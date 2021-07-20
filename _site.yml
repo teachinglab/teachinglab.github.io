@@ -1,0 +1,14 @@
+name: "TL-website"
+navbar:
+  title: "Official Teaching Lab Github Site"
+  left:
+    - text: "Home"
+      href: index.html
+  right: 
+    - icon: fa-envelope fa-lg
+      href: mailto:<teachinglab@teachinglab.org>
+    - icon: fa-github fa-lg
+      href: http://github.com/teachinglab/
+output:
+  html_document:
+    theme: darkly
