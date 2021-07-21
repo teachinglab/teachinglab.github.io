@@ -23,49 +23,49 @@ navbar:
         - text: "All Partners Report Unmatched"
           href: "2021Reports/2021 Report_unmatched_All Partners.html"
         - text: "Kankakee Report"
-          href: "2021 Report_unmatched_Kankakee School District, IL.html",
+          href: "2021Reports/2021 Report_unmatched_Kankakee School District IL.html"
         - text: "Pointe Coupee Report"
-          href: "2021 Report_unmatched_Pointe Coupee Parish, LA.html",
+          href: "2021Reports/2021 Report_unmatched_Pointe Coupee Parish LA.html"
         - text: "Brownington Report"
-          href: "2021 Report_unmatched_Brownington Central School, VT.html",
+          href: "2021Reports/2021 Report_unmatched_Brownington Central School VT.html"
         - text: "Freire Charter Report"
           href: "DE.html"
         - text: "Louisiana State Report"
-          href: "2021 Report_unmatched_Louisiana State Content Leader Training, LA.html",
+          href: "2021Reports/2021 Report_unmatched_Louisiana State Content Leader Training LA.html"
         - text: "Building 21 Report"
-          href: "2021 Report_unmatched_Building 21.html",
+          href: "2021Reports/2021 Report_unmatched_Building 21.html"
         - text: "Delaware Department of Education Report"
-          href: "2021 Report_unmatched_Delaware Department of Education, DE.html",
+          href: "2021Reports/2021 Report_unmatched_Delaware Department of Education DE.html"
         - text: "East Baton Rouge Report"
-          href: "2021 Report_unmatched_East Baton Rouge Parish, LA.html",
+          href: "2021Reports/2021 Report_unmatched_East Baton Rouge Parish LA.html"
         - text: "Evangeline Parish Report"
-          href: "2021 Report_unmatched_Evangeline Parish, LA.html",
+          href: "2021Reports/2021 Report_unmatched_Evangeline Parish LA.html"
         - text: "Lafayette Parish Report"
-          href: "2021 Report_unmatched_Lafayette Parish, LA.html",
+          href: "2021Reports/2021 Report_unmatched_Lafayette Parish LA.html"
         - text: "Legacy Early College Report"
-          href: "2021 Report_unmatched_Legacy Early College, SC.html",
+          href: "2021Reports/2021 Report_unmatched_Legacy Early College SC.html"
         - text: "Mississippi Department of Education Report"
-          href: "2021 Report_unmatched_Mississippi Department of Education, MS.html",
+          href: "2021Reports/2021 Report_unmatched_Mississippi Department of Education MS.html"
         - text: "NYC District 11 District-wide"
-          href: "2021 Report_unmatched_NYC District 11 - District-wide, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - District-wide NY.html"
         - text: "NYC District 11 - IS 355"
-          href: "2021 Report_unmatched_NYC District 11 - IS 355, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - IS 355 NY.html"
         - text: "NYC District 11 - PS 21"
-          href: "2021 Report_unmatched_NYC District 11 - PS 21, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 21 NY.html"
         - text: "NYC District 11 - PS 87"
-          href: "2021 Report_unmatched_NYC District 11 - PS 87, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 87 NY.html"
         - text: "NYC District 11 - PS 89"
-          href: "2021 Report_unmatched_NYC District 11 - PS 89, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 89 NY.html"
         - text: "NYC District 11 - PS 96"
-          href: "2021 Report_unmatched_NYC District 11 - PS 96, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 96 NY.html"
         - text: "NYC District 11 - PS 103"
-          href: "2021 Report_unmatched_NYC District 11 - PS 103, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 103 NY.html"
         - text: "NYC District 11 - PS 189"
-          href: "2021 Report_unmatched_NYC District 11 - PS 189, NY.html",
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 189 NY.html"
         - text: "NYC District 11 - PS 498"
-          href: "2021 Report_unmatched_NYC District 11 - PS 498, NY.html",
-        - text: "\Tangipahoa Parish Report"
-          href: "2021 Report_unmatched_Tangipahoa Parish, LA.html"
+          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 498 NY.html"
+        - text: "Tangipahoa Parish Report"
+          href: "2021Reports/2021 Report_unmatched_Tangipahoa Parish, LA.html"
 output:
   html_document:
     theme: sandstone
