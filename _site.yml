@@ -1,16 +1,27 @@
 name: "TL-website"
+output_dir: "docs"
 navbar:
   title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+      icon: fa-home
+    
   right: 
     - icon: fa-envelope fa-lg
       href: mailto:<teachinglab@teachinglab.org>
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
+    - text: "About"
+      href: about.html
+      icon: fa-info
+    - text: "Reports"
+      icon: fa-file
+      menu: 
+        - text: "All Partners Report"
+          href: "2021Reports/2021 Report_unmatched_All Partners.html"
+        - text: "Vermont Report"
+          href: "2021Reports/2021 Report_unmatched_Brownington Central School, VT.html"
 output:
   html_document:
-    theme: darkly
+    theme: sandstone
