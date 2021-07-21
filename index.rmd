@@ -1,5 +1,5 @@
 ---
-title: "Teaching Lab Website"
+title: "<center>Teaching Lab Website"
 ---
 
 <center>

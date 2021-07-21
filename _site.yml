@@ -1,9 +1,11 @@
 name: "TL-website"
 navbar:
-  title: "Official Teaching Lab Github Site"
+  title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
   left:
     - text: "Home"
       href: index.html
+    - text: "About"
+      href: about.html
   right: 
     - icon: fa-envelope fa-lg
       href: mailto:<teachinglab@teachinglab.org>
