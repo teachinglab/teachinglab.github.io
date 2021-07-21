@@ -122,7 +122,7 @@ html_plot <- girafe(ggobj = final_graph, fonts = list(sans = "Calibri"),
          opts_hover_inv(css = "opacity:0.5;"),
          opts_toolbar(saveaspng = F)
          ),
-       width_svg = 32, height_svg = 20
+       # width_svg = 100, height_svg = 70
        ) #%>%# Real size
   # girafe_options(.,
   #                htmlwidgets::sizingPolicy(padding = "5px",
