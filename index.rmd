@@ -16,7 +16,7 @@ Site currently under maintenance, lots more to come soon though!
 <br>
 <br>
 ````{=html}
-```{r echo = F, warning = F, message = F}
+```{r echo = F, warning = F, message = F, results='asis'}
 xfun::file_string(here::here("HTML/TLReviews.html"))
 ```
 ````
