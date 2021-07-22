@@ -5,7 +5,7 @@ navbar:
   title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
   left:
     - text: "Home"
-      href: index.html
+      href: index-protected.html
       icon: fa-home
     
   right: 
@@ -14,63 +14,63 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
     - text: "About"
-      href: about.html
+      href: about-protected.html
       icon: fa-info
     - text: "Reports"
       icon: fa-file
       menu: 
         - text: "All Partners Report Matched"
-          href: "2021Reports/2021 Report_matched_All Partners.html"
+          href: "Encrypted/2021 Report_matched_All Partners-protected.html"
         - text: "All Partners Report Unmatched"
-          href: "2021Reports/2021 Report_unmatched_All Partners.html"
+          href: "Encrypted/2021 Report_unmatched_All Partners-protected.html"
         - text: "Building 21 Report"
-          href: "2021Reports/2021 Report_unmatched_Building 21.html"
+          href: "Encrypted/2021 Report_unmatched_Building 21-protected.html"
         - text: "Delaware Department of Education Report"
-          href: "2021Reports/2021 Report_unmatched_Delaware Department of Education DE.html"
+          href: "Encrypted/2021 Report_unmatched_Delaware Department of Education DE-protected.html"
         - text: "East Baton Rouge Report"
-          href: "2021Reports/2021 Report_unmatched_East Baton Rouge Parish LA.html"
+          href: "Encrypted/2021 Report_unmatched_East Baton Rouge Parish LA-protected.html"
         - text: "Evangeline Parish Report"
-          href: "2021Reports/2021 Report_unmatched_Evangeline Parish LA.html"
+          href: "Encrypted/2021 Report_unmatched_Evangeline Parish LA-protected.html"
         - text: "Kankakee Report"
-          href: "2021Reports/2021 Report_unmatched_Kankakee School District IL.html"
+          href: "Encrypted/2021 Report_unmatched_Kankakee School District IL-protected.html"
         - text: "Louisiana State Report"
-          href: "2021Reports/2021 Report_unmatched_Louisiana State Content Leader Training LA.html"
+          href: "Encrypted/2021 Report_unmatched_Louisiana State Content Leader Training LA-protected.html"
         - text: "Brownington Report"
-          href: "2021Reports/2021 Report_unmatched_Brownington Central School VT.html"
+          href: "Encrypted/2021 Report_unmatched_Brownington Central School VT-protected.html"
         - text: "Freire Charter Report"
-          href: "DE.html"
+          href: "DE-protected.html"
         - text: "Lafayette Parish Report"
-          href: "2021Reports/2021 Report_unmatched_Lafayette Parish LA.html"
+          href: "Encrypted/2021 Report_unmatched_Lafayette Parish LA-protected.html"
         - text: "Legacy Early College Report"
-          href: "2021Reports/2021 Report_unmatched_Legacy Early College SC.html"
+          href: "Encrypted/2021 Report_unmatched_Legacy Early College SC-protected.html"
         - text: "Mississippi Department of Education Report"
-          href: "2021Reports/2021 Report_unmatched_Mississippi Department of Education MS.html"
+          href: "Encrypted/2021 Report_unmatched_Mississippi Department of Education MS-protected.html"
         - text: "NYC District 11 District-wide"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - District-wide NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - District-wide NY-protected.html"
         - text: "NYC District 11 - IS 355"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - IS 355 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - IS 355 NY-protected.html"
         - text: "NYC District 11 - PS 21"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 21 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 21 NY-protected.html"
         - text: "NYC District 11 - PS 87"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 87 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 87 NY-protected.html"
         - text: "NYC District 11 - PS 89"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 89 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 89 NY-protected.html"
         - text: "NYC District 11 - PS 96"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 96 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 96 NY-protected.html"
         - text: "NYC District 11 - PS 103"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 103 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 103 NY-protected.html"
         - text: "NYC District 11 - PS 189"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 189 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 189 NY-protected.html"
         - text: "NYC District 11 - PS 498"
-          href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 498 NY.html"
+          href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 498 NY-protected.html"
         - text: "Pointe Coupee Report"
-          href: "2021Reports/2021 Report_unmatched_Pointe Coupee Parish LA.html"
+          href: "Encrypted/2021 Report_unmatched_Pointe Coupee Parish LA-protected.html"
         - text: "Tangipahoa Parish Report"
-          href: "2021Reports/2021 Report_unmatched_Tangipahoa Parish, LA.html"
+          href: "Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html"
 output:
   html_document:
     theme: sandstone
     highlight: textmate
     include:
-      after_body: footer.html
+      after_body: footer-protected.html
     css: styles.css
