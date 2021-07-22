@@ -1,4 +1,5 @@
-name: "TL-website"
+name: "TL-Data-Site"
+title: "Teaching Lab Data"
 output_dir: "docs"
 navbar:
   title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
@@ -22,16 +23,6 @@ navbar:
           href: "2021Reports/2021 Report_matched_All Partners.html"
         - text: "All Partners Report Unmatched"
           href: "2021Reports/2021 Report_unmatched_All Partners.html"
-        - text: "Kankakee Report"
-          href: "2021Reports/2021 Report_unmatched_Kankakee School District IL.html"
-        - text: "Pointe Coupee Report"
-          href: "2021Reports/2021 Report_unmatched_Pointe Coupee Parish LA.html"
-        - text: "Brownington Report"
-          href: "2021Reports/2021 Report_unmatched_Brownington Central School VT.html"
-        - text: "Freire Charter Report"
-          href: "DE.html"
-        - text: "Louisiana State Report"
-          href: "2021Reports/2021 Report_unmatched_Louisiana State Content Leader Training LA.html"
         - text: "Building 21 Report"
           href: "2021Reports/2021 Report_unmatched_Building 21.html"
         - text: "Delaware Department of Education Report"
@@ -40,6 +31,14 @@ navbar:
           href: "2021Reports/2021 Report_unmatched_East Baton Rouge Parish LA.html"
         - text: "Evangeline Parish Report"
           href: "2021Reports/2021 Report_unmatched_Evangeline Parish LA.html"
+        - text: "Kankakee Report"
+          href: "2021Reports/2021 Report_unmatched_Kankakee School District IL.html"
+        - text: "Louisiana State Report"
+          href: "2021Reports/2021 Report_unmatched_Louisiana State Content Leader Training LA.html"
+        - text: "Brownington Report"
+          href: "2021Reports/2021 Report_unmatched_Brownington Central School VT.html"
+        - text: "Freire Charter Report"
+          href: "DE.html"
         - text: "Lafayette Parish Report"
           href: "2021Reports/2021 Report_unmatched_Lafayette Parish LA.html"
         - text: "Legacy Early College Report"
@@ -64,8 +63,14 @@ navbar:
           href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 189 NY.html"
         - text: "NYC District 11 - PS 498"
           href: "2021Reports/2021 Report_unmatched_NYC District 11 - PS 498 NY.html"
+        - text: "Pointe Coupee Report"
+          href: "2021Reports/2021 Report_unmatched_Pointe Coupee Parish LA.html"
         - text: "Tangipahoa Parish Report"
           href: "2021Reports/2021 Report_unmatched_Tangipahoa Parish, LA.html"
 output:
   html_document:
     theme: sandstone
+    highlight: textmate
+    include:
+      after_body: footer.html
+    css: styles.css
