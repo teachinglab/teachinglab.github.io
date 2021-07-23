@@ -1,6 +1,7 @@
 name: "TL-Data-Site"
 title: "Teaching Lab Data"
 output_dir: "docs"
+favicon: favicon.ico
 navbar:
   title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
   left:
