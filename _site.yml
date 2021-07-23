@@ -5,7 +5,7 @@ navbar:
   title: "<img id=\"logo\" style=\"width: 180px;margin-top: -19px;\" src=\"teachinglab_logo.png\" />"
   left:
     - text: "Home"
-      href: index-protected.html
+      href: index.html
       icon: fa-home
     
   right: 
@@ -14,7 +14,7 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
     - text: "About"
-      href: about-protected.html
+      href: about.html
       icon: fa-info
     - text: "Reports"
       icon: fa-file
@@ -72,5 +72,5 @@ output:
     theme: sandstone
     highlight: textmate
     include:
-      after_body: footer-protected.html
+      after_body: footer.html
     css: styles.css
