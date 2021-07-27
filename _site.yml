@@ -20,8 +20,6 @@ navbar:
     - text: "Reports"
       icon: fa-file
       menu: 
-        - text: "All Partners Report Matched"
-          href: "Encrypted/2021 Report_matched_All Partners-protected.html"
         - text: "All Partners Report Unmatched"
           href: "Encrypted/2021 Report_unmatched_All Partners-protected.html"
         - text: "Building 21 Report"
@@ -68,6 +66,8 @@ navbar:
           href: "Encrypted/2021 Report_unmatched_Pointe Coupee Parish, LA-protected.html"
         - text: "Tangipahoa Parish Report"
           href: "Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html"
+        - text: "All Partners Report Matched"
+          href: "Encrypted/2021 Report_matched_All Partners-protected.html"
 output:
   html_document:
     theme: sandstone
