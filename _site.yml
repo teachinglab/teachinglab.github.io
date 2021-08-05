@@ -17,6 +17,16 @@ navbar:
     - text: "About"
       href: about.html
       icon: fa-info
+    - text: "Dashboards"
+      menu:
+        - text: "End of Session 2021-2022"
+          href: "https://teachinglabhq.shinyapps.io/YearlyDashboard2"
+        - text: "End of Course 2021-2022"
+          href: "https://teachinglabhq.shinyapps.io/YearlyDashboard"
+        - text: "Diagnostic Completion per Partner"
+          href: "https://teachinglabhq.shinyapps.io/DiagnosticComplete"
+        - text: "End of Session pre 2021-2022"
+          href: "https://teachinglabhq.shinyapps.io/ParticipantFeedback"
     - text: "Reports"
       icon: fa-file
       menu: 
