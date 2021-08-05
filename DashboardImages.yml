@@ -1,0 +1,16 @@
+- title: "End of Course Surveys 2021-2022"
+  img: Images/Dashboards/CourseDashboard.png
+  href: https://teachinglabhq.shinyapps.io/YearlyDashboard/
+  showcase: true
+- title: "End of Session Surveys 2021-2022"
+  img: Images/Dashboards/SessionDashboard.png
+  href: https://teachinglabhq.shinyapps.io/YearlyDashboard2/
+  showcase: true
+- title: "Diagnostic Responses per Partner"
+  img: Images/Dashboards/DiagnosticResponses.png
+  href: https://teachinglabhq.shinyapps.io/DiagnosticComplete/
+  showcase: true
+- title: "Pre 2021-2022 End of Session"
+  img: Images/Dashboards/OldDashboard.png
+  href: https://teachinglabhq.shinyapps.io/ParticipantFeedback/
+  showcase: true
