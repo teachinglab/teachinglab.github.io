@@ -1,39 +1,139 @@
 ---
 title: "Explore Teaching Lab's Data"
-site: distill::distill_article
-  css: _thumbnails.scss
-resource_files:
-  - Images/
+output: 
+  distill::distill_article:
+    css: theme.css
 ---
 
 ```{r setup, include = F}
-library(quillt)
+library(gt)
+library(tidyverse)
 ```
 
 
 <center>
-This site provides a catalog of assorted Teaching Lab data products, ranging from dashboards and reports to individual tables and charts that show the effectiveness of our work. The layout below shows first dashboards, then reports, and then all miscellaneous published data that Teaching Lab publicly shares, if you cannot find the information you are looking for please reach out to duncan.gates@teachinglab.org.
+This site provides a catalog of assorted Teaching Lab data products, ranging from dashboards and reports to individual tables and charts that show the effectiveness of our work. The layout below shows first surveys, then dashboards, then reports, and then all miscellaneous published data that Teaching Lab publicly shares, if you cannot find the information you are looking for please reach out to duncan.gates@teachinglab.org.
 </center>
 
+# Survey Links
 
-# Dashboards
 
-```{r, echo = F}
-examples(yml = "DashboardImages.yml", ncol = 2)
+Please verify if the following links are available in Moodle and slide decks, and add if necessary.
+
+
+* <strong>Attendance list</strong>: https://tinyurl.com/TL-attend
+
+
+* <strong>Diagnostic Educator Survey. We are finding that we have higher completion rates when time is given in the first session to complete this</strong>. It's taking participants 5 minutes on average to complete, per Survey Monkey metrics.
+  + Link: https://www.surveymonkey.com/r/diagnosticSY21-22
+
+
+* <strong>Short knowledge assessments to be taken during the first and last session of PL</strong>. Knowledge assessments are taking around 5 min, per Survey Monkey metrics.
+  + Please find the link to your course here, under the tab “Knowledge Assessment Links”. We are drafting these in order of PL courses being implemented, so not all are ready yet. 
+
+
+* <strong>End-of-Session Participant Feedback Survey to be taken after every PL session</strong>, except the final session (e.g., if there are 5 sessions, use this for Sessions #1-4). Please remind participants of which course they are taking. It's taking 2 min, per Survey Monkey metrics.
+  + Link: https://www.surveymonkey.com/r/TLendofsession
+
+
+* <strong>End-of-Course Participant Feedback Survey to be taken after the final PL session</strong> (e.g., if there are 5 sessions, use this for Session #5). Please remind participants of which course they are taking. It's taking 4 min, per Survey Monkey metrics.
+  + Link: https://www.surveymonkey.com/r/TLendofcourse
+
+
+# Active Dashboards
+
+[![MyToyBox](./Images/Dashboards/CourseDashboard.png "Course Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/YearlyDashboard/)
+[![MyToyBox](./Images/Dashboards/SessionDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/YearlyDashboard2/)
+[![MyToyBox](./Images/Dashboards/DiagnosticResponses.png "Diagnostic Responses per Partner Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/DiagnosticComplete/)
+[![MyToyBox](./Images/Dashboards/RaceandCulture.png "Race and Culture Internal Surveys Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/RaceandCulture/)
+
+
+```{r dashboards, echo = F, eval = T, results = 'asis', layout = "l-page"}
+# Number of rows corresponds to number of items in eventual gt
+# This is further customizable by adding row customization at each level with text_transform, eventually creating something similar to `quillt`
+# dashboards <- tibble(Row1 = c("End of Course Surveys 2021-2022", "https://teachinglabhq.shinyapps.io/YearlyDashboard/ Images/Dashboards/CourseDashboard.png"),
+#                      Row2 = c("End of Session Surveys 2021-2022", "https://teachinglabhq.shinyapps.io/YearlyDashboard2/ Images/Dashboards/SessionDashboard.png"),
+#                      Row3 = c("Diagnostic Responses per Partner", "https://teachinglabhq.shinyapps.io/DiagnosticComplete/ Images/Dashboards/DiagnosticResponses.png"),
+#                      Row4 = c("Race and Culture Internal Surveys", "https://teachinglabhq.shinyapps.io/RaceandCulture/ Images/Dashboards/RaceandCulture.png"))
+# dashboards %>%
+#   gt::gt() %>%
+#   text_transform(
+#     locations = cells_body(rows = c(1)),
+#     fn = function(x) {
+#       paste0("<center><strong>", x, "</strong></center>")
+#     }
+#   ) %>%
+#   text_transform(
+#     locations = cells_body(rows = c(2)),
+#     fn = function(x) {
+#     paste0("<a href = '", stringr::word(x, 1), "'>", local_image(
+#       filename = stringr::word(x, 2),
+#       height = 200
+#     ), "</a>")
+#     }
+#   ) %>%
+#   tab_options(
+#     column_labels.hidden = T,
+#     table.width = pct(100)
+#   ) %>%
+#   gt::opt_table_font(
+#       font = list(
+#         gt::google_font("Calibri"),
+#         gt::default_fonts()
+#       )
+#     ) %>%
+#   gtsave(here::here("HTML/DashboardsTable.html"))
 ```
+
+```{r echo = F, out.width = c("25%", "25%", "25%", "25%"), out.height = "80%"}
+# library(magick)
+# imgs <- map(c("Images/Dashboards/CourseDashboard.png", "Images/Dashboards/SessionDashboard.png",
+#                           "Images/Dashboards/DiagnosticResponses.png", "Images/Dashboards/RaceandCulture.png"), image_read)
+# imgs_with_border <- map(imgs, ~ image_border(.x, "white", "100x100"))
+# map2(.x = imgs_with_border, .y = c("Images/Dashboards/CourseDashboard.png", "Images/Dashboards/SessionDashboard.png",
+#                           "Images/Dashboards/DiagnosticResponses.png", "Images/Dashboards/RaceandCulture.png"), ~ image_write(.x, path = here::here(.y)))
+
+
+# knitr::include_graphics(c("Images/Dashboards/CourseDashboard.png", "Images/Dashboards/SessionDashboard.png", 
+#                           "Images/Dashboards/DiagnosticResponses.png", "Images/Dashboards/RaceandCulture.png"))
+```
+
 
 
 # Reports
 
-```{r, echo = F}
-examples(yml = "ReportImages.yml", ncol = 2)
-```
+<center> Passwords for Reports are [here](https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing) which will only be viewable if you are a Teaching Lab employee. </center>
+<br>
+
+[![MyToyBox](./Images/Reports/Reports.png "All Partners Report"){width=195px}](Encrypted/2021 Report_unmatched_All Partners-protected.html)
+[![MyToyBox](./Images/Reports/ReportsMatched.png "All Partners Report: Matched"){width=195px}](Encrypted/2021 Report_matched_All Partners-protected.html)
+[![MyToyBox](./Images/Reports/BrowningtonReport.png "Brownington Report"){width=195px}](Encrypted/2021 Report_unmatched_Brownington Central School, VT-protected.html)
+[![MyToyBox](./Images/Reports/Building21Report.png "Building 21 Report"){width=195px}](Encrypted/2021 Report_unmatched_Building 21-protected.html)
+[![MyToyBox](./Images/Reports/DelawareDoEReport.png "Delaware DOE Report"){width=195px}](Encrypted/2021 Report_unmatched_Delaware Department of Education, DE-protected.html)
+[![MyToyBox](./Images/Reports/EastBatonReport.png "East Baton Rouge Report"){width=195px}](Encrypted/2021 Report_unmatched_East Baton Rouge Parish, LA-protected.html)
+[![MyToyBox](./Images/Reports/EvangelineReport.png "Evangeline Parish Report"){width=195px}](Encrypted/2021 Report_unmatched_Evangeline Parish, LA-protected.html)
+[![MyToyBox](./Images/Reports/FreireReport.png "Freire Charter Schools Report"){width=195px}](Encrypted/DE-protected.html)
+[![MyToyBox](./Images/Reports/KankakeeReport.png "Kankakee School District"){width=195px}](Encrypted/2021 Report_unmatched_Kankakee School District, IL-protected.html)
+[![MyToyBox](./Images/Reports/LafayetteReport.png "Lafayette Parish"){width=195px}](Encrypted/2021 Report_unmatched_Lafayette Parish, LA-protected.html)
+[![MyToyBox](./Images/Reports/LegacyReport.png "Legacy Early College"){width=195px}](Encrypted/2021 Report_unmatched_Legacy Early College, SC-protected.html)
+[![MyToyBox](./Images/Reports/LouisianaStateReport.png "Louisiana State Content Leader Training"){width=195px}](Encrypted/2021 Report_unmatched_Louisiana State Content Leader Training, LA-protected.html)
+[![MyToyBox](./Images/Reports/MississippiDOEReport.png "Mississippi Department of Education"){width=195px}](Encrypted/2021 Report_unmatched_Mississippi Department of Education, MS-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11D-wide.png "NYC District 11 - District-wide"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - District-wide, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11IS355.png "NYC District 11 - IS 355"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - IS 355, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS21.png "NYC District 11 - PS 21"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 21, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS87.png "NYC District 11 - PS 87"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 87, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS89.png "NYC District 11 - PS 89"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 89, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS96.png "NYC District 11 - PS 96"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 96, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS103.png "NYC District 11 - PS 103"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 103, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS189.png "NYC District 11 - PS 189"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 189, NY-protected.html)
+[![MyToyBox](./Images/Reports/NYCD11PS498.png "NYC District 11 - PS 498"){width=195px}](Encrypted/2021 Report_unmatched_NYC District 11 - PS 498, NY-protected.html)
+[![MyToyBox](./Images/Reports/PointeCoupeeReport.png "Pointe Coupee Parish"){width=195px}](Encrypted/2021 Report_unmatched_Pointe Coupee Parish, LA-protected.html)
+[![MyToyBox](./Images/Reports/TangipahoaReport.png "Tangipahoa Parish"){width=195px}](Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html)
+
 
 
 # Miscellaneous
 
-```{r, echo = F}
-examples(yml = "MiscellaneousImages.yml", ncol = 2)
-```
+[![MyToyBox](./Images/Miscellaneous/Reviews.png "Course Survey Dashboard"){width=195px}](https://teachinglab.github.io/TLReviews.html)
 
 
