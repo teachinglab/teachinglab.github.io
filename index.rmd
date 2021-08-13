@@ -46,6 +46,7 @@ Please verify if the following links are available in Moodle and slide decks, an
 [![MyToyBox](./Images/Dashboards/SessionDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/YearlyDashboard2/)
 [![MyToyBox](./Images/Dashboards/DiagnosticResponses.png "Diagnostic Responses per Partner Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/DiagnosticComplete/)
 [![MyToyBox](./Images/Dashboards/RaceandCulture.png "Race and Culture Internal Surveys Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/RaceandCulture/)
+[![MyToyBox](./Images/Dashboards/FacilitatorPersonalDashboard.png "Facilitator Personal Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/PersonalFacilitator/)
 
 
 ```{r dashboards, echo = F, eval = T, results = 'asis', layout = "l-page"}
