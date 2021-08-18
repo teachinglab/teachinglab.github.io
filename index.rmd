@@ -12,7 +12,7 @@ library(tidyverse)
 
 
 <center>
-This site provides a catalog of assorted Teaching Lab data products, ranging from dashboards and reports to individual tables and charts that show the effectiveness of our work. The layout below shows first surveys, then dashboards, then reports, and then all miscellaneous published data that Teaching Lab publicly shares, if you cannot find the information you are looking for please reach out to duncan.gates@teachinglab.org.
+Update initial paragraph: Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, and more. If you cannot find the information you are looking for or are having trouble accessing something, please reach out to duncan.gates@teachinglab.org.
 </center>
 
 # Survey Links
@@ -29,7 +29,7 @@ Please verify if the following links are available in Moodle and slide decks, an
 
 
 * <strong>Short knowledge assessments to be taken during the first and last session of PL</strong>. Knowledge assessments are taking around 5 min, per Survey Monkey metrics.
-  + Please find the link to your course here, under the tab “Knowledge Assessment Links”. We are drafting these in order of PL courses being implemented, so not all are ready yet. 
+  + Please find the link to your course [here](https://docs.google.com/spreadsheets/d/1cELGsuEjXsb1e5oRdtdYof-Ul7jfdBXMOTYbIYd7nS4/edit?usp=sharing), under the tab “Knowledge Assessment Links”. We are drafting these in order of PL courses being implemented, so not all are ready yet. 
 
 
 * <strong>End-of-Session Participant Feedback Survey to be taken after every PL session</strong>, except the final session (e.g., if there are 5 sessions, use this for Sessions #1-4). Please remind participants of which course they are taking. It's taking 2 min, per Survey Monkey metrics.
