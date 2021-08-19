@@ -42,10 +42,10 @@ Please verify if the following links are available in Moodle and slide decks, an
 
 # Active Dashboards
 
-[![MyToyBox](./Images/Dashboards/CourseDashboard.png "Course Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/YearlyDashboard/)
-[![MyToyBox](./Images/Dashboards/SessionDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/YearlyDashboard2/)
+[![MyToyBox](./Images/Dashboards/CourseDashboard.png "Course Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/CourseSurvey/)
+[![MyToyBox](./Images/Dashboards/SessionDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/SessionSurvey/)
 [![MyToyBox](./Images/Dashboards/DiagnosticResponses.png "Diagnostic Responses per Partner Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/DiagnosticComplete/)
-[![MyToyBox](./Images/Dashboards/RaceandCulture.png "Race and Culture Internal Surveys Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/RaceandCulture/)
+[![MyToyBox](./Images/Dashboards/RaceandCulture.png "Race and Culture Internal Surveys Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/RaceandCulture2/)
 [![MyToyBox](./Images/Dashboards/FacilitatorPersonalDashboard.png "Facilitator Personal Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/PersonalFacilitator/)
 
 
