@@ -119,3 +119,7 @@ d-article img {
     display: inline-block;
     width:195px;
 }
+
+d-article p {
+  line-height: 2rem;
+}
