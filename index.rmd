@@ -7,6 +7,8 @@ output:
 
 <center>
 Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, and more. If you cannot find the information you are looking for or are having trouble accessing something, please reach out to duncan.gates@teachinglab.org.
+
+This site can be navigated through the navbar at the top of the page which contains all of the functionality you should need. The home button contains survey links for sharing. The "Reports" and the "Dashboards & Visualizations" tabs respectively contain a list of reports and dashboards and visualizations sorted chronologically.
 </center>
 
 
