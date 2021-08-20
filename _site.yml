@@ -8,12 +8,14 @@ navbar:
   logo: "teachinglab_logo.png"
   href: https://www.teachinglab.org/
   right: 
+    - icon: fa-home fa-lg
+      href: index.html
+    - text: "Surveys"
+      href: Surveys.html
     - text: "Reports"
       href: Reports.html
     - text: "Dashboards and Visualizations"
       href: Dashboards.html
-    - icon: fa-home fa-lg
-      href: index.html
     - icon: fa-envelope fa-lg
       href: mailto:<teachinglab@teachinglab.org>
     - icon: fa-github fa-lg
