@@ -2,21 +2,113 @@
 title: "Dashboard & Visualization Hub"
 output: 
   distill::distill_article:
-    css: theme.css
+    css: "css/strapless.css"
 ---
 
-# Active Dashboards (SY20-21)
+# Active Dashboards (SY21-22)
 
-[![MyToyBox](./Images/Dashboards/CourseDashboard.png "Course Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/CourseSurvey/)
-[![MyToyBox](./Images/Dashboards/SessionDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/SessionSurvey/)
-[![MyToyBox](./Images/Dashboards/DiagnosticResponses.png "Diagnostic Responses per Partner Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/DiagnosticComplete/)
-[![MyToyBox](./Images/Dashboards/RaceandCulture.png "Race and Culture Internal Surveys Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/RaceandCulture2/)
-[![MyToyBox](./Images/Dashboards/FacilitatorPersonalDashboard.png "Facilitator Personal Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/PersonalFacilitator/)
+<br>
+
+```{r echo = F}
+library(bs4cards)
+# bs4cards::use_strapless(here::here("css"))
+galleries <- tibble::tibble(
+  long_name = c("End of Course Surveys 2021-2022", 
+                "End of Session Surveys 2021-2022",
+                "Diagnostic Responses per Partner", 
+                "Race and Culture Internal Surveys",
+                "Facilitator Personal Data Dashboard (Requires @teachinglab.org login)"),
+  blurb = c("A dashboard to explore responses to the surveys given at the end of courses.", 
+            "A dashboard to explore responses given at the end of each survey for full time TL employees.", 
+            "A simple table and time series graph for live diagnostic survey responses per partner.", 
+            "Reviewing race and culture internal surveys, currently contains 4 rounds of data.", 
+            "A personalized dashboard to explore responses given at the end of each survey for full time TL facilitators."),
+  date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
+  image_url = c("https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
+                "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
+                "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png",
+                "https://teachinglab.github.io/Images/Dashboards/RaceandCulture.png",
+                "https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png"),
+  link = c("https://teachinglabhq.shinyapps.io/CourseSurvey/",
+           "https://teachinglabhq.shinyapps.io/SessionSurvey/",
+           "https://teachinglabhq.shinyapps.io/DiagnosticComplete/",
+           "https://teachinglabhq.shinyapps.io/RaceandCulture2/",
+           "https://teachinglabhq.shinyapps.io/PersonalFacilitator/")
+)
+
+galleries %>% 
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    footer = paste("updated on", date),
+    layout = "label-below", 
+    width = "very-wide",
+    breakpoint = 5/12,
+    rounding = "1rem",
+    padding = 1
+  )
+```
+
+
+<br>
 
 # Inactive Dashboards (Pre SY20-21)
 
-[![MyToyBox](./Images/Dashboards/CourseDashboard.png "Session Survey Dashboard"){width=195px}](https://teachinglabhq.shinyapps.io/ParticipantFeedback/)
+<br>
+
+```{r echo = F}
+galleries2 <- tibble::tibble(
+  long_name = c("End of Session Surveys before SY21-22"),
+  blurb = c("An outdated dashboard to explore pre-SY21-22 data"),
+  date = c(Sys.Date()),
+  image_url = c(here::here("Images/Dashboards/CourseDashboard.png")),
+  link = c("https://teachinglabhq.shinyapps.io/ParticipantFeedback/")
+)
+
+galleries2 %>% 
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    footer = paste("updated on", date),
+    layout = "label-below", 
+    width = "very-wide",
+    breakpoint = 5/12,
+    rounding = "1rem",
+    padding = 1
+  )
+```
+
+<br>
 
 # Visualizations
 
-[![MyToyBox](./Images/Miscellaneous/Reviews.png "Course Survey Dashboard"){width=195px}](https://teachinglab.github.io/TLReviews.html)
+<br>
+
+```{r echo = F}
+galleries3 <- tibble::tibble(
+  long_name = c("Visualizing and textualizing TL data."),
+  blurb = c("A visualization of 2 years of reviews of Teaching Lab courses by type of content."),
+  date = c(Sys.Date()),
+  image_url = c(here::here("Images/Miscellaneous/Reviews.png")),
+  link = c("https://teachinglab.github.io/TLReviews.html")
+)
+
+galleries3 %>% 
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    footer = paste("updated on", date),
+    layout = "label-below", 
+    width = "very-wide",
+    breakpoint = 5/12,
+    rounding = "1rem",
+    padding = 1
+  )
+```
+

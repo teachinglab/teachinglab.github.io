@@ -89,4 +89,4 @@ output:
     css: scss/bootstrap/_thumbnails.scss
     includes:
       after_body: footer.html
-theme: styles.css
+theme: css/styles.css
