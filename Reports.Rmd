@@ -13,7 +13,7 @@ output:
 
 <br>
 
-```{r echo = F}
+```{r echo = F, layout = "l-page"}
 library(bs4cards)
 report_galleries <- tibble::tibble(
   location = c(
@@ -118,11 +118,8 @@ report_galleries %>%
     footer = long_name,
     link = link,
     image = image_url,
-    width = "wide",
-    # breakpoint = 5/12,
+    width = 2,
     layout = "inset-bottom",
-    colour = "#ffffffcc",
-    rounding = "1rem",
-    padding = 1
+    spacing = 3
   )
 ```

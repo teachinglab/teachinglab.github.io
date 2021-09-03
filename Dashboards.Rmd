@@ -9,7 +9,7 @@ output:
 
 <br>
 
-```{r echo = F}
+```{r echo = F, layout = "l-page"}
 library(bs4cards)
 # bs4cards::use_strapless(here::here("css"))
 galleries <- tibble::tibble(
@@ -22,7 +22,7 @@ galleries <- tibble::tibble(
             "A dashboard to explore responses given at the end of each survey for full time TL employees.", 
             "A simple table and time series graph for live diagnostic survey responses per partner.", 
             "Reviewing race and culture internal surveys, currently contains 4 rounds of data.", 
-            "A personalized dashboard to explore responses given at the end of each survey for full time TL facilitators."),
+            "A personalized dashboard to explore responses given at the end of each survey for TL facilitators."),
   date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
   image_url = c("https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
@@ -44,10 +44,8 @@ galleries %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = "very-wide",
-    breakpoint = 5/12,
-    rounding = "1rem",
-    padding = 1
+    width = 3, 
+    spacing = 3
   )
 ```
 
@@ -75,10 +73,7 @@ galleries2 %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = "very-wide",
-    breakpoint = 5/12,
-    rounding = "1rem",
-    padding = 1
+    width = 4
   )
 ```
 
@@ -105,10 +100,7 @@ galleries3 %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = "very-wide",
-    breakpoint = 5/12,
-    rounding = "1rem",
-    padding = 1
+    width = 4
   )
 ```
 
