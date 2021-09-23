@@ -7,6 +7,8 @@ output:
 
 # Active Dashboards (SY21-22)
 
+All dashboards will require an @teachinglab.org email login to verify that access to the correct content is granted.
+
 <br>
 
 ```{r echo = F, layout = "l-page"}
@@ -16,23 +18,19 @@ galleries <- tibble::tibble(
   long_name = c("End of Course Surveys 2021-2022", 
                 "End of Session Surveys 2021-2022",
                 "Diagnostic Responses per Partner", 
-                "Race and Culture Internal Surveys",
-                "Facilitator Personal Data Dashboard (Requires @teachinglab.org login)"),
+                "Facilitator End of Session Survey Dashboard"),
   blurb = c("A dashboard to explore responses to the surveys given at the end of courses.", 
             "A dashboard to explore responses given at the end of each survey for full time TL employees.", 
             "A simple table and time series graph for live diagnostic survey responses per partner.", 
-            "Reviewing race and culture internal surveys, currently contains 4 rounds of data.", 
-            "A personalized dashboard to explore responses given at the end of each survey for TL facilitators."),
-  date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
+            "A dashboard for TL facilitators, that provides just their indiviudal data based on email login."),
+  date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
   image_url = c("https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png",
-                "https://teachinglab.github.io/Images/Dashboards/RaceandCulture.png",
                 "https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png"),
   link = c("https://teachinglabhq.shinyapps.io/CourseSurvey/",
            "https://teachinglabhq.shinyapps.io/SessionSurvey/",
            "https://teachinglabhq.shinyapps.io/DiagnosticComplete/",
-           "https://teachinglabhq.shinyapps.io/RaceandCulture2/",
            "https://teachinglabhq.shinyapps.io/PersonalFacilitator/")
 )
 
@@ -44,7 +42,7 @@ galleries %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = 3, 
+    width = 2, 
     spacing = 3
   )
 ```
@@ -73,7 +71,7 @@ galleries2 %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = 4
+    width = 2
   )
 ```
 
@@ -100,7 +98,7 @@ galleries3 %>%
     image = image_url,
     footer = paste("updated on", date),
     layout = "label-below", 
-    width = 4
+    width = 2
   )
 ```
 
