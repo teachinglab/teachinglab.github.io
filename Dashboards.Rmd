@@ -7,6 +7,8 @@ output:
 
 # Active Dashboards (SY21-22)
 
+<br>
+
 All dashboards will require an @teachinglab.org email login to verify that access to the correct content is granted.
 
 <br>
@@ -28,7 +30,7 @@ galleries <- tibble::tibble(
                 "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png",
                 "https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png"),
-  link = c("https://teachinglabhq.shinyapps.io/CourseSurvey/",
+  link = c(paste0("#\" ", "onclick='window.open(\"https://teachinglabhq.shinyapps.io/CourseSurvey/\");return false;'"),
            "https://teachinglabhq.shinyapps.io/SessionSurvey/",
            "https://teachinglabhq.shinyapps.io/DiagnosticComplete/",
            "https://teachinglabhq.shinyapps.io/PersonalFacilitator/")
