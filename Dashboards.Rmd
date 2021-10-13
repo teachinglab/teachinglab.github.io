@@ -30,10 +30,10 @@ galleries <- tibble::tibble(
                 "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png",
                 "https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png"),
-  link = c(paste0("#\" ", "onclick='window.open(\"https://teachinglabhq.shinyapps.io/CourseSurvey/\");return false;'"),
-           "https://teachinglabhq.shinyapps.io/SessionSurvey/",
-           "https://teachinglabhq.shinyapps.io/DiagnosticComplete/",
-           "https://teachinglabhq.shinyapps.io/PersonalFacilitator/")
+  link = c("https://teachinglabhq.shinyapps.io/CourseSurvey/ target=\"_blank\"",
+           "https://teachinglabhq.shinyapps.io/SessionSurvey/ target=\"_blank\"",
+           "https://teachinglabhq.shinyapps.io/DiagnosticComplete/ target=\"_blank\"",
+           "https://teachinglabhq.shinyapps.io/PersonalFacilitator/ target=\"_blank\"")
 )
 
 galleries %>% 
