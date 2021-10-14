@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a {
+  target: "_blank";
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;

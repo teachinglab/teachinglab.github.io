@@ -5,6 +5,8 @@ output:
     css: css/theme.css
 ---
 
+<base target="_blank"/>
+
 # 2021-2022 Survey Links
 
 
