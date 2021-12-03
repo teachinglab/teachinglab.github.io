@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = "stylesheet" href = "css/student_styles.css">
+    <link rel = "icon" type = "image/x-icon" href = "favicon.ico">
+    <script type = "text/javascript" src="www/jquery-3.1.0.min.js"></script>
+    <script type = "text/javascript" src = "www/student_upload.js"></script>
+    <title>Student Work Upload</title>
+  </head>
+<div class="wrapper">
+  <header>
+    <h1>Student Work Upload</h1>
+    <span></span>
+  </header>
+  <form id="mainForm" novalidate>
+    <div class="sections">
+      
+      <section class="active">
+          <div class = "teacherName">
+            <label for="teacherName">Please enter your name</label><br>
+            <input type="text" placeholder="Name*" id="title" required>
+          </div>
+          <div class = "emailAddress">
+            <label for="emailAddress">Your e-mail address</label><br>
+            <input type="email" placeholder="Email*" id="email" size = "64" maxLength = "64" title = "Please provide a valid email for upload" required>
+          </div>
+          
+          
+          <div class="images">
+            <div class="pic">
+              add file
+            </div>
+          </div>
+        
+        
+      </section>
+    
+    </div>
+    
+    <footer>
+      <ul>
+        <li><span id="reset">reset</span></li>
+        <li><span id="send">send</span></li>
+      </ul>
+    </footer> 
+  </form>
+  
+</div>
+<div class="notification"></div>
+<footer>
+  <a href="https://teachinglab.org" target="_blank">© Teaching Lab, 2021</a>
+</footer>
+</html>
