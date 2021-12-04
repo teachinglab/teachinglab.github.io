@@ -86,7 +86,7 @@ navbar:
       #     href: "Encrypted/2021 Report_matched_All Partners-protected.html"
 output:
   distill::distill_article:
-    css: scss/bootstrap/_thumbnails.scss
+    # css: ['scss/bootstrap/_variables.scss', 'scss/bootstrap/_thumbnails.scss']
     includes:
       after_body: footer.html
 theme: css/styles.css

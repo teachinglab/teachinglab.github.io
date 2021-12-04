@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Teaching Lab Data Hub: Reports Hub</title>
@@ -1860,7 +1861,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2309,47 +2313,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <style type="text/css">
-  //
-  // Thumbnails
-  // --------------------------------------------------
-
-
-  // Mixin and adjust the regular image class
-  .thumbnail {
-    display: block;
-    padding: $thumbnail-padding;
-    margin-bottom: $line-height-computed;
-    line-height: $line-height-base;
-    background-color: $thumbnail-bg;
-    border: 1px solid $thumbnail-border;
-    border-radius: $thumbnail-border-radius;
-    @include transition(border .2s ease-in-out);
-
-    > img,
-    a > img {
-      @include img-responsive;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
-
-    // Image captions
-    .caption {
-      padding: $thumbnail-caption-padding;
-      color: $thumbnail-caption-color;
-    }
-  }
-
-  // Add a hover state for linked versions only
-  a.thumbnail:hover,
-  a.thumbnail:focus,
-  a.thumbnail.active {
-    border-color: $link-color;
-  }
-
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
   <link rel="stylesheet" href="css/strapless.css" type="text/css"/>
@@ -2584,7 +2547,7 @@ Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdW
 </div>
 </div>
 </div>
-<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Louisiana State</div>
+<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Lafayette Parish</div>
 </div>
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .4rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <div style="position: relative; border-radius: 0 0 0 0 ;">
@@ -2601,7 +2564,7 @@ Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdW
 </div>
 </div>
 </div>
-<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Lafayette Parish</div>
+<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Legacy Early College</div>
 </div>
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .4rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <div style="position: relative; border-radius: 0 0 0 0 ;">
@@ -2618,7 +2581,7 @@ Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdW
 </div>
 </div>
 </div>
-<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Legacy Early College</div>
+<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:#808080FF; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">Personalized Report for: Louisiana State</div>
 </div>
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah bs4cards-NA" style="padding: .4rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <div style="position: relative; border-radius: 0 0 0 0 ;">
