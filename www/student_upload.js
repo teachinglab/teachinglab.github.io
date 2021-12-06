@@ -1,3 +1,5 @@
+
+
 // File upload function
 (function ($) {
   $.fn.uploader = function (options) {
@@ -182,13 +184,21 @@
     
     
     function submit() {  
-      var button = $('#file-uploader__submit-button')
+      var button = $('#send')
       
       button.on('click', function () {
         if(!way) {
           var title = $('#title')
           var email  = $('#email')
-          var attachments = $('.file-chooser__input')
+          var attachments = $(".file-chooser__input")
+          var files = document.querySelector(".file-chooser__input").files;
+          var currentdate = new Date(); 
+          var datetime = currentdate.getDate() + "/" + 
+                         (currentdate.getMonth()+1)  + "/" +
+                         currentdate.getFullYear() + "_"  +
+                         currentdate.getHours() + ":" +
+                         currentdate.getMinutes() + ":" +
+                         currentdate.getSeconds();
           var attachmentsArr = []
           
           for(var i = 0; i < attachments.length; i++) {
@@ -198,13 +208,16 @@
           var newStock = {
             title: title.val(),
             email: email.val(),
-            attachments: attachmentsArr,
+            attachments: files,
+            datetime: datetime,
             type: 1
           }
           
           console.log(newStock)
           
           saveToQueue(newStock)
+          // Figure out how to make this work
+          cloudConnect(newStock)
         }
       })
     }
@@ -254,15 +267,15 @@
             if(!stock.title || !stock.message) {
               check = 1
             }
+        } else if(!stock.title || !stock.email || stock.attachments == 0) {
+            check = 3
         } else if (email.includes(emails[0]) === false && email.includes(emails[1]) === false && email.includes(emails[2]) === false) {
-          check = "x"
-        } else {
-          if(!stock.title || !stock.email || stock.attachments == 0) {
-            check = 1
-          }
+          check = 2
         }
         
-        if(check) {
+        if (check === 2) {
+        notification.append('<div class="error btn"><p><strong>Error:</strong> Please enter a valid email.</p><span><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></div>')
+      } else if(check === 3) {
           notification.append('<div class="error btn"><p><strong>Error:</strong> Please fill in the form.</p><span><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></div>')
         } else {
           notification.append('<div class="success btn"><p><strong>Success:</strong> '+ 'file' +' is submitted.</p><span><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></div>')
@@ -271,10 +284,6 @@
         }
       } else {
         notification.append('<div class="error btn"><p><strong>Error:</strong> Please waiting a queue.</p><span><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></div>')
-      }
-      
-      if (check === "x") {
-        notification.append('<div class="error btn"><p><strong>Error:</strong> Please enter a valid email.</p><span><i class=\"fa fa-times\" aria-hidden=\"true\"></i></span></div>')
       }
     }
     

@@ -4,7 +4,9 @@
     <link rel = "stylesheet" href = "css/student_styles.css">
     <link rel = "icon" type = "image/x-icon" href = "favicon.ico">
     <script type = "text/javascript" src="www/jquery-3.1.0.min.js"></script>
+    <script type = "text/javascript" src = "www/file_save.js"></script>
     <script type = "text/javascript" src = "www/student_upload.js"></script>
+    <script type = "text/javascript" src = "www/mf-conditional-fields.js"></script>
     <title>Teaching Lab Data Upload</title>
   </head>
 <div class="wrapper">
@@ -15,31 +17,33 @@
   <form action="" enctype="multipart/form-data" class="file-uploader" novalidate>
     <div class="sections">
       
-      <section class="active">
-          <div class = "teacherName">
-            <label for="teacherName">Please enter your name</label><br>
-            <input type="text" placeholder="Name*" id="title" required>
-          </div>
-          <div class = "emailAddress">
-            <label for="emailAddress">Your e-mail address</label><br>
-            <input type="email" placeholder="Email*" id="email" size = "64" maxLength = "64" title = "Please provide a valid email for upload" required>
-          </div>
-          <div class = "file-upload-area">
-            <div class="file-uploader__message-area">
-              <p>Select a file to upload</p>
-            </div>
-            <div class="file-chooser">
-              <input class="file-chooser__input" type="file" multiple>
-            </div>
-          </div>
-      </section>
+ <!--     <section class="active">-->
+      <!--    <div class = "teacherName">-->
+        <!--    <label for="teacherName">Please enter your name</label><br>-->
+         <!--   <input type="text" placeholder="Name*" id="title" required>-->
+          <!--</div>-->
+         <!-- <div class = "emailAddress">-->
+            <!--<label for="emailAddress">Your e-mail address</label><br>-->
+            <!--<input type="email" placeholder="Email*" id="email" size = "64" maxLength = "64" title = "Please provide a valid email for upload" required>-->
+          <!--</div>-->
+          <!--<div class = "file-upload-area">-->
+          <!--  <div class="file-uploader__message-area">-->
+          <!--    <p>Select a file to upload</p>-->
+              <center><script type = "text/javascript" src="www/survey_monkey.js"></script></center>
+         <!--   </div>-->
+         <!--   <div class="file-chooser">-->
+          <!--    <input class="file-chooser__input" type="file" multiple>-->
+          <!--  </div>-->
+        <!--  </div>-->
+     <!-- </section>-->
     
     </div>
     
     <footer>
       <ul>
         <li><span id="reset">reset</span></li>
-        <li><input id="send" class="file-uploader__submit-button" type="submit" value="Submit"></li>
+        <li></li>
+        <!--<li><input id="send" class="file-uploader__submit-button" type="button" value="Submit"></li>-->
       </ul>
     </footer> 
   </form>
