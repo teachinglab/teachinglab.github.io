@@ -5,6 +5,76 @@ output:
     css: "css/strapless.css"
 ---
 
+# SY21-22 Mid-Year Reports
+
+<br>
+
+```{r echo = F, layout = "l-page"}
+library(bs4cards)
+report_galleries <- tibble::tibble(
+  location = c(
+    "All Partners",
+    "Brownington Central School, VT",
+    "Building 21 - Allentown, PA",
+    "Building 21 - Philadelphia, PA",
+    "Calcasieu Parish, LA",
+    "District 11",
+    "District 11 Math",
+    "District 11 ELA",
+    "San Diego 6-8",
+    "San Diego K-5"
+  ),
+  long_name = c(
+    "All Partners Report",
+    "District 11 Report",
+    "District 11 Math Report",
+    "District 11 ELA Report",
+    "San Diego 6-8 Report",
+    "San Diego K-5 Report",
+    "Brownington Central School, VT Report",
+    "Building 21 - Allentown, PA Report",
+    "Building 21 - Philadelphia, PA Report",
+    "Calcasieu Parish, LA Report"
+  ),
+  image_url = c(
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/Reports.png")
+  ),
+  link = c(
+    "2022Reports/2021-2022-tl-report_All Partners.html", 
+    "2022Reports/2021-2022-tl-report_Brownington Central School, VT.html",
+    "2022Reports/2021-2022-tl-report_Building 21 - Allentown, PA.html", 
+    "2022Reports/2021-2022-tl-report_Building 21 - Philadelphia, PA.html", 
+    "2022Reports/2021-2022-tl-report_Calcasieu Parish, LA.html", 
+    "2022Reports/2021-2022-tl-report_District 11 ELA.html", 
+    "2022Reports/2021-2022-tl-report_District 11 Math.html", 
+    "2022Reports/2021-2022-tl-report_District 11.html", 
+    "2022Reports/2021-2022-tl-report_San Diego 6-8.html", 
+    "2022Reports/2021-2022-tl-report_San Diego K-5.html"
+  )
+)
+
+report_galleries %>%
+  cards(
+    title = "SY21-22",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "inset-bottom",
+    spacing = 3
+  )
+```
+
+
 # SY20-21 Reports
 
 <br>
@@ -14,7 +84,6 @@ output:
 <br>
 
 ```{r echo = F, layout = "l-page"}
-library(bs4cards)
 report_galleries <- tibble::tibble(
   location = c(
     "All Partners Report Unmatched",
