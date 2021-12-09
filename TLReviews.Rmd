@@ -7,7 +7,7 @@ title: "Teaching Lab Reviews"
 <br>
 <br>
 
-```{r echo = F, warning = F, message = F, layout = "l-page"}
+```{r echo = F, warning = F, message = F, layout = "l-page", eval = F}
 library(tidyverse)
 library(ggiraph)
 library(here)
