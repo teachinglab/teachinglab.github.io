@@ -7,9 +7,9 @@ title: "Teaching Lab Reviews"
 <br>
 <br>
 
-```{r echo = F, warning = F, message = F, layout = "l-page", eval = F}
+```{r echo = F, warning = F, message = F, layout = "l-page"}
 library(tidyverse)
-library(ggiraph)
+# library(ggiraph)
 library(here)
 sorted_teaching_df <- readr::read_rds(here::here("Data/tl_reviews.rds"))
 theme_set(theme_minimal())
@@ -55,39 +55,41 @@ graph <- g +
   stat_summary(fun = mean, geom = "point", size = 5) +
   geom_hline(aes(yintercept = mean_score), color = "gray70")
 
-final_graph <- graph +
-  geom_segment(
-    aes(x = fct_rev(pro_grouping), xend = fct_rev(pro_grouping),
-        y = mean_score, yend = grouped_means),
-    show.legend = F,
-    size = 0.8
-  ) +
-  ggiraph::geom_jitter_interactive(size = 3, aes(alpha = 0.8,
-                            tooltip = paste(`District, Parish, Or Network`, 
-                                            `Professional Training Session`,
-                                            paste0("\"",
-                                            `Overall, what went well in this professional learning?`,
-                                            "\""
-                                            ),
-                                            sep = "\n")), 
-              height = 0.15, width = 0.1) + # Height changes width here since coord_flip already happened
-  # scale_alpha_manual(values = c(0.6, 0.2)) + # Manually change the alpha since they need to be set for different n
-  stat_summary(fun = mean, geom = "point", size = 5) + # Add mean summary point
-  geom_hline(aes(yintercept = mean_score), color = "gray70")
+graph
 
-tooltip_css <- "font-family:'Calibri';color:white;"
-html_plot <- girafe(ggobj = final_graph, fonts = list(sans = "Calibri"),
-       options = list(
-         opts_tooltip(offx = 15, offy = 15, use_cursor_pos = T, use_fill = T, css = tooltip_css),
-         opts_sizing(rescale = T, width = 1),
-         opts_hover_inv(css = "opacity:0.5;"),
-         opts_toolbar(saveaspng = F)
-         ),
-       width_svg = 13, height_svg = 12
-       ) %>%# Real size
-  girafe_options(.,
-                 htmlwidgets::sizingPolicy(padding = "5px",
-                                           defaultWidth = "40%", defaultHeight = "40%"))
+# final_graph <- graph +
+#   geom_segment(
+#     aes(x = fct_rev(pro_grouping), xend = fct_rev(pro_grouping),
+#         y = mean_score, yend = grouped_means),
+#     show.legend = F,
+#     size = 0.8
+#   ) +
+#   ggiraph::geom_jitter_interactive(size = 3, aes(alpha = 0.8,
+#                             tooltip = paste(`District, Parish, Or Network`, 
+#                                             `Professional Training Session`,
+#                                             paste0("\"",
+#                                             `Overall, what went well in this professional learning?`,
+#                                             "\""
+#                                             ),
+#                                             sep = "\n")), 
+#               height = 0.15, width = 0.1) + # Height changes width here since coord_flip already happened
+#   # scale_alpha_manual(values = c(0.6, 0.2)) + # Manually change the alpha since they need to be set for different n
+#   stat_summary(fun = mean, geom = "point", size = 5) + # Add mean summary point
+#   geom_hline(aes(yintercept = mean_score), color = "gray70")
 
-html_plot
+# tooltip_css <- "font-family:'Calibri';color:white;"
+# html_plot <- girafe(ggobj = final_graph, fonts = list(sans = "Calibri"),
+#        options = list(
+#          opts_tooltip(offx = 15, offy = 15, use_cursor_pos = T, use_fill = T, css = tooltip_css),
+#          opts_sizing(rescale = T, width = 1),
+#          opts_hover_inv(css = "opacity:0.5;"),
+#          opts_toolbar(saveaspng = F)
+#          ),
+#        width_svg = 13, height_svg = 12
+#        ) %>%# Real size
+#   girafe_options(.,
+#                  htmlwidgets::sizingPolicy(padding = "5px",
+#                                            defaultWidth = "40%", defaultHeight = "40%"))
+# 
+# html_plot
 ```
