@@ -51,7 +51,6 @@ galleries %>%
   )
 ```
 
-
 <br>
 
 # Inactive Dashboards (Pre SY20-21)
@@ -105,4 +104,3 @@ galleries3 %>%
     width = 2
   )
 ```
-
