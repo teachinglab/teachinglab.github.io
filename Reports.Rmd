@@ -9,7 +9,7 @@ output:
 
 <br>
 
-<center> Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. </center>
+<center> Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. Different tabs within the spreadsheet contain the passwords for each year. </center>
 
 <br>
 
