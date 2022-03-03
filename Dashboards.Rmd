@@ -20,21 +20,21 @@ library(bs4cards)
 # bs4cards::use_strapless(here::here("css"))
 galleries <- tibble::tibble(
   long_name = c("Facilitator End of Session Survey Dashboard",
-                "End of Course Surveys 2021-2022", 
                 "End of Session Surveys 2021-2022",
+                "End of Course Surveys 2021-2022", 
                 "Diagnostic Responses per Partner"),
   blurb = c("A dashboard for TL facilitators, that provides just their indiviudal data based on email login.",
+            "A dashboard to explore responses given at the end of each session for full time TL employees.", 
             "A dashboard to explore responses to the surveys given at the end of courses.", 
-            "A dashboard to explore responses given at the end of each survey for full time TL employees.", 
             "A simple table and time series graph for live diagnostic survey responses per partner."),
   date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
   image_url = c("https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png",
-                "https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
+                "https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
                 "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png"),
   link = c("https://teachinglabhq.shinyapps.io/PersonalFacilitator/",
-           "https://teachinglabhq.shinyapps.io/CourseSurvey/",
            "https://teachinglabhq.shinyapps.io/SessionSurvey/",
+           "https://teachinglabhq.shinyapps.io/CourseSurvey/",
            "https://teachinglabhq.shinyapps.io/DiagnosticComplete/")
 )
 
