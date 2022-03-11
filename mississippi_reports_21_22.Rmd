@@ -1,0 +1,41 @@
+---
+title: "Spring Mississippi Reports"
+output: 
+  distill::distill_article:
+    css: "css/strapless.css"
+---
+
+# Mississippi Reports
+
+<br>
+
+<center> Passwords for Reports are [here](https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing) which will only be viewable if you are a Teaching Lab employee. </center>
+
+<br>
+
+```{r echo = F, layout = "l-page"}
+report_galleries <- tibble::tibble(
+  location = c("Mid-Year Reports 2021-2022",
+               "Mississippi Teacher-Level Reports",
+               "End of Year Reports 2020-2021"),
+  long_name = location,
+  image_url = c(here::here("Images/Reports/Midyear/2021-2022-tl-report_All Partners.png"),
+                here::here("Images/Reports/Mississippi_reports.png"),
+                here::here("Images/Reports/Reports.png")),
+  link = c("mid_year_reports_21_22.html",
+           "mississippi_reports_21_22.html",
+           "end_of_year_20_21.html")
+)
+
+report_galleries %>%
+  cards(
+    title = "Reports",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "inset-bottom",
+    spacing = 3
+  )
+```
+

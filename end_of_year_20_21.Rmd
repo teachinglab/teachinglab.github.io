@@ -1,0 +1,129 @@
+---
+title: "End of Year 2020-2021 Reports"
+output: 
+  distill::distill_article:
+    css: "css/strapless.css"
+---
+
+# SY20-21 Reports
+
+<br>
+
+<center> Passwords for Reports are [here](https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing) which will only be viewable if you are a Teaching Lab employee. </center>
+
+<br>
+
+```{r echo = F, layout = "l-page"}
+report_galleries <- tibble::tibble(
+  location = c(
+    "All Partners Report Unmatched",
+    "Brownington",
+    "Building 21",
+    "Delaware Department of Education",
+    "District 11",
+    "East Baton Rouge",
+    "Evangeline Parish",
+    "Freire Charter",
+    "Kankakee",
+    "Lafayette Parish",
+    "Legacy Early College",
+    "Louisiana State",
+    "Mississippi Department of Education",
+    "NYC District 11 District-wide",
+    "NYC District 11 - IS 355",
+    "NYC District 11 - PS 21",
+    "NYC District 11 - PS 87",
+    "NYC District 11 - PS 89",
+    "NYC District 11 - PS 96",
+    "NYC District 11 - PS 103",
+    "NYC District 11 - PS 189",
+    "NYC District 11 - PS 498",
+    "Pointe Coupee",
+    "Tangipahoa Parish",
+    "All Partners Report Matched"
+  ),
+  long_name = c(
+    "All Partners SY21-22 Report Unmatched",
+    "Personalized Report for: Brownington",
+    "Personalized Report for: Building 21", "Personalized Report for: Delaware Department of Education",
+    "Personalized Report for: District 11",
+    "Personalized Report for: East Baton Rouge", "Personalized Report for: Evangeline Parish",
+    "Personalized Report for: Freire Charter", "Personalized Report for: Kankakee",
+    "Personalized Report for: Lafayette Parish",
+    "Personalized Report for: Legacy Early College", "Personalized Report for: Louisiana State",
+    "Personalized Report for: Mississippi Department of Education",
+    "Personalized Report for: NYC District 11 District-wide", "Personalized Report for: NYC District 11 - IS 355",
+    "Personalized Report for: NYC District 11 - PS 21", "Personalized Report for: NYC District 11 - PS 87",
+    "Personalized Report for: NYC District 11 - PS 89", "Personalized Report for: NYC District 11 - PS 96",
+    "Personalized Report for: NYC District 11 - PS 103", "Personalized Report for: NYC District 11 - PS 189",
+    "Personalized Report for: NYC District 11 - PS 498", "Personalized Report for: Pointe Coupee",
+    "Personalized Report for: Tangipahoa Parish",
+    "All Partners SY21-22 Report Matched Sample"
+  ),
+  image_url = c(
+    here::here("Images/Reports/Reports.png"),
+    here::here("Images/Reports/ReportsMatched.png"),
+    here::here("Images/Reports/BrowningtonReport.png"),
+    here::here("Images/Reports/Building21Report.png"),
+    here::here("Images/Reports/DelawareDoEReport.png"),
+    here::here("Images/Reports/NYCD11D-wide.png"),
+    here::here("Images/Reports/EastBatonReport.png"),
+    here::here("Images/Reports/EvangelineReport.png"),
+    here::here("Images/Reports/FreireReport.png"),
+    here::here("Images/Reports/KankakeeReport.png"),
+    here::here("Images/Reports/LafayetteReport.png"),
+    here::here("Images/Reports/LegacyReport.png"),
+    here::here("Images/Reports/LouisianaStateReport.png"),
+    here::here("Images/Reports/MississippiDOEReport.png"),
+    here::here("Images/Reports/NYCD11D-wide.png"),
+    here::here("Images/Reports/NYCD11IS355.png"),
+    here::here("Images/Reports/NYCD11PS21.png"),
+    here::here("Images/Reports/NYCD11PS87.png"),
+    here::here("Images/Reports/NYCD11PS89.png"),
+    here::here("Images/Reports/NYCD11PS96.png"),
+    here::here("Images/Reports/NYCD11PS103.png"),
+    here::here("Images/Reports/NYCD11PS189.png"),
+    here::here("Images/Reports/NYCD11PS498.png"),
+    here::here("Images/Reports/PointeCoupeeReport.png"),
+    here::here("Images/Reports/TangipahoaReport.png")
+  ),
+  link = c(
+    "Encrypted/2021 Report_unmatched_All Partners-protected.html",
+    "Encrypted/2021 Report_unmatched_Brownington Central School, VT-protected.html",
+    "Encrypted/2021 Report_unmatched_Building 21-protected.html",
+    "Encrypted/2021 Report_unmatched_Delaware Department of Education, DE-protected.html",
+    "Encrypted/FinalReportDistrict11.html",
+    "Encrypted/2021 Report_unmatched_East Baton Rouge Parish, LA-protected.html",
+    "Encrypted/2021 Report_unmatched_Evangeline Parish, LA-protected.html",
+    "Encrypted/DE-protected.html",
+    "Encrypted/2021 Report_unmatched_Kankakee School District, IL-protected.html",
+    "Encrypted/2021 Report_unmatched_Lafayette Parish, LA-protected.html",
+    "Encrypted/2021 Report_unmatched_Legacy Early College, SC-protected.html",
+    "Encrypted/2021 Report_unmatched_Louisiana State Content Leader Training, LA-protected.html",
+    "Encrypted/2021 Report_unmatched_Mississippi Department of Education, MS-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - District-wide, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - IS 355, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 21, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 87, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 89, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 96, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 103, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 189, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_NYC District 11 - PS 498, NY-protected.html",
+    "Encrypted/2021 Report_unmatched_Pointe Coupee Parish, LA-protected.html",
+    "Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html",
+    "Encrypted/2021 Report_matched_All Partners-protected.html"
+  )
+)
+
+report_galleries %>%
+  cards(
+    title = "SY20-21",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "inset-bottom",
+    spacing = 3
+  )
+```
