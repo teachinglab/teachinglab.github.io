@@ -9,6 +9,10 @@ a {
   color: #04abeb;
 }
 
+d-article a{
+  border-bottom: 1px solid #04abeb;
+}
+
 .distill-site-nav {
   color: #C0C0C0; 
   background-color: #FF1493;
