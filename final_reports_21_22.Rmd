@@ -12,7 +12,7 @@ report_galleries <- tibble::tibble(
   location = c("NYC District 9 - District-wide, NY"),
   long_name = location,
   image_url = c(here::here("Images/Reports/Final/march_report_nyc_district_9_-_district-wide,_ny.png")),
-  link = c("2022Reports/Final/march_report_nyc_district_9_-_district-wide,_ny.html")
+  link = c("2022Reports/Final/_report_nyc_district_9___district_wide,_ny.html")
 )
 
 report_galleries %>%
