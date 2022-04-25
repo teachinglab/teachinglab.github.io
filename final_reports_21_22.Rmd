@@ -1,0 +1,29 @@
+---
+title: "Reports Hub"
+output: 
+  distill::distill_article:
+    css: "css/strapless.css"
+---
+
+# Reports Indices
+
+```{r echo = F, layout = "l-page"}
+report_galleries <- tibble::tibble(
+  location = c("NYC District 9 - District-wide, NY"),
+  long_name = location,
+  image_url = c(here::here("Images/Reports/Final/march_report_nyc_district_9_-_district-wide,_ny.png")),
+  link = c("2022Reports/Final/march_report_nyc_district_9_-_district-wide,_ny.html")
+)
+
+report_galleries %>%
+  cards(
+    title = "Reports",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "inset-bottom",
+    spacing = 3
+  )
+```
+
