@@ -9,10 +9,12 @@ save_screenshot_report <- function(files_input_loc, files_output_loc) {
   
   purrr::walk2(all_files, all_files_png, ~ webshot(url = .x, 
                                                    file = paste0(here::here(files_output_loc), .y),
-                                                   cliprect = "viewport"))
+                                                   cliprect = "viewport",
+                                                   vwidth = 1590,
+                                                   vheight = 1632))
 }
 
 ### This workflow needs fixing ###
 
-save_screenshot_report(files_input_loc = here::here("fake_end_of_year"),
-                       files_output_loc = "Images/Reports/Final/")
+save_screenshot_report(files_input_loc = "~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/Mississippi/Reports/AprilReports",
+                       files_output_loc = "Images/Reports/Mississippi/April")

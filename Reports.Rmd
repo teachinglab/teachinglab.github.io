@@ -15,15 +15,15 @@ report_galleries <- tibble::tibble(
                "Mississippi March Teacher-Level Reports",
                "End of Year Reports 2020-2021"),
   long_name = location,
-  image_url = c(here::here("Images/Reports/Final/2021-2022-final-tl-report.png"),
+  image_url = c(here::here("Images/Reports/2021-2022/2021-2022-final-tl-report.png"),
                 here::here("Images/Reports/Midyear/2021-2022-tl-report_All Partners.png"),
-                here::here("Images/Reports/Mississippi_reports.png"),
-                here::here("Images/Reports/Mississippi_reports.png"),
-                here::here("Images/Reports/Reports.png")),
-  link = c("final_reports_21_22.html",
+                here::here("Images/Reports/Mississippi/April/Mississippi_reports_april.png"),
+                here::here("Images/Reports/Mississippi/March/Mississippi_reports_march.png"),
+                here::here("Images/Reports/2020-2021/mid_year_report.png")),
+  link = c("end_of_year_21_22.html",
            "mid_year_reports_21_22.html",
            "mississippi_reports_april_21_22.html",
-           "mississippi_reports_21_22.html",
+           "mississippi_reports_march_21_22.html",
            "end_of_year_20_21.html")
 )
 
