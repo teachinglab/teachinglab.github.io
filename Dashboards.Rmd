@@ -70,7 +70,7 @@ galleries3 <- tibble::tibble(
   blurb = c(paste0("A visualization of ", year_diff, " years of reviews of Teaching Lab courses by type of content."),
             ""),
   date = c(Sys.Date(), Sys.Date()),
-  image_url = c(here::here("Images/Miscellaneous/Reviews.png"),
+  image_url = c(here::here("Images/Visualizations/Reviews.png"),
                 here::here("Images/Visualizations/SpendingperKid.png")),
   link = c("https://teachinglab.github.io/TLReviews.html",
            "https://teachinglab.github.io/USStateSpendingperKid.html")
