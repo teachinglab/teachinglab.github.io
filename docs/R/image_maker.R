@@ -16,5 +16,5 @@ save_screenshot_report <- function(files_input_loc, files_output_loc) {
 
 ### This workflow needs fixing ###
 
-save_screenshot_report(files_input_loc = "~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/Mississippi/Reports/AprilReports",
-                       files_output_loc = "Images/Reports/Mississippi/April")
+save_screenshot_report(files_input_loc = "~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/ANAs/Reports",
+                       files_output_loc = "Images/Reports/ANA_21_22/")
