@@ -26,8 +26,8 @@ report_galleries <- tibble::tibble(
     "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_306_ny.png"
   ),
   link = c(
-    "reports/ana_reports/may_report_nyc_district_27__ps_104_ny.html",
-    "reports/ana_reports/may_report_nyc_district_27__ps_306_ny.html"
+    "Reports/ana_reports/may_report_nyc_district_27__ps_104_ny.html",
+    "Reports/ana_reports/may_report_nyc_district_27__ps_306_ny.html"
   )
 )
 
