@@ -22,7 +22,7 @@ galleries <- tibble::tibble(
   long_name = c("Facilitator End of Session Survey Dashboard",
                 "End of Session Surveys 2021-2022",
                 "End of Course Surveys 2021-2022", 
-                "Diagnostic Responses per Partner",
+                "Survey Responses per Partner",
                 "Coaching Participant Feedback 2022"),
   blurb = c("A dashboard for TL facilitators, that provides just their indiviudal data based on email login.",
             "A dashboard to explore responses given at the end of each session for full time TL employees.", 
