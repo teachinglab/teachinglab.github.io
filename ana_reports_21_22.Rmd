@@ -17,20 +17,26 @@ output:
 library(bs4cards)
 report_galleries <- tibble::tibble(
   location = c(
+    "NYC District 27 - All Sites",
     "NYC District 27 - PS 104, NY",
     "NYC District 27 - PS 306, NY",
-    "NYC District 27 - MS 210, NY"
+    "NYC District 27 - MS 210, NY",
+    "NYC District 27 - PS/MS 183, NY"
   ),
   long_name = location,
   image_url = c(
+    "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_104_ny.png",
+    "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_104_ny.png",
     "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_104_ny.png",
     "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_306_ny.png",
     "Images/Reports/ANA_21_22/may_report_nyc_district_27__ps_306_ny.png"
   ),
   link = c(
+    "Reports/ana_reports/may_report_all_district_27_sites.html",
     "Reports/ana_reports/may_report_nyc_district_27__ps_104_ny.html",
     "Reports/ana_reports/may_report_nyc_district_27__ps_306_ny.html",
-    "Reports/ana_reports/may_report_nyc_district_27__ms_210_ny.html"
+    "Reports/ana_reports/may_report_nyc_district_27__ms_210_ny.html",
+    "Reports/ana_reports/ms_183_ny.html"
   )
 )
 
