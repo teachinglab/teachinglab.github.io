@@ -20,10 +20,22 @@ Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdW
 ```{r echo = F, layout = "l-page"}
 library(bs4cards)
 report_galleries <- tibble::tibble(
-  location = c("NYC District 9 - District-wide, NY"),
+  location = c("All Sites",
+               "Amistad Dual Language, NY",
+               "Delaware Department of Education, DE",
+               "NYC District 9 - District-wide, NY",
+               "San Diego Unified School District, CA"),
   long_name = location,
-  image_url = c(here::here("Images/Reports/2021-2022/march_report_nyc_district_9_-_district-wide,_ny.png")),
-  link = c("Reports/2022Reports/Final/final_report_nyc_district_9___district_wide__ny.html")
+  image_url = c(here::here("Images/Reports/2021-2022/final_report_all_sites.png"),
+                here::here("Images/Reports/2021-2022/final_report_amistad_dual_language__ny.png"),
+                here::here("Images/Reports/2021-2022/final_report_delaware_department_of_education__de.png"),
+                here::here("Images/Reports/2021-2022/final_report_nyc_district_9___district_wide__ny.png"),
+                here::here("Images/Reports/2021-2022/final_report_san_diego_unified_school_district__ca.png")),
+  link = c("Reports/2022Reports/Final/final_report_all_sites.html",
+           "Reports/2022Reports/Final/final_report_amistad_dual_language__ny.html",
+           "Reports/2022Reports/Final/final_report_delaware_department_of_education__de.html",
+           "Reports/2022Reports/Final/final_report_nyc_district_9___district_wide__ny.html",
+           "Reports/2022Reports/Final/final_report_san_diego_unified_school_district__ca.html")
 )
 
 report_galleries %>%
