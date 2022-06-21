@@ -17,4 +17,4 @@ save_screenshot_report <- function(files_input_loc, files_output_loc) {
 ### This workflow needs fixing ###
 #"~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/ANAs/Reports"
 save_screenshot_report(files_input_loc = here::here("Reports/2022Reports/Final"),
-                       files_output_loc = "Images/Reports/2021-2022/")
+                       files_output_loc = here::here("Images/Reports/2021-2022/"))
