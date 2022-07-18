@@ -1,13 +1,20 @@
 library(tidyverse)
 library(webshot)
 
-save_screenshot_report <- function(files_input_loc, files_output_loc) {
+save_screenshot_report <- function(files_input_loc, files_output_loc, filetype = "html") {
+  ### Get all files in folder ###
   all_files <- list.files(files_input_loc, full.names = T)
   
-  all_files_png <- list.files(files_input_loc) |>
-    stringr::str_replace_all("\\.html", "\\.png")
+  ### Rename all files as png from pdf or html ###
+  if (filetype == "html") {
+    all_files_type <- list.files(files_input_loc) |>
+      stringr::str_replace_all("\\.html", "\\.png")
+  } else  if (filetype == "pdf") {
+    all_files_type <- list.files(files_input_loc) |>
+      stringr::str_replace_all("\\.pdf", "\\.png")
+  }
   
-  purrr::walk2(all_files, all_files_png, ~ webshot(url = .x, 
+  purrr::walk2(all_files, all_files_type, ~ webshot(url = .x, 
                                                    file = paste0(here::here(files_output_loc), .y),
                                                    cliprect = "viewport",
                                                    vwidth = 1590,
@@ -16,5 +23,7 @@ save_screenshot_report <- function(files_input_loc, files_output_loc) {
 
 ### This workflow needs fixing ###
 #"~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/ANAs/Reports"
-save_screenshot_report(files_input_loc = here::here("Reports/2022Reports/Final"),
-                       files_output_loc = here::here("Images/Reports/2021-2022/"))
+save_screenshot_report(files_input_loc = here::here("Reports/contact_leads_21_22"),
+                       files_output_loc = here::here("Images/Reports/ContactLeads2122/"),
+                       filetype = "pdf")
+

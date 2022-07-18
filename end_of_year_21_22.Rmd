@@ -1,5 +1,5 @@
 ---
-title: "Reports Hub"
+title: "End of Year Reports"
 output: 
   distill::distill_article:
     css: "css/strapless.css"

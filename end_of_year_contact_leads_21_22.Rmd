@@ -1,0 +1,86 @@
+---
+title: "Reports Hub"
+output: 
+  distill::distill_article:
+    css: "css/strapless.css"
+---
+
+# SY21-22 End of Year Contact Lead Report
+
+<br>
+
+<center>
+
+Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. Different tabs within the spreadsheet contain the passwords for each year.
+
+</center>
+
+<br>
+
+```{r echo = F, layout = "l-page"}
+library(bs4cards)
+report_galleries <- tibble::tibble(
+  location = c("End of Year Contact Lead Aggregate Report",
+ "Amistad EOY contact lead report",
+ "Brownington EOY contact lead report",
+ "CityYear EOY contact lead report",
+ "D11_1 EOY contact lead report",
+ "D11_2 EOY contact lead report",
+ "D11_3 EOY contact lead report",
+ "Kankakee EOY contact lead report",
+ "Lafayette EOY contact lead report",
+ "McNairy EOY contact lead report",
+ "New Mexico EOY contact lead report",
+ "North Andover_1 EOY contact lead report",
+ "North Andover_2 EOY contact lead report",
+ "San Diego EOY contact lead report",
+ "West Contra Costa EOY contact lead report",
+ "West Contra Costa_Murphy Elementary EOY contact lead report"),
+  long_name = location,
+  image_url = c(
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
+    here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png")
+  ),
+  link = c("Reports/contact_leads_21_22/1- End of Year Contact Lead Aggregate Report.pdf",
+          "Reports/contact_leads_21_22/Amistad EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/Brownington EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/CityYear EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/D11_1 EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/D11_2 EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/D11_3 EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/Kankakee EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/Lafayette EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/McNairy EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/New Mexico EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/North Andover_1 EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/North Andover_2 EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/San Diego EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/West Contra Costa EOY contact lead report.pdf",
+          "Reports/contact_leads_21_22/West Contra Costa_Murphy Elementary EOY contact lead report.pdf")
+)
+
+report_galleries %>%
+  cards(
+    title = "End of\nYear Report",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "label-right",
+    spacing = 3
+  )
+```
