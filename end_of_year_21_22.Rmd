@@ -152,7 +152,7 @@ report_galleries <- tibble::tibble(
   )
 )
 
-report_galleries %>%
+report_galleries |>
   cards(
     title = "End of\nYear Report",
     footer = long_name,
