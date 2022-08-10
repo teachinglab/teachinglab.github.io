@@ -21,7 +21,7 @@ report_galleries <- tibble::tibble(
            "mississippi_reports_march_21_22.html")
 )
 
-report_galleries %>%
+report_galleries |>
   cards(
     title = "Reports",
     footer = long_name,

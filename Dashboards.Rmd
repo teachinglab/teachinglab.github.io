@@ -7,61 +7,54 @@ output:
 
 <!-- <base target="_blank"/> -->
 
-# Active Dashboards (SY21-22)
+# Active Dashboards (SY22-23)
 
-<br>
-
-All dashboards will require an @teachinglab.org email login to verify that access to the correct content is granted.
-
-<br>
-
-```{r echo = F, layout = "l-page"}
+```{r active-dashboards, echo = F, layout = "l-page"}
 library(bs4cards)
-# bs4cards::use_strapless(here::here("css"))
-galleries <- tibble::tibble(
-  long_name = c("Facilitator End of Session Survey Dashboard",
-                "End of Session Surveys 2021-2022",
-                "End of Course Surveys 2021-2022", 
-                "Survey Responses per Partner",
-                "Coaching Participant Feedback 2022"),
-  blurb = c("A dashboard for TL facilitators, that provides just their indiviudal data based on email login.",
-            "A dashboard to explore responses given at the end of each session for full time TL employees.", 
-            "A dashboard to explore responses to the surveys given at the end of courses.", 
-            "A simple table and time series graph for live diagnostic survey responses per partner.",
-            "A dashboard to explore responses to the coaching participant feedback survey."),
-  date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
-  image_url = c(here::here("Images/Dashboards/FacilitatorPersonalDashboard.png"),
-                here::here("Images/Dashboards/SessionDashboard.png"),
-                here::here("Images/Dashboards/CourseDashboard.png"),
-                here::here("Images/Dashboards/DiagnosticResponses.png"),
-                here::here("Images/Dashboards/DiagnosticResponses.png")),
-  link = c("https://teachinglabhq.shinyapps.io/PersonalFacilitator/",
-           "https://teachinglabhq.shinyapps.io/SessionSurvey/",
-           "https://teachinglabhq.shinyapps.io/CourseSurvey/",
-           "https://teachinglabhq.shinyapps.io/DiagnosticComplete/",
-           "https://teachinglabhq.shinyapps.io/CoachingParticipantFeedback/")
+
+report_galleries <- tibble::tibble(
+  location = c("Facilitator facing dashboards",
+               "Internal End of Session Dashboard",
+               "Internal End of Course Dashboard",
+               "Educator Survey Dashboard",
+               "Knowledge Assessments Dashboard",
+               "Student Survey Dashboard",
+               "IPG Dashboard"),
+  long_name = location,
+  image_url = c(here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png"),
+                here::here("Images/Dashboards/QualtricsDashboard.png")),
+  link = c("https://docs.google.com/spreadsheets/d/19279eLViYY7XJ3mmsax3MS1z1iwsoNsAtTkdvLN5pN8/edit#gid=0",
+           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/62cf1818b2bfe20010b73370?pageId=Page_b7e6ec6e-e184-4ac4-8026-588b45199a2a",
+           "ana_reports_21_22.html",
+           "https://teachinglab.github.io/",
+           "https://docs.google.com/spreadsheets/d/19279eLViYY7XJ3mmsax3MS1z1iwsoNsAtTkdvLN5pN8/edit#gid=1730670966",
+           "https://teachinglab.github.io/",
+           "https://teachinglab.github.io/")
 )
 
-galleries |>
+report_galleries |>
   cards(
-    title = long_name,
-    text = blurb,
+    title = "",
+    footer = long_name,
     link = link,
     image = image_url,
-    footer = paste("updated on", date),
-    layout = "label-below", 
-    width = 2, 
+    width = 2,
+    layout = "inset-bottom",
     spacing = 3
   )
 ```
 
-<br>
 
 # Visualizations
 
 <br>
 
-```{r echo = F}
+```{r visualizations, echo = F}
 time_diff <- Sys.Date() - as.Date("2019-01-01")
 year_diff <- round(as.numeric(time_diff)/365)
 galleries3 <- tibble::tibble(
@@ -69,7 +62,6 @@ galleries3 <- tibble::tibble(
                 "How much does each US state spend per kid per capita over time?"),
   blurb = c(paste0("A visualization of ", year_diff, " years of reviews of Teaching Lab courses by type of content."),
             ""),
-  date = c(Sys.Date(), Sys.Date()),
   image_url = c(here::here("Images/Visualizations/Reviews.png"),
                 here::here("Images/Visualizations/SpendingperKid.png")),
   link = c("https://teachinglab.github.io/TLReviews.html",
@@ -82,36 +74,78 @@ galleries3 |>
     text = blurb,
     link = link,
     image = image_url,
-    footer = paste("updated on", date),
     layout = "label-below", 
-    width = 2
+    width = 2,
+    spacing = 3
   )
 ```
 
+<!-- # Inactive Dashboards (SY21-22) -->
 
-# Inactive Dashboards (Pre SY20-21)
+<!-- <br> -->
 
-<br>
+<!-- All dashboards require an @teachinglab.org email login to verify that access to the correct content is granted. -->
 
-```{r echo = F}
-galleries2 <- tibble::tibble(
-  long_name = c("End of Session Surveys before SY21-22"),
-  blurb = c("An outdated dashboard to explore pre-SY21-22 data"),
-  date = c(Sys.Date()),
-  image_url = c(here::here("Images/Dashboards/CourseDashboard.png")),
-  link = c("https://teachinglabhq.shinyapps.io/ParticipantFeedback/")
-)
+<!-- <br> -->
 
-galleries2 |>
-  cards(
-    title = long_name,
-    text = blurb,
-    link = link,
-    image = image_url,
-    footer = paste("updated on", date),
-    layout = "label-below", 
-    width = 2
-  )
-```
+<!-- ```{r inactive-dashboards-21-22, echo = F, layout = "l-page"} -->
+<!-- # bs4cards::use_strapless(here::here("css")) -->
+<!-- galleries <- tibble::tibble( -->
+<!--   location = c("Facilitator End of Session Survey Dashboard", -->
+<!--                 "End of Session Surveys 2021-2022", -->
+<!--                 "End of Course Surveys 2021-2022",  -->
+<!--                 "Survey Responses per Partner", -->
+<!--                 "Coaching Participant Feedback 2022"), -->
+<!--   long_name = location, -->
+<!--   image_url = c(here::here("Images/Dashboards/FacilitatorPersonalDashboard.png"), -->
+<!--                 here::here("Images/Dashboards/SessionDashboard.png"), -->
+<!--                 here::here("Images/Dashboards/CourseDashboard.png"), -->
+<!--                 here::here("Images/Dashboards/DiagnosticResponses.png"), -->
+<!--                 here::here("Images/Dashboards/DiagnosticResponses.png")), -->
+<!--   link = c("https://teachinglabhq.shinyapps.io/PersonalFacilitator/", -->
+<!--            "https://teachinglabhq.shinyapps.io/SessionSurvey/", -->
+<!--            "https://teachinglabhq.shinyapps.io/CourseSurvey/", -->
+<!--            "https://teachinglabhq.shinyapps.io/DiagnosticComplete/", -->
+<!--            "https://teachinglabhq.shinyapps.io/CoachingParticipantFeedback/") -->
+<!-- ) -->
 
-<br>
+<!-- galleries |> -->
+<!--   cards( -->
+<!--     title = "Inactive Dashboards SY21-22", -->
+<!--     link = link, -->
+<!--     footer = long_name, -->
+<!--     image = image_url, -->
+<!--     layout = "label-below",  -->
+<!--     width = 2,  -->
+<!--     spacing = 3 -->
+<!--   ) -->
+<!-- ``` -->
+
+<!-- <br> -->
+
+
+<!-- # Inactive Dashboards (Pre SY20-21) -->
+
+<!-- <br> -->
+
+<!-- ```{r inactive-dashboards-20-21, echo = F} -->
+<!-- galleries2 <- tibble::tibble( -->
+<!--   location = c("End of Session Surveys before SY21-22"), -->
+<!--   long_name = location, -->
+<!--   image_url = c(here::here("Images/Dashboards/CourseDashboard.png")), -->
+<!--   link = c("https://teachinglabhq.shinyapps.io/ParticipantFeedback/") -->
+<!-- ) -->
+
+<!-- galleries2 |> -->
+<!--   cards( -->
+<!--     title = "Inactive Dashboards SY20-21", -->
+<!--     link = link, -->
+<!--     footer = long_name, -->
+<!--     image = image_url, -->
+<!--     layout = "label-below",  -->
+<!--     width = 2,  -->
+<!--     spacing = 3 -->
+<!--   ) -->
+<!-- ``` -->
+
+<!-- <br> -->
