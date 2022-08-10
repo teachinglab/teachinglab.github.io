@@ -1,5 +1,5 @@
 ---
-title: "Surveys Hub"
+title: "Data Collection Overview"
 output: 
   distill::distill_article:
     css: css/theme.css
@@ -7,26 +7,43 @@ output:
 
 <base target="_blank"/>
 
-# 2021-2022 Survey Links
+- <a href="https://docs.google.com/document/d/19yDyFCx1KeSPHlD9SLvLfG76FRGdfChL1hnCo_dV1zQ/edit?usp=sharing">Teaching Lab's evaluation plan</a>
+
+- <img src="Images/Surveys/Teaching Lab Evaluation Plan Overview SY22-23.png" alt="Guskey Framework" width = "700">
+
+- <video width="700" controls>
+  <source src="https://drive.google.com/file/d/1VAZ_5YrY5SYmgwymRFB2uKII0Iv8SvZK/view?usp=sharing" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
+
+- <a href="https://docs.google.com/presentation/d/1q0cN-9w5nZiHSvC7ltSAJIqFaN8DFYoZGwhlD76rWuM/edit#slide=id.g12348856a48_0_1079">Slide deck</a>
+
+# SY22-23 Data Collection Overview
+
+<p align="center" class = "l-screen">
+
+<iframe height = "1500px" width = "100%" class="l-screen-inset shaded" src="https://docs.google.com/document/d/e/2PACX-1vQZ9iNozHcw6p_JEs9q-0xQrfJ8nHAyC0Kj47PbWGgcD5PXLOPOwy3xyfno1o-alJztS8zqmTPzPA2N/pub?embedded=true"></iframe>
+
+</p>
+
+# Data Plan Collection Tool
 
 
-Please verify if the following links are available in Moodle and slide decks, and add if necessary.
+<p align="center" class = "l-screen">
+
+<iframe height = "400px" width = "100%" class="l-screen-inset shaded" src="https://zingtree.com/show/329834131#9"></iframe>
+
+</p>
+
+# What has been collected so far - by site
+
+```{r echo = F, layout = "l-screen"}
+library(googlesheets4)
+df <- read_sheet("https://docs.google.com/spreadsheets/d/1fP1I1lugnfi-a5LpVgvtp1PtdRObColtvioTAFMtYqo/edit#gid=0", skip = 1)
+
+df |>
+  gt::gt() |>
+  TeachingLab::gt_theme_tl()
+```
 
 
-* <strong>Attendance list</strong>: https://tinyurl.com/TL-attend
-
-
-* <strong>Diagnostic Educator Survey. We are finding that we have higher completion rates when time is given in the first session to complete this</strong>. It's taking participants 5 minutes on average to complete, per Survey Monkey metrics.
-  + Link: https://www.surveymonkey.com/r/diagnosticSY21-22
-
-
-* <strong>Short knowledge assessments to be taken during the first and last session of PL</strong>. Knowledge assessments are taking around 5 min, per Survey Monkey metrics.
-  + Please find the link to your course [here](https://docs.google.com/spreadsheets/d/1cELGsuEjXsb1e5oRdtdYof-Ul7jfdBXMOTYbIYd7nS4/edit?usp=sharing), under the tab “Knowledge Assessment Links”. We are drafting these in order of PL courses being implemented, so not all are ready yet. 
-
-
-* <strong>End-of-Session Participant Feedback Survey to be taken after every PL session</strong>, except the final session (e.g., if there are 5 sessions, use this for Sessions #1-4). Please remind participants of which course they are taking. It's taking 2 min, per Survey Monkey metrics.
-  + Link: https://www.surveymonkey.com/r/TLendofsession
-
-
-* <strong>End-of-Course Participant Feedback Survey to be taken after the final PL session</strong> (e.g., if there are 5 sessions, use this for Session #5). Please remind participants of which course they are taking. It's taking 4 min, per Survey Monkey metrics.
-  + Link: https://www.surveymonkey.com/r/TLendofcourse

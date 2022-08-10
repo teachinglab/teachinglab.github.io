@@ -5,7 +5,7 @@ output:
     css: "css/strapless.css"
 ---
 
-<base target="_blank"/>
+<!-- <base target="_blank"/> -->
 
 # Active Dashboards (SY21-22)
 
@@ -30,11 +30,11 @@ galleries <- tibble::tibble(
             "A simple table and time series graph for live diagnostic survey responses per partner.",
             "A dashboard to explore responses to the coaching participant feedback survey."),
   date = c(Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date(), Sys.Date()),
-  image_url = c("https://teachinglab.github.io/Images/Dashboards/FacilitatorPersonalDashboard.png",
-                "https://teachinglab.github.io/Images/Dashboards/SessionDashboard.png",
-                "https://teachinglab.github.io/Images/Dashboards/CourseDashboard.png",
-                "https://teachinglab.github.io/Images/Dashboards/DiagnosticResponses.png",
-                "https://teachinglab.github.io/Images/Dashboards/CoachingFeedback.png"),
+  image_url = c(here::here("Images/Dashboards/FacilitatorPersonalDashboard.png"),
+                here::here("Images/Dashboards/SessionDashboard.png"),
+                here::here("Images/Dashboards/CourseDashboard.png"),
+                here::here("Images/Dashboards/DiagnosticResponses.png"),
+                here::here("Images/Dashboards/DiagnosticResponses.png")),
   link = c("https://teachinglabhq.shinyapps.io/PersonalFacilitator/",
            "https://teachinglabhq.shinyapps.io/SessionSurvey/",
            "https://teachinglabhq.shinyapps.io/CourseSurvey/",
@@ -42,7 +42,7 @@ galleries <- tibble::tibble(
            "https://teachinglabhq.shinyapps.io/CoachingParticipantFeedback/")
 )
 
-galleries %>% 
+galleries |>
   cards(
     title = long_name,
     text = blurb,
@@ -76,7 +76,7 @@ galleries3 <- tibble::tibble(
            "https://teachinglab.github.io/USStateSpendingperKid.html")
 )
 
-galleries3 %>% 
+galleries3 |>
   cards(
     title = long_name,
     text = blurb,
@@ -102,7 +102,7 @@ galleries2 <- tibble::tibble(
   link = c("https://teachinglabhq.shinyapps.io/ParticipantFeedback/")
 )
 
-galleries2 %>% 
+galleries2 |>
   cards(
     title = long_name,
     text = blurb,
