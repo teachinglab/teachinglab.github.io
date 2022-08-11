@@ -12,7 +12,7 @@ output:
 - <img src="Images/Surveys/Teaching Lab Evaluation Plan Overview SY22-23.png" alt="Guskey Framework" width = "700">
 
 - <video width="700" controls>
-  <source src="https://drive.google.com/file/d/1VAZ_5YrY5SYmgwymRFB2uKII0Iv8SvZK/view?usp=sharing" type="video/mp4">
+  <source src="videos/Impact Evaluation Plan Updated.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
 
@@ -43,6 +43,7 @@ df <- read_sheet("https://docs.google.com/spreadsheets/d/1fP1I1lugnfi-a5LpVgvtp1
 
 df |>
   gt::gt() |>
+  gt::sub_missing(missing_text = "No data yet") |>
   TeachingLab::gt_theme_tl()
 ```
 

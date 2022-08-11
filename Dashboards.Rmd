@@ -30,7 +30,7 @@ report_galleries <- tibble::tibble(
                 here::here("Images/Dashboards/QualtricsDashboard.png")),
   link = c("https://docs.google.com/spreadsheets/d/19279eLViYY7XJ3mmsax3MS1z1iwsoNsAtTkdvLN5pN8/edit#gid=0",
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/62cf1818b2bfe20010b73370?pageId=Page_b7e6ec6e-e184-4ac4-8026-588b45199a2a",
-           "ana_reports_21_22.html",
+           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/62f3cbf2bcc32c0010a7db88?pageId=Page_a4a3fb0e-2d6a-402c-9008-b299c554fd57",
            "https://teachinglab.github.io/",
            "https://docs.google.com/spreadsheets/d/19279eLViYY7XJ3mmsax3MS1z1iwsoNsAtTkdvLN5pN8/edit#gid=1730670966",
            "https://teachinglab.github.io/",
