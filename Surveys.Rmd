@@ -44,6 +44,16 @@ df <- read_sheet("https://docs.google.com/spreadsheets/d/1fP1I1lugnfi-a5LpVgvtp1
 df |>
   gt::gt() |>
   gt::sub_missing(missing_text = "No data yet") |>
+  gt::data_color(
+    columns = !`Site/partner`,
+    colors = scales::col_numeric(
+      palette = paletteer::paletteer_d(
+        palette = "ggsci::blue_material"
+      ) %>%
+        as.character(),
+      domain = NULL
+    )
+  ) |>
   TeachingLab::gt_theme_tl()
 ```
 
