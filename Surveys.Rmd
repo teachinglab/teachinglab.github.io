@@ -34,7 +34,7 @@ output:
 
 # What has been collected so far - by site
 
-```{r echo = F, layout = "l-screen"}
+```{r echo = F, layout = "l-screen-inset shaded"}
 library(googlesheets4)
 df <- read_sheet("https://docs.google.com/spreadsheets/d/1fP1I1lugnfi-a5LpVgvtp1PtdRObColtvioTAFMtYqo/edit#gid=0", skip = 1)
 
