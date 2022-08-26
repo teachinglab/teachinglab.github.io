@@ -9,6 +9,10 @@ output:
 
 # Active Dashboards (SY22-23)
 
+<br>
+
+<a href="https://www.youtube.com/">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.youtube.com/">End of Course Dashboard Tutorial</a>
+
 ```{r active-dashboards, echo = F, layout = "l-page"}
 library(bs4cards)
 
