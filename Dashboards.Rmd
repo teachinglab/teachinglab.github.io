@@ -18,6 +18,7 @@ library(bs4cards)
 
 report_galleries <- tibble::tibble(
   location = c("Facilitator facing dashboards",
+               "Coaching facing dashboards",
                "Internal End of Session Dashboard",
                "Internal End of Course Dashboard",
                "Ongoing Coaching Dashboard",
@@ -28,7 +29,8 @@ report_galleries <- tibble::tibble(
                "Coming soon: Student Survey Dashboard",
                "Coming soon: IPG Dashboard"),
   long_name = location,
-  image_url = c(here::here("Images/Dashboards/QualtricsDashboard.png"),
+  image_url = c(here::here("Images/Dashboards/FacilitatorFacingDashboard.png"),
+                here::here("Images/Dashboards/CoachingFacingDashboard.png"),
                 here::here("Images/Dashboards/QualtricsSession.png"),
                 here::here("Images/Dashboards/QualtricsCourse.png"),
                 here::here("Images/Dashboards/QualtricsOngoingCoaching.png"),
@@ -39,6 +41,7 @@ report_galleries <- tibble::tibble(
                 here::here("Images/Dashboards/BlankDashboard.png"),
                 here::here("Images/Dashboards/BlankDashboard.png")),
   link = c("https://teachinglabhq.shinyapps.io/FacilitatorAuth/",
+           "https://teachinglabhq.shinyapps.io/CoachingAuth/",
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/62cf1818b2bfe20010b73370",
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/62f3cbf2bcc32c0010a7db88?pageId=Page_a4a3fb0e-2d6a-402c-9008-b299c554fd57",
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6317cbd1f9feca001046524d?pageId=Page_f76e2092-a99b-480c-a9dd-2c4bb5becaee",
