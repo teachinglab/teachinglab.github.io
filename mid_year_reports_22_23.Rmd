@@ -1,0 +1,61 @@
+---
+title: "Mid-Year Reports 2021-2022"
+output: 
+  distill::distill_article:
+    css: "css/strapless.css"
+---
+
+# SY21-22 Mid-Year Reports
+
+<br>
+
+<center> Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. Different tabs within the spreadsheet contain the passwords for each year. </center>
+
+<br>
+
+```{r echo = F, layout = "l-page"}
+library(bs4cards)
+report_galleries <- tibble::tibble(
+  location = c(
+    "All Partners",
+    "DE_DE Department of Education",
+    "NY_Amistad Dual Language",
+    "NY_Rochester City Schools",
+    "TN_McNairy County Schools",
+    "WI_WI DPI"
+  ),
+  long_name = c(
+    "All Partners Report",
+    "DE_DE Department of Education Report",
+    "NY_Amistad Dual Language Report",
+    "NY_Rochester City Schools Report",
+    "TN_McNairy County Schools Report",
+    "WI_WI DPI Report"
+  ),
+  image_url = c(
+    here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
+    here::here("Images/Reports/2022-2023/MidYear/final_report_de_de_department_of_education.png"),
+    here::here("Images/Reports/2022-2023/MidYear/final_report_ny_amistad_dual_language.png"),
+    here::here("Images/Reports/2022-2023/MidYear/final_report_ny_rochester_city_schools.png"),
+    here::here("Images/Reports/2022-2023/MidYear/final_report_tn_mcnairy_county_schools.png"),
+    here::here("Images/Reports/2022-2023/MidYear/final_report_wi_wi_dpi.png")
+  ),
+  link = c("Reports/2023Reports/MidYear/final_report_all_sites.html",
+  "Reports/2023Reports/MidYear/final_report_de_de_department_of_education.html",
+  "Reports/2023Reports/MidYear/final_report_ny_amistad_dual_language.html",
+  "Reports/2023Reports/MidYear/final_report_ny_rochester_city_schools.html",
+  "Reports/2023Reports/MidYear/final_report_tn_mcnairy_county_schools.html",
+  "Reports/2023Reports/MidYear/final_report_wi_wi_dpi.html")
+)
+
+report_galleries %>%
+  cards(
+    title = "Mid-Year\nReport",
+    footer = long_name,
+    link = link,
+    image = image_url,
+    width = 2,
+    layout = "label-right",
+    spacing = 3
+  )
+```

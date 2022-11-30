@@ -23,7 +23,7 @@ save_screenshot_report <- function(files_input_loc, files_output_loc, filetype =
 
 ### This workflow needs fixing ###
 #"~/Teaching Lab/Coding/TeachingLab/Analysis/2021-2022/ANAs/Reports"
-save_screenshot_report(files_input_loc = here::here("Reports/contact_leads_21_22"),
-                       files_output_loc = here::here("Images/Reports/ContactLeads2122/"),
-                       filetype = "pdf")
+save_screenshot_report(files_input_loc = here::here("Reports/2023Reports/MidYear"),
+                       files_output_loc = here::here("Images/Reports/2022-2023/MidYear/"),
+                       filetype = "html")
 

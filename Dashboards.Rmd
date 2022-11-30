@@ -51,7 +51,7 @@ report_galleries <- tibble::tibble(
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6318d897a3a583000f1518ba?pageId=Page_0998ca6d-2c3c-463e-baed-f5dc6fd22289",
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887",
            "22_23_knowledge_assessments.html",
-           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/630500d0663413001002f3e9?pageId=Page_bfe4b4d1-74a3-4b24-8a1c-5a90e65ef172",
+           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6349bfbbb614690016a0b7b1",
            "https://teachinglab.co1.qualtrics.com/Q/MyProjectsSection",
            "#")
 )
