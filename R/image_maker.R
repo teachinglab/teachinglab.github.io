@@ -27,3 +27,9 @@ save_screenshot_report(files_input_loc = here::here("Reports/2023Reports/MidYear
                        files_output_loc = here::here("Images/Reports/2022-2023/MidYear/"),
                        filetype = "html")
 
+# list.files(here::here("Reports/2023Reports/MidYear")) |>
+#   clipr::write_clip() |>
+#   datapasta::vector_paste_vertical()
+
+
+
