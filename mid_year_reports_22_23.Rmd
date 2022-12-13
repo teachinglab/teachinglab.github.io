@@ -7,11 +7,11 @@ output:
 
 # SY22-23 Mid-Year Reports
 
-<!-- <br> -->
+<br>
 
-<!-- <center> Passwords for Reports are <a href="https://docs.google.com/spreadsheets/d/1eAUdWEzc0R7WzpztOvutRp2FYDtpks37LSFV8sq8ezg/edit?usp=sharing" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. Different tabs within the spreadsheet contain the passwords for each year. </center> -->
+<center> Passwords for Reports are <a href="https://docs.google.com/document/d/1j0GUFyzWm0CNqXXcqhp0BzkRugmV0vf2LdrsTElnw1A/" target="_blank">here</a> which will only be viewable if you are a Teaching Lab employee. Different tabs within the spreadsheet contain the passwords for each year. </center>
 
-<!-- <br> -->
+<br>
 
 ```{r echo = F, layout = "l-page"}
 library(bs4cards)
