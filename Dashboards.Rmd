@@ -42,7 +42,7 @@ report_galleries <- tibble::tibble(
                 here::here("Images/Dashboards/QualtricsDiagnosticDashboard.png"),
                 here::here("Images/Dashboards/QualtricsKnowledgeAssessment.png"),
                 here::here("Images/Dashboards/QualtricsIPGDashboard.png"),
-                here::here("Images/Dashboards/BlankDashboard.png"),
+                here::here("Images/Dashboards/QualtricsStudentSurvey.png"),
                 here::here("Images/Dashboards/QualtricsConsultancyDashboard.png"),
                 here::here("Images/Dashboards/QualtricsTEADashboard.png")),
   link = c("https://teachinglabhq.shinyapps.io/FacilitatorAuth/", # Facilitator board 1
