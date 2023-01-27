@@ -14,7 +14,7 @@ output:
 <a href="https://youtu.be/mRBWfdjEv-4">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/dxE-PciN-ZY">Facilitator Facing Dashboard Tutorial</a>
 <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a> Scroll down for Qualtrics access tutorial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a>    Scroll down for Qualtrics access tutorial
 
 ```{r active-dashboards, echo = F, layout = "l-page"}
 library(bs4cards)
