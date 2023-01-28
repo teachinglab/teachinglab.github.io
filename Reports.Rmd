@@ -44,4 +44,3 @@ report_galleries |>
     spacing = 3
   )
 ```
-
