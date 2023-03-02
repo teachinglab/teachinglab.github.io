@@ -7,6 +7,17 @@ output:
 
 <!-- <base target="_blank"/> -->
 
+# Dashboard Access
+
+<center>
+<p align = "center" class = "l-screen">
+
+<iframe class="l-screen-inset shaded" frameBorder = "0" style = "height: 900px; width: 900px; margin:auto; display:block; margin-left:-100px;"  src="https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/pub?embedded=true"></iframe>
+
+</p>
+</center>
+
+
 # Active Dashboards (SY22-23)
 
 <br>
@@ -14,7 +25,7 @@ output:
 <a href="https://youtu.be/mRBWfdjEv-4">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/dxE-PciN-ZY">Facilitator Facing Dashboard Tutorial</a>
 <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a>    Scroll down for Qualtrics access tutorial
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a>
 
 ```{r active-dashboards, echo = F, layout = "l-page"}
 library(bs4cards)
@@ -73,16 +84,6 @@ report_galleries |>
     spacing = 3
   )
 ```
-
-# Dashboard Access
-
-<center>
-<p align="center" class = "l-screen">
-
-<iframe height = "1500px" width = "100%" class="l-screen-inset shaded" src="https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/pub?embedded=true"></iframe>
-
-</p>
-</center>
 
 # Visualizations
 
