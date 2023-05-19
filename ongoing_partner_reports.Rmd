@@ -23,6 +23,7 @@ report_galleries <- tibble::tibble(
     "Berkshire Hills",
     "Boston Prep",
     "Dennis-Yarmouth",
+    "Greenfield",
     "King Phillip",
     "Milford",
     "Milton",
@@ -36,7 +37,7 @@ report_galleries <- tibble::tibble(
   long_name = location,
   image_url = rep(c(
     here::here("Images/Reports/2022-2023/Ongoing/final_report_all_sites.png")
-  ), 15),
+  ), 16),
   link = c(
     "Reports/2023Reports/Ongoing/final_report_all_sites.html",
     "Reports/2023Reports/Ongoing/final_report_abrsd.html",
@@ -44,6 +45,7 @@ report_galleries <- tibble::tibble(
     "Reports/2023Reports/Ongoing/final_report_berkshire_hills.html",
     "Reports/2023Reports/Ongoing/final_report_boston_prep.html",
     "Reports/2023Reports/Ongoing/final_report_dennis_yarmouth.html",
+    "Reports/2023Reports/Ongoing/final_report_greenfield.html",
     "Reports/2023Reports/Ongoing/final_report_king_phillip.html",
     "Reports/2023Reports/Ongoing/final_report_milford.html",
     "Reports/2023Reports/Ongoing/final_report_milton.html",
