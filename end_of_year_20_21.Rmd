@@ -18,6 +18,7 @@ library(bs4cards)
 report_galleries <- tibble::tibble(
   location = c(
     "All Partners Report Unmatched",
+    "All Partners Report Matched",
     "Brownington",
     "Building 21",
     "Delaware Department of Education",
@@ -40,11 +41,11 @@ report_galleries <- tibble::tibble(
     "NYC District 11 - PS 189",
     "NYC District 11 - PS 498",
     "Pointe Coupee",
-    "Tangipahoa Parish",
-    "All Partners Report Matched"
+    "Tangipahoa Parish"
   ),
   long_name = c(
     "All Partners SY21-22 Report Unmatched",
+    "All Partners SY21-22 Report Matched Sample",
     "Personalized Report for: Brownington",
     "Personalized Report for: Building 21", "Personalized Report for: Delaware Department of Education",
     "Personalized Report for: District 11",
@@ -58,8 +59,7 @@ report_galleries <- tibble::tibble(
     "Personalized Report for: NYC District 11 - PS 89", "Personalized Report for: NYC District 11 - PS 96",
     "Personalized Report for: NYC District 11 - PS 103", "Personalized Report for: NYC District 11 - PS 189",
     "Personalized Report for: NYC District 11 - PS 498", "Personalized Report for: Pointe Coupee",
-    "Personalized Report for: Tangipahoa Parish",
-    "All Partners SY21-22 Report Matched Sample"
+    "Personalized Report for: Tangipahoa Parish"
   ),
   image_url = c(
     here::here("Images/Reports/2020-2021/mid_year_report.png"),
@@ -90,6 +90,7 @@ report_galleries <- tibble::tibble(
   ),
   link = c(
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_All Partners-protected.html",
+    "Reports/end_of_year_20_21/Encrypted/2021 Report_matched_All Partners-protected.html",
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Brownington Central School, VT-protected.html",
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Building 21-protected.html",
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Delaware Department of Education, DE-protected.html",
@@ -112,8 +113,7 @@ report_galleries <- tibble::tibble(
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_NYC District 11 - PS 189, NY-protected.html",
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_NYC District 11 - PS 498, NY-protected.html",
     "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Pointe Coupee Parish, LA-protected.html",
-    "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html",
-    "Reports/end_of_year_20_21/Encrypted/2021 Report_matched_All Partners-protected.html"
+    "Reports/end_of_year_20_21/Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html"
   )
 )
 
