@@ -50,11 +50,11 @@ report_galleries <- tibble::tibble(
     "Reports/2023Reports/Ongoing/final_report_milford.html",
     "Reports/2023Reports/Ongoing/final_report_milton.html",
     "Reports/2023Reports/Ongoing/final_report_needham.html",
-    "Reports/2023Reports/Ongoing/final_report_northampton_files",
+    "Reports/2023Reports/Ongoing/final_report_northampton.html",
     "Reports/2023Reports/Ongoing/final_report_plainville.html",
     "Reports/2023Reports/Ongoing/final_report_uxbridge.html",
     "Reports/2023Reports/Ongoing/final_report_wakefield.html",
-    "Reports/2023Reports/Ongoing/final_report_west_springfield_files"
+    "Reports/2023Reports/Ongoing/final_report_west_springfield.html"
   )
 )
 
