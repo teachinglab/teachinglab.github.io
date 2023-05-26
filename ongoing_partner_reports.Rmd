@@ -32,12 +32,14 @@ report_galleries <- tibble::tibble(
     "Plainville",
     "Uxbridge",
     "Wakefield",
+    "Wakefield K-4",
+    "Wakefield 5-12",
     "West Springfield"
   ),
   long_name = location,
-  image_url = rep(c(
+  image_url = c(
     here::here("Images/Reports/2022-2023/Ongoing/final_report_all_sites.png")
-  ), 16),
+    ),
   link = c(
     "Reports/2023Reports/Ongoing/final_report_all_sites.html",
     "Reports/2023Reports/Ongoing/final_report_abrsd.html",
@@ -54,6 +56,8 @@ report_galleries <- tibble::tibble(
     "Reports/2023Reports/Ongoing/final_report_plainville.html",
     "Reports/2023Reports/Ongoing/final_report_uxbridge.html",
     "Reports/2023Reports/Ongoing/final_report_wakefield.html",
+    "Reports/2023Reports/Ongoing/final_report_wakefield_k_4.html",
+    "Reports/2023Reports/Ongoing/final_report_wakefield_5_12.html",
     "Reports/2023Reports/Ongoing/final_report_west_springfield.html"
   )
 )
