@@ -14,6 +14,7 @@ library(bs4cards)
 report_galleries <- tibble::tibble(
   location = c(
     "All Sites",
+    "All Sites Matched",
     "AR_Arkansas DOE",
     "CA_San Diego",
     "CA_Silver Giving",
@@ -63,6 +64,7 @@ report_galleries <- tibble::tibble(
   image_url = here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
   link = c(
     "Reports/2023Reports/EndYear/final_report_all_sites.html",
+    "Reports/2023Reports/EndYear/final_report_all_sites_matched.html",
     "Reports/2023Reports/EndYear/final_report_ar_arkansas_doe.html",
     "Reports/2023Reports/EndYear/final_report_ca_san_diego.html",
     "Reports/2023Reports/EndYear/final_report_ca_silver_giving.html",
