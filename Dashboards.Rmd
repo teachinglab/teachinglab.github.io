@@ -42,8 +42,9 @@ report_galleries <- tibble::tibble(
                "IPG Dashboard", # 9
                "Student Survey Dashboard", # 10
                "EIC Student Survey Dashboard", #11
-               "Chicago Consultancy Feedback Dashboard", # 12
-               "TEA Dashboard"), # 13
+               "Student Work Graded Dashboard", # 12
+               "Chicago Consultancy Feedback Dashboard", # 13
+               "TEA Dashboard"), # 14
   long_name = location,
   image_url = c(here::here("Images/Dashboards/FacilitatorFacingDashboard.png"),
                 here::here("Images/Dashboards/CoachingFacingDashboard.png"),
@@ -56,6 +57,7 @@ report_galleries <- tibble::tibble(
                 here::here("Images/Dashboards/QualtricsIPGDashboard.png"),
                 here::here("Images/Dashboards/QualtricsStudentSurvey.png"),
                 here::here("Images/Dashboards/QualtricsStudentSurvey.png"),
+                here::here("Images/Dashboards/StudentWorkGraded.png"),
                 here::here("Images/Dashboards/QualtricsConsultancyDashboard.png"),
                 here::here("Images/Dashboards/QualtricsTEADashboard.png")),
   link = c("https://teachinglabhq.shinyapps.io/FacilitatorAuth/", # Facilitator board 1
@@ -69,8 +71,9 @@ report_galleries <- tibble::tibble(
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6349bfbbb614690016a0b7b1", # Classroom Observations 9
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6345c33160c27c00166cb726?pageId=Page_ee9d1195-c476-4414-b1ab-ee2da2fdb4ce", # Student Survey 10
            "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62", # EIC Student Survey 11
-           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/630500d0663413001002f3e9", # Chicago Consultancy 12
-           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63bdf29afe66530014e58930?pageId=Page_03b58604-212c-4977-85d8-20a3a24eefac") # TEA Dashboard 13
+           "https://teachinglabhq.shinyapps.io/student_work_graded/",
+           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/630500d0663413001002f3e9", # Chicago Consultancy 13
+           "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63bdf29afe66530014e58930?pageId=Page_03b58604-212c-4977-85d8-20a3a24eefac") # TEA Dashboard 14
 )
 
 report_galleries |>
