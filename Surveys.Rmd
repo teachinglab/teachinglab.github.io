@@ -1,57 +1,16 @@
 ---
-title: "Data Collection Overview"
+title: "Data Collection Tracker"
 output: 
   distill::distill_article:
     css: css/theme.css
 ---
 
-# SY22-23 Data Collection Overview
-
-<p align="center" class = "l-screen">
-
-<iframe height = "1500px" width = "100%" class="l-screen-inset shaded" frameborder = "0" src="https://docs.google.com/document/d/e/2PACX-1vQZ9iNozHcw6p_JEs9q-0xQrfJ8nHAyC0Kj47PbWGgcD5PXLOPOwy3xyfno1o-alJztS8zqmTPzPA2N/pub?embedded=true"></iframe>
-
-</p>
-
-<base target="_blank"/>
-
-- <a href="https://docs.google.com/document/d/19yDyFCx1KeSPHlD9SLvLfG76FRGdfChL1hnCo_dV1zQ/edit?usp=sharing">Teaching Lab's evaluation plan</a>
-
-- <img src="Images/Surveys/Teaching Lab Evaluation Plan Overview SY22-23.png" alt="Guskey Framework" width = "700">
-
-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/_SDYiLuV47A?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small></div><div><small><a href="https://spelbolag-utan-svensk-licens.se/">https://spelbolag-utan-svensk-licens.se/</a></small></div><div><small><a href="https://youtubeembedcode.com/pl/">youtubeembedcode pl</a></small></div><div><small><a href="https://xn--bsta-utlndska-casinon-51bh.se/">bästa-utländska-casinon.se</a></small></div><div><small><a href="https://youtubeembedcode.com/nl/">youtubeembedcode.com/nl/</a></small></div><div><small><a href="https://spelstopp.net/">Spelstopp.net</a></small></div><div><small><a href="https://youtubeembedcode.com/nl/">youtubeembedcode.com/nl/</a></small></div><div><small><a href="https://spela-utan-spelpaus.se/">spela-utan-spelpaus.se</a></small></div><div><small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small></div><div><small><a href="https://casinoutansvensklicenslista.se/">https://casinoutansvensklicenslista.se/</a></small></div></iframe>
-
-- <a href="https://docs.google.com/presentation/d/1q0cN-9w5nZiHSvC7ltSAJIqFaN8DFYoZGwhlD76rWuM/edit#slide=id.g12348856a48_0_1079">Slide deck</a>
-
-# Data Plan Collection Tool
-
-
-<p align="center" class = "l-screen">
-
-<iframe height = "400px" width = "100%" class="l-screen-inset shaded" src="https://zingtree.com/show/329834131#9"></iframe>
-
-</p>
-
-# What has been collected so far - by site
-
-```{r echo = F, layout = "l-screen-inset shaded"}
-library(googlesheets4)
-df <- read_sheet("https://docs.google.com/spreadsheets/d/1fP1I1lugnfi-a5LpVgvtp1PtdRObColtvioTAFMtYqo/edit#gid=0", skip = 1)
-
-df |>
-  gt::gt() |>
-  gt::sub_missing(missing_text = "No data yet") |>
-  gt::data_color(
-    columns = !site,
-    colors = scales::col_numeric(
-      palette = paletteer::paletteer_d(
-        palette = "ggsci::blue_material"
-      ) %>%
-        as.character(),
-      domain = NULL
-    )
-  ) |>
-  TeachingLab::gt_theme_tl()
+```{r, echo = F}
+htmltools::tags$iframe(
+  style = "height:1000px;width:1800px;position:relative;left:-550px;",
+  src = "https://teachinglabhq.shinyapps.io/OngoingSurveyCount/",
+  frameborder = "0"
+)
+# knitr::include_app(url = "https://teachinglabhq.shinyapps.io/OngoingSurveyCount/", height = "1000px")
 ```
-
 
