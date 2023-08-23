@@ -7,7 +7,7 @@ output:
 
 ```{r, echo = F}
 htmltools::tags$iframe(
-  style = "height:1000px;width:1800px;position:relative;left:-550px;",
+  style = "height:1000px;width:1475px;position:relative;left:-375px;",
   src = "https://teachinglabhq.shinyapps.io/OngoingSurveyCount/",
   frameborder = "0"
 )
