@@ -10,7 +10,7 @@ navbar:
   right: 
     - icon: fa-home fa-lg
       href: index.html
-    - text: "Data Collection Overview"
+    - text: "Data Collection Tracker"
       href: Surveys.html
     - text: "Reports"
       href: Reports.html
