@@ -81,8 +81,12 @@ report_galleries <- tibble::tibble(
     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62", # EIC Student Survey 9
     "https://teachinglabhq.shinyapps.io/student_work_samples/",
     "https://teachinglabhq.shinyapps.io/student_work_graded/" # 10
+  ),
+  tags = c("custom", "custom", "qualtrics", "qualtrics", "custom", "qualtrics", "custom", "qualtrics", "qualtrics", "custom", "custom")
+) |>
+  dplyr::mutate(
+    label_color = ifelse(tags == "custom", "#04abeb", "#016891")
   )
-)
 
 report_galleries |>
   cards(
@@ -94,7 +98,8 @@ report_galleries |>
     layout = "label-left", 
     breakpoint = 5, 
     width = 4,
-    # width = 2,
+    tags = paste("all;", tags),
+    label_colour = label_color,
     spacing = 3
   )
 ```
@@ -108,7 +113,8 @@ galleries2 <- tibble::tibble(
   long_name = c("Facilitator facing dashboards"),
   blurb = c("A tutorial for facilitators to see how to use the custom facilitator dashboard"),
   image_url = c("https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj"),
-  link = c("https://youtu.be/dxE-PciN-ZY")
+  link = c("https://youtu.be/dxE-PciN-ZY"),
+  tags = c("all;")
 )
 
 galleries2 |>
