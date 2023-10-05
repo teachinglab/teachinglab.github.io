@@ -12,20 +12,20 @@ output:
 <center>
 <p align = "center" class = "l-screen">
 
-<iframe class="l-screen-inset shaded" frameBorder = "0" style = "height: 900px; width: 900px; margin:auto; display:block; margin-left:-100px;"  src="https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/pub?embedded=true"></iframe>
+<iframe class="l-screen-inset shaded" frameBorder = "0" style = "height: 400px; width: 900px; margin:auto; display:block; margin-left:-100px;"  src="https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/pub?embedded=true"></iframe>
 
 </p>
 </center>
 
 
-# Active Dashboards (SY22-23)
+# Active Dashboards (SY23-24)
 
 <br>
 
-<a href="https://youtu.be/mRBWfdjEv-4">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/dxE-PciN-ZY">Facilitator Facing Dashboard Tutorial</a>
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a>
+<!-- <a href="https://youtu.be/mRBWfdjEv-4">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/dxE-PciN-ZY">Facilitator Facing Dashboard Tutorial</a> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a> -->
 
 ```{r active-dashboards, echo = F, layout = "l-page"}
 library(bs4cards)
@@ -36,22 +36,37 @@ report_galleries <- tibble::tibble(
     "Coaching facing dashboards", # 2
     "Internal Participant Feedback Dashboard", # 3
     "Educator Survey Dashboard", # 4
-    "Knowledge Assessments Dashboards", # 5
+    "Course Assessments Dashboard", # 5
     "IPG Dashboard", # 6
-    "Student Survey Dashboard", # 7
-    "EIC Student Survey Dashboard", # 8
-    "Student Work Graded Dashboard"
-  ), # 9
+    "IPG Raw Data Dashboard", # 7
+    "Student Survey Dashboard", # 8
+    "EIC Student Survey Dashboard", # 9
+    "Student Work Dashboard", # 10
+    "Student Work Graded Dashboard" # 11
+  ),
   long_name = location,
+  text = c("A custom dashboard for use by teaching lab facilitators to view personal data (non FTE's)",
+           "A custom dashboard for use by teaching lab coaches to view personal data (non FTE's)",
+           "A Qualtrics dashboard to view all Participant Feedback, with tabs for viewing end of session, course, and coaching data separately",
+           "A Qualtrics dashboard to view all Educator Survey data, with tabs for different sections",
+           "A custom dashboard for diving deeper on responses to course assessments, including % all questions correct, % correct by question, and % selected for each answer",
+           "A Qualtrics dashboard for viewing all IPG data by % responses, split by rubric",
+           "A custom dashboard for looking at individual IPG responses, drill down by site -> coach -> teacher to see all available data",
+           "A Qualtrics dashboard for all Student Survey data, with tabs for each question grouping",
+           "A Qualtrics dashboard for all EIC Student Survey data, with tabs for each question grouping",
+           "A custom dashboard for grading student work",
+           "A custom dashboard for seeing the results of student work grading"),
   image_url = c(
     here::here("Images/Dashboards/FacilitatorFacingDashboard.png"),
     here::here("Images/Dashboards/CoachingFacingDashboard.png"),
-    here::here("Images/Dashboards/QualtricsSession.png"),
-    here::here("Images/Dashboards/QualtricsDiagnosticDashboard.png"),
-    here::here("Images/Dashboards/QualtricsKnowledgeAssessment.png"),
-    here::here("Images/Dashboards/QualtricsIPGDashboard.png"),
-    here::here("Images/Dashboards/QualtricsStudentSurvey.png"),
-    here::here("Images/Dashboards/QualtricsStudentSurvey.png"),
+    here::here("Images/Dashboards/QualtricsLogo.png"),
+    here::here("Images/Dashboards/QualtricsLogo.png"),
+    here::here("Images/Dashboards/CourseAssessment.png"),
+    here::here("Images/Dashboards/QualtricsLogo.png"),
+    here::here("Images/Dashboards/IPGRawDashboard.png"),
+    here::here("Images/Dashboards/QualtricsLogo.png"),
+    here::here("Images/Dashboards/QualtricsLogo.png"),
+    here::here("Images/Dashboards/StudentWorkGrader.png"),
     here::here("Images/Dashboards/StudentWorkGraded.png")
   ),
   link = c(
@@ -59,11 +74,13 @@ report_galleries <- tibble::tibble(
     "https://teachinglabhq.shinyapps.io/CoachingAuth/", # Coaching board 2
     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d", # End of Session 3
     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887", # Educator Survey 4
-    "https://teachinglabhq.shinyapps.io/KnowledgeAssessments2022-2023/", # Knowledge Assessments 5
+    "https://teachinglabhq.shinyapps.io/course_assessments/", # Course Assessments 5
     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6349bfbbb614690016a0b7b1", # Classroom Observations 6
-    "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6345c33160c27c00166cb726?pageId=Page_ee9d1195-c476-4414-b1ab-ee2da2fdb4ce", # Student Survey 7
-    "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62", # EIC Student Survey 8
-    "https://teachinglabhq.shinyapps.io/student_work_graded/" # 9
+    "https://teachinglabhq.shinyapps.io/IPGRawDataDashboard/",
+    "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6345c33160c27c00166cb726?pageId=Page_ee9d1195-c476-4414-b1ab-ee2da2fdb4ce", # Student Survey 8
+    "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62", # EIC Student Survey 9
+    "https://teachinglabhq.shinyapps.io/student_work_samples/",
+    "https://teachinglabhq.shinyapps.io/student_work_graded/" # 10
   )
 )
 
@@ -72,12 +89,40 @@ report_galleries |>
     title = "",
     footer = long_name,
     link = link,
+    text = text,
     image = image_url,
-    width = 2,
-    layout = "inset-bottom",
+    layout = "label-left", 
+    breakpoint = 5, 
+    width = 4,
+    # width = 2,
     spacing = 3
   )
 ```
+
+# Tutorials 
+
+<br>
+
+```{r tutorials, echo = F}
+galleries2 <- tibble::tibble(
+  long_name = c("Facilitator facing dashboards"),
+  blurb = c("A tutorial for facilitators to see how to use the custom facilitator dashboard"),
+  image_url = c("https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj"),
+  link = c("https://youtu.be/dxE-PciN-ZY")
+)
+
+galleries2 |>
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    layout = "label-below",
+    width = 2,
+    spacing = 3
+  )
+```
+
 
 # Visualizations
 
