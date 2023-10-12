@@ -10,8 +10,14 @@ navbar:
   right: 
     - icon: fa-home fa-lg
       href: index.html
-    - text: "Data Collection Tracker"
-      href: Surveys.html
+    - text: "FY24 Trackers"
+      menu:
+        - text: "Overall data collection by site"
+          href: Surveys.html
+        - text: "NPS by site"
+          href: nps.html
+        - text: Coaching Data Collection Tracker
+          href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
     - text: "Reports"
       href: Reports.html
     - text: "Dashboards and Visualizations"
