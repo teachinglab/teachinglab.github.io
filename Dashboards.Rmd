@@ -110,11 +110,17 @@ report_galleries |>
 
 ```{r tutorials, echo = F}
 galleries2 <- tibble::tibble(
-  long_name = c("Facilitator facing dashboards"),
-  blurb = c("A tutorial for facilitators to see how to use the custom facilitator dashboard"),
+  long_name = c("Facilitator facing dashboards tutorial", 
+                "NPS Dashboard Tutorial", 
+                "IPG Dashboard Tutorial", 
+                "Course Assessments Dashboard Tutorial"),
+  blurb = c("A tutorial for facilitators to see how to use the custom facilitator dashboard", 
+            "A brief tutorial on the nps dashboard, overviewing what the data is and says.", 
+            "An in depth tutorial on how to look at raw IPG data and download reports with fully developed visuals contextualizing the data.",
+            "Another in depth tutorial on how to see every level of course assessments data, from specific answers, to overall % correct."),
   image_url = c("https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj"),
-  link = c("https://youtu.be/dxE-PciN-ZY"),
-  tags = c("all;")
+  link = c("https://youtu.be/dxE-PciN-ZY", "https://youtu.be/t_QM7QxFUq8", "https://youtu.be/UtIpIyDLok4", "https://youtu.be/o0CEkx0r5yY"),
+  tags = c("all;custom;")
 )
 
 galleries2 |>
