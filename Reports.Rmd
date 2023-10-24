@@ -9,7 +9,8 @@ output:
 
 ```{r echo = F, layout = "l-page"}
 report_galleries <- tibble::tibble(
-  location = c("End of Year Reports 2022-2023",
+  location = c("SY23-24 Report (Ongoing and updating with current data)",
+               "End of Year Reports 2022-2023",
                "Ongoing Partner Reports",
                "Mid-Year Reports 2022-2023",
                "End of Year Contact Lead Reports 2021-2022",
@@ -20,7 +21,8 @@ report_galleries <- tibble::tibble(
                #"End of Year Reports 2020-2021"
                ),
   long_name = location,
-  image_url = c(here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
+  image_url = c(here::here("Images/Reports/23_24/Ongoing23_24Report.png"),
+                here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
                 here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
                 here::here("Images/Reports/2022-2023/MidYear/final_report_all_sites.png"),
                 here::here("Images/Reports/ContactLeads2122/EndofYearContactLeadSurvey.png"),
@@ -30,7 +32,8 @@ report_galleries <- tibble::tibble(
                 # here::here("Images/Reports/Mississippi/April/Mississippi_reports_april.png"),
                 # here::here("Images/Reports/2020-2021/mid_year_report.png")
                 ),
-  link = c("end_year_reports_22_23.html",
+  link = c("https://teachinglabhq.shinyapps.io/OngoingReport_23_24/",
+           "end_year_reports_22_23.html",
            "ongoing_partner_reports.html",
            "mid_year_reports_22_23.html",
            "end_of_year_contact_leads_21_22.html",
@@ -49,7 +52,7 @@ report_galleries |>
     link = link,
     image = image_url,
     width = 2,
-    layout = "inset-bottom",
+    layout = "label-below",
     spacing = 3
   )
 ```

@@ -4742,4 +4742,12 @@ template {
   
 }
 
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #04abeb;
+}
+
 /*# sourceMappingURL=strapless.css.map */
