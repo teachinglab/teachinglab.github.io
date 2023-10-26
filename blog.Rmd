@@ -1,0 +1,45 @@
+---
+title: "Learning & Research Blog"
+output: 
+  distill::distill_article:
+    css: "css/theme.css"
+---
+
+# Guskey Framework
+
+```{r guskey-framework, echo = F}
+time_diff <- Sys.Date() - as.Date("2019-01-01")
+year_diff <- round(as.numeric(time_diff) / 365)
+galleries3 <- tibble::tibble(
+  long_name = c(
+    "Guskey Framework Part 1: Participant Perceptions/Feedback",
+    "Guskey Framework Part 2: Participant Learning/Educator Surveys"
+  ),
+  blurb = c(
+    "An exploration of part 1 of the Teaching Lab framework...",
+    "An exploration of part 2 of the Teaching Lab framework..."
+  ),
+  image_url = c(
+    here::here("Images/Visualizations/Reviews.png"),
+    here::here("Images/Visualizations/SpendingperKid.png")
+  ),
+  link = c(
+    "https://teachinglab.github.io/TLReviews.html",
+    "https://teachinglab.github.io/USStateSpendingperKid.html"
+  )
+)
+
+galleries3 |>
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    layout = "label-below",
+    width = 2,
+    spacing = 3
+  )
+```
+
+
+# Data Deep Dives

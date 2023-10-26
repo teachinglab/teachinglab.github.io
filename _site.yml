@@ -26,6 +26,8 @@ navbar:
       href: mailto:<research@teachinglab.org>
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
+    - icon: fa-blog fa-lg
+      href: blog.html
     - text: "About"
       href: about.html
       icon: fa-info
