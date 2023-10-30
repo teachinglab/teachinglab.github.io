@@ -13,9 +13,9 @@ navbar:
     - text: "FY24 Trackers"
       menu:
         - text: "Overall data collection by site"
-          href: Surveys.html
+          href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
         - text: "NPS by site"
-          href: nps.html
+          href: https://teachinglabhq.shinyapps.io/nps_monitoring_tl/
         - text: Coaching Data Collection Tracker
           href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
     - text: "Reports"
