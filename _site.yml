@@ -16,11 +16,13 @@ navbar:
           href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
         - text: "NPS by site"
           href: https://teachinglabhq.shinyapps.io/nps_monitoring_tl/
-        - text: Coaching Data Collection Tracker
+        - text: Coaching Data Tracker Dashboard
+          href: https://teachinglabhq.shinyapps.io/CoachingDataCollection/
+        - text: Coaching Data Collection Tracker Raw Spreadsheet
           href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
     - text: "Reports"
       href: Reports.html
-    - text: "Dashboards and Visualizations"
+    - text: "Dashboards"
       href: Dashboards.html
     - icon: fa-envelope fa-lg
       href: mailto:<research@teachinglab.org>
@@ -28,9 +30,6 @@ navbar:
       href: http://github.com/teachinglab/
     - icon: fa-blog fa-lg
       href: blog.html
-    - text: "About"
-      href: about.html
-      icon: fa-info
     # - text: "Dashboards"
     #   menu:
     #     - text: "End of Session 2021-2022"

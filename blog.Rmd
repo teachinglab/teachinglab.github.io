@@ -8,6 +8,7 @@ output:
 # Guskey Framework
 
 ```{r guskey-framework, echo = F}
+library(bs4cards)
 time_diff <- Sys.Date() - as.Date("2019-01-01")
 year_diff <- round(as.numeric(time_diff) / 365)
 galleries3 <- tibble::tibble(

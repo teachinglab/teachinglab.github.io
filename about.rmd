@@ -1,5 +1,0 @@
----
-title: "About This Website"
----
-
-Please navigate using the dashbar, all other information about the site should be viewable on the home page.

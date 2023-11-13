@@ -1,5 +1,5 @@
 ---
-title: "Dashboard & Visualization Hub"
+title: "Dashboard Hub"
 output: 
   distill::distill_article:
     css: "css/strapless.css"
