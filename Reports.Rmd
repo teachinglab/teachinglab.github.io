@@ -33,7 +33,7 @@ card(
              href = "https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5"),
   card_body(
     fill = FALSE, gap = 0,
-    card_title("All reports from previous years are archived here")
+    card_title("All reports from previous years are archived on google drive, please download and launch in your web browswer to view.")
   )
 )
 ```

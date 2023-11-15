@@ -4,9 +4,12 @@ description: "Teaching Lab data product hosting site."
 output_dir: "docs"
 favicon: favicon.ico
 base_url: https://teachinglab.github.io
+google_analytics: "G-2P0MJ9QPG4"
 navbar:
-  logo: "teachinglab_logo.png"
-  href: https://www.teachinglab.org/
+  logo: 
+    image: "teachinglab_logo.png"
+    href: https://www.teachinglab.org/
+  search: true
   right: 
     - icon: fa-home fa-lg
       href: index.html
