@@ -5,29 +5,31 @@ output:
     css: "css/strapless.css"
 ---
 
-```{r echo = F}
+```{r echo = F, layout = "l-body-outset"}
 library(bslib)
 library(htmltools)
 card(
   card_header(
     class = "bg-dark",
-    tags$a("Ongoing SY23_24 Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/")
+    tags$a("Ongoing SY23_24 Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/", style = "font-weight:bold;")
   ),
   card_image(file = "Images/Reports/23_24/Ongoing23_24Report.png",
              href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"),
   card_body(
     fill = FALSE, gap = 0,
-    card_title("A fully compiled interactive report for all L&R data"),
+    card_title("A fully compiled, updating, interactive report for all L&R data representing each part of the Guskey Framework", style = "font-size:larger;"),
     tags$a(class = "text-muted", "See the tutorial for usage here", href = "https://www.youtube.com/")
   )
 )
 ```
 
-```{r echo = F}
+<br>
+
+```{r echo = F, layout = "l-body-outset"}
 card(
   card_header(
     class = "bg-dark",
-    tags$a("Report Archives", href = "https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5")
+    tags$a("Report Archives", href = "https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5", style = "font-weight:bold;")
   ),
   card_image(file = "Images/Reports/google_drive.png",
              href = "https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5"),

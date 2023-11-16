@@ -6,6 +6,7 @@
 
 a {
   target: "_blank";
+  color: #04abeb;
 }
 
 html {
@@ -4504,6 +4505,7 @@ template {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-bottom: 10px!important;
 }
 .card > hr {
   margin-right: 0;
@@ -4532,6 +4534,9 @@ template {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  color: #04abeb;
+  display: block;
+  width: 100%;
 }
 
 .card-title {
@@ -4558,7 +4563,7 @@ template {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: black;
+  background-color: #1d1f21;
   color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -4568,7 +4573,6 @@ template {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {

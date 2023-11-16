@@ -94,6 +94,7 @@ d-article a {
   background-size: 2px 2px;
   text-decoration: none;
   transition: background-size .2s;
+  color: #04abeb;
 }
 
 d-article a:hover {
