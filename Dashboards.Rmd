@@ -3,13 +3,16 @@ title: "Dashboard Hub"
 output: 
   distill::distill_article:
     css: "css/strapless.css"
+    toc: true
+    toc_depth: 2
 ---
 
-<base target="_blank"/>
-
-# Dashboard Access
+The following dashboards are organized according to our <a href = "https://datahub.teachinglab.org/evaluation_plan.html">evaluation plan</a> and can also be found at the <a href = "https://docs.google.com/document/d/1yvo1cW5i3OXtzN3Lf1lCRgw06Efbt0CH7n6PM53kELI/edit">data collection overview and data access guide</a>.
 
 ## Participant Perceptions
+
+Participant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.
+<br>
 
 ```{r participant-feedback-surveys, echo = F, layout = "l-body-outset"}
 library(htmltools)
@@ -33,11 +36,11 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("Participant Feedback Internal Rollup", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/", style = "font-weight:bold;")
+      tags$a("Participant Feedback Internal Rollup", href = "https://teachinglabhq.shinyapps.io/tl_facilitator_data/", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
-      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
+      href = "https://teachinglabhq.shinyapps.io/tl_facilitator_data/"
     ),
     card_footer("View all participant feedback data with additional functionality and time-incorporated data")
   ),
@@ -59,6 +62,8 @@ layout_column_wrap(
 ```
 
 ## Participant Mindsets
+
+Participant mindsets come from the diagnostic educator survey and follow up educator survey.
 
 ```{r educator-surveys, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
@@ -95,6 +100,8 @@ layout_column_wrap(
 
 ## Participant Knowledge
 
+Participants that completed <a href = "https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">course assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.
+
 ```{r course-assessments, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
   width = 1 / 2,
@@ -127,6 +134,8 @@ layout_column_wrap(
 ```
 
 ## Participant Practices
+
+Teaching Lab staff conduct classroom observations and capture <a href = "https://achievethecore.org/category/1155/printable-versions">standards and shifts aligned instruction</a> in the classroom observations survey. Those results will appear in the following dashboards.
 
 ```{r ipg-data, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
@@ -174,6 +183,8 @@ layout_column_wrap(
 ```
 
 ## Student Learning Experiences
+
+Respondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.
 
 ```{r student-survey, echo = F, layout = "l-body-outset"}
 layout_column_wrap(

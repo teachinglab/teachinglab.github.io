@@ -5,6 +5,8 @@ output:
     css: "css/strapless.css"
 ---
 
+<base target="_blank"/>
+
 ```{r echo = F, layout = "l-body-outset"}
 library(bslib)
 library(htmltools)
