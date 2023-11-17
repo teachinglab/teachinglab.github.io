@@ -4,7 +4,8 @@ output:
   distill::distill_article:
     css: "css/strapless.css"
     toc: true
-    toc_depth: 2
+    toc_depth: 3
+    toc_float: true
 ---
 
 The following dashboards are organized according to our <a href = "https://datahub.teachinglab.org/evaluation_plan.html">evaluation plan</a> and can also be found at the <a href = "https://docs.google.com/document/d/1yvo1cW5i3OXtzN3Lf1lCRgw06Efbt0CH7n6PM53kELI/edit">data collection overview and data access guide</a>.
@@ -30,7 +31,7 @@ layout_column_wrap(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
       href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
     ),
-    card_footer("View all forms of participant feedback and NPS simultaneously in section 2")
+    card_footer("View all forms of p+articipant feedback and NPS simultaneously in section 2")
   ),
   card(
     full_screen = TRUE,
@@ -39,7 +40,7 @@ layout_column_wrap(
       tags$a("Participant Feedback Internal Rollup", href = "https://teachinglabhq.shinyapps.io/tl_facilitator_data/", style = "font-weight:bold;")
     ),
     card_image(
-      file = "Images/Reports/23_24/Ongoing23_24Report.png",
+      file = "Images/Dashboards/FacilitatorRollup.png",
       href = "https://teachinglabhq.shinyapps.io/tl_facilitator_data/"
     ),
     card_footer("View all participant feedback data with additional functionality and time-incorporated data")
