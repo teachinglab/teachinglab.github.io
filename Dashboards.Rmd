@@ -25,11 +25,11 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("Participant Feedback Full Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/", style = "font-weight:bold;")
+      tags$a("Participant Feedback Full Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section2", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
-      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section2"
     ),
     card_footer("View all forms of p+articipant feedback and NPS simultaneously in section 2")
   ),
@@ -74,11 +74,11 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("Educator Survey Full Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/", style = "font-weight:bold;")
+      tags$a("Educator Survey Full Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section4", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
-      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section4"
     ),
     card_footer("View demographic information in section 1, teacher mindsets in section 4, and school leader mindsets in section 5")
   ),
@@ -123,11 +123,11 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("Course Assessments Ongoing Report", href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887", style = "font-weight:bold;")
+      tags$a("Course Assessments Ongoing Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section3", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
-      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section3"
     ),
     card_footer("Additionally view overall course assessments data in the ongoing report.")
   )
@@ -140,7 +140,7 @@ Teaching Lab staff conduct classroom observations and capture <a href = "https:/
 
 ```{r ipg-data, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
-  width = 1 / 3,
+  width = 1 / 4,
   height = 400,
   card(
     full_screen = TRUE,
@@ -158,11 +158,11 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("IPG Ongoing Report Data", href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887", style = "font-weight:bold;")
+      tags$a("IPG Ongoing Report Data", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Reports/23_24/Ongoing23_24Report.png",
-      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/"
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6"
     ),
     card_footer("View % positive indicators in section 6b and 6c.")
   ),
@@ -170,15 +170,27 @@ layout_column_wrap(
     full_screen = TRUE,
     card_header(
       class = "bg-dark",
-      tags$a("IPG Qualtrics Data", href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d", style = "font-weight:bold;")
+      tags$a("IPG Qualtrics Data", href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6349bfbbb614690016a0b7b1/pages/Page_120ba1a8-cea1-44d2-a7e0-19fd41fcc67a/view", style = "font-weight:bold;")
     ),
     card_image(
       file = "Images/Dashboards/QualtricsLogo.png",
-      href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d"
+      href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6349bfbbb614690016a0b7b1/pages/Page_120ba1a8-cea1-44d2-a7e0-19fd41fcc67a/view"
     ),
     card_footer(
       tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
+  ),
+  card(
+    full_screen = TRUE,
+    card_header(
+      class = "bg-dark",
+      tags$a("Google Sheets Classroom Observations Qualtrics Copy", href = "https://docs.google.com/spreadsheets/d/1mRZThJuslwVGXyWNY2Z-gAgh0FZKaJM1LIHRwhRvMg8/edit#gid=1191104641", style = "font-weight:bold;")
+    ),
+    card_image(
+      file = "Images/Dashboards/QualtricsLogo.png",
+      href = "https://docs.google.com/spreadsheets/d/1mRZThJuslwVGXyWNY2Z-gAgh0FZKaJM1LIHRwhRvMg8/edit#gid=1191104641"
+    ),
+    card_footer("A google sheet with all qualtrics data, each tab contains responses from a specific IPG rubric.")
   )
 )
 ```
@@ -189,8 +201,20 @@ Respondents to the student survey and submissions of student work samples have t
 
 ```{r student-survey, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
-  width = 1 / 2,
+  width = 1 / 3,
   height = 400,
+  card(
+    full_screen = TRUE,
+    card_header(
+      class = "bg-dark",
+      tags$a("Student Outcomes Ongoing Report", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section7", style = "font-weight:bold;")
+    ),
+    card_image(
+      file = "Images/Reports/23_24/Ongoing23_24Report.png",
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section7"
+    ),
+    card_footer("View % agree/strongly agree on the student survey and eic student survey in section 7a (data not shown if site is not applicable).")
+  ),
   card(
     full_screen = TRUE,
     card_header(
@@ -224,8 +248,20 @@ layout_column_wrap(
 
 ```{r student-work, echo = F, layout = "l-body-outset"}
 layout_column_wrap(
-  width = 1 / 2,
+  width = 1 / 3,
   height = 400,
+  card(
+    full_screen = TRUE,
+    card_header(
+      class = "bg-dark",
+      tags$a("Student Work Graded Summaries", href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section7", style = "font-weight:bold;")
+    ),
+    card_image(
+      file = "Images/Reports/23_24/Ongoing23_24Report.png",
+      href = "https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section7"
+    ),
+    card_footer("View graded student work assignments breakdowns in sections 7b and 7c.")
+  ),
   card(
     full_screen = TRUE,
     card_header(
