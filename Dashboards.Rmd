@@ -56,7 +56,7 @@ layout_column_wrap(
       href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d"
     ),
     card_footer(
-      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/")
+      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
   )
 )
@@ -93,7 +93,7 @@ layout_column_wrap(
       href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887"
     ),
     card_footer(
-      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/")
+      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
   )
 )
@@ -177,7 +177,7 @@ layout_column_wrap(
       href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d"
     ),
     card_footer(
-      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/")
+      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
   )
 )
@@ -202,7 +202,7 @@ layout_column_wrap(
       href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6345c33160c27c00166cb726?pageId=Page_ee9d1195-c476-4414-b1ab-ee2da2fdb4ce"
     ),
     card_footer(
-      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/")
+      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
   ),
   card(
@@ -216,7 +216,7 @@ layout_column_wrap(
       href = "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62"
     ),
     card_footer(
-      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/e/2PACX-1vSjVRONZssfrEojC0cbGwLbJ8mNvKm4-Q1slQeCB1GoO665U_b5bRr7-7yx7KPvqHU8vUbPTnGQoogd/")
+      tags$a("Access qualtrics dashboards using the information here", href = "https://docs.google.com/document/d/1oD5mCtSMK8atMZknPruhgf6qToAA5oF7HyZQTil3i4w/edit")
     )
   )
 )
