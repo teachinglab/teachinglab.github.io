@@ -6,7 +6,38 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
+    self_contained: false
 ---
+
+<!-- TOC JAVASCRIPT ELEMENTS -->
+<script>
+function toggle () {
+  document.getElementById("TOC").classList.toggle("hide");
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (entry.intersectionRatio > 0) {
+        document.querySelector(`[href="#${id}"]`).parentElement.classList.add('active');
+      } else {
+        document.querySelector(`[href="#${id}"]`).parentElement.classList.remove('active');
+      }
+    });
+  });
+
+  // Track all headings that have an `id` applied
+  document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((h1, h2, h3, h4, h5, h6) => {
+    observer.observe(h1, h2, h3, h4, h5, h6);
+  });
+  
+});
+</script>
+
+<!-- TOC HTML ELEMENTS -->
+<input type="button" class="d-article-with-toc" id="TOC" value="&#x2630" title="Toggle (Hide/Show) Table of Contents" alt="Toggle button for hiding/showing the Table of Contents" onclick="toggle()" style="padding:7px; border: 0px;"/>
 
 The following dashboards are organized according to our <a href = "https://datahub.teachinglab.org/evaluation_plan.html">evaluation plan</a> and can also be found at the <a href = "https://docs.google.com/document/d/1yvo1cW5i3OXtzN3Lf1lCRgw06Efbt0CH7n6PM53kELI/edit">data collection overview and data access guide</a>.
 
@@ -16,6 +47,12 @@ Participant perceptions include data from the end of session survey administered
 <br>
 
 ```{r participant-feedback-surveys, echo = F, layout = "l-body-outset"}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = TRUE
+)
 library(htmltools)
 library(bslib)
 layout_column_wrap(
@@ -289,231 +326,3 @@ layout_column_wrap(
 )
 ```
 
-
-<!-- <a href="https://youtu.be/mRBWfdjEv-4">End of Session Dashboard Tutorial</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/dxE-PciN-ZY">Facilitator Facing Dashboard Tutorial</a> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://youtu.be/KZsLENMy8cg">End of Course Dashboard Tutorial</a> -->
-
-<!-- ```{r active-dashboards, echo = F, layout = "l-page"} -->
-<!-- library(bs4cards) -->
-
-<!-- report_galleries <- tibble::tibble( -->
-<!--   location = c( -->
-<!--     "Facilitator facing dashboards", # 1 -->
-<!--     "Coaching facing dashboards", # 2 -->
-<!--     "Internal Participant Feedback Dashboard", # 3 -->
-<!--     "Educator Survey Dashboard", # 4 -->
-<!--     "Course Assessments Dashboard", # 5 -->
-<!--     "IPG Dashboard", # 6 -->
-<!--     "IPG Raw Data Dashboard", # 7 -->
-<!--     "Student Survey Dashboard", # 8 -->
-<!--     "EIC Student Survey Dashboard", # 9 -->
-<!--     "Student Work Dashboard", # 10 -->
-<!--     "Student Work Graded Dashboard" # 11 -->
-<!--   ), -->
-<!--   long_name = location, -->
-<!--   text = c( -->
-<!--     "A custom dashboard for use by teaching lab facilitators to view personal data (non FTE's)", -->
-<!--     "A custom dashboard for use by teaching lab coaches to view personal data (non FTE's)", -->
-<!--     "A Qualtrics dashboard to view all Participant Feedback, with tabs for viewing end of session, course, and coaching data separately", -->
-<!--     "A Qualtrics dashboard to view all Educator Survey data, with tabs for different sections", -->
-<!--     "A custom dashboard for diving deeper on responses to course assessments, including % all questions correct, % correct by question, and % selected for each answer", -->
-<!--     "A Qualtrics dashboard for viewing all IPG data by % responses, split by rubric", -->
-<!--     "A custom dashboard for looking at individual IPG responses, drill down by site -> coach -> teacher to see all available data", -->
-<!--     "A Qualtrics dashboard for all Student Survey data, with tabs for each question grouping", -->
-<!--     "A Qualtrics dashboard for all EIC Student Survey data, with tabs for each question grouping", -->
-<!--     "A custom dashboard for grading student work", -->
-<!--     "A custom dashboard for seeing the results of student work grading" -->
-<!--   ), -->
-<!--   image_url = c( -->
-<!--     here::here("Images/Dashboards/FacilitatorFacingDashboard.png"), -->
-<!--     here::here("Images/Dashboards/CoachingFacingDashboard.png"), -->
-<!--     here::here("Images/Dashboards/QualtricsLogo.png"), -->
-<!--     here::here("Images/Dashboards/QualtricsLogo.png"), -->
-<!--     here::here("Images/Dashboards/CourseAssessment.png"), -->
-<!--     here::here("Images/Dashboards/QualtricsLogo.png"), -->
-<!--     here::here("Images/Dashboards/IPGRawDashboard.png"), -->
-<!--     here::here("Images/Dashboards/QualtricsLogo.png"), -->
-<!--     here::here("Images/Dashboards/QualtricsLogo.png"), -->
-<!--     here::here("Images/Dashboards/StudentWorkGrader.png"), -->
-<!--     here::here("Images/Dashboards/StudentWorkGraded.png") -->
-<!--   ), -->
-<!--   link = c( -->
-<!--     "https://teachinglabhq.shinyapps.io/FacilitatorAuth/", # Facilitator board 1 -->
-<!--     "https://teachinglabhq.shinyapps.io/CoachingAuth/", # Coaching board 2 -->
-<!--     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6317cbd1f9feca001046524d", # End of Session 3 -->
-<!--     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/63053d35379f890010cc456e?pageId=Page_fcc6840b-679e-4652-b50c-6a95853b5887", # Educator Survey 4 -->
-<!--     "https://teachinglabhq.shinyapps.io/course_assessments/", # Course Assessments 5 -->
-<!--     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6349bfbbb614690016a0b7b1", # Classroom Observations 6 -->
-<!--     "https://teachinglabhq.shinyapps.io/IPGRawDataDashboard/", -->
-<!--     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/6345c33160c27c00166cb726?pageId=Page_ee9d1195-c476-4414-b1ab-ee2da2fdb4ce", # Student Survey 8 -->
-<!--     "https://teachinglab.co1.qualtrics.com/reporting-dashboard/#/dashboard/636172f94060140010530cc8?pageId=Page_35ff03a3-5111-48b5-abcd-ecfca4249e62", # EIC Student Survey 9 -->
-<!--     "https://teachinglabhq.shinyapps.io/student_work_samples/", -->
-<!--     "https://teachinglabhq.shinyapps.io/student_work_graded/" # 10 -->
-<!--   ), -->
-<!--   tags = c("custom", "custom", "qualtrics", "qualtrics", "custom", "qualtrics", "custom", "qualtrics", "qualtrics", "custom", "custom") -->
-<!-- ) |> -->
-<!--   dplyr::mutate( -->
-<!--     label_color = ifelse(tags == "custom", "#04abeb", "#016891") -->
-<!--   ) -->
-
-<!-- report_galleries |> -->
-<!--   cards( -->
-<!--     title = "", -->
-<!--     footer = long_name, -->
-<!--     link = link, -->
-<!--     text = text, -->
-<!--     image = image_url, -->
-<!--     layout = "label-left", -->
-<!--     breakpoint = 5, -->
-<!--     width = 4, -->
-<!--     tags = paste("all;", tags), -->
-<!--     label_colour = label_color, -->
-<!--     spacing = 3 -->
-<!--   ) -->
-<!-- ``` -->
-
-<!-- # Tutorials  -->
-
-<!-- <br> -->
-
-<!-- ```{r tutorials, echo = F} -->
-<!-- galleries2 <- tibble::tibble( -->
-<!--   long_name = c( -->
-<!--     "Facilitator facing dashboards tutorial", -->
-<!--     "NPS Dashboard Tutorial", -->
-<!--     "IPG Dashboard Tutorial", -->
-<!--     "Course Assessments Dashboard Tutorial" -->
-<!--   ), -->
-<!--   blurb = c( -->
-<!--     "A tutorial for facilitators to see how to use the custom facilitator dashboard", -->
-<!--     "A brief tutorial on the nps dashboard, overviewing what the data is and says.", -->
-<!--     "An in depth tutorial on how to look at raw IPG data and download reports with fully developed visuals contextualizing the data.", -->
-<!--     "Another in depth tutorial on how to see every level of course assessments data, from specific answers, to overall % correct." -->
-<!--   ), -->
-<!--   image_url = c("https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj"), -->
-<!--   link = c("https://youtu.be/dxE-PciN-ZY", "https://youtu.be/t_QM7QxFUq8", "https://youtu.be/UtIpIyDLok4", "https://youtu.be/o0CEkx0r5yY"), -->
-<!--   tags = c("all;custom;") -->
-<!-- ) -->
-
-<!-- galleries2 |> -->
-<!--   cards( -->
-<!--     title = long_name, -->
-<!--     text = blurb, -->
-<!--     link = link, -->
-<!--     image = image_url, -->
-<!--     layout = "label-below", -->
-<!--     width = 2, -->
-<!--     spacing = 3 -->
-<!--   ) -->
-<!-- ``` -->
-
-
-<!-- # Visualizations -->
-
-<!-- <br> -->
-
-<!-- ```{r visualizations, echo = F} -->
-<!-- time_diff <- Sys.Date() - as.Date("2019-01-01") -->
-<!-- year_diff <- round(as.numeric(time_diff) / 365) -->
-<!-- galleries3 <- tibble::tibble( -->
-<!--   long_name = c( -->
-<!--     "Visualizing and textualizing TL data.", -->
-<!--     "How much does each US state spend per kid per capita over time?" -->
-<!--   ), -->
-<!--   blurb = c( -->
-<!--     paste0("A visualization of ", year_diff, " years of reviews of Teaching Lab courses by type of content."), -->
-<!--     "" -->
-<!--   ), -->
-<!--   image_url = c( -->
-<!--     here::here("Images/Visualizations/Reviews.png"), -->
-<!--     here::here("Images/Visualizations/SpendingperKid.png") -->
-<!--   ), -->
-<!--   link = c( -->
-<!--     "https://teachinglab.github.io/TLReviews.html", -->
-<!--     "https://teachinglab.github.io/USStateSpendingperKid.html" -->
-<!--   ) -->
-<!-- ) -->
-
-<!-- galleries3 |> -->
-<!--   cards( -->
-<!--     title = long_name, -->
-<!--     text = blurb, -->
-<!--     link = link, -->
-<!--     image = image_url, -->
-<!--     layout = "label-below", -->
-<!--     width = 2, -->
-<!--     spacing = 3 -->
-<!--   ) -->
-<!-- ``` -->
-
-<!-- # Inactive Dashboards (SY21-22) -->
-
-<!-- <br> -->
-
-<!-- All dashboards require an @teachinglab.org email login to verify that access to the correct content is granted. -->
-
-<!-- <br> -->
-
-<!-- ```{r inactive-dashboards-21-22, echo = F, layout = "l-page"} -->
-<!-- # bs4cards::use_strapless(here::here("css")) -->
-<!-- galleries <- tibble::tibble( -->
-<!--   location = c("Facilitator End of Session Survey Dashboard", -->
-<!--                 "End of Session Surveys 2021-2022", -->
-<!--                 "End of Course Surveys 2021-2022",  -->
-<!--                 "Survey Responses per Partner", -->
-<!--                 "Coaching Participant Feedback 2022"), -->
-<!--   long_name = location, -->
-<!--   image_url = c(here::here("Images/Dashboards/FacilitatorPersonalDashboard.png"), -->
-<!--                 here::here("Images/Dashboards/SessionDashboard.png"), -->
-<!--                 here::here("Images/Dashboards/CourseDashboard.png"), -->
-<!--                 here::here("Images/Dashboards/DiagnosticResponses.png"), -->
-<!--                 here::here("Images/Dashboards/DiagnosticResponses.png")), -->
-<!--   link = c("https://teachinglabhq.shinyapps.io/PersonalFacilitator/", -->
-<!--            "https://teachinglabhq.shinyapps.io/SessionSurvey/", -->
-<!--            "https://teachinglabhq.shinyapps.io/CourseSurvey/", -->
-<!--            "https://teachinglabhq.shinyapps.io/DiagnosticComplete/", -->
-<!--            "https://teachinglabhq.shinyapps.io/CoachingParticipantFeedback/") -->
-<!-- ) -->
-
-<!-- galleries |> -->
-<!--   cards( -->
-<!--     title = "Inactive Dashboards SY21-22", -->
-<!--     link = link, -->
-<!--     footer = long_name, -->
-<!--     image = image_url, -->
-<!--     layout = "label-below",  -->
-<!--     width = 2,  -->
-<!--     spacing = 3 -->
-<!--   ) -->
-<!-- ``` -->
-
-<!-- <br> -->
-
-
-<!-- # Inactive Dashboards (Pre SY20-21) -->
-
-<!-- <br> -->
-
-<!-- ```{r inactive-dashboards-20-21, echo = F} -->
-<!-- galleries2 <- tibble::tibble( -->
-<!--   location = c("End of Session Surveys before SY21-22"), -->
-<!--   long_name = location, -->
-<!--   image_url = c(here::here("Images/Dashboards/CourseDashboard.png")), -->
-<!--   link = c("https://teachinglabhq.shinyapps.io/ParticipantFeedback/") -->
-<!-- ) -->
-
-<!-- galleries2 |> -->
-<!--   cards( -->
-<!--     title = "Inactive Dashboards SY20-21", -->
-<!--     link = link, -->
-<!--     footer = long_name, -->
-<!--     image = image_url, -->
-<!--     layout = "label-below",  -->
-<!--     width = 2,  -->
-<!--     spacing = 3 -->
-<!--   ) -->
-<!-- ``` -->
-
-<!-- <br> -->

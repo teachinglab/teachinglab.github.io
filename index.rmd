@@ -5,21 +5,6 @@ output:
     css: css/theme.css
 ---
 
-<!-- <html> -->
-<!-- <head> -->
-<!--   <title>A static website</title> -->
-
-<!--   <!-- include the widget --> 
-<!--   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
-<!-- </head> -->
-<!-- <body> -->
-<!--   <!-- Add a simpler button: -->
-<!--     Simple button that will open the modal. -->
-<!--   --> -->
-<!--   <div data-netlify-identity-button>Login</div> -->
-<!-- </body> -->
-<!-- </html> -->
-
 <center>
 
 Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, and more. If you cannot find the information you are looking for or are having trouble accessing something, please reach out to duncan.gates@teachinglab.org.

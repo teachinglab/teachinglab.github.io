@@ -2488,7 +2488,7 @@ FY24 Trackers
   border-radius: 10px;
   background: #eee;
   transform-origin: center center;
-  transform: scale(1);
+  transform: scale(1)!important;
   transition: transform 0.5s;
   position: relative;
   display: block;
@@ -2534,8 +2534,7 @@ img {
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  margin: 0 0 0.5rem 0;
+  margin: 0.5rem 0.5rem 0.75rem 0;
   position: relative;
 }
 
@@ -2567,13 +2566,14 @@ img {
     <div id="slide-1">
       <b style = 'font-size:20px;'>How often does data update?</b>
       <br>
-     <p style = 'text-align:left;'>It depends. Unfortunately, different calculations have different computations, tools, and issues involved so data is not always up to date to the last second! With Teaching Lab&rsquo;s current data stack, all tools can be guaranteed to be updated within at least the last 24 hours (business days). Below is a comprehensive list of tools, and the timeline on which they update.
+      <br>
+     <p style = 'text-align:left;margin-left:1em;'>It depends. Unfortunately, different calculations have different computations, tools, and issues involved so data is not always up to date to the last second! With Teaching Lab&rsquo;s current data stack, all tools can be guaranteed to be updated within at least the last 24 hours (business days). Below is a comprehensive list of tools, and the timeline on which they update.
      </p>
-      <ol style = 'text-align:left;'>
+      <ol style = 'text-align:left;font-family: "Calibri", sans-serif;font-weight: 200;line-height: 1.3;font-size: 1.0em;color: #333333;font-style: normal;'>
       <li>Qualtrics dashboards - potentially up to a 15-minute delay on responses appearing in dashboards.</li>
       <li>Teaching Lab shiny dashboards - potentially up to a 15-minute delay on responses appearing.</li>
       <li>Data trackers - these update daily at 6 AM EST, so there will be 6 am + time since then delay on updating</li>
-      <li>Reports - Currently (SY23-24 November 21) the only report is the ongoing report, which has a 15-minute potential delay on data appearing.</li>
+      <li>Reports - Currently (SY23-24 November 21) the only report is the ongoing report, which has a 60-minute potential delay on data appearing.</li>
       </ol>
     </div>
     <div id="slide-2">
