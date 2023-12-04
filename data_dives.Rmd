@@ -1,0 +1,40 @@
+---
+title: "Data Dives"
+output: 
+  distill::distill_article:
+    css: "css/theme.css"
+---
+
+# Guskey Framework
+
+```{r guskey-framework, echo = F}
+library(bs4cards)
+galleries3 <- data.frame(
+  long_name = c(
+    "Behind the Numbers: What We Measure & Why"
+  ),
+  blurb = c(
+    "Teaching Lab's first data dive!"
+  ),
+  image_url = c(
+    here::here("Images/data_dives/data_dive_1.png")
+  ),
+  link = c(
+    "https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p"
+  )
+)
+
+galleries3 |>
+  cards(
+    title = long_name,
+    text = blurb,
+    link = link,
+    image = image_url,
+    layout = "label-below",
+    width = 2,
+    spacing = 3
+  )
+```
+
+
+# Data Deep Dives

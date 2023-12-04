@@ -13,9 +13,6 @@ navbar:
   right: 
     - icon: fa-home fa-lg
       href: index.html
-    - text: "Evaluation Plan"
-      href: evaluation_plan.html
-      # icon: fa-vials fa-lg
     - text: "FY24 Trackers"
       menu:
         - text: "Overall data collection by site"
@@ -31,13 +28,20 @@ navbar:
       # icon: fa-file fa-lg
     - text: "Dashboards"
       href: Dashboards.html
+    - text: "Resources"
+      menu:
+        - text: "Evaluation Plan"
+          href: evaluation_plan.html
+        - text: "Data Dives"
+          href: data_dives.html
+      # icon: fa-vials fa-lg
+    - text: "Blog"
+      href: blog.html
       # icon: fa-gauge fa-lg
     - icon: fa-envelope fa-lg
       href: mailto:<research@teachinglab.org>
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
-    - icon: fa-blog fa-lg
-      href: blog.html
     # - text: "Dashboards"
     #   menu:
     #     - text: "End of Session 2021-2022"
