@@ -5,8 +5,6 @@ output:
     css: "css/theme.css"
 ---
 
-# Guskey Framework
-
 ```{r guskey-framework, echo = F}
 library(bs4cards)
 galleries3 <- data.frame(
@@ -35,6 +33,3 @@ galleries3 |>
     spacing = 3
   )
 ```
-
-
-# Data Deep Dives
