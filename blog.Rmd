@@ -17,7 +17,7 @@ galleries3 <- tibble::tibble(
     "Discover how Teaching Lab's innovative coaching is transforming classrooms by uplifting both teachers and students."
   ),
   image_url = c(
-    here::here("Images/blog/teachers_coached_growth.png")
+    here::here("Images/blog/blog_header.png")
   ),
   link = c(
     "https://teachinglab.github.io/blog_post_1.html"
