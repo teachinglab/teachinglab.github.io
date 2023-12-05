@@ -5,28 +5,22 @@ output:
     css: "css/theme.css"
 ---
 
-# Guskey Framework
-
 ```{r guskey-framework, echo = F}
 library(bs4cards)
 time_diff <- Sys.Date() - as.Date("2019-01-01")
 year_diff <- round(as.numeric(time_diff) / 365)
 galleries3 <- tibble::tibble(
   long_name = c(
-    "Guskey Framework Part 1: Participant Perceptions/Feedback",
-    "Guskey Framework Part 2: Participant Learning/Educator Surveys"
+    "Blog 1: Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success"
   ),
   blurb = c(
-    "An exploration of part 1 of the Teaching Lab framework...",
-    "An exploration of part 2 of the Teaching Lab framework..."
+    "Discover how Teaching Lab's innovative coaching is transforming classrooms by uplifting both teachers and students."
   ),
   image_url = c(
-    here::here("Images/Visualizations/Reviews.png"),
-    here::here("Images/Visualizations/SpendingperKid.png")
+    here::here("Images/blog/teachers_coached_growth.png")
   ),
   link = c(
-    "https://teachinglab.github.io/TLReviews.html",
-    "https://teachinglab.github.io/USStateSpendingperKid.html"
+    "https://teachinglab.github.io/blog_post_1.html"
   )
 )
 
@@ -41,6 +35,3 @@ galleries3 |>
     spacing = 3
   )
 ```
-
-
-# Data Deep Dives
