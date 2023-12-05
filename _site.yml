@@ -8,7 +8,7 @@ google_analytics: "G-2P0MJ9QPG4"
 navbar:
   logo: 
     image: "teachinglab_logo.png"
-    href: https://www.teachinglab.org/
+    href: https://datahub.teachinglab.org/
   search: true
   right: 
     - icon: fa-home fa-lg
@@ -42,67 +42,6 @@ navbar:
       href: mailto:<research@teachinglab.org>
     - icon: fa-github fa-lg
       href: http://github.com/teachinglab/
-    # - text: "Dashboards"
-    #   menu:
-    #     - text: "End of Session 2021-2022"
-    #       href: "https://teachinglabhq.shinyapps.io/YearlyDashboard2"
-    #     - text: "End of Course 2021-2022"
-    #       href: "https://teachinglabhq.shinyapps.io/YearlyDashboard"
-    #     - text: "Diagnostic Completion per Partner"
-    #       href: "https://teachinglabhq.shinyapps.io/DiagnosticComplete"
-    #     - text: "End of Session pre 2021-2022"
-    #       href: "https://teachinglabhq.shinyapps.io/ParticipantFeedback"
-    # - text: "Reports"
-    #   icon: fa-file
-      # menu:
-      #   - text: "All Partners Report Unmatched"
-      #     href: "Encrypted/2021 Report_unmatched_All Partners-protected.html"
-      #   - text: "Brownington Report"
-      #     href: "Encrypted/2021 Report_unmatched_Brownington Central School, VT-protected.html"
-      #   - text: "Building 21 Report"
-      #     href: "Encrypted/2021 Report_unmatched_Building 21-protected.html"
-      #   - text: "Delaware Department of Education Report"
-      #     href: "Encrypted/2021 Report_unmatched_Delaware Department of Education, DE-protected.html"
-      #   - text: "East Baton Rouge Report"
-      #     href: "Encrypted/2021 Report_unmatched_East Baton Rouge Parish, LA-protected.html"
-      #   - text: "Evangeline Parish Report"
-      #     href: "Encrypted/2021 Report_unmatched_Evangeline Parish, LA-protected.html"
-      #   - text: "Freire Charter Report"
-      #     href: "Encrypted/DE-protected.html"
-      #   - text: "Kankakee Report"
-      #     href: "Encrypted/2021 Report_unmatched_Kankakee School District, IL-protected.html"
-      #   - text: "Louisiana State Report"
-      #     href: "Encrypted/2021 Report_unmatched_Louisiana State Content Leader Training, LA-protected.html"
-      #   - text: "Lafayette Parish Report"
-      #     href: "Encrypted/2021 Report_unmatched_Lafayette Parish, LA-protected.html"
-      #   - text: "Legacy Early College Report"
-      #     href: "Encrypted/2021 Report_unmatched_Legacy Early College, SC-protected.html"
-      #   - text: "Mississippi Department of Education Report"
-      #     href: "Encrypted/2021 Report_unmatched_Mississippi Department of Education, MS-protected.html"
-      #   - text: "NYC District 11 District-wide"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - District-wide, NY-protected.html"
-      #   - text: "NYC District 11 - IS 355"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - IS 355, NY-protected.html"
-      #   - text: "NYC District 11 - PS 21"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 21, NY-protected.html"
-      #   - text: "NYC District 11 - PS 87"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 87, NY-protected.html"
-      #   - text: "NYC District 11 - PS 89"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 89, NY-protected.html"
-      #   - text: "NYC District 11 - PS 96"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 96, NY-protected.html"
-      #   - text: "NYC District 11 - PS 103"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 103, NY-protected.html"
-      #   - text: "NYC District 11 - PS 189"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 189, NY-protected.html"
-      #   - text: "NYC District 11 - PS 498"
-      #     href: "Encrypted/2021 Report_unmatched_NYC District 11 - PS 498, NY-protected.html"
-      #   - text: "Pointe Coupee Report"
-      #     href: "Encrypted/2021 Report_unmatched_Pointe Coupee Parish, LA-protected.html"
-      #   - text: "Tangipahoa Parish Report"
-      #     href: "Encrypted/2021 Report_unmatched_Tangipahoa Parish, LA-protected.html"
-      #   - text: "All Partners Report Matched"
-      #     href: "Encrypted/2021 Report_matched_All Partners-protected.html"
 output:
   distill::distill_article:
     # css: ['scss/bootstrap/_variables.scss', 'scss/bootstrap/_thumbnails.scss']

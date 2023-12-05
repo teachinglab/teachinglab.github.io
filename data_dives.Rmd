@@ -5,6 +5,8 @@ output:
     css: "css/theme.css"
 ---
 
+See the zoom recording [here](https://teachinglab-org.zoom.us/rec/share/iGc5K0lUuaOTB_6ljr2Hq-k3OZedl7RaKNd9RRRcsr5SQdWOHKx2abUA33aubXsi.0UcB36vA32xWQdDW).
+
 ```{r guskey-framework, echo = F}
 library(bs4cards)
 galleries3 <- data.frame(
@@ -19,7 +21,8 @@ galleries3 <- data.frame(
   ),
   link = c(
     "https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p"
-  )
+  ),
+  label_colour = c("#c4d8e2")
 )
 
 galleries3 |>
@@ -30,6 +33,8 @@ galleries3 |>
     image = image_url,
     layout = "label-below",
     width = 2,
-    spacing = 3
+    border_radius = 5,
+    spacing = 3,
+    label_colour = label_colour
   )
 ```
