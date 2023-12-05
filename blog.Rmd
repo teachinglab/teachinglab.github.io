@@ -2,36 +2,22 @@
 title: "Learning & Research Blog"
 output: 
   distill::distill_article:
-    css: "css/theme.css"
+    css: "css/strapless.css"
 ---
 
-```{r guskey-framework, echo = F}
-library(bs4cards)
-time_diff <- Sys.Date() - as.Date("2019-01-01")
-year_diff <- round(as.numeric(time_diff) / 365)
-galleries3 <- tibble::tibble(
-  long_name = c(
-    "Blog 1: Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success"
-  ),
-  blurb = c(
-    "Discover how Teaching Lab's innovative coaching is transforming classrooms by uplifting both teachers and students."
-  ),
-  image_url = c(
-    here::here("Images/blog/blog_header.png")
-  ),
-  link = c(
-    "https://teachinglab.github.io/blog_post_1.html"
-  )
-)
-
-galleries3 |>
-  cards(
-    title = long_name,
-    text = blurb,
-    link = link,
-    image = image_url,
-    layout = "label-below",
-    width = 2,
-    spacing = 3
+```{r guskey-framework, echo = F, layout = "l-body-outset"}
+library(bslib)
+library(htmltools)
+card(
+    full_screen = TRUE,
+    card_header(
+      class = "bg-dark",
+      tags$a("Blog 1: Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success", href = "https://teachinglab.github.io/blog_post_1.html", style = "font-weight:bold;")
+    ),
+    card_image(
+      file = "Images/blog/blog_header.png",
+      href = "https://teachinglab.github.io/blog_post_1.html"
+    ),
+    card_footer("Discover how Teaching Lab's innovative coaching is transforming classrooms by uplifting both teachers and students.")
   )
 ```
