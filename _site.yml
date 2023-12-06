@@ -34,6 +34,8 @@ navbar:
           href: evaluation_plan.html
         - text: "Data Dives"
           href: data_dives.html
+        - text: "Data Availability"
+          href: tl_data_overview.html
       # icon: fa-vials fa-lg
     - text: "Blog"
       href: blog.html
