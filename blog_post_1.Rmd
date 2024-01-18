@@ -19,3 +19,24 @@ output:
 <p>Finally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. <strong>Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments</strong>. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.</p>
 <img src="./images/blog/student_performance.png" alt="Student Performance" width="498" height="331">
 <p><strong><em>What’s next for understanding the impact of Teaching Lab’s coaching model?</em></strong></p><p>As we grow and scale our model, data collection and analysis is becoming more robust and richer. By utilizing data collected from the coaching log, the Learning &amp; Research Team will explore correlations between the frequency and duration of coaching sessions, the specific areas of focus and goals within coaching cycles, and the resulting outcomes at the end of SY23-24. We will also participate in an exploratory <a target="_blank" href="https://annenberg.brown.edu/rppl"><span style="color:rgb(17, 85, 204);">RPPL</span></a> study to better understand the “moves” our coaches make with teachers and how they could be leveraged in the development of an AI feedback tool. Finally, through two federal grants that Teaching Lab has won, the <a target="_blank" href="https://oese.ed.gov/offices/office-of-discretionary-grants-support-services/innovation-early-learning/education-innovation-and-research-eir/"><span style="color:rgb(17, 85, 204);">Education Innovation Research</span></a> mid-phase grant in partnership with <a target="_blank" href="https://new.assistments.org/"><span style="color:rgb(17, 85, 204);">ASSISTments</span></a> and the <a target="_blank" href="https://oese.ed.gov/offices/office-of-discretionary-grants-support-services/effective-educator-development-programs/teacher-and-school-leader-incentive-program/"><span style="color:rgb(17, 85, 204);">Teacher and School Leader Incentive</span></a> grant, we will engage in randomized control trials that will rigorously evaluate the effectiveness of our coaching model.</p><p>For more information on Teaching Lab’s impact, see <a target="_blank" href="https://view.genial.ly/653ad43e39b26a00115c9a89/interactive-image-teaching-labs-impact"><span style="color:rgb(17, 85, 204);">here.</span></a></p><p><strong>References</strong></p><p><span style="color:rgb(51, 51, 51);">Kraft, M. A. (2020). Interpreting Effect Sizes of Education Interventions. Educational Researcher, 49(4), 241-253. </span><a target="_blank" href="https://doi.org/10.3102/0013189X20912798"><span style="color:rgb(17, 85, 204);">https://doi.org/10.3102/0013189X20912798</span></a></p><p><span style="color:rgb(51, 51, 51);">Kraft, M. A., Blazar, D., &amp; Hogan, D. (2018). The Effect of Teacher Coaching on Instruction and Achievement: A Meta-Analysis of the Causal Evidence. </span><span style="color:rgb(51, 51, 51);"><em>Review of Educational Research</em></span><span style="color:rgb(51, 51, 51);">, </span><span style="color:rgb(51, 51, 51);"><em>88</em></span><span style="color:rgb(51, 51, 51);">(4), 547-588. </span><a target="_blank" href="https://doi.org/10.3102/0034654318759268"><span style="color:rgb(0, 106, 204);">https://doi.org/10.3102/0034654318759268</span></a></p>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://datahub-2.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
