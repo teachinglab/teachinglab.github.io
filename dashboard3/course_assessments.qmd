@@ -1,0 +1,9 @@
+---
+title: "Course Assessments Dashboard"
+image: imgs/CourseAssessment.png
+description: View course assessments data as % correct before/after, % correct by each question, and finally % selected within each question!
+order: 1
+categories: [Course Assessments, Mindsets]
+author: Duncan Gates
+date: "02-02-2024"
+---

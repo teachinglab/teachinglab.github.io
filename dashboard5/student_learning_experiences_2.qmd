@@ -1,0 +1,9 @@
+---
+title: "Student Work // Ongoing Report"
+image: imgs/Ongoing23_24Report.png
+description: View graded student work assignments breakdowns in sections 7d and 7e.
+order: 2
+categories: [Student Work]
+author: Duncan Gates
+date: "02-02-2024"
+---

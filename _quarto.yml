@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Teaching Lab Data Hub"
+  favicon: favicon.ico
+  google-analytics: "G-2P0MJ9QPG4"
+  site-url: "https://datahub.teachinglab.org/"
+  description: "Website for sharing and exploring Teaching Lab data and resources."
+  open-graph: true
+  navbar:
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "FY24 Trackers"
+        menu:
+          - text: "Overall data collection by site"
+            href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
+          - text: "NPS by site"
+            href: https://teachinglabhq.shinyapps.io/nps_monitoring_tl/
+          - text: Coaching Data Tracker Dashboard
+            href: https://teachinglabhq.shinyapps.io/CoachingDataCollection/
+          - text: Coaching Data Collection Tracker Raw Spreadsheet
+            href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
+      - text: "Reports"
+        href: Reports.qmd
+      - text: "Dashboards"
+        href: Dashboards.qmd
+      - text: "Resources"
+        menu:
+          - text: "Evaluation Plan"
+            href: evaluation_plan.qmd
+          - text: "Data Dives"
+            href: data_dives.qmd
+          - text: "On the Data"
+            href: On_the_data.html
+      - text: "Blog"
+        href: blog.html
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/teachinglab/teachinglab.github.io
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+editor: visual
+

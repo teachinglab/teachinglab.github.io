@@ -1,0 +1,9 @@
+---
+title: "Student Outcomes // Ongoing Report"
+image: imgs/Ongoing23_24Report.png
+description: View % agree/strongly agree on the student survey and eic student survey in section 7a (student survey), 7b (EIC Student Survey), and 7c (Student Survey SY23-24).
+order: 1
+categories: [Student Survey]
+author: Duncan Gates
+date: "02-02-2024"
+---

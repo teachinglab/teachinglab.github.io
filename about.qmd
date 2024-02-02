@@ -1,0 +1,18 @@
+---
+title: "About"
+image: Images/futuristic_dashboard.webp
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/teachinglabhq
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/company/teaching-lab/
+    - icon: github
+      text: Github
+      href: https://github.com/TeachingLabHQ
+---
+
+On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an \[coach_facilitator_external_internal\] user. Please reach out to Duncan if your authentication is not correct.

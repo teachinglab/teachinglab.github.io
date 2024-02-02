@@ -1,0 +1,19 @@
+---
+title: "Duncan Gates"
+image: imgs/duncan.png
+description: "Data Analyst \n duncan.gates@teachinglab.org"
+about:
+  template: trestles
+  image: imgs/duncan.png
+  links:
+    - icon: globe
+      text: Test website
+    
+order: 1
+---
+
+Duncan Gates is a data analyst/scientist with research interests in education, economics, computational modeling, and AI.
+
+## Education
+
+H.B.S, Oregon State University - 2020 (Economics, Math)

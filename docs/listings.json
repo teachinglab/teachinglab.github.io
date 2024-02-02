@@ -1,0 +1,39 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/Blog.html",
+      "/Reports.html",
+      "/Dashboards.html",
+      "/evaluation_plan.html",
+      "/data_dives.html",
+      "/On_the_data.html"
+    ]
+  },
+  {
+    "listing": "/Dashboards.html",
+    "items": [
+      "/dashboard/participant_feedback_1.html",
+      "/dashboard/participant_feedback_2.html",
+      "/dashboard/participant_feedback_3.html",
+      "/dashboard2/educator_survey.html",
+      "/dashboard2/educator_survey_2.html",
+      "/dashboard3/course_assessments.html",
+      "/dashboard3/course_assessments_2.html",
+      "/dashboard4/participant_practice_1.html",
+      "/dashboard4/participant_practice_2.html",
+      "/dashboard4/participant_practice_3.html",
+      "/dashboard4/participant_practice_4.html",
+      "/dashboard5/student_learning_experiences_1.html",
+      "/dashboard5/student_learning_experiences_2.html",
+      "/dashboard5/student_learning_experiences_3.html",
+      "/dashboard5/student_learning_experiences_4.html"
+    ]
+  },
+  {
+    "listing": "/Blog.html",
+    "items": [
+      "/blog/01_changing_the_game/index.html"
+    ]
+  }
+]

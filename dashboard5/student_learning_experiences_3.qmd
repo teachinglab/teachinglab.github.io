@@ -1,0 +1,9 @@
+---
+title: "Student Work Graded Dashboard"
+image: imgs/StudentWorkGraded.png
+description: View the % proficient and on grade level after assignments have been submitted and graded in the above dashboard.
+order: 3
+categories: [Student Work]
+author: Duncan Gates
+date: "02-02-2024"
+---

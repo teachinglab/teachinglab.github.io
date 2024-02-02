@@ -1,0 +1,9 @@
+---
+title: "IPG Qualtrics Dashboard"
+image: imgs/QualtricsLogo.png
+description: Classroom Observations Data in Qualtrics
+order: 4
+categories: [Qualtrics]
+author: Duncan Gates
+date: "02-02-2024"
+---

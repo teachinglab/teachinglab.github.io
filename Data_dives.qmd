@@ -1,0 +1,62 @@
+---
+title: "Data Dives"
+description: "The Learning & Research team's series on how, what, why and where we use data - with video recordings and slides linked."
+image: "Images/data_dives/data_dive.webp"
+format:
+  html:
+    page-layout: full
+---
+
+```{css, echo=FALSE}
+.quarto-title {
+    display: none;
+  }
+
+.description {
+    display: none;
+  }
+```
+
+```{r}
+#| echo: FALSE
+#| out.width: 100%
+knitr::include_graphics('images/data_dives/data_dive_banner.png')
+```
+
+------------------------------------------------------------------------
+
+# SY23-24
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Behind the Numbers: What We Measure & Why](https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p)
+
+A thorough review of why we use the Guskey Framework, specifically what does Teaching Lab's data say, and what our practice looks like. Zoom recording [here](https://teachinglab-org.zoom.us/rec/share/iGc5K0lUuaOTB_6ljr2Hq-k3OZedl7RaKNd9RRRcsr5SQdWOHKx2abUA33aubXsi.0UcB36vA32xWQdDW).
+:::
+
+::: {.column width="30%"}
+```{r data-dive-1, out.width=450, echo=F}
+knitr::include_graphics("images/reports/ongoing_report.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Course Assessments: How We Know We’re Increasing Participant Knowledge](https://docs.google.com/presentation/d/1XvrtVlVVnz3b1Sr-_xdkYq2vV7eogtZ0feI3KHYyXO8/edit#slide=id.p)
+
+A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [course assessment dashboard](https://teachinglabhq.shinyapps.io/course_assessments/) which has many fun levels of data! Zoom recording [here](https://drive.google.com/drive/folders/17aIskSziSPidP4YbUjhkQL-uARv2XSP8).
+:::
+
+::: {.column width="30%"}
+```{r skyline, out.width=250, echo=F}
+knitr::include_graphics("images/reports/skyline.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------

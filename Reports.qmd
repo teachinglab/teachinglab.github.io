@@ -1,0 +1,98 @@
+---
+title: "Reports"
+description: "Reports from previous years, and this year's ongoing report which provides continuous updated data by site."
+image: "Images/Reports/Reports.png"
+format:
+  html:
+    page-layout: full
+---
+
+```{css, echo=FALSE}
+.quarto-title {
+    display: none;
+  }
+
+.description {
+    display: none;
+  }
+```
+
+```{r}
+#| echo: FALSE
+#| out.width: 100%
+knitr::include_graphics('images/reports/reports_banner.png')
+```
+
+Reports on Teaching Lab Data
+
+------------------------------------------------------------------------
+
+# SY23-24
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Ongoing Report](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/)
+
+A fully compiled, updating, interactive AI-utilizing report for all L&R data representing each part of the Guskey Framework. Sections do not correspond exactly to the guskey framework but are enumerated on the context page. Additionally includes a PDS page in the last section where all PDS data can be accessed.
+:::
+
+::: {.column width="30%"}
+```{r ongoing-report, out.width=450, echo=F}
+knitr::include_graphics("images/reports/ongoing_report.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [CPS Skyline PL Participant Feedback](https://lookerstudio.google.com/reporting/d893b206-4d7f-4c87-966a-e7f9f733f529/page/UJUkD?s=rFEFXNvc2RE)
+
+A custom built CPS Skyline Report on Participant Feedback
+:::
+
+::: {.column width="30%"}
+```{r skyline, out.width=250, echo=F}
+knitr::include_graphics("images/reports/skyline.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Cleveland SY23-24 LBTT](https://lookerstudio.google.com/reporting/e105f773-a9de-4557-854c-25507d6b532b/page/juHnD?s=toOvTMv_m4U)
+
+A custom built report on trends, environment, planning, and writing for Cleveland LBTT
+:::
+
+::: {.column width="30%"}
+```{r cleveland-lbtt, out.width=250, echo=F}
+knitr::include_graphics("images/reports/cleveland_lbtt.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+# SY22-23
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Previous Year's Reports (Static)](https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5)
+
+R-studio project template and workflow for sharing psychological research projects in the form of a website.
+:::
+
+::: {.column width="30%"}
+```{r vertical, out.width=300, echo=F}
+knitr::include_graphics("images/reports/google_drive.png")
+```
+:::
+:::

@@ -1,0 +1,95 @@
+---
+title: "Dashboards"
+description: "Dashboards are developed and maintained by Duncan Gates."
+image: "Images/Dashboards/dashboards.png"
+listing:
+  - id: dashboard_list
+    contents: dashboard
+    sort: "order"
+    type: grid
+    categories: true
+    image-align: 'right'
+    image-height: '100%'
+    grid-columns: 3
+  - id: dashboard2_list
+    contents: dashboard2
+    sort: "order"
+    type: grid
+    categories: true
+    image-align: 'right'
+    image-height: '100%'
+    grid-columns: 3
+  - id: dashboard3_list
+    contents: dashboard3
+    sort: "order"
+    type: grid
+    categories: true
+    image-align: 'right'
+    image-height: '100%'
+    grid-columns: 3
+  - id: dashboard4_list
+    contents: dashboard4
+    sort: "order"
+    type: grid
+    categories: true
+    image-align: 'right'
+    image-height: '100%'
+    grid-columns: 4
+  - id: dashboard5_list
+    contents: dashboard5
+    sort: "order"
+    type: grid
+    categories: true
+    image-align: 'right'
+    image-height: '100%'
+    grid-columns: 4
+format:
+  html:
+    page-layout: full
+engine: knitr
+---
+
+```{css, echo=FALSE}
+.quarto-title {
+    display: none;
+  }
+  
+.description {
+    display: none;
+  }
+```
+
+## Participant Perceptions
+
+Participant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.
+
+::: {#dashboard_list}
+:::
+
+## Participant Mindsets
+
+Participant mindsets come from the diagnostic educator survey and follow up educator survey.
+
+::: {#dashboard2_list}
+:::
+
+## Participant Knowledge
+
+Participants that completed <a href = "https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">course assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.
+
+::: {#dashboard3_list}
+:::
+
+## Participant Practices
+
+Teaching Lab staff conduct classroom observations and capture <a href = "https://achievethecore.org/category/1155/printable-versions">standards and shifts aligned instruction</a> in the classroom observations survey. Those results will appear in the following dashboards.
+
+::: {#dashboard4_list}
+:::
+
+## Student Learning Experiences
+
+Respondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.
+
+::: {#dashboard5_list}
+:::

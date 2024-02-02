@@ -1,0 +1,13 @@
+---
+title: "Participant Feedback Rollup"
+image: imgs/FacilitatorRollup.png
+description: View all participant feedback data over time with facilitator competency included.
+order: 2
+categories: [Participant Feedback, NPS, Over Time, AI]
+author: Duncan Gates
+date: "02-01-2024"
+---
+
+[Go to the facilitator feedback report ➡️](https://teachinglabhq.shinyapps.io/tl_facilitator_data)
+
+[![](imgs/FacilitatorRollup.png)](https://teachinglabhq.shinyapps.io/tl_facilitator_data/)

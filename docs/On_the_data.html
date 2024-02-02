@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.">
+
+<title>Teaching Lab Data Hub - On the Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Teaching Lab Data Hub - On the Data">
+<meta property="og:description" content="Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.">
+<meta property="og:image" content="https://datahub.teachinglab.org/Images/on_the_data/on_the_data.png">
+<meta property="og:site-name" content="Teaching Lab Data Hub">
+<meta property="og:image:height" content="400">
+<meta property="og:image:width" content="400">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Teaching Lab Data Hub</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy24-trackers" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">FY24 Trackers</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fy24-trackers">    
+        <li>
+    <a class="dropdown-item" href="https://teachinglabhq.shinyapps.io/OngoingSurveyCount/">
+ <span class="dropdown-text">Overall data collection by site</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://teachinglabhq.shinyapps.io/nps_monitoring_tl/">
+ <span class="dropdown-text">NPS by site</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://teachinglabhq.shinyapps.io/CoachingDataCollection/">
+ <span class="dropdown-text">Coaching Data Tracker Dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0">
+ <span class="dropdown-text">Coaching Data Collection Tracker Raw Spreadsheet</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./Reports.html">
+ <span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Dashboards.html">
+ <span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="./evaluation_plan.html">
+ <span class="dropdown-text">Evaluation Plan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./data_dives.html">
+ <span class="dropdown-text">Data Dives</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./On_the_data.html">
+ <span class="dropdown-text">On the Data</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">On the Data</h1>
+</div>
+
+<div>
+  <div class="description">
+    Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 1000px;
+  height: 800px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1)!important;
+  transition: transform 0.5s;
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.slides > div:target {
+  transform: scale(0.8); 
+}
+
+.author-info {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.author-info a {
+  color: white;
+}
+
+img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: auto;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0.5rem 0.75rem 0;
+  position: relative;
+}
+
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > a {
+    display: none;
+  }
+}
+</style>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="slider">
+  
+  <a href="#slide-1">How often does data update?</a>
+  <a href="#slide-2">How do we score mindsets?</a>
+  <a href="#slide-3">How do we score classroom observations?</a>
+  <a href="#slide-4">How do we score student work?</a>
+  <a href="#slide-5">How do we score course assessments?</a>
+
+  <div class="slides">
+    <div id="slide-1">
+      <b style="font-size:20px;">How often does data update?</b>
+      <br>
+      <br>
+     <p style="text-align:left;margin-left:1em;">It depends. Unfortunately, different calculations have different computations, tools, and issues involved so data is not always up to date to the last second! With Teaching Lab’s current data stack, all tools can be guaranteed to be updated within at least the last 24 hours (business days). Below is a comprehensive list of tools, and the timeline on which they update.
+     </p>
+      <ol style="text-align:left;font-family: &quot;Calibri&quot;, sans-serif;font-weight: 200;line-height: 1.3;font-size: 1.0em;color: #333333;font-style: normal;">
+      <li>Qualtrics dashboards - potentially up to a 60-minute delay on responses appearing in dashboards.</li>
+      <li>Teaching Lab shiny dashboards - potentially up to a 60-minute delay on responses appearing.</li>
+      <li>Data trackers - these update daily at 6 AM EST, so there will be 6 am + time since then delay on updating</li>
+      <li>Reports - Currently (SY23-24 November 21) the only report is the ongoing report, which has a 60-minute potential delay on data appearing.</li>
+      </ol>
+    </div>
+    <div id="slide-2" style="height:1200px;">
+      <b style="font-size:20px;">How do we score mindsets?</b>
+      <br>
+      <br>
+      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
+      <p>We ask participants to report the extent to which they agree/disagree with Likert statements surrounding Equitable Mindsets on a scale from 1 (strongly disagree) to 5 (strongly agree).&nbsp;</p><p>Equitable Mindsets - Section 4a</p><p>Self-Reported CRSE - Section 6a</p><p>These statements are grouped into the following categories (non participant facing): <span style="color:rgb(51, 51, 51);">Recognition of Race &amp; Culture, High Expectations, and Growth Mindsets</span></p><p><span style="color:rgb(51, 51, 51);">(Sentiment Score) We ‘score’ the responses to these statements using a weighted scale, where the ideal response is ‘strongly agree, 5’, and overall higher scores correspond to holding equitable mindsets &nbsp; :</span></p><ul><li>Strongly agree - 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;score: 1.0</li><li>Agree - 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score: 0.75</li><li>Neither Agree Nor Disagree - 3&nbsp; &nbsp;     score: 0.5</li><li>Disagree - 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;score: 0.25</li><li>Strongly Disagree - 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score: 0.0</li></ul><p><span style="color:rgb(51, 51, 51);">For scoring purposes, in the case of </span><span style="color:rgb(255, 0, 0);">reverse coded </span>questions, where we would ideally expect participants to select “strongly disagree - 1”, we treat responses of 1 as 5, 2 as 4, 3 as 3, 4 as 2, and 5 as 1. Therefore, on a reverse coded question, if a participant selected strongly disagree - 1, they receive a score of 1, whereas if they selected agree - 4, they receive a score of 0.25.&nbsp;</p><p>Once the weighted scale is applied, we calculate an average score for each mindset statement. For example, a statement with 5 responses of Agree, Strongly Agree, Agree, Neither Agree Nor Disagree, and Strongly Agree, the following score would be reflected:&nbsp;</p><p style="text-align:center;">score = 0.75 + 1.0 + 0.75 + 0.5 + 1.05 =0.80 , or 80%</p><p>Finally, we can wrap up these mindset statements by their category using an <strong>average of the statement scores in the category</strong>. As an example:&nbsp;</p><div><table><tbody><tr><td>Recognition of Race and Culture</td></tr><tr><td><strong>Overall</strong></td><td>66.14%</td></tr><tr><td><span style="color:rgb(255, 0, 0);">I am color blind when it comes to my teaching - I don’t think of my students in terms of their race or ethnicity.</span></td><td>54.67%</td></tr><tr><td><span style="color:rgb(255, 0, 0);">The gap in the achievement among students of different races is about poverty, not race.</span></td><td>62.31%</td></tr><tr><td>I think about my own background and experiences and how those affect my instruction.</td><td>81.44%</td></tr></tbody></table></div>
+      </div>
+    </div>
+    <div id="slide-3">
+      <b style="font-size:20px;">How do we score classroom observations?</b>
+      <br>
+      <br>
+      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
+      <p>Classroom observations are scored as the average of the total questions per individual that qualifies as a positive indicator - or put another way, the % positive indicators per individual. The following outline shows exactly what that looks like for the main forms of the IPG.</p><ul><li>K12 Math IPG: ‘Yes’, 3s, 4s&nbsp;</li><ul><li>Questions: CA1a-c, CA2a-d, CA3a-e</li></ul><li>K12 ELA IPG: ‘Yes’, 3s, 4s</li><ul><li>Questions: CA1a-c, CA2a-d, CA3a-f</li></ul><li>FSOT: 3s, 4s for most questions (3s and 2s for AD1 and AD2)</li><ul><li>Questions: ac1-2, td1-4, sp1-4, ad1-2</li></ul><li>Don’t include ‘Not Observed’/’Not Applicable’ in scoring&nbsp;</li><li>Overall Scoring:</li><ul><li>% pos ind = average of&nbsp; individual scores ( avg(individual pos ind/ individual possible qs) )</li></ul></ul>
+      </div>
+    </div>
+    <div id="slide-4">
+      <b style="font-size:20px;">How do we score student work?</b>
+      <br>
+      <br>
+      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
+        <p><strong>Student work is scored based on the following 2 rubrics.</strong></p><ul><li><strong>Math: </strong><a target="_blank" href="https://drive.google.com/file/d/18Emi3DNRR4DDrl3m0KkBuKYzyzk5e5J5/view?usp=share_link"><strong>https://drive.google.com/file/d/18Emi3DNRR4DDrl3m0KkBuKYzyzk5e5J5/view?usp=share_link</strong></a></li><li><strong>ELA: </strong><a target="_blank" href="https://drive.google.com/file/d/1xfsgWdA7-D9F05NJY8ZKTzI99FinP0UT/view?usp=share_link"><strong>https://drive.google.com/file/d/1xfsgWdA7-D9F05NJY8ZKTzI99FinP0UT/view?usp=share_link</strong></a></li></ul><p><strong>The primary metrics that we report on are the % proficient (the % that scored a 2 according to the above rubrics) and the % on grade level (a necessary precondition for scoring based on the rubrics).</strong></p>
+      </div>
+    </div>
+    <div id="slide-5" style="height:1500px;">
+      <b style="font-size:20px;">How do we score course assessments?</b>
+      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
+        <p>
+          Course assessments questions can prompt anywhere from 1-3 correct answers in a question. Using the question “Which of the following statements are true about the principles behind the Instructional Routines? Select all that apply.” from the “<em>Math Cycle of Inquiry - Instructional Routines</em>” as an example, the following should demonstrate the full range of possible scores (images from the course assessments dashboard which can be viewed here).
+        </p>
+        <img src="./images/data_overview/course_assessments3.png" alt="course assessments" width="608" height="435" style="position:inherit;">
+        <p>
+          In this breakdown of the % selected per question, the correct answers are displayed with green text. If an individual participant were to select both the correct answers response to this question they would receive 100% on that question, if they were to select only one of the correct answers they would receive 50%, and if they selected no correct answers they would receive 0%. There are no penalties for incorrect answers.
+        </p>
+        <img src="./images/data_overview/course_assessments2.png" alt="course assessments 2" width="483" height="436" style="position:inherit;">
+        <p>
+          Ultimately, all that data gets rolled up into the numbers in the following chart, the overall % correct. This shows the average score that each participant received on all questions the first time that they took the quiz (Before/Pre) and the second time (After/Post).
+        </p>
+        <img src="./images/data_overview/course_assessments1.png" alt="course assessments 1" width="483" height="436" style="position:inherit;">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

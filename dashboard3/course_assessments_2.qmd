@@ -1,0 +1,9 @@
+---
+title: "Course Assessments // Ongoing Report"
+image: imgs/Ongoing23_24Report.png
+description: View course assessments data in the ongoing report!
+order: 2
+categories: [Course Assessments, Mindsets]
+author: Duncan Gates
+date: "02-02-2024"
+---
