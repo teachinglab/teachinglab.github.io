@@ -1,13 +1,8 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/Blog.html",
     "items": [
-      "/Blog.html",
-      "/Reports.html",
-      "/Dashboards.html",
-      "/evaluation_plan.html",
-      "/data_dives.html",
-      "/On_the_data.html"
+      "/blog/01_changing_the_game/index.html"
     ]
   },
   {
@@ -31,9 +26,14 @@
     ]
   },
   {
-    "listing": "/Blog.html",
+    "listing": "/index.html",
     "items": [
-      "/blog/01_changing_the_game/index.html"
+      "/Reports.html",
+      "/Dashboards.html",
+      "/Evaluation_plan.html",
+      "/Blog.html",
+      "/Data_dives.html",
+      "/On_the_data.html"
     ]
   }
 ]

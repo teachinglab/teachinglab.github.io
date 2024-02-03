@@ -1,7 +1,7 @@
 ---
 title: "Teaching Lab: Professional Learning Evaluation Plan"
 description: "A background on who, why, and what we measure with links to specific survey instruments"
-image: "Images/Surveys/Teaching Lab Evaluation Plan Overview SY22-23.png"
+image: "Images/Surveys/guskey_framework.png"
 format:
   html:
     page-layout: full

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -49,7 +51,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,13 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
 
-<script type="text/javascript">
+<script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -72,12 +82,30 @@ gtag('js', new Date());
 gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 </script>
 
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Teaching Lab Data Hub - On the Data">
 <meta property="og:description" content="Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.">
 <meta property="og:image" content="https://datahub.teachinglab.org/Images/on_the_data/on_the_data.png">
-<meta property="og:site-name" content="Teaching Lab Data Hub">
+<meta property="og:site_name" content="Teaching Lab Data Hub">
 <meta property="og:image:height" content="400">
 <meta property="og:image:width" content="400">
 </head>
@@ -86,21 +114,22 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Teaching Lab Data Hub</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy24-trackers" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -126,12 +155,12 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Reports.html">
- <span class="menu-text">Reports</span></a>
+    <a class="nav-link" href="./Reports.html"> 
+<span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dashboards.html">
- <span class="menu-text">Dashboards</span></a>
+    <a class="nav-link" href="./Dashboards.html"> 
+<span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -143,7 +172,7 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
  <span class="dropdown-text">Evaluation Plan</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data_dives.html">
+    <a class="dropdown-item" href="./Data_dives.html">
  <span class="dropdown-text">Data Dives</span></a>
   </li>  
         <li>
@@ -153,26 +182,25 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -206,7 +234,9 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <style type="text/css">
@@ -326,76 +356,7 @@ img {
 }
 </style>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-
-<div class="slider">
-  
-  <a href="#slide-1">How often does data update?</a>
-  <a href="#slide-2">How do we score mindsets?</a>
-  <a href="#slide-3">How do we score classroom observations?</a>
-  <a href="#slide-4">How do we score student work?</a>
-  <a href="#slide-5">How do we score course assessments?</a>
-
-  <div class="slides">
-    <div id="slide-1">
-      <b style="font-size:20px;">How often does data update?</b>
-      <br>
-      <br>
-     <p style="text-align:left;margin-left:1em;">It depends. Unfortunately, different calculations have different computations, tools, and issues involved so data is not always up to date to the last second! With Teaching Lab’s current data stack, all tools can be guaranteed to be updated within at least the last 24 hours (business days). Below is a comprehensive list of tools, and the timeline on which they update.
-     </p>
-      <ol style="text-align:left;font-family: &quot;Calibri&quot;, sans-serif;font-weight: 200;line-height: 1.3;font-size: 1.0em;color: #333333;font-style: normal;">
-      <li>Qualtrics dashboards - potentially up to a 60-minute delay on responses appearing in dashboards.</li>
-      <li>Teaching Lab shiny dashboards - potentially up to a 60-minute delay on responses appearing.</li>
-      <li>Data trackers - these update daily at 6 AM EST, so there will be 6 am + time since then delay on updating</li>
-      <li>Reports - Currently (SY23-24 November 21) the only report is the ongoing report, which has a 60-minute potential delay on data appearing.</li>
-      </ol>
-    </div>
-    <div id="slide-2" style="height:1200px;">
-      <b style="font-size:20px;">How do we score mindsets?</b>
-      <br>
-      <br>
-      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
-      <p>We ask participants to report the extent to which they agree/disagree with Likert statements surrounding Equitable Mindsets on a scale from 1 (strongly disagree) to 5 (strongly agree).&nbsp;</p><p>Equitable Mindsets - Section 4a</p><p>Self-Reported CRSE - Section 6a</p><p>These statements are grouped into the following categories (non participant facing): <span style="color:rgb(51, 51, 51);">Recognition of Race &amp; Culture, High Expectations, and Growth Mindsets</span></p><p><span style="color:rgb(51, 51, 51);">(Sentiment Score) We ‘score’ the responses to these statements using a weighted scale, where the ideal response is ‘strongly agree, 5’, and overall higher scores correspond to holding equitable mindsets &nbsp; :</span></p><ul><li>Strongly agree - 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;score: 1.0</li><li>Agree - 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score: 0.75</li><li>Neither Agree Nor Disagree - 3&nbsp; &nbsp;     score: 0.5</li><li>Disagree - 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;score: 0.25</li><li>Strongly Disagree - 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score: 0.0</li></ul><p><span style="color:rgb(51, 51, 51);">For scoring purposes, in the case of </span><span style="color:rgb(255, 0, 0);">reverse coded </span>questions, where we would ideally expect participants to select “strongly disagree - 1”, we treat responses of 1 as 5, 2 as 4, 3 as 3, 4 as 2, and 5 as 1. Therefore, on a reverse coded question, if a participant selected strongly disagree - 1, they receive a score of 1, whereas if they selected agree - 4, they receive a score of 0.25.&nbsp;</p><p>Once the weighted scale is applied, we calculate an average score for each mindset statement. For example, a statement with 5 responses of Agree, Strongly Agree, Agree, Neither Agree Nor Disagree, and Strongly Agree, the following score would be reflected:&nbsp;</p><p style="text-align:center;">score = 0.75 + 1.0 + 0.75 + 0.5 + 1.05 =0.80 , or 80%</p><p>Finally, we can wrap up these mindset statements by their category using an <strong>average of the statement scores in the category</strong>. As an example:&nbsp;</p><div><table><tbody><tr><td>Recognition of Race and Culture</td></tr><tr><td><strong>Overall</strong></td><td>66.14%</td></tr><tr><td><span style="color:rgb(255, 0, 0);">I am color blind when it comes to my teaching - I don’t think of my students in terms of their race or ethnicity.</span></td><td>54.67%</td></tr><tr><td><span style="color:rgb(255, 0, 0);">The gap in the achievement among students of different races is about poverty, not race.</span></td><td>62.31%</td></tr><tr><td>I think about my own background and experiences and how those affect my instruction.</td><td>81.44%</td></tr></tbody></table></div>
-      </div>
-    </div>
-    <div id="slide-3">
-      <b style="font-size:20px;">How do we score classroom observations?</b>
-      <br>
-      <br>
-      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
-      <p>Classroom observations are scored as the average of the total questions per individual that qualifies as a positive indicator - or put another way, the % positive indicators per individual. The following outline shows exactly what that looks like for the main forms of the IPG.</p><ul><li>K12 Math IPG: ‘Yes’, 3s, 4s&nbsp;</li><ul><li>Questions: CA1a-c, CA2a-d, CA3a-e</li></ul><li>K12 ELA IPG: ‘Yes’, 3s, 4s</li><ul><li>Questions: CA1a-c, CA2a-d, CA3a-f</li></ul><li>FSOT: 3s, 4s for most questions (3s and 2s for AD1 and AD2)</li><ul><li>Questions: ac1-2, td1-4, sp1-4, ad1-2</li></ul><li>Don’t include ‘Not Observed’/’Not Applicable’ in scoring&nbsp;</li><li>Overall Scoring:</li><ul><li>% pos ind = average of&nbsp; individual scores ( avg(individual pos ind/ individual possible qs) )</li></ul></ul>
-      </div>
-    </div>
-    <div id="slide-4">
-      <b style="font-size:20px;">How do we score student work?</b>
-      <br>
-      <br>
-      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
-        <p><strong>Student work is scored based on the following 2 rubrics.</strong></p><ul><li><strong>Math: </strong><a target="_blank" href="https://drive.google.com/file/d/18Emi3DNRR4DDrl3m0KkBuKYzyzk5e5J5/view?usp=share_link"><strong>https://drive.google.com/file/d/18Emi3DNRR4DDrl3m0KkBuKYzyzk5e5J5/view?usp=share_link</strong></a></li><li><strong>ELA: </strong><a target="_blank" href="https://drive.google.com/file/d/1xfsgWdA7-D9F05NJY8ZKTzI99FinP0UT/view?usp=share_link"><strong>https://drive.google.com/file/d/1xfsgWdA7-D9F05NJY8ZKTzI99FinP0UT/view?usp=share_link</strong></a></li></ul><p><strong>The primary metrics that we report on are the % proficient (the % that scored a 2 according to the above rubrics) and the % on grade level (a necessary precondition for scoring based on the rubrics).</strong></p>
-      </div>
-    </div>
-    <div id="slide-5" style="height:1500px;">
-      <b style="font-size:20px;">How do we score course assessments?</b>
-      <div class="left-align-text" style="text-align:left;padding-left: 1.1em;">
-        <p>
-          Course assessments questions can prompt anywhere from 1-3 correct answers in a question. Using the question “Which of the following statements are true about the principles behind the Instructional Routines? Select all that apply.” from the “<em>Math Cycle of Inquiry - Instructional Routines</em>” as an example, the following should demonstrate the full range of possible scores (images from the course assessments dashboard which can be viewed here).
-        </p>
-        <img src="./images/data_overview/course_assessments3.png" alt="course assessments" width="608" height="435" style="position:inherit;">
-        <p>
-          In this breakdown of the % selected per question, the correct answers are displayed with green text. If an individual participant were to select both the correct answers response to this question they would receive 100% on that question, if they were to select only one of the correct answers they would receive 50%, and if they selected no correct answers they would receive 0%. There are no penalties for incorrect answers.
-        </p>
-        <img src="./images/data_overview/course_assessments2.png" alt="course assessments 2" width="483" height="436" style="position:inherit;">
-        <p>
-          Ultimately, all that data gets rolled up into the numbers in the following chart, the overall % correct. This shows the average score that each participant received on all questions the first time that they took the quiz (Before/Pre) and the second time (After/Post).
-        </p>
-        <img src="./images/data_overview/course_assessments1.png" alt="course assessments 1" width="483" height="436" style="position:inherit;">
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> This page is currently under maintenance, check back later for more information!</p>
 
 
 
@@ -441,6 +402,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -509,13 +497,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -542,9 +532,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -580,10 +584,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -593,8 +596,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -609,6 +621,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -649,6 +893,62 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://www.teachinglab.org/"><img src="https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w" class="img-fluid" alt="Teaching Lab" width="200"></a></p>
+<p>Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.</p>
+<p>Great Teachers Make The Difference: <a href="https://www.teachinglab.org/donate">Support Our Work.</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link active" href="./On_the_data.html" aria-current="page">
+<p>FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.html">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/teachinglabhq">
+      <i class="bi bi-twitter" role="img" aria-label="Teaching Lab Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/teachinglabhq">
+      <i class="bi bi-github" role="img" aria-label="Teaching Lab GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://datahub.teachinglab.org/docs/blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="TL Blog RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
 
 
 

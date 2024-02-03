@@ -7,3 +7,7 @@ categories: [Classroom Observations, IPG]
 author: Duncan Gates
 date: "02-02-2024"
 ---
+
+[Go to section 6 of the ongoing report ➡️](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6)
+
+[![](imgs/Ongoing23_24Report.png)](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6)

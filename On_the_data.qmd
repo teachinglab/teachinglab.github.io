@@ -2,8 +2,8 @@
 title: "On the Data"
 image: "Images/on_the_data/on_the_data.png"
 description: Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.
+footer: "Confidential"
 ---
-
 
 ```{css, echo = FALSE}
 * {
@@ -122,7 +122,17 @@ img {
 }
 ```
 
-
-```{r, echo = FALSE}
+```{r, echo = FALSE, eval = FALSE}
 htmltools::includeHTML("HTML/slider_explainer.html")
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+This page is currently under maintenance, check back later for more information!

@@ -10,19 +10,20 @@
 <atom:link href="https://datahub.teachinglab.org/Blog.xml" rel="self" type="application/rss+xml"/>
 <description>Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.</description>
 <image>
-<url>https://datahub.teachinglab.org/Images/blog/blog_banner.png</url>
+<url>https://datahub.teachinglab.org/Images/blog/blog_banner_2.png</url>
 <title>Teaching Lab Data Hub</title>
 <link>https://datahub.teachinglab.org/Blog.html</link>
-<height>82</height>
+<height>144</height>
 <width>144</width>
 </image>
-<generator>quarto-1.2.269</generator>
+<generator>quarto-1.4.549</generator>
 <lastBuildDate>Sun, 15 Dec 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Changing the Game: How High-Dosage Coaching Shifts Teacher Practices &amp; Student Success</title>
   <dc:creator>Shaye Worthman</dc:creator>
-  <link>https://datahub.teachinglab.org/blog/01_changing_the_game/index.html</link>
+  <link>https://datahub.teachinglab.org/blog/01_changing_the_game/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -43,16 +44,16 @@
 <p><br>
 <br>
 </p>
-<p><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/ipg_scores.png" class="img-fluid" alt="Improvements in teacher scores on classroom observations"></p>
+<p><a href="images/ipg_scores.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/ipg_scores.png" class="img-fluid" alt="Improvements in teacher scores on classroom observations"></a></p>
 <p>Teaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.</figcaption><p></p>
+<p><a href="images/person_plot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
+<figcaption>Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.</figcaption>
 </figure>
 </div>
 <p>We saw the most growth in Chicago Network 7 and New York City District 9.</p>
-<p><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/student_work_scores1.png" class="img-fluid"></p>
+<p><a href="images/student_work_scores1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/student_work_scores1.png" class="img-fluid"></a></p>
 <p><br>
 <br>
 </p>
@@ -62,13 +63,14 @@
 <p>For more information on Teaching Lab’s impact, see <a href="https://view.genial.ly/653ad43e39b26a00115c9a89/interactive-image-teaching-labs-impact">here.</a></p>
 
 
+
 </section>
 </section>
 
  ]]></description>
   <category>coaching</category>
   <category>mindsets</category>
-  <guid>https://datahub.teachinglab.org/blog/01_changing_the_game/index.html</guid>
+  <guid>https://datahub.teachinglab.org/blog/01_changing_the_game/</guid>
   <pubDate>Sun, 15 Dec 2024 07:00:00 GMT</pubDate>
   <media:content url="https://datahub.teachinglab.org/blog/01_changing_the_game/images/blog_header.png" medium="image" type="image/png" height="147" width="144"/>
 </item>

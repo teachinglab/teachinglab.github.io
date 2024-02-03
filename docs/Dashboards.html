@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Dashboards are developed and maintained by Duncan Gates.">
+<meta name="description" content="Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates.">
 
 <title>Teaching Lab Data Hub - Dashboards</title>
 <style>
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -51,7 +53,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -60,8 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -207,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
 
-<script type="text/javascript">
+<script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -215,13 +225,59 @@ gtag('js', new Date());
 gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 </script>
 
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Teaching Lab Data Hub - Dashboards">
-<meta property="og:description" content="Dashboards are developed and maintained by Duncan Gates.">
+<meta property="og:description" content="Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates.">
 <meta property="og:image" content="https://datahub.teachinglab.org/Images/Dashboards/dashboards.png">
-<meta property="og:site-name" content="Teaching Lab Data Hub">
+<meta property="og:site_name" content="Teaching Lab Data Hub">
 <meta property="og:image:height" content="400">
 <meta property="og:image:width" content="400">
 </head>
@@ -230,21 +286,22 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Teaching Lab Data Hub</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy24-trackers" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -270,12 +327,12 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Reports.html">
- <span class="menu-text">Reports</span></a>
+    <a class="nav-link" href="./Reports.html"> 
+<span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Dashboards.html" aria-current="page">
- <span class="menu-text">Dashboards</span></a>
+    <a class="nav-link active" href="./Dashboards.html" aria-current="page"> 
+<span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -287,7 +344,7 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
  <span class="dropdown-text">Evaluation Plan</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data_dives.html">
+    <a class="dropdown-item" href="./Data_dives.html">
  <span class="dropdown-text">Data Dives</span></a>
   </li>  
         <li>
@@ -297,26 +354,25 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -347,12 +403,12 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Dashboards are developed and maintained by Duncan Gates.
+    Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates.
   </div>
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -360,7 +416,9 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <style type="text/css">
@@ -378,7 +436,7 @@ gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
 <p>Participant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.</p>
 <div id="listing-dashboard_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Participant Feedback,NPS,Qualitative" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706916374508" data-listing-reading-time-sort="0.03">
+<div class="g-col-1" data-index="0" data-categories="Participant Feedback,NPS,Qualitative" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706990072618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./dashboard/participant_feedback_1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -414,7 +472,7 @@ Feb 1, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Participant Feedback,NPS,Over Time,AI" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706916490666" data-listing-reading-time-sort="0.035">
+<div class="g-col-1" data-index="1" data-categories="Participant Feedback,NPS,Over Time,AI" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706916490666" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="./dashboard/participant_feedback_2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -453,7 +511,7 @@ Feb 1, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Qualtrics" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706831667506" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="2" data-categories="Qualtrics" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706989374300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./dashboard/participant_feedback_3.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -494,7 +552,7 @@ No matching items
 <p>Participant mindsets come from the diagnostic educator survey and follow up educator survey.</p>
 <div id="listing-dashboard2_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Educator Survey,Mindsets,CRSE" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706831898776" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="0" data-categories="Educator Survey,Mindsets,CRSE" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706989452114" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./dashboard2/educator_survey.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -530,7 +588,7 @@ Feb 1, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Qualtrics" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706832388244" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="1" data-categories="Qualtrics" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706989593189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./dashboard2/educator_survey_2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -571,7 +629,7 @@ No matching items
 <p>Participants that completed <a href="https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">course assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.</p>
 <div id="listing-dashboard3_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Course Assessments,Mindsets" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706913650637" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="0" data-categories="Course Assessments,Mindsets" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706989660041" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="./dashboard3/course_assessments.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -604,7 +662,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Course Assessments,Mindsets" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706913648046" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="1" data-categories="Course Assessments,Mindsets" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706989762352" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./dashboard3/course_assessments_2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -648,7 +706,7 @@ No matching items
 <p>Teaching Lab staff conduct classroom observations and capture <a href="https://achievethecore.org/category/1155/printable-versions">standards and shifts aligned instruction</a> in the classroom observations survey. Those results will appear in the following dashboards.</p>
 <div id="listing-dashboard4_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="IPG,Raw Data,Classroom Observations" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706913986547" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="0" data-categories="IPG,Raw Data,Classroom Observations" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990055398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="./dashboard4/participant_practice_1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -684,7 +742,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Classroom Observations,IPG" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706913996109" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="1" data-categories="Classroom Observations,IPG" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990088907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./dashboard4/participant_practice_2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -717,7 +775,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Qualtrics,Raw Data,Google Sheets" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706914065894" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="2" data-categories="Qualtrics,Raw Data,Google Sheets" data-listing-date-sort="1706770800000" data-listing-file-modified-sort="1706990195845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./dashboard4/participant_practice_3.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -753,7 +811,7 @@ Feb 1, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Qualtrics" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706914171622" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="3" data-categories="Qualtrics" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990236724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./dashboard4/participant_practice_4.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -794,7 +852,7 @@ No matching items
 <p>Respondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.</p>
 <div id="listing-dashboard5_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="Student Survey" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706914508034" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="0" data-categories="Student Survey" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990312203" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./dashboard5/student_learning_experiences_1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -824,7 +882,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706914575966" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="1" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990333879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./dashboard5/student_learning_experiences_2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -854,7 +912,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706914625099" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="2" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990492358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <a href="./dashboard5/student_learning_experiences_3.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -884,7 +942,7 @@ Feb 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706914667822" data-listing-reading-time-sort="0.005">
+<div class="g-col-1" data-index="3" data-categories="Student Work" data-listing-date-sort="1706857200000" data-listing-file-modified-sort="1706990458201" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <a href="./dashboard5/student_learning_experiences_4.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -900,7 +958,7 @@ Student Work
 </div>
 </div>
 <div class="card-text listing-description">
-Grade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates
+Grade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates.
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -966,6 +1024,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1034,13 +1119,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1067,9 +1154,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1105,10 +1206,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1118,8 +1218,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1134,6 +1243,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1174,6 +1515,62 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://www.teachinglab.org/"><img src="https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w" class="img-fluid" alt="Teaching Lab" width="200"></a></p>
+<p>Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.</p>
+<p>Great Teachers Make The Difference: <a href="https://www.teachinglab.org/donate">Support Our Work.</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./On_the_data.html">
+<p>FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.html">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/teachinglabhq">
+      <i class="bi bi-twitter" role="img" aria-label="Teaching Lab Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/teachinglabhq">
+      <i class="bi bi-github" role="img" aria-label="Teaching Lab GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://datahub.teachinglab.org/docs/blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="TL Blog RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
 
 
 

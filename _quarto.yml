@@ -6,11 +6,47 @@ website:
   title: "Teaching Lab Data Hub"
   favicon: favicon.ico
   google-analytics: "G-2P0MJ9QPG4"
+  cookie-consent: 
+    type: implied
+    style: simple
+    palette: light
   site-url: "https://datahub.teachinglab.org/"
   description: "Website for sharing and exploring Teaching Lab data and resources."
   open-graph: true
+  search: 
+    show-item-context: true
+  # language:
+    # search-box-placeholder: Search
+  page-footer:
+    left: |
+      [![](https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w){fig-alt="Teaching Lab" width=200px}](https://www.teachinglab.org/)
+      
+      Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.
+      
+      Great Teachers Make The Difference: [Support Our Work.](https://www.teachinglab.org/donate)
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "FAQ"
+        href: On_the_data.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/teachinglabhq
+        aria-label: Teaching Lab Twitter
+      - icon: github
+        href: https://github.com/teachinglabhq
+        aria-label: Teaching Lab GitHub
+      - icon: rss
+        href: https://datahub.teachinglab.org/docs/blog/index.xml
+        aria-label: TL Blog RSS
+  # announcement: 
+    # content: "🎉 Quarto 1.4 released! [Download](/docs/download/), [Read More](/docs/blog/posts/2024-01-24-1.4-release/)"
+    # position: below-navbar
   navbar:
-    search: true
     left:
       - href: index.qmd
         text: Home
@@ -31,9 +67,9 @@ website:
       - text: "Resources"
         menu:
           - text: "Evaluation Plan"
-            href: evaluation_plan.qmd
+            href: evaluation_plan.html
           - text: "Data Dives"
-            href: data_dives.qmd
+            href: Data_dives.html
           - text: "On the Data"
             href: On_the_data.html
       - text: "Blog"
@@ -45,8 +81,8 @@ website:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: [cosmo, theme-dark.scss]
+      light: [journal, theme-light.scss]
+      dark: [journal, theme-dark.scss]
     css: styles.css
     toc: true
 

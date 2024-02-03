@@ -1,17 +1,143 @@
 [
   {
-    "objectID": "On_the_data.html",
-    "href": "On_the_data.html",
-    "title": "On the Data",
+    "objectID": "Blog.html",
+    "href": "Blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "How often does data update?\n  How do we score mindsets?\n  How do we score classroom observations?\n  How do we score student work?\n  How do we score course assessments?\n\n  \n    \n      How often does data update?\n      \n      \n     It depends. Unfortunately, different calculations have different computations, tools, and issues involved so data is not always up to date to the last second! With Teaching Lab’s current data stack, all tools can be guaranteed to be updated within at least the last 24 hours (business days). Below is a comprehensive list of tools, and the timeline on which they update.\n     \n      \n      Qualtrics dashboards - potentially up to a 60-minute delay on responses appearing in dashboards.\n      Teaching Lab shiny dashboards - potentially up to a 60-minute delay on responses appearing.\n      Data trackers - these update daily at 6 AM EST, so there will be 6 am + time since then delay on updating\n      Reports - Currently (SY23-24 November 21) the only report is the ongoing report, which has a 60-minute potential delay on data appearing.\n      \n    \n    \n      How do we score mindsets?\n      \n      \n      \n      We ask participants to report the extent to which they agree/disagree with Likert statements surrounding Equitable Mindsets on a scale from 1 (strongly disagree) to 5 (strongly agree). Equitable Mindsets - Section 4aSelf-Reported CRSE - Section 6aThese statements are grouped into the following categories (non participant facing): Recognition of Race & Culture, High Expectations, and Growth Mindsets(Sentiment Score) We ‘score’ the responses to these statements using a weighted scale, where the ideal response is ‘strongly agree, 5’, and overall higher scores correspond to holding equitable mindsets   :Strongly agree - 5                           score: 1.0Agree - 4                                          score: 0.75Neither Agree Nor Disagree - 3        score: 0.5Disagree - 2                                     score: 0.25Strongly Disagree - 1                      score: 0.0For scoring purposes, in the case of reverse coded questions, where we would ideally expect participants to select “strongly disagree - 1”, we treat responses of 1 as 5, 2 as 4, 3 as 3, 4 as 2, and 5 as 1. Therefore, on a reverse coded question, if a participant selected strongly disagree - 1, they receive a score of 1, whereas if they selected agree - 4, they receive a score of 0.25. Once the weighted scale is applied, we calculate an average score for each mindset statement. For example, a statement with 5 responses of Agree, Strongly Agree, Agree, Neither Agree Nor Disagree, and Strongly Agree, the following score would be reflected: score = 0.75 + 1.0 + 0.75 + 0.5 + 1.05 =0.80 , or 80%Finally, we can wrap up these mindset statements by their category using an average of the statement scores in the category. As an example: Recognition of Race and CultureOverall66.14%I am color blind when it comes to my teaching - I don’t think of my students in terms of their race or ethnicity.54.67%The gap in the achievement among students of different races is about poverty, not race.62.31%I think about my own background and experiences and how those affect my instruction.81.44%\n      \n    \n    \n      How do we score classroom observations?\n      \n      \n      \n      Classroom observations are scored as the average of the total questions per individual that qualifies as a positive indicator - or put another way, the % positive indicators per individual. The following outline shows exactly what that looks like for the main forms of the IPG.K12 Math IPG: ‘Yes’, 3s, 4s Questions: CA1a-c, CA2a-d, CA3a-eK12 ELA IPG: ‘Yes’, 3s, 4sQuestions: CA1a-c, CA2a-d, CA3a-fFSOT: 3s, 4s for most questions (3s and 2s for AD1 and AD2)Questions: ac1-2, td1-4, sp1-4, ad1-2Don’t include ‘Not Observed’/’Not Applicable’ in scoring Overall Scoring:% pos ind = average of  individual scores ( avg(individual pos ind/ individual possible qs) )\n      \n    \n    \n      How do we score student work?\n      \n      \n      \n        Student work is scored based on the following 2 rubrics.Math: https://drive.google.com/file/d/18Emi3DNRR4DDrl3m0KkBuKYzyzk5e5J5/view?usp=share_linkELA: https://drive.google.com/file/d/1xfsgWdA7-D9F05NJY8ZKTzI99FinP0UT/view?usp=share_linkThe primary metrics that we report on are the % proficient (the % that scored a 2 according to the above rubrics) and the % on grade level (a necessary precondition for scoring based on the rubrics).\n      \n    \n    \n      How do we score course assessments?\n      \n        \n          Course assessments questions can prompt anywhere from 1-3 correct answers in a question. Using the question “Which of the following statements are true about the principles behind the Instructional Routines? Select all that apply.” from the “Math Cycle of Inquiry - Instructional Routines” as an example, the following should demonstrate the full range of possible scores (images from the course assessments dashboard which can be viewed here).\n        \n        \n        \n          In this breakdown of the % selected per question, the correct answers are displayed with green text. If an individual participant were to select both the correct answers response to this question they would receive 100% on that question, if they were to select only one of the correct answers they would receive 50%, and if they selected no correct answers they would receive 0%. There are no penalties for incorrect answers.\n        \n        \n        \n          Ultimately, all that data gets rolled up into the numbers in the following chart, the overall % correct. This shows the average score that each participant received on all questions the first time that they took the quiz (Before/Pre) and the second time (After/Post)."
+    "text": "Welcome to the Teaching Lab blog, where data science and education converge to inspire transformative teaching and learning. Our data scientists and educators dive deep into data to uncover insights that shape effective, equitable teaching strategies. From student performance analyses to innovative educational tools, we explore how data can inform and revolutionize education. Join us for cutting-edge research, case studies, and practical tips to empower your teaching. Dive into the future of education with us.\n\n\n\n\n\n\n\n\n\n\nChanging the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success\n\n\n\n\n\n\ncoaching\n\n\nmindsets\n\n\n\nDiscover how Teaching Lab’s innovative coaching is transforming classrooms by uplifting both teachers and students.\n\n\n\n\n\nDec 15, 2024\n\n\nShaye Worthman\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "Evaluation_plan.html",
-    "href": "Evaluation_plan.html",
-    "title": "Teaching Lab: Professional Learning Evaluation Plan",
+    "objectID": "Dashboards.html#participant-perceptions",
+    "href": "Dashboards.html#participant-perceptions",
+    "title": "Dashboards",
+    "section": "Participant Perceptions",
+    "text": "Participant Perceptions\nParticipant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback // Ongoing Report\n\n\n\nParticipant Feedback\n\n\nNPS\n\n\nQualitative\n\n\n\nView ALL participant feedback data in the overall form including quantitative and qualitative data, and NPS simultaneously in section 2 of the ongoing report\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback Rollup\n\n\n\nParticipant Feedback\n\n\nNPS\n\n\nOver Time\n\n\nAI\n\n\n\nView all participant feedback data over time with facilitator competency included.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback Qualtrics Dashboard\n\n\n\nQualtrics\n\n\n\nA qualtrics dashboard for participant feedback\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Dashboards.html#participant-mindsets",
+    "href": "Dashboards.html#participant-mindsets",
+    "title": "Dashboards",
+    "section": "Participant Mindsets",
+    "text": "Participant Mindsets\nParticipant mindsets come from the diagnostic educator survey and follow up educator survey.\n\n\n\n\n\n\n\n\n\n\nEducator Survey // Ongoing Report\n\n\n\nEducator Survey\n\n\nMindsets\n\n\nCRSE\n\n\n\nView demographic information in section 1, teacher mindsets in section 4, school leader mindsets in section 5, and CRSE data in section 6a.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEducator Survey Qualtrics Data\n\n\n\nQualtrics\n\n\n\nView educator survey data in qualtrics.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Dashboards.html#participant-knowledge",
+    "href": "Dashboards.html#participant-knowledge",
+    "title": "Dashboards",
+    "section": "Participant Knowledge",
+    "text": "Participant Knowledge\nParticipants that completed course assessments will answer multiple choice quiz questions that address pedagogical content knowledge.\n\n\n\n\n\n\n\n\n\n\nCourse Assessments Dashboard\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments data as % correct before/after, % correct by each question, and finally % selected within each question!\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCourse Assessments // Ongoing Report\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments data in the ongoing report!\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Dashboards.html#participant-practices",
+    "href": "Dashboards.html#participant-practices",
+    "title": "Dashboards",
+    "section": "Participant Practices",
+    "text": "Participant Practices\nTeaching Lab staff conduct classroom observations and capture standards and shifts aligned instruction in the classroom observations survey. Those results will appear in the following dashboards.\n\n\n\n\n\n\n\n\n\n\nIPG Raw Data/Downloadable Dashboard\n\n\n\nIPG\n\n\nRaw Data\n\n\nClassroom Observations\n\n\n\nDownload classroom observations data in a rolled up summative form, or view entire responses on a per-teacher basis\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIPG Ongoing Report Data\n\n\n\nClassroom Observations\n\n\nIPG\n\n\n\nView % positive indicators over time in section 6b and 6c, and select specific ipg rubrics to see improvements in core action over time.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Sheets Classroom Observations Qualtrics Copy\n\n\n\nQualtrics\n\n\nRaw Data\n\n\nGoogle Sheets\n\n\n\nA google sheet with all qualtrics data, each tab contains responses from a specific IPG rubric.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIPG Qualtrics Dashboard\n\n\n\nQualtrics\n\n\n\nClassroom Observations Data in Qualtrics\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Dashboards.html#student-learning-experiences",
+    "href": "Dashboards.html#student-learning-experiences",
+    "title": "Dashboards",
+    "section": "Student Learning Experiences",
+    "text": "Student Learning Experiences\nRespondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.\n\n\n\n\n\n\n\n\n\n\nStudent Outcomes // Ongoing Report\n\n\n\nStudent Survey\n\n\n\nView % agree/strongly agree on the student survey and eic student survey in section 7a (student survey), 7b (EIC Student Survey), and 7c (Student Survey SY23-24).\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work // Ongoing Report\n\n\n\nStudent Work\n\n\n\nView graded student work assignments breakdowns in sections 7d and 7e.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work Graded Dashboard\n\n\n\nStudent Work\n\n\n\nView the % proficient and on grade level after assignments have been submitted and graded in the above dashboard.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work Grading Web App\n\n\n\nStudent Work\n\n\n\nGrade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "people/duncan_gates.html",
+    "href": "people/duncan_gates.html",
+    "title": "Duncan Gates",
     "section": "",
-    "text": "Background\nTeaching Lab’s mission is to fundamentally shift the paradigm of teacher professional learning (PL) to achieve educational equity. In our fourth full-year of implementation of professional learning with school partners, Teaching Lab seeks to answer the following questions about the impact of our work: \n\nTo what extent do teachers experience and sustain a change in equitable mindsets, content and pedagogical content knowledge, and equitable teaching practices after participating in Teaching Lab PL?\nTo what extent do the learning experiences and academic outcomes of students of teachers who participate in Teaching Lab PL experience improve?\n\nOur theory of evaluation for our professional learning model is adapted from the Guskey (2009) framework: If teachers find their professional learning experience valuable (participant perceptions), if they increase content and pedagogical content knowledge (participant knowledge), if they have an equitable mindset and high expectations for all students (participant mindsets), if they have the conducive environment for professional learning (enabling conditions), and if they enact evidence-based instructional practices in the classroom (participant practices), then their students will have improved learning outcomes (student learning experiences).\nTeaching Lab has designed a rigorous evaluation plan of our professional learning, with multiple venues for collecting data about each component within our theory of evaluation. We have obtained agreements from almost every single one of our system partners to engage in data collection, and we are excited to triangulate various data points to tell the story of where Teaching Lab is changing teaching and learning, and where we can adapt our model to reach even better results. \nIn addition to our internal evaluation plan, Teaching Lab is engaged in external evaluation studies led by prominent education researchers, Dr. Heather Hill, Dr. John Papay, and Dr. David Blazar, as well as the The Bill & Melinda Gates Foundation. These studies will  measure changes in teacher mindsets, knowledge, and practices in addition to  student learning experiences and outcomes, both academic and social emotional, to better understand the impact ofTeaching Lab professional learning.\n\n\nWhat We Measure\nThe following describes how we plan to learn about each component of our theory of evaluation: \n\nParticipant perceptions:\n\nWe administer an End-of-Session Survey which allows us to learn about participants’ feedback of the facilitation and the overall quality and content of the sessions. We use this information to make real-time adjustments to facilitation.\nWe also administer an End-of-Course Survey, which allows us to learn whether participants believe the PL is high quality, relevant, and feasible, and whether they would recommend it to others (Net Promoter Score). We use this information to make any necessary changes to the course structure and/or content focus.\n\nParticipant knowledge: \n\nDuring the first session, participants complete a short knowledge assessmentconsisting of multiple-choice quiz questions about the specific content and pedagogical content knowledge addressed in the sequence of learning for a content area. We use this information to adjust facilitation as needed. During the last session, they complete the same set of multiple-choice quiz questions. We use this information to track how participant knowledge changes.\n\nParticipant mindsets: \n\nWe conducted a literature review to identify key teacher mindsets and expectations which are most predictive of student learning outcomes, particularly the outcomes of students of color: recognition of race and culture, high expectations that all students can and will learn, and growth mindsets. Moreover, we have incorporated items on self-efficacy to deliver culturally responsive instruction, which is linked to high expectations and effective teaching practices. We’ve adapted the questions on teacher mindsets to be relevant for coaches and school leaders. We continue to integrate these mindsets into our PL sequence.\nWe ask about these characteristics in our Diagnostic Educator Survey and Follow-up Educator Survey. We use this information to track how participant mindsets change throughout our partnership. \nThe mindset questions can be found in the Mindsets and Expectations section of our Educator Survey.\nWe also triangulate these survey responses with students’ perceptions of their learning experience. Read more about our work on the student perception survey in the “Student learning experiences” section below.\n\nSupportive structures and environment: Teaching Lab’s grassroots model of professional learning leans on the core belief that teachers deserve to feel motivated and supported by their peers to learn and grow. In teacher-led communities, educators are more likely to buy into their own development and work collaboratively with their colleagues to improve instruction. We call this the “heart” of professional learning. \n\nIn our Diagnostic Educator Survey and Follow-up Educator Survey, we ask teachers about their trust of other teachers, and the level of collaboration they have with others in their schools, which are parts of teacher social capital. We use this information to track how teacher social capital changes throughout our partnership.\nThe supportive structures and environment questions can be found in the School Environment section of our Diagnostic Educator Survey and Follow-up Educator Survey.\n\nParticipant practices: \n\nOur team conducts classroom observations and takes the opportunity to capture standards-and-shifts-aligned instruction using a subset of core actions from the Instructional Practice Guides which are most emphasized in our learning sequence (e.g., citing relevant evidence, productive struggle, student talk) throughout our partnership. \nWe also sign data agreements with state education agencies and districts when possible to obtain teacher evaluation data to compare the effectiveness of teachers participating in our professional learning sequences compared to other teachers. \n\nStudent learning experiences: Our ultimate goal is to increase student learning and achieve educational equity. \n\nWe conducted a literature review to identify key dimensions of student learning experiences that are within teachers’ control and highly predictive of student learning outcomes: student-teacher relationships, self-efficacy, growth mindset, happiness and sense of belonging, being challenged and culturally responsive teaching practices. We ask about these dimensions in our twice-a-year student survey based on Transcend’s Leaps Student Voice Survey.\nWe also collect and analyze student tasksfrom the same students multiple times throughout the school year to track the quality of student tasks and student performance on rigorous, grade-level tasks throughout our partnership.\nWe sign data agreements with state education agencies and districts when possible to obtain student formative and/or summative assessment data to track learning."
+    "text": "Duncan Gates is a data analyst/scientist with research interests in education, economics, computational modeling, and AI."
+  },
+  {
+    "objectID": "people/duncan_gates.html#education",
+    "href": "people/duncan_gates.html#education",
+    "title": "Duncan Gates",
+    "section": "Education",
+    "text": "Education\nH.B.S, Oregon State University - 2020 (Economics, Math)"
+  },
+  {
+    "objectID": "dashboard/participant_feedback_2.html",
+    "href": "dashboard/participant_feedback_2.html",
+    "title": "Participant Feedback Rollup",
+    "section": "",
+    "text": "Go to the facilitator feedback report ➡️"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an [coach_facilitator_external_internal] user. Please reach out to Duncan if your authentication is not correct."
+  },
+  {
+    "objectID": "index.html#pages",
+    "href": "index.html#pages",
+    "title": "Teaching Lab Data Hub",
+    "section": "Pages",
+    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nReports\n\n\nReports from previous years, and this year’s ongoing report which provides continuous updated data by site.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards\n\n\nDashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching Lab: Professional Learning Evaluation Plan\n\n\nA background on who, why, and what we measure with links to specific survey instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\nVarious musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Dives\n\n\nThe Learning & Research team’s series on how, what, why and where we use data - with video recordings and slides linked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn the Data\n\n\nLearn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoom Channel\n\n\nThis channel tutorials for dashboards and reports and the learning evaluation plan.\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Teaching Lab Data Hub",
+    "section": "Contact",
+    "text": "Contact\nDuncan Gates\n\nData Analyst\nLearning & Research Staff Page\nSlack\nemail: duncan.gates@teachinglab.org\nCurrent Time Zone: MST"
+  },
+  {
+    "objectID": "trademark.html",
+    "href": "trademark.html",
+    "title": "Trademark Policy",
+    "section": "",
+    "text": "This policy is adapted directly from the WordPress Foundation’s trademark policy for the WordPress and WordCamp names and logos. We admire the job that WordPress has done building a thriving open source community while at the same time making possible a wide variety of WordPress related businesses. We hope that this policy will help us do the same for Quarto."
+  },
+  {
+    "objectID": "trademark.html#goals",
+    "href": "trademark.html#goals",
+    "title": "Trademark Policy",
+    "section": "Goals",
+    "text": "Goals\n\nTBD"
+  },
+  {
+    "objectID": "dashboard4/participant_practice_2.html",
+    "href": "dashboard4/participant_practice_2.html",
+    "title": "IPG Ongoing Report Data",
+    "section": "",
+    "text": "Go to section 6 of the ongoing report ➡️"
+  },
+  {
+    "objectID": "dashboard4/participant_practice_4.html",
+    "href": "dashboard4/participant_practice_4.html",
+    "title": "IPG Qualtrics Dashboard",
+    "section": "",
+    "text": "Go to the qualtrics dashboard ➡"
+  },
+  {
+    "objectID": "dashboard3/course_assessments.html",
+    "href": "dashboard3/course_assessments.html",
+    "title": "Course Assessments Dashboard",
+    "section": "",
+    "text": "Go to the course assessments dashboard ➡️"
+  },
+  {
+    "objectID": "dashboard2/educator_survey.html",
+    "href": "dashboard2/educator_survey.html",
+    "title": "Educator Survey // Ongoing Report",
+    "section": "",
+    "text": "Go to the ongoing report ➡️"
+  },
+  {
+    "objectID": "dashboard5/student_learning_experiences_1.html",
+    "href": "dashboard5/student_learning_experiences_1.html",
+    "title": "Student Outcomes // Ongoing Report",
+    "section": "",
+    "text": "Go to section 7 of the ongoing report ➡️"
+  },
+  {
+    "objectID": "dashboard5/student_learning_experiences_2.html",
+    "href": "dashboard5/student_learning_experiences_2.html",
+    "title": "Student Work // Ongoing Report",
+    "section": "",
+    "text": "Go to section 7 of the ongoing report ➡️"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -21,11 +147,67 @@
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "On_the_data.html",
+    "href": "On_the_data.html",
+    "title": "On the Data",
+    "section": "",
+    "text": "This page is currently under maintenance, check back later for more information!"
+  },
+  {
+    "objectID": "Evaluation_plan.html",
+    "href": "Evaluation_plan.html",
+    "title": "Teaching Lab: Professional Learning Evaluation Plan",
+    "section": "",
+    "text": "Background\nTeaching Lab’s mission is to fundamentally shift the paradigm of teacher professional learning (PL) to achieve educational equity. In our fourth full-year of implementation of professional learning with school partners, Teaching Lab seeks to answer the following questions about the impact of our work: \n\nTo what extent do teachers experience and sustain a change in equitable mindsets, content and pedagogical content knowledge, and equitable teaching practices after participating in Teaching Lab PL?\nTo what extent do the learning experiences and academic outcomes of students of teachers who participate in Teaching Lab PL experience improve?\n\nOur theory of evaluation for our professional learning model is adapted from the Guskey (2009) framework: If teachers find their professional learning experience valuable (participant perceptions), if they increase content and pedagogical content knowledge (participant knowledge), if they have an equitable mindset and high expectations for all students (participant mindsets), if they have the conducive environment for professional learning (enabling conditions), and if they enact evidence-based instructional practices in the classroom (participant practices), then their students will have improved learning outcomes (student learning experiences).\nTeaching Lab has designed a rigorous evaluation plan of our professional learning, with multiple venues for collecting data about each component within our theory of evaluation. We have obtained agreements from almost every single one of our system partners to engage in data collection, and we are excited to triangulate various data points to tell the story of where Teaching Lab is changing teaching and learning, and where we can adapt our model to reach even better results. \nIn addition to our internal evaluation plan, Teaching Lab is engaged in external evaluation studies led by prominent education researchers, Dr. Heather Hill, Dr. John Papay, and Dr. David Blazar, as well as the The Bill & Melinda Gates Foundation. These studies will  measure changes in teacher mindsets, knowledge, and practices in addition to  student learning experiences and outcomes, both academic and social emotional, to better understand the impact ofTeaching Lab professional learning.\n\n\nWhat We Measure\nThe following describes how we plan to learn about each component of our theory of evaluation: \n\nParticipant perceptions:\n\nWe administer an End-of-Session Survey which allows us to learn about participants’ feedback of the facilitation and the overall quality and content of the sessions. We use this information to make real-time adjustments to facilitation.\nWe also administer an End-of-Course Survey, which allows us to learn whether participants believe the PL is high quality, relevant, and feasible, and whether they would recommend it to others (Net Promoter Score). We use this information to make any necessary changes to the course structure and/or content focus.\n\nParticipant knowledge: \n\nDuring the first session, participants complete a short knowledge assessmentconsisting of multiple-choice quiz questions about the specific content and pedagogical content knowledge addressed in the sequence of learning for a content area. We use this information to adjust facilitation as needed. During the last session, they complete the same set of multiple-choice quiz questions. We use this information to track how participant knowledge changes.\n\nParticipant mindsets: \n\nWe conducted a literature review to identify key teacher mindsets and expectations which are most predictive of student learning outcomes, particularly the outcomes of students of color: recognition of race and culture, high expectations that all students can and will learn, and growth mindsets. Moreover, we have incorporated items on self-efficacy to deliver culturally responsive instruction, which is linked to high expectations and effective teaching practices. We’ve adapted the questions on teacher mindsets to be relevant for coaches and school leaders. We continue to integrate these mindsets into our PL sequence.\nWe ask about these characteristics in our Diagnostic Educator Survey and Follow-up Educator Survey. We use this information to track how participant mindsets change throughout our partnership. \nThe mindset questions can be found in the Mindsets and Expectations section of our Educator Survey.\nWe also triangulate these survey responses with students’ perceptions of their learning experience. Read more about our work on the student perception survey in the “Student learning experiences” section below.\n\nSupportive structures and environment: Teaching Lab’s grassroots model of professional learning leans on the core belief that teachers deserve to feel motivated and supported by their peers to learn and grow. In teacher-led communities, educators are more likely to buy into their own development and work collaboratively with their colleagues to improve instruction. We call this the “heart” of professional learning. \n\nIn our Diagnostic Educator Survey and Follow-up Educator Survey, we ask teachers about their trust of other teachers, and the level of collaboration they have with others in their schools, which are parts of teacher social capital. We use this information to track how teacher social capital changes throughout our partnership.\nThe supportive structures and environment questions can be found in the School Environment section of our Diagnostic Educator Survey and Follow-up Educator Survey.\n\nParticipant practices: \n\nOur team conducts classroom observations and takes the opportunity to capture standards-and-shifts-aligned instruction using a subset of core actions from the Instructional Practice Guides which are most emphasized in our learning sequence (e.g., citing relevant evidence, productive struggle, student talk) throughout our partnership. \nWe also sign data agreements with state education agencies and districts when possible to obtain teacher evaluation data to compare the effectiveness of teachers participating in our professional learning sequences compared to other teachers. \n\nStudent learning experiences: Our ultimate goal is to increase student learning and achieve educational equity. \n\nWe conducted a literature review to identify key dimensions of student learning experiences that are within teachers’ control and highly predictive of student learning outcomes: student-teacher relationships, self-efficacy, growth mindset, happiness and sense of belonging, being challenged and culturally responsive teaching practices. We ask about these dimensions in our twice-a-year student survey based on Transcend’s Leaps Student Voice Survey.\nWe also collect and analyze student tasksfrom the same students multiple times throughout the school year to track the quality of student tasks and student performance on rigorous, grade-level tasks throughout our partnership.\nWe sign data agreements with state education agencies and districts when possible to obtain student formative and/or summative assessment data to track learning."
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "dashboard5/student_learning_experiences_3.html",
+    "href": "dashboard5/student_learning_experiences_3.html",
+    "title": "Student Work Graded Dashboard",
+    "section": "",
+    "text": "Go to the student work grades dashboard ➡️"
+  },
+  {
+    "objectID": "dashboard5/student_learning_experiences_4.html",
+    "href": "dashboard5/student_learning_experiences_4.html",
+    "title": "Student Work Grading Web App",
+    "section": "",
+    "text": "Go to the student work grading app ➡️"
+  },
+  {
+    "objectID": "dashboard2/educator_survey_2.html",
+    "href": "dashboard2/educator_survey_2.html",
+    "title": "Educator Survey Qualtrics Data",
+    "section": "",
+    "text": "Go to the qualtrics dashboard ➡"
+  },
+  {
+    "objectID": "dashboard3/course_assessments_2.html",
+    "href": "dashboard3/course_assessments_2.html",
+    "title": "Course Assessments // Ongoing Report",
+    "section": "",
+    "text": "Go to section 3 of the Ongoing Report ➡️"
+  },
+  {
+    "objectID": "dashboard4/participant_practice_3.html",
+    "href": "dashboard4/participant_practice_3.html",
+    "title": "Google Sheets Classroom Observations Qualtrics Copy",
+    "section": "",
+    "text": "Go to the google sheet ➡️"
+  },
+  {
+    "objectID": "dashboard4/participant_practice_1.html",
+    "href": "dashboard4/participant_practice_1.html",
+    "title": "IPG Raw Data/Downloadable Dashboard",
+    "section": "",
+    "text": "Go to the IPG Raw/Downloadable Dashboard ➡️"
   },
   {
     "objectID": "Reports.html",
@@ -63,95 +245,39 @@
     "text": "Previous Year’s Reports (Static)\nR-studio project template and workflow for sharing psychological research projects in the form of a website."
   },
   {
-    "objectID": "index.html#pages",
-    "href": "index.html#pages",
-    "title": "Teaching Lab Data Hub",
-    "section": "Pages",
-    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\nVarious musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReports\n\n\nReports from previous years, and this year’s ongoing report which provides continuous updated data by site.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards\n\n\nDashboards are developed and maintained by Duncan Gates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching Lab: Professional Learning Evaluation Plan\n\n\nA background on who, why, and what we measure with links to specific survey instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Dives\n\n\nThe Learning & Research team’s series on how, what, why and where we use data - with video recordings and slides linked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn the Data\n\n\nLearn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoom Channel\n\n\nThis channel tutorials for dashboards and reports and the learning evaluation plan.\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Teaching Lab Data Hub",
-    "section": "Contact",
-    "text": "Contact\nDuncan Gates\n\nData Analyst\nLearning & Research Staff Page\nSlack\nemail: duncan.gates@teachinglab.orgu\nCurrent Time Zone: MST"
-  },
-  {
     "objectID": "blog/01_changing_the_game/index.html",
     "href": "blog/01_changing_the_game/index.html",
     "title": "Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success",
     "section": "",
-    "text": "Over the past two years, Teaching Lab’s direct-to-teacher coaching model has seen remarkable growth. Beginning in the spring of 2021 with 90 teachers across the state of Mississippi, Teaching Lab scaled in SY22-23 to provide coaching services to more than 300 teachers in New York City, Chicago, and Arkansas. So far in SY23-24, Teaching Lab has over 800 teachers registered to participate in direct-to-teacher coaching.\nThrough analysis of classroom observations, student work samples, and formative and summative assessment data, the impact Teaching Lab’s coaching has on teachers and students through our coaching model is clear: teachers improve their practices and students improve their academic performance.\n\n\n\nCoaching is one of the most promising professional learning interventions. The results of a meta-analysis from 60 studies conducted by Kraft et al., (2018) indicate that, on average, teacher coaching programs were associated with a substantial improvement in instructional practice, with an effect size of 0.49 standard deviations. This is like turning a good teacher into a really great teacher. Additionally, student academic achievement received a boost, showing an effect size of 0.18 standard deviations. While the effect is smaller, some researchers, such as Kraft (2020) again, consider 0.20 standard deviations to be a large effect size for causal studies of pre-K–12 education interventions evaluating effects on student achievement – so this is very meaningful progress.\n\n\n\nTeaching Lab conducted over 600 classroom observations for our direct-to-teacher partnerships in SY22-23. On average, teachers increased the percentage of positive indicators on the ELA and Math Instructional Practice Guides and Foundational Skills Observational Tool by 33 percentage points, from 46% at baseline to 79% at the end of the year. (Note: Scoring 3 or 4 on a 4-point Likert Scale and Yes on Yes/No items on the observational tools are considered positive indicators.) \n\n\n\n\nTeaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)\n\n\n\nEach “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.\n\n\nWe saw the most growth in Chicago Network 7 and New York City District 9.\n\n\n\n\nFinally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.\nWhat’s next for understanding the impact of Teaching Lab’s coaching model?\nAs we grow and scale our model, data collection and analysis is becoming more robust and richer. By utilizing data collected from the coaching log, the Learning & Research Team will explore correlations between the frequency and duration of coaching sessions, the specific areas of focus and goals within coaching cycles, and the resulting outcomes at the end of SY23-24. We will also participate in an exploratory RPPL study to better understand the “moves” our coaches make with teachers and how they could be leveraged in the development of an AI feedback tool. Finally, through two federal grants that Teaching Lab has won, the Education Innovation Research mid-phase grant in partnership with ASSISTments and the Teacher and School Leader Incentive grant, we will engage in randomized control trials that will rigorously evaluate the effectiveness of our coaching model.\nFor more information on Teaching Lab’s impact, see here."
+    "text": "Over the past two years, Teaching Lab’s direct-to-teacher coaching model has seen remarkable growth. Beginning in the spring of 2021 with 90 teachers across the state of Mississippi, Teaching Lab scaled in SY22-23 to provide coaching services to more than 300 teachers in New York City, Chicago, and Arkansas. So far in SY23-24, Teaching Lab has over 800 teachers registered to participate in direct-to-teacher coaching.\nThrough analysis of classroom observations, student work samples, and formative and summative assessment data, the impact Teaching Lab’s coaching has on teachers and students through our coaching model is clear: teachers improve their practices and students improve their academic performance.\n\n\n\nCoaching is one of the most promising professional learning interventions. The results of a meta-analysis from 60 studies conducted by Kraft et al., (2018) indicate that, on average, teacher coaching programs were associated with a substantial improvement in instructional practice, with an effect size of 0.49 standard deviations. This is like turning a good teacher into a really great teacher. Additionally, student academic achievement received a boost, showing an effect size of 0.18 standard deviations. While the effect is smaller, some researchers, such as Kraft (2020) again, consider 0.20 standard deviations to be a large effect size for causal studies of pre-K–12 education interventions evaluating effects on student achievement – so this is very meaningful progress.\n\n\n\nTeaching Lab conducted over 600 classroom observations for our direct-to-teacher partnerships in SY22-23. On average, teachers increased the percentage of positive indicators on the ELA and Math Instructional Practice Guides and Foundational Skills Observational Tool by 33 percentage points, from 46% at baseline to 79% at the end of the year. (Note: Scoring 3 or 4 on a 4-point Likert Scale and Yes on Yes/No items on the observational tools are considered positive indicators.) \n\n\n\n\nTeaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)\n\n\n\nEach “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.\n\n\nWe saw the most growth in Chicago Network 7 and New York City District 9.\n\n\n\n\nFinally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.\nWhat’s next for understanding the impact of Teaching Lab’s coaching model?\nAs we grow and scale our model, data collection and analysis is becoming more robust and richer. By utilizing data collected from the coaching log, the Learning & Research Team will explore correlations between the frequency and duration of coaching sessions, the specific areas of focus and goals within coaching cycles, and the resulting outcomes at the end of SY23-24. We will also participate in an exploratory RPPL study to better understand the “moves” our coaches make with teachers and how they could be leveraged in the development of an AI feedback tool. Finally, through two federal grants that Teaching Lab has won, the Education Innovation Research mid-phase grant in partnership with ASSISTments and the Teacher and School Leader Incentive grant, we will engage in randomized control trials that will rigorously evaluate the effectiveness of our coaching model.\nFor more information on Teaching Lab’s impact, see here.\n\n\n\nEach “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "blog/01_changing_the_game/index.html#changing-the-game-how-high-dosage-coaching-shifts-teacher-practices-student-success",
+    "href": "blog/01_changing_the_game/index.html#changing-the-game-how-high-dosage-coaching-shifts-teacher-practices-student-success",
+    "title": "Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success",
     "section": "",
-    "text": "On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an [coach_facilitator_external_internal] user. Please reach out to Duncan if your authentication is not correct."
+    "text": "Over the past two years, Teaching Lab’s direct-to-teacher coaching model has seen remarkable growth. Beginning in the spring of 2021 with 90 teachers across the state of Mississippi, Teaching Lab scaled in SY22-23 to provide coaching services to more than 300 teachers in New York City, Chicago, and Arkansas. So far in SY23-24, Teaching Lab has over 800 teachers registered to participate in direct-to-teacher coaching.\nThrough analysis of classroom observations, student work samples, and formative and summative assessment data, the impact Teaching Lab’s coaching has on teachers and students through our coaching model is clear: teachers improve their practices and students improve their academic performance.\n\n\n\nCoaching is one of the most promising professional learning interventions. The results of a meta-analysis from 60 studies conducted by Kraft et al., (2018) indicate that, on average, teacher coaching programs were associated with a substantial improvement in instructional practice, with an effect size of 0.49 standard deviations. This is like turning a good teacher into a really great teacher. Additionally, student academic achievement received a boost, showing an effect size of 0.18 standard deviations. While the effect is smaller, some researchers, such as Kraft (2020) again, consider 0.20 standard deviations to be a large effect size for causal studies of pre-K–12 education interventions evaluating effects on student achievement – so this is very meaningful progress.\n\n\n\nTeaching Lab conducted over 600 classroom observations for our direct-to-teacher partnerships in SY22-23. On average, teachers increased the percentage of positive indicators on the ELA and Math Instructional Practice Guides and Foundational Skills Observational Tool by 33 percentage points, from 46% at baseline to 79% at the end of the year. (Note: Scoring 3 or 4 on a 4-point Likert Scale and Yes on Yes/No items on the observational tools are considered positive indicators.) \n\n\n\n\nTeaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)\n\n\n\nEach “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.\n\n\nWe saw the most growth in Chicago Network 7 and New York City District 9.\n\n\n\n\nFinally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.\nWhat’s next for understanding the impact of Teaching Lab’s coaching model?\nAs we grow and scale our model, data collection and analysis is becoming more robust and richer. By utilizing data collected from the coaching log, the Learning & Research Team will explore correlations between the frequency and duration of coaching sessions, the specific areas of focus and goals within coaching cycles, and the resulting outcomes at the end of SY23-24. We will also participate in an exploratory RPPL study to better understand the “moves” our coaches make with teachers and how they could be leveraged in the development of an AI feedback tool. Finally, through two federal grants that Teaching Lab has won, the Education Innovation Research mid-phase grant in partnership with ASSISTments and the Teacher and School Leader Incentive grant, we will engage in randomized control trials that will rigorously evaluate the effectiveness of our coaching model.\nFor more information on Teaching Lab’s impact, see here.\n\n\n\nEach “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."
   },
   {
-    "objectID": "dashboard/participant_feedback_2.html",
-    "href": "dashboard/participant_feedback_2.html",
-    "title": "Participant Feedback Rollup",
+    "objectID": "dashboard/participant_feedback_3.html",
+    "href": "dashboard/participant_feedback_3.html",
+    "title": "Participant Feedback Qualtrics Dashboard",
     "section": "",
-    "text": "Go to the facilitator feedback report ➡️"
+    "text": "Go to the qualtrics dashboard ➡"
   },
   {
     "objectID": "dashboard/participant_feedback_1.html",
     "href": "dashboard/participant_feedback_1.html",
     "title": "Participant Feedback // Ongoing Report",
     "section": "",
-    "text": "Go to the ongoing report ➡️"
+    "text": "Go to section 2 of the ongoing report ➡️"
   },
   {
-    "objectID": "people/duncan_gates.html",
-    "href": "people/duncan_gates.html",
-    "title": "Duncan Gates",
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Open Source License",
     "section": "",
-    "text": "Duncan Gates is a data analyst/scientist with research interests in education, economics, computational modeling, and AI."
-  },
-  {
-    "objectID": "people/duncan_gates.html#education",
-    "href": "people/duncan_gates.html#education",
-    "title": "Duncan Gates",
-    "section": "Education",
-    "text": "Education\nH.B.S, Oregon State University - 2020 (Economics, Math)"
-  },
-  {
-    "objectID": "Dashboards.html#participant-perceptions",
-    "href": "Dashboards.html#participant-perceptions",
-    "title": "Dashboards",
-    "section": "Participant Perceptions",
-    "text": "Participant Perceptions\nParticipant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback // Ongoing Report\n\n\n\nParticipant Feedback\n\n\nNPS\n\n\nQualitative\n\n\n\nView ALL participant feedback data in the overall form including quantitative and qualitative data, and NPS simultaneously in section 2 of the ongoing report\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback Rollup\n\n\n\nParticipant Feedback\n\n\nNPS\n\n\nOver Time\n\n\nAI\n\n\n\nView all participant feedback data over time with facilitator competency included.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant Feedback Qualtrics Dashboard\n\n\n\nQualtrics\n\n\n\nA qualtrics dashboard for participant feedback\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "Dashboards.html#participant-mindsets",
-    "href": "Dashboards.html#participant-mindsets",
-    "title": "Dashboards",
-    "section": "Participant Mindsets",
-    "text": "Participant Mindsets\nParticipant mindsets come from the diagnostic educator survey and follow up educator survey.\n\n\n\n\n\n\n\n\n\n\nEducator Survey // Ongoing Report\n\n\n\nEducator Survey\n\n\nMindsets\n\n\nCRSE\n\n\n\nView demographic information in section 1, teacher mindsets in section 4, school leader mindsets in section 5, and CRSE data in section 6a.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEducator Survey Qualtrics Data\n\n\n\nQualtrics\n\n\n\nView educator survey data in qualtrics.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "Dashboards.html#participant-knowledge",
-    "href": "Dashboards.html#participant-knowledge",
-    "title": "Dashboards",
-    "section": "Participant Knowledge",
-    "text": "Participant Knowledge\nParticipants that completed course assessments will answer multiple choice quiz questions that address pedagogical content knowledge.\n\n\n\n\n\n\n\n\n\n\nCourse Assessments Dashboard\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments data as % correct before/after, % correct by each question, and finally % selected within each question!\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCourse Assessments // Ongoing Report\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments data in the ongoing report!\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "Dashboards.html#participant-practices",
-    "href": "Dashboards.html#participant-practices",
-    "title": "Dashboards",
-    "section": "Participant Practices",
-    "text": "Participant Practices\nTeaching Lab staff conduct classroom observations and capture standards and shifts aligned instruction in the classroom observations survey. Those results will appear in the following dashboards.\n\n\n\n\n\n\n\n\n\n\nIPG Raw Data/Downloadable Dashboard\n\n\n\nIPG\n\n\nRaw Data\n\n\nClassroom Observations\n\n\n\nDownload classroom observations data in a rolled up summative form, or view entire responses on a per-teacher basis\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIPG Ongoing Report Data\n\n\n\nClassroom Observations\n\n\nIPG\n\n\n\nView % positive indicators over time in section 6b and 6c, and select specific ipg rubrics to see improvements in core action over time.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Sheets Classroom Observations Qualtrics Copy\n\n\n\nQualtrics\n\n\nRaw Data\n\n\nGoogle Sheets\n\n\n\nA google sheet with all qualtrics data, each tab contains responses from a specific IPG rubric.\n\n\n\nDuncan Gates\n\n\nFeb 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIPG Qualtrics Dashboard\n\n\n\nQualtrics\n\n\n\nClassroom Observations Data in Qualtrics\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "Dashboards.html#student-learning-experiences",
-    "href": "Dashboards.html#student-learning-experiences",
-    "title": "Dashboards",
-    "section": "Student Learning Experiences",
-    "text": "Student Learning Experiences\nRespondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.\n\n\n\n\n\n\n\n\n\n\nStudent Outcomes // Ongoing Report\n\n\n\nStudent Survey\n\n\n\nView % agree/strongly agree on the student survey and eic student survey in section 7a (student survey), 7b (EIC Student Survey), and 7c (Student Survey SY23-24).\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work // Ongoing Report\n\n\n\nStudent Work\n\n\n\nView graded student work assignments breakdowns in sections 7d and 7e.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work Graded Dashboard\n\n\n\nStudent Work\n\n\n\nView the % proficient and on grade level after assignments have been submitted and graded in the above dashboard.\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Work Grading Web App\n\n\n\nStudent Work\n\n\n\nGrade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates\n\n\n\nDuncan Gates\n\n\nFeb 2, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "TL Software 0.1 (and earlier) is licensed under the GNU GPL v2. Quarto version 1.4 is licensed under the MIT License. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
   },
   {
     "objectID": "Data_dives.html#behind-the-numbers-what-we-measure-why",
@@ -166,12 +292,5 @@
     "title": "Data Dives",
     "section": "Course Assessments: How We Know We’re Increasing Participant Knowledge",
     "text": "Course Assessments: How We Know We’re Increasing Participant Knowledge\nA demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the course assessment dashboard which has many fun levels of data! Zoom recording here."
-  },
-  {
-    "objectID": "Blog.html",
-    "href": "Blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Welcome to the Teaching Lab blog, where data science and education converge to inspire transformative teaching and learning. Our data scientists and educators dive deep into data to uncover insights that shape effective, equitable teaching strategies. From student performance analyses to innovative educational tools, we explore how data can inform and revolutionize education. Join us for cutting-edge research, case studies, and practical tips to empower your teaching. Dive into the future of education with us.\n\n\n\n\n  \n\n\n\n\nChanging the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success\n\n\n\n\n\n\n\ncoaching\n\n\nmindsets\n\n\n\n\nDiscover how Teaching Lab’s innovative coaching is transforming classrooms by uplifting both teachers and students.\n\n\n\n\n\n\nDec 15, 2024\n\n\nShaye Worthman\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -7,3 +7,7 @@ categories: [Qualtrics]
 author: Duncan Gates
 date: "02-02-2024"
 ---
+
+[Go to the qualtrics dashboard ➡](https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6349bfbbb614690016a0b7b1/pages/Page_120ba1a8-cea1-44d2-a7e0-19fd41fcc67a/view)
+
+[![](imgs/QualtricsLogo.png)](https://teachinglab.co1.qualtrics.com/reporting-dashboard/web/6349bfbbb614690016a0b7b1/pages/Page_120ba1a8-cea1-44d2-a7e0-19fd41fcc67a/view)

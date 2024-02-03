@@ -4,10 +4,10 @@ image: teachinglab_logo.png
 toc: false
 listing:
   contents: 
-    - Blog.qmd
     - Reports.qmd
     - Dashboards.qmd
     - Evaluation_plan.qmd
+    - Blog.qmd
     - Data_dives.qmd
     - On_the_data.qmd
     - Trackers.qmd
@@ -58,7 +58,6 @@ p {
 
 ```
 
-
 ```{r banner}
 #| echo: FALSE
 #| out.width: 60%
@@ -73,8 +72,6 @@ knitr::include_graphics('teachinglab_logo.png')
 ::: {#front-list}
 :::
 
-
-
 ## Contact
 
 [Duncan Gates](https://datahub.teachinglab.org/people/duncan_gates.html)
@@ -82,5 +79,5 @@ knitr::include_graphics('teachinglab_logo.png')
 -   Data Analyst
 -   [Learning & Research Staff Page](https://sites.google.com/teachinglab.org/staff-site/learning-research)
 -   [Slack](https://teachinglabhq.slack.com/team/U01MRR8KBRU)
--   email: [duncan.gates\@teachinglab.orgu](mailto:duncan.gates@teachinglab.org){.email}
+-   email: [duncan.gates\@teachinglab.org](mailto:duncan.gates@teachinglab.org){.email}
 -   Current Time Zone: MST

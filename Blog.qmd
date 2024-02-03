@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 description: "Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes."
-image: "Images/blog/blog_banner.png"
+image: "Images/blog/blog_banner_2.png"
 listing:
   contents: blog
   id: blog-list
@@ -33,7 +33,6 @@ knitr::include_graphics('Images/blog/blog_banner.png')
 ```
 
 Welcome to the Teaching Lab blog, where data science and education converge to inspire transformative teaching and learning. Our data scientists and educators dive deep into data to uncover insights that shape effective, equitable teaching strategies. From student performance analyses to innovative educational tools, we explore how data can inform and revolutionize education. Join us for cutting-edge research, case studies, and practical tips to empower your teaching. Dive into the future of education with us.
-
 
 ::: {#blog-list}
 :::

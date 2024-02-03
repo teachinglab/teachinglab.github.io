@@ -7,3 +7,7 @@ categories: [Qualtrics, Raw Data, Google Sheets]
 author: Duncan Gates
 date: "02-01-2024"
 ---
+
+[Go to the google sheet ➡️](https://docs.google.com/spreadsheets/d/1mRZThJuslwVGXyWNY2Z-gAgh0FZKaJM1LIHRwhRvMg8/edit#gid=1191104641)
+
+[![](imgs/google_sheets.png)](https://docs.google.com/spreadsheets/d/1mRZThJuslwVGXyWNY2Z-gAgh0FZKaJM1LIHRwhRvMg8/edit#gid=1191104641)

@@ -7,3 +7,7 @@ categories: [IPG, Raw Data, Classroom Observations]
 author: Duncan Gates
 date: "02-02-2024"
 ---
+
+[Go to the IPG Raw/Downloadable Dashboard ➡️](https://teachinglabhq.shinyapps.io/IPGRawDataDashboard/)
+
+[![](imgs/IPGRawDashboard.png)](https://teachinglabhq.shinyapps.io/IPGRawDataDashboard/)
