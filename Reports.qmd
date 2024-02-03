@@ -1,7 +1,7 @@
 ---
 title: "Reports"
 description: "Reports from previous years, and this year's ongoing report which provides continuous updated data by site."
-image: "Images/Reports/Reports.png"
+image: "Images/Reports/reports.png"
 format:
   html:
     page-layout: full
@@ -20,7 +20,7 @@ format:
 ```{r}
 #| echo: FALSE
 #| out.width: 100%
-knitr::include_graphics('images/reports/reports_banner.png')
+knitr::include_graphics('Images/Reports/reports_banner.png')
 ```
 
 Reports on Teaching Lab Data
@@ -40,7 +40,7 @@ A fully compiled, updating, interactive AI-utilizing report for all L&R data rep
 
 ::: {.column width="30%"}
 ```{r ongoing-report, out.width=450, echo=F}
-knitr::include_graphics("images/reports/ongoing_report.png")
+knitr::include_graphics("Images/Reports/ongoing_report.png")
 ```
 :::
 :::
@@ -56,7 +56,7 @@ A custom built CPS Skyline Report on Participant Feedback
 
 ::: {.column width="30%"}
 ```{r skyline, out.width=250, echo=F}
-knitr::include_graphics("images/reports/skyline.png")
+knitr::include_graphics("Images/Reports/skyline.png")
 ```
 :::
 :::
@@ -72,7 +72,7 @@ A custom built report on trends, environment, planning, and writing for Clevelan
 
 ::: {.column width="30%"}
 ```{r cleveland-lbtt, out.width=250, echo=F}
-knitr::include_graphics("images/reports/cleveland_lbtt.png")
+knitr::include_graphics("Images/Reports/cleveland_lbtt.png")
 ```
 :::
 :::
@@ -92,7 +92,7 @@ R-studio project template and workflow for sharing psychological research projec
 
 ::: {.column width="30%"}
 ```{r vertical, out.width=300, echo=F}
-knitr::include_graphics("images/reports/google_drive.png")
+knitr::include_graphics("Images/Reports/google_drive.png")
 ```
 :::
 :::
