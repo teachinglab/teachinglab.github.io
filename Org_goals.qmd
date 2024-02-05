@@ -1,0 +1,22 @@
+---
+title: "Organizational Goal Tracking"
+description: "Check in on how Teaching Lab is doing at achieving it's organizational goals - animated by quarter with the ability to view each quarter individually"
+image: "Images/tl_scrollytell.png"
+---
+
+<iframe
+  src="https://teachinglabhq.shinyapps.io/tl_scrollytell/"
+  style="
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+    height: 100%;
+  ">
+</iframe>

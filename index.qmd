@@ -9,8 +9,9 @@ listing:
     - Evaluation_plan.qmd
     - Blog.qmd
     - Data_dives.qmd
-    - On_the_data.qmd
     - Trackers.qmd
+    - Org_goals.qmd
+    - On_the_data.qmd
     - front_page/front_page.yaml
   sort-ui: false
   filter-ui: false
