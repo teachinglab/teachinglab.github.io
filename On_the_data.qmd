@@ -5,15 +5,7 @@ description: Learn how often the data updates, where it comes from, and how item
 footer: "Confidential"
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-```
+
 
 ```{css, echo = FALSE}
 * {
