@@ -5,6 +5,16 @@ description: Learn how often the data updates, where it comes from, and how item
 footer: "Confidential"
 ---
 
+```{css, echo=FALSE}
+.quarto-title {
+    display: none;
+  }
+  
+.description {
+    display: none;
+  }
+```
+
 ```{css, echo = FALSE}
 * {
   box-sizing: border-box;
@@ -125,6 +135,10 @@ img {
 ```{r, echo = FALSE, eval = FALSE}
 htmltools::includeHTML("HTML/slider_explainer.html")
 ```
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
