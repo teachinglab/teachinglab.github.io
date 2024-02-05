@@ -38,7 +38,7 @@ A thorough review of why we use the Guskey Framework, specifically what does Tea
 
 ::: {.column width="30%"}
 ```{r data-dive-1, out.width=450, echo=F}
-knitr::include_graphics("Images/reports/ongoing_report.png")
+knitr::include_graphics("Images/Reports/ongoing_report.png")
 ```
 :::
 :::
@@ -53,8 +53,8 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 :::
 
 ::: {.column width="30%"}
-```{r skyline, out.width=250, echo=F}
-knitr::include_graphics("Images/reports/skyline.png")
+```{r skyline, out.width=350, echo=F}
+knitr::include_graphics("Images/data_overview/course_assessments3.png")
 ```
 :::
 :::
