@@ -20,7 +20,7 @@ format:
 ```{r}
 #| echo: FALSE
 #| out.width: 100%
-knitr::include_graphics('images/data_dives/data_dive_banner.png')
+knitr::include_graphics('Images/data_dives/data_dive_banner.png')
 ```
 
 ------------------------------------------------------------------------
@@ -38,7 +38,7 @@ A thorough review of why we use the Guskey Framework, specifically what does Tea
 
 ::: {.column width="30%"}
 ```{r data-dive-1, out.width=450, echo=F}
-knitr::include_graphics("images/reports/ongoing_report.png")
+knitr::include_graphics("Images/reports/ongoing_report.png")
 ```
 :::
 :::
@@ -54,7 +54,7 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 
 ::: {.column width="30%"}
 ```{r skyline, out.width=250, echo=F}
-knitr::include_graphics("images/reports/skyline.png")
+knitr::include_graphics("Images/reports/skyline.png")
 ```
 :::
 :::
