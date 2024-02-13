@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/10816339-ba5b-4608-8351-a3111a50acc9/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/data-hub-1",
+  "appService.deploySubpath": "."
+}
