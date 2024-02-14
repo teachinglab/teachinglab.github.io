@@ -66,8 +66,6 @@ p {
 knitr::include_graphics('teachinglab_logo.png')
 ```
 
-<a href="/.auth/login/github">Login</a>
-
 <center>Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.</center>
 
 ## Pages
