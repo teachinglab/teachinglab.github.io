@@ -31,14 +31,14 @@ knitr::include_graphics('Images/data_dives/data_dive_banner.png')
 
 ::: columns
 ::: {.column width="70%"}
-## [Behind the Numbers: What We Measure & Why](https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p)
+## [Evaluating Excellence: Insights into Our Student Work Analysis](https://docs.google.com/presentation/d/1yG2WX0EpVryk5drCzqm25YmJhb34lZN4RTTyDpIempY/edit)
 
-A thorough review of why we use the Guskey Framework, specifically what does Teaching Lab's data say, and what our practice looks like. Zoom recording [here](https://teachinglab-org.zoom.us/rec/share/iGc5K0lUuaOTB_6ljr2Hq-k3OZedl7RaKNd9RRRcsr5SQdWOHKx2abUA33aubXsi.0UcB36vA32xWQdDW).
+A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [student work graded dashboard](https://teachinglabhq.shinyapps.io/student_work_graded/) which has the ability to explore aggregate data and individual student work samples! Zoom recording [here](https://drive.google.com/file/d/1pm6LGwAuZF3r1fqqYQ261W_eYbOCBafn/view?usp=drive_link).
 :::
 
 ::: {.column width="30%"}
-```{r data-dive-1, out.width=450, echo=F}
-knitr::include_graphics("Images/Reports/ongoing_report.png")
+```{r data-dive-3, out.width=350, echo=F}
+knitr::include_graphics("dashboard5/imgs/StudentWorkGraded.png")
 ```
 :::
 :::
@@ -53,10 +53,28 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 :::
 
 ::: {.column width="30%"}
-```{r skyline, out.width=350, echo=F}
+```{r data-dive-2, out.width=350, echo=F}
 knitr::include_graphics("Images/data_overview/course_assessments3.png")
 ```
 :::
 :::
 
 ------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Behind the Numbers: What We Measure & Why](https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p)
+
+A thorough review of why we use the Guskey Framework, specifically what does Teaching Lab's data say, and what our practice looks like. Zoom recording [here](https://teachinglab-org.zoom.us/rec/share/iGc5K0lUuaOTB_6ljr2Hq-k3OZedl7RaKNd9RRRcsr5SQdWOHKx2abUA33aubXsi.0UcB36vA32xWQdDW).
+:::
+
+::: {.column width="30%"}
+```{r data-dive-1, out.width=450, echo=F}
+knitr::include_graphics("Images/Reports/ongoing_report.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+
