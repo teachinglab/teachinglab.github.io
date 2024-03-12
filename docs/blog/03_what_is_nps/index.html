@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Duncan Gates">
+<meta name="dcterms.date" content="2024-03-15">
+<meta name="description" content="Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.">
 
-<title>Teaching Lab Data Hub -</title>
+<title>Teaching Lab Data Hub - The Basics: What is NPS?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +26,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,35 +77,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-front-list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-front-list'] = new List('listing-front-list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -130,43 +105,14 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Teaching Lab Data Hub -">
-<meta property="og:description" content="Website for sharing and exploring Teaching Lab data and resources.">
-<meta property="og:image" content="https://datahub.teachinglab.org/teachinglab_logo.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Teaching Lab Data Hub - The Basics: What is NPS?">
+<meta property="og:description" content="Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.">
+<meta property="og:image" content="https://datahub.teachinglab.org/blog/03_what_is_nps/images/blog_header_3.png">
 <meta property="og:site_name" content="Teaching Lab Data Hub">
-<meta property="og:image:height" content="451">
-<meta property="og:image:width" content="1500">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1792">
 </head>
 
 <body class="nav-fixed">
@@ -176,7 +122,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Teaching Lab Data Hub</span>
     </a>
   </div>
@@ -187,7 +133,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -214,11 +160,11 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Reports.html"> 
+    <a class="nav-link" href="../../Reports.html"> 
 <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dashboards.html"> 
+    <a class="nav-link" href="../../Dashboards.html"> 
 <span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -227,27 +173,27 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
         <li>
-    <a class="dropdown-item" href="./evaluation_plan.html">
+    <a class="dropdown-item" href="../../evaluation_plan.html">
  <span class="dropdown-text">Evaluation Plan</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Data_dives.html">
+    <a class="dropdown-item" href="../../Data_dives.html">
  <span class="dropdown-text">Data Dives</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./On_the_data.html">
+    <a class="dropdown-item" href="../../On_the_data.html">
  <span class="dropdown-text">On the Data</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -264,246 +210,184 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#history-controversy-applicability-alternatives" id="toc-history-controversy-applicability-alternatives" class="nav-link active" data-scroll-target="#history-controversy-applicability-alternatives"><strong>History, controversy, applicability, alternatives</strong></a></li>
+  <li><a href="#predict-your-nps" id="toc-predict-your-nps" class="nav-link" data-scroll-target="#predict-your-nps">Predict your NPS</a></li>
+  <li><a href="#the-argument-for-continuing-to-use-nps" id="toc-the-argument-for-continuing-to-use-nps" class="nav-link" data-scroll-target="#the-argument-for-continuing-to-use-nps"><strong>The argument for continuing to use NPS</strong></a></li>
+  <li><a href="#the-argument-against-continuing-to-use-nps" id="toc-the-argument-against-continuing-to-use-nps" class="nav-link" data-scroll-target="#the-argument-against-continuing-to-use-nps"><strong>The argument against continuing to use NPS</strong></a></li>
+  <li><a href="#no-metric-is-perfect" id="toc-no-metric-is-perfect" class="nav-link" data-scroll-target="#no-metric-is-perfect"><strong>No metric is perfect</strong></a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Basics: What is NPS?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">metrics</div>
+    <div class="quarto-category">business growth</div>
+  </div>
+  </div>
 
-
-
-<div class="cell">
-<style type="text/css">
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-  
-div.quarto-post .metadata {
-    display: none;
-  }
-  
-div.quarto-post .thumbnail {
-    flex-basis: 50%;
-}
-
-p {
-    max-width: 100%;
-}
-
-</style>
+<div>
+  <div class="description">
+    Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.
+  </div>
 </div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Duncan Gates </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The Net Promoter Score (NPS) first appeared in the <a href="https://hbr.org/2003/12/the-one-number-you-need-to-grow">Harvard Business Review</a> in 2003, and has since become the prominent and crucial metric for measuring the customer experience and predicting business success. It is, however, not without critique and can often be confusing. In this blog post, we will explore the reasons Teaching Lab uses NPS, its benefits, and its critiques.&nbsp;</p>
+<p>NPS’s are measured with a single question and reported with a number from the range -100 to +100, a higher score being desirable.</p>
+<p>The NPS question is framed as:</p>
+<blockquote class="blockquote">
+<p><em>How likely is it that you would recommend our company/product/service to a friend or colleague?</em></p>
+</blockquote>
+<p>i.e.&nbsp;How likely are you to <strong>promote us</strong>?</p>
+<p>Notice that the question is explicitly not about whether the customer is happy, but about whether the product (in Teaching Lab’s case, service) is something they would attach their own name and credibility to by <strong>recommending</strong> it to someone they personally know. By this methodology, NPS indicates not only customer satisfaction but customer loyalty. The former indicates attitude, and the latter is behavioral, which has much more remunerative implications.&nbsp;</p>
+<p>Respondents answer the question by choosing a number on a scale of 0-10, with 10 meaning they are “extremely likely” to recommend something.&nbsp;</p>
+<p><a href="images/image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/image1.png" class="img-fluid"></a></p>
+<p><strong>Respondents are divided into three groups as shown in the above graphic: Promoters, Passives, and Detractors based on their answers.</strong></p>
+<ul>
+<li><p><strong>Promoters:</strong> Promoters are likely to enthusiastically recommend your company or service. As stated in the Harvard Business Review: “The only path to profitable growth may lie in a company’s ability to get its loyal customers to become, in effect, its marketing department.”</p></li>
+<li><p><strong>Passives:</strong> Passives are probably satisfied but not as enthusiastic about the company or service compared to a promoter. If another company offers an excellent option, these customers might choose it, as they are not as loyal to you. On a scale of 1-10, their answers are 7 or 8.</p></li>
+<li><p><strong>Detractor:</strong> Detractors can destroy a company with negative reviews. Whether they had an adverse experience or didn’t like the font you use, detractors will likely post about how much they do not like your business. On the other hand, every detractor represents a missed opportunity to add a promoter.</p></li>
+</ul>
+<p>Finally, the answers from all individual customers are then aggregated into one single number, a single company statistic, which is the company’s Net Promoter Score.</p>
+<p><a href="images/image7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/image7.png" class="img-fluid"></a></p>
+<p>Again, the NPS can range from -100 to 100.&nbsp;</p>
+<p>Once calculated, <strong>what is a good NPS?</strong></p>
+<p>This question is tougher to answer than you might think. Technically, any score above 0 can be considered a “good” score, since it means you have more Promoters than Detractors. According to global NPS standards, a score of above 50 is good, and above 70 is outstanding. Survey Monkey’s global benchmark of 150,000 organizations finds that the average NPS is 32.</p>
+<p>And importantly, “good NPS” is industry-specific. In a Qualtrics <a href="https://delighted.com/blog/what-is-a-good-nps-score#:~:text=The%20creators%20of%20the%20NPS,absolute%20or%20relative%20NPS%20method.">blog post</a> by Adam Lang that reviews 2020 data for automakers, software, and more, the following ranges were found to be standard for each industry:</p>
+<p><a href="images/image3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/image3.png" class="img-fluid"></a></p>
+<p>To further complicate things, the NPS can change dramatically given the number of responses. Here is a fun animation from Qualtrics showing how the overall NPS changes as responses come in, giving great insight into the ultimate number. (Note: This is not Teaching Lab data.)&nbsp;</p>
+<p><a href="https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4" class="uri">https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4</a> (will actually embed in the blog post itself)</p>
+<section id="history-controversy-applicability-alternatives" class="level3">
+<h3 class="anchored" data-anchor-id="history-controversy-applicability-alternatives"><strong>History, controversy, applicability, alternatives</strong></h3>
+<p>Net Promoter Score rose to prominence after the release of a 2003 Harvard Business Review article titled “<a href="https://hbr.org/2003/12/the-one-number-you-need-to-grow">The One Number You Need to Grow</a>.” The overarching message of the article is that the measurement of customer satisfaction and customer retention does not help firms achieve growth; instead, word of mouth is the metric that is linked to growth. In the foundational study for the article by Bain &amp; Company, 400 companies across more than a dozen industries collected data, and then correlations were run comparing NPS to each company’s revenue growth rate (Satmetrix, 2004).&nbsp;</p>
+<p>The attention-grabbing headline has, however, had its fair share of critique. Subsequent scholarly research has found that “Net Promoter in no way would be categorized as the single most reliable indicator of a company’s ability to grow“ (Keiningham, 2007). Bain &amp; Company study author Fred Reichheld has even acknowledged its imperfections in the analytics that were used to support Net Promoter:&nbsp;</p>
+<p>“All we did was quantify this common sense in a way that made sense to business leaders—the target audience for my book. These practical leaders have little interest in advanced statistical methods. Frankly, we see little value in continued debate about cause versus correlation, timeframes, or statistical methods.”</p>
+<p>Further studies have found that actual consumer behavior (recommendation giving) does not necessarily reflect the uniform idea of the question (HBR, 2019), suggesting that human complexity throws yet more issues into the calculation. Another paper, “Measuring Customer Satisfaction and Loyalty: Improving the ‘Net-Promoter’ Score” has even counterintuitively demonstrated that “satisfaction” and “liking” are better predictors of recommendations than “likelihood to recommend” (Schneider, 2008). We can actually even see the potential for this likelihood in Teaching Lab’s data.</p>
+<p><a href="images/image5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/image5.png" class="img-fluid"></a></p>
+<p>The above figure shows the relationship between NPS and facilitation feedback where each “strongly agree” has been recoded to a 5, “agree” to a 4, and so on until “strongly disagree” is a 1. <strong>The data clearly demonstrates that participants can enjoy the facilitation or coaching, but still give a “passive” rating.</strong> Additionally, a clear upward diagonal pull in the local polynomial regression model implemented shows that Net Promoter Scores occur at the highest frequency in the 7, 8, 9, and 10 groups, with 5’s across the board being crucial to get a 9 or 10 score. Unfortunately, the 7 and 8 scores are discounted in the NPS calculation. It can at least be clearly stated that NPS is not the only metric to rely on, as promised by Bain &amp; Company.&nbsp;</p>
+<p><strong>Hidden behind a low NPS can often be a lot of passive (7 or 8) ratings - check out one of Teaching Lab’s current NPS’s; 31.55% of people giving a 7 or 8 rating can really impact the ultimate, overall NPS.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="teachinglab_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+<p><img src="images/clipboard-271239126.png" class="img-fluid figure-img"></p>
+<figcaption>From Ongoing Report, March 12</figcaption>
 </figure>
 </div>
+<p>This is the essence of NPS: even though this number might be lower than our goal, it does <strong>not</strong> necessarily mean people didn’t like the service; instead, it is intended to measure whether or not they would <strong>advocate</strong> for the service, something that is much harder to achieve. Think about it: How often do you advocate for a product?</p>
+<p>Interestingly, there is a big difference in Teaching Lab’s NPS, depending on the PL audience!</p>
+<p>For teachers, the NPS is currently 33.12, which is the lowest among all the PL audience types.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4206239914.png" class="img-fluid figure-img"></p>
+<figcaption>From Ongoing Report, March 12</figcaption>
+</figure>
 </div>
+<p>And for contact leads, we have the highest overall NPS!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4141439629.png" class="img-fluid figure-img"></p>
+<figcaption>From Ongoing Report, March 12</figcaption>
+</figure>
 </div>
-<center>
-Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.
-</center>
-<section id="pages" class="level2">
-<h2 class="anchored" data-anchor-id="pages">Pages</h2>
-<div id="listing-front-list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1706992470247" data-listing-reading-time-sort="1" data-listing-word-count-sort="157">
-<a href="./Reports.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/Reports/reports.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Reports
-</h5>
-<div class="card-text listing-description">
-Reports from previous years, and this year’s ongoing report which provides continuous updated data by site.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1707157667054" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
-<a href="./Dashboards.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/Dashboards/dashboards.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dashboards
-</h5>
-<div class="card-text listing-description">
-Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1706992107024" data-listing-reading-time-sort="6" data-listing-word-count-sort="1085">
-<a href="./Evaluation_plan.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/Surveys/guskey_framework.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Teaching Lab: Professional Learning Evaluation Plan
-</h5>
-<div class="card-text listing-description">
-A background on who, why, and what we measure with links to specific survey instruments
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1710256386407" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
-<a href="./Blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/blog/blog_banner_2.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blog
-</h5>
-<div class="card-text listing-description">
-Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1708449746543" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
-<a href="./Data_dives.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/data_dives/data_dive.webp" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Dives
-</h5>
-<div class="card-text listing-description">
-The Learning &amp; Research team’s series on how, what, why and where we use data - with video recordings and slides linked.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1708446824637" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
-<a href="./Org_goals.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/tl_scrollytell.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Organizational Goal Tracking
-</h5>
-<div class="card-text listing-description">
-Check in on how Teaching Lab is doing at achieving it’s organizational goals - animated by quarter with the ability to view each quarter individually
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1708954068616" data-listing-reading-time-sort="2" data-listing-word-count-sort="283">
-<a href="./On_the_data.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./Images/on_the_data/on_the_data.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-On the Data
-</h5>
-<div class="card-text listing-description">
-Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7">
-<a href="https://www.loom.com/profile/Duncan-6058b002-e045-437d-84b5-a551c871f053" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="teachinglab_logo.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Loom Channel
-</h5>
-<div class="card-text listing-description">
-This channel tutorials for dashboards and reports and the learning evaluation plan.
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<p>These bar charts demonstrate the range of the reality of what is being measured - certain people might be more likely to <strong>recommend</strong> a service in the first place. Additionally note what is impacting the NPS the most here - “other educator” and “teacher” have about the same percent of passive scores, but teachers tend to be detractors (0-6 rating) more often, whereas contact leads in general are more likely to be promoters, and less likely to be either detractors or passive.</p>
+</section>
+<section id="predict-your-nps" class="level3">
+<h3 class="anchored" data-anchor-id="predict-your-nps">Predict your NPS</h3>
+<p>Use the following model and parameters to predict what your next NPS rating will be! Note that this predictive model is by no means a guarantee, but it predicted today’s NPS scores with 82% accuracy!</p>
+<div class="cell">
+<iframe src="https://teachinglabhq.shinyapps.io/nps_predict/?showcase=0" width="672" height="400px" data-external="1">
+</iframe>
 </div>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="https://datahub.teachinglab.org/people/duncan_gates.html">Duncan Gates</a></p>
+<section id="the-argument-for-continuing-to-use-nps" class="level3">
+<h3 class="anchored" data-anchor-id="the-argument-for-continuing-to-use-nps"><strong>The argument for continuing to use NPS</strong></h3>
+<ol type="1">
+<li><p><strong>It’s a leading indicator of business growth.</strong></p>
 <ul>
-<li>Data Analyst</li>
-<li><a href="https://sites.google.com/teachinglab.org/staff-site/learning-research">Learning &amp; Research Staff Page</a></li>
-<li><a href="https://teachinglabhq.slack.com/team/U01MRR8KBRU">Slack</a></li>
-<li>email: <a href="mailto:duncan.gates@teachinglab.org" class="email">duncan.gates@teachinglab.org</a></li>
-<li>Current Time Zone: MST</li>
-</ul>
+<li>The logic follows that the more enthusiastic customers you have, the more new customers you can attract (and with less effort or investment), and this cycle becomes a growth engine.</li>
+</ul></li>
+<li><p><strong>It’s simpler and more productive than traditional customer satisfaction surveys.</strong></p>
+<ul>
+<li>NPS is low friction on both sides, it is easy to evaluate and easy to answer.</li>
+</ul></li>
+<li><p><strong>It clearly shows where pain points are on the aggregate.</strong></p>
+<ul>
+<li>NPS results show strengths and weaknesses in the customer base, identifying where teams can work to improve customer relations.</li>
+</ul></li>
+</ol>
+</section>
+<section id="the-argument-against-continuing-to-use-nps" class="level3">
+<h3 class="anchored" data-anchor-id="the-argument-against-continuing-to-use-nps"><strong>The argument against continuing to use NPS</strong></h3>
+<ol type="1">
+<li><p><strong>It doesn’t accurately differentiate promoters and detractors.</strong></p>
+<ul>
+<li>The rule-of-thumb score classifications proposed by Reichheld (promoters are those respondents who give a likelihood of recommendation of 9 or 10 while the detractors give 6 or less) could be further refined.&nbsp; This approach may not fully capture the statistical nuances between different respondent groups.&nbsp; Additionally, it might obscure significant trends and lead to misunderstandings about the Net Promoter Score (NPS), suggesting a negative score when the actual scenario might be different.</li>
+</ul></li>
+<li><p><strong>It can be used incorrectly.</strong></p>
+<ul>
+<li>A common criticism is that companies send the survey too frequently. There are eventually diminishing returns on customer surveys. Results become less representative when survey fatigue starts to set in.&nbsp;</li>
+</ul></li>
+<li><p><strong>If it is used as the only measure.</strong></p>
+<ol type="1">
+<li>The other common criticism is that companies rely too heavily on NPS alone. They don’t use any other measurements of customer experience and satisfaction to complement the Net Promoter Score. To note: Teaching Lab has comprehensive post-session and post-PL Series participant feedback surveys, in addition to the contact lead survey. NPS is one of many measures for our impact on teaching and learning.&nbsp;</li>
+</ol></li>
+<li><p><strong>Customer feedback experts have diverse opinions on its applicability across all scenarios.</strong></p>
+<ol type="1">
+<li>When asked to compare the NPS with other loyalty indices, again, only 19% of the customer feedback professionals agreed that the NPS is a better predictor of growth compared to other loyalty indices. The remaining 81% of the customer feedback professionals either disagreed with (~40%) or remained neutral toward (~40%) the statements regarding the merits of the NPS (Hayes, 2008).</li>
+</ol></li>
+</ol>
+</section>
+<section id="no-metric-is-perfect" class="level3">
+<h3 class="anchored" data-anchor-id="no-metric-is-perfect"><strong>No metric is perfect</strong></h3>
+<p>“All models are wrong, some are useful” - George Box (British statistician). A statement that is especially true for the less than straightforward NPS metric can be shown to be wrong, <strong>but if wielded well, it can be useful</strong>. Most research suggests sending the surveys frequently, but to different subsets of customers, at regular milestones in the customer lifecycle. Using this methodology you can pivot and tweak your service, rather than getting a static feedback dump every quarter. Teaching Lab adheres to this practice, including it in participant feedback surveys rather than only doing it quarterly or otherwise infrequently.</p>
+<p>Lastly, using a customer loyalty index with other questions relevant to your business can be essential in finding specific issues and highlights in customer feedback. Teaching Lab also does this; our participant feedback surveys incorporate 5-point Likert-scale items as well as open-ended items in conjunction with the NPS to provide a more holistic view of participants’ experiences and opinions.</p>
+<section id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner" class="level4">
+<h4 class="anchored" data-anchor-id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner"><strong>What does this mean for how I interpret feedback data for my partner?</strong></h4>
+<p>In wrapping up our analysis, it’s crucial to not only consider NPS but also to delve into other vital metrics that offer a broader view of customer satisfaction and loyalty Recently, at Teaching Lab, we’ve introduced targeted qualitative questions based on the respondents’ NPS category to enrich our understanding and add depth to our quantitative data. Detractors are optionally prompted with, “We’re sorry to hear that. What would you like us to improve on?” to identify areas for enhancement. Passive respondents are optionally prompted with “Thank you for your feedback. Would you like to tell us why you would score us that way?” to uncover underlying reasons for their neutrality. Lastly, promoters are asked, “We’re glad you like us. Would you like to tell us what exactly excites you?” to highlight strengths and areas of excellence. This strategic addition aims to provide a more nuanced view of our customer experience, allowing us to tailor our strategies more effectively to meet and exceed customer expectations. To see this new data (and more on participant feedback), head to the <a href="https://teachinglabhq.shinyapps.io/tl_facilitator_data/">Facilitator/Coaching Dashboard</a> and check out the NPS rollup!</p>
 
 
-
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-5">From Ongoing Report, March 12</span>
+<span class="glightbox-desc lightbox-desc-6">From Ongoing Report, March 12</span>
+<span class="glightbox-desc lightbox-desc-7">From Ongoing Report, March 12</span>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1038,6 +922,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="teachinglab/teachinglab.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1049,22 +935,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../../about.html">
 <p>About</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./On_the_data.html">
+    <a class="nav-link" href="../../On_the_data.html">
 <p>FAQ</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./license.html">
+    <a class="nav-link" href="../../license.html">
 <p>License</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./trademark.html">
+    <a class="nav-link" href="../../trademark.html">
 <p>Trademark</p>
 </a>
   </li>  
@@ -1094,6 +980,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

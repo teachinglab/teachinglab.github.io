@@ -2,7 +2,7 @@
 title: "Changing the Game: How High-Dosage Coaching Shifts Teacher Practices & Student Success"
 lightbox: true
 author: "Shaye Worthman"
-date: 12/15/24
+date: 12/15/23
 description: "Discover how Teaching Lab's innovative coaching is transforming classrooms by uplifting both teachers and students."
 image: "images/blog_header.png"
 bibliography: references.bib
