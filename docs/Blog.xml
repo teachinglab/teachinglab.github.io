@@ -13,8 +13,6 @@
 <url>https://datahub.teachinglab.org/Images/blog/blog_banner_2.png</url>
 <title>Teaching Lab Data Hub</title>
 <link>https://datahub.teachinglab.org/Blog.html</link>
-<height>144</height>
-<width>144</width>
 </image>
 <generator>quarto-1.4.549</generator>
 <lastBuildDate>Fri, 15 Mar 2024 07:00:00 GMT</lastBuildDate>
@@ -51,7 +49,7 @@
 <p>And importantly, “good NPS” is industry-specific. In a Qualtrics <a href="https://delighted.com/blog/what-is-a-good-nps-score#:~:text=The%20creators%20of%20the%20NPS,absolute%20or%20relative%20NPS%20method.">blog post</a> by Adam Lang that reviews 2020 data for automakers, software, and more, the following ranges were found to be standard for each industry:</p>
 <p><a href="images/image3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://datahub.teachinglab.org/blog/03_what_is_nps/images/image3.png" class="img-fluid"></a></p>
 <p>To further complicate things, the NPS can change dramatically given the number of responses. Here is a fun animation from Qualtrics showing how the overall NPS changes as responses come in, giving great insight into the ultimate number. (Note: This is not Teaching Lab data.)&nbsp;</p>
-<p><a href="https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4" class="uri">https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4</a> (will actually embed in the blog post itself)</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4"></video></div>
 <section id="history-controversy-applicability-alternatives" class="level3">
 <h3 class="anchored" data-anchor-id="history-controversy-applicability-alternatives"><strong>History, controversy, applicability, alternatives</strong></h3>
 <p>Net Promoter Score rose to prominence after the release of a 2003 Harvard Business Review article titled “<a href="https://hbr.org/2003/12/the-one-number-you-need-to-grow">The One Number You Need to Grow</a>.” The overarching message of the article is that the measurement of customer satisfaction and customer retention does not help firms achieve growth; instead, word of mouth is the metric that is linked to growth. In the foundational study for the article by Bain &amp; Company, 400 companies across more than a dozen industries collected data, and then correlations were run comparing NPS to each company’s revenue growth rate (Satmetrix, 2004).&nbsp;</p>

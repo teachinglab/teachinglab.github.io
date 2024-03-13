@@ -56,7 +56,7 @@ And importantly, “good NPS” is industry-specific. In a Qualtrics [blog post]
 
 To further complicate things, the NPS can change dramatically given the number of responses. Here is a fun animation from Qualtrics showing how the overall NPS changes as responses come in, giving great insight into the ultimate number. (Note: This is not Teaching Lab data.) 
 
-<https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4> (will actually embed in the blog post itself)
+{{< video https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4 >}}
 
 ### **History, controversy, applicability, alternatives**
 
