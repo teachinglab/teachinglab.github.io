@@ -87,7 +87,7 @@
 <h3 class="anchored" data-anchor-id="predict-your-nps">Predict your NPS</h3>
 <p>Use the following model and parameters to predict what your next NPS rating will be! Note that this predictive model is by no means a guarantee, but it predicted today’s NPS scores with 82% accuracy!</p>
 <div class="cell">
-<iframe src="https://teachinglabhq.shinyapps.io/nps_predict/?showcase=0" width="672" height="400px" data-external="1">
+<iframe src="https://teachinglabhq.shinyapps.io/nps_predict/?showcase=0" width="672" height="950px" data-external="1">
 </iframe>
 </div>
 </section>

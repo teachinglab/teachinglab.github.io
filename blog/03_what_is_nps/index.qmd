@@ -95,7 +95,7 @@ These bar charts demonstrate the range of the reality of what is being measured 
 Use the following model and parameters to predict what your next NPS rating will be! Note that this predictive model is by no means a guarantee, but it predicted today's NPS scores with 82% accuracy!
 
 ```{r}
-knitr::include_app("https://teachinglabhq.shinyapps.io/nps_predict/", height = "400px")
+knitr::include_app("https://teachinglabhq.shinyapps.io/nps_predict/", height = "950px")
 ```
 
 ### **The argument for continuing to use NPS**
