@@ -6,8 +6,8 @@ listing:
   contents: 
     - Reports.qmd
     - Dashboards.qmd
-    - Evaluation_plan.qmd
-    - Blog.qmd
+    - evaluation_plan.qmd
+    - blog.qmd
     - Data_dives.qmd
     - Trackers.qmd
     - Org_goals.qmd

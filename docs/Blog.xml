@@ -6,16 +6,18 @@
       version="2.0">
 <channel>
 <title>Teaching Lab Data Hub</title>
-<link>https://datahub.teachinglab.org/Blog.html</link>
-<atom:link href="https://datahub.teachinglab.org/Blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://datahub.teachinglab.org/blog.html</link>
+<atom:link href="https://datahub.teachinglab.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.</description>
 <image>
 <url>https://datahub.teachinglab.org/Images/blog/blog_banner_2.png</url>
 <title>Teaching Lab Data Hub</title>
-<link>https://datahub.teachinglab.org/Blog.html</link>
+<link>https://datahub.teachinglab.org/blog.html</link>
+<height>144</height>
+<width>144</width>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Fri, 15 Mar 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 15 Mar 2024 05:00:00 GMT</lastBuildDate>
 <item>
   <title>The Basics: What is NPS?</title>
   <dc:creator>Duncan Gates</dc:creator>
@@ -146,7 +148,7 @@
   <category>metrics</category>
   <category>business growth</category>
   <guid>https://datahub.teachinglab.org/blog/03_what_is_nps/</guid>
-  <pubDate>Fri, 15 Mar 2024 07:00:00 GMT</pubDate>
+  <pubDate>Fri, 15 Mar 2024 05:00:00 GMT</pubDate>
   <media:content url="https://datahub.teachinglab.org/blog/03_what_is_nps/images/blog_header_3.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
@@ -386,7 +388,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
   <category>pl preferences</category>
   <category>pd format</category>
   <guid>https://datahub.teachinglab.org/blog/02_beyond_the_basics/</guid>
-  <pubDate>Thu, 22 Feb 2024 08:00:00 GMT</pubDate>
+  <pubDate>Thu, 22 Feb 2024 06:00:00 GMT</pubDate>
   <media:content url="https://datahub.teachinglab.org/blog/02_beyond_the_basics/images/blog_header_2.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -419,7 +421,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
 <p>Teaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/person_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
+<p><a href="images/person_plot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
 <figcaption>Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.</figcaption>
 </figure>
 </div>
@@ -442,7 +444,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
   <category>coaching</category>
   <category>mindsets</category>
   <guid>https://datahub.teachinglab.org/blog/01_changing_the_game/</guid>
-  <pubDate>Fri, 15 Dec 2023 08:00:00 GMT</pubDate>
+  <pubDate>Fri, 15 Dec 2023 06:00:00 GMT</pubDate>
   <media:content url="https://datahub.teachinglab.org/blog/01_changing_the_game/images/blog_header.png" medium="image" type="image/png" height="147" width="144"/>
 </item>
 </channel>

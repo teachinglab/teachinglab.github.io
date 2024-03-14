@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/Blog.html",
+    "listing": "/blog.html",
     "items": [
       "/blog/03_what_is_nps/index.html",
       "/blog/02_beyond_the_basics/index.html",
@@ -32,8 +32,8 @@
     "items": [
       "/Reports.html",
       "/Dashboards.html",
-      "/Evaluation_plan.html",
-      "/Blog.html",
+      "/evaluation_plan.html",
+      "/blog.html",
       "/Data_dives.html",
       "/Org_goals.html",
       "/On_the_data.html"
