@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  resources: staticwebapp.config.json
 
 website:
   title: "Teaching Lab Data Hub"
