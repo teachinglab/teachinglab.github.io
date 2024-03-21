@@ -1,0 +1,25 @@
+---
+title: "Teaching Lab: Data Collection Overview"
+description: "A collection of listings of what we use collect data"
+image: "Images/Surveys/guskey_framework.png"
+format:
+  html:
+    page-layout: full
+---
+
+```{=html}
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vQZ9iNozHcw6p_JEs9q-0xQrfJ8nHAyC0Kj47PbWGgcD5PXLOPOwy3xyfno1o-alJztS8zqmTPzPA2N/pub?embedded=true" style="
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+    height: 100%;
+  ">
+```
+</iframe>

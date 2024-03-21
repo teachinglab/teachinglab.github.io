@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: docs
   resources: staticwebapp.config.json
+  preview:
+    port: 4200
 
 website:
   title: "Teaching Lab Data Hub"
@@ -73,6 +75,8 @@ website:
             href: Data_dives.html
           - text: "On the Data"
             href: On_the_data.html
+          - text: "Data Collection Overview"
+            href: data_collection_overview.html
       - text: "Blog"
         href: blog.html
     right:
