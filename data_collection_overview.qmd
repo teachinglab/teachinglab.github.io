@@ -10,9 +10,10 @@ format:
 ```{=html}
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vQZ9iNozHcw6p_JEs9q-0xQrfJ8nHAyC0Kj47PbWGgcD5PXLOPOwy3xyfno1o-alJztS8zqmTPzPA2N/pub?embedded=true" style="
     position: fixed;
-    top: 0px;
+    top: -55px;
     bottom: 0px;
     right: 0px;
+    left: 550px;
     width: 100%;
     border: none;
     margin: 0;
