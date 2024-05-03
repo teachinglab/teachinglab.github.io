@@ -96,3 +96,43 @@ knitr::include_graphics("Images/Reports/google_drive.png")
 ```
 :::
 :::
+
+------------------------------------------------------------------------
+
+# SY21-22
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [SY21-22 Reports (Static)](https://drive.google.com/drive/folders/1QB6co7iB38ECPWfSzg82roANgQBcy50C)
+
+R-studio project template and workflow for sharing psychological research projects in the form of a website.
+:::
+
+::: {.column width="30%"}
+```{r vertical-2, out.width=300, echo=F}
+knitr::include_graphics("Images/Reports/google_drive.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+# SY20-21
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [SY20-21 Reports (Static)](https://drive.google.com/drive/folders/1hqjczciGHCfl5tdu_z8hyIXI0D5gKUip)
+
+R-studio project template and workflow for sharing psychological research projects in the form of a website.
+:::
+
+::: {.column width="30%"}
+```{r vertical-3, out.width=300, echo=F}
+knitr::include_graphics("Images/Reports/google_drive.png")
+```
+:::
+:::
