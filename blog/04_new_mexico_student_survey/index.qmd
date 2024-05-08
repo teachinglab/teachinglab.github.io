@@ -1,0 +1,93 @@
+---
+title: "Voices from the Classroom: Student Survey Findings from a Rigorous Research Study in New Mexico"
+lightbox: true
+author: "Ching Sullivan and Mary Kate Dykes"
+date: 05/08/24
+description: "Preliminary results from the New Mexico RCT indicate that Teaching Lab PL positively impacts students' learning experiences. Students whose teachers had participated in PL reported more positive perceptions of their teachers' use of culturally responsive teaching methods in addition to greater self-confidence in their mathematical skills, compared to students whose teachers had not yet participated in PL."
+image: "images/blog_header_4.png"
+bibliography: references.bib
+comments: 
+    utterances:
+      repo: teachinglab/teachinglab.github.io
+categories: 
+  - metrics
+  - business growth
+execute: 
+  echo: false
+---
+
+### Introduction
+
+Student surveys provide invaluable insights directly from Teaching Lab’s most important stakeholders: students. By tapping into their perceptions, we can gauge the impact of professional learning on teaching practices, especially those aimed at enhancing students’ learning experiences. Through a partnership with the New Mexico Public Education Department (NMPED) and University of Maryland, Teaching Lab has administered student surveys for the past two academic years as part of a rigorous research study, allowing us to capture information about various dimensions of students’ experiences using a unique research design. In this blog post, we will dive deeper into the methodology of the New Mexico study, explore key findings from both the treatment and control groups, and discuss the broader implications of these results.
+
+### **What Does Research Tell Us About Student Surveys?** 
+
+![](images/image6.png){fig-align="center" width="600"}
+
+There is an abundance of research that finds (1) teachers impact student perceptions of their classroom environments, and (2) student perceptions of their classroom environments correlate with student learning outcomes. Therefore, we have included student surveys on classroom learning environments as part of Teaching Lab’s research agenda and theory of evaluation. 
+
+**We can rely on students’ perceptions of teachers because students know good teaching when they see it**: The Measures of Effective Teaching ([MET Project, 2010](https://docs.gatesfoundation.org/documents/preliminary-findings-research-paper.pdf)) project found that students perceived clear differences among teachers. Student feedback about teachers is more consistent than that provided by administrators after classroom observations or those based solely on student test scores. 
+
+**It is important to understand student perceptions of teacher quality because this perception is correlated to students’ learning outcomes:** [Hattie (2017)’](https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf)s meta-analysis of 1,400 studies found that overall, student ratings of teaching quality has a 0.50 effect size, which means that students' evaluations of their teachers are significantly correlated with their academic achievement. Additionally, the [MET Project (2012)](https://cepr.harvard.edu/sites/hwpi.harvard.edu/files/cepr/files/met-brief-learning-about-teaching.pdf?m=1430506670) found that students in classes where students perceived their teachers to be in the top quartile of effectiveness learned 4.8 months of schooling more in math compared to students in classes where students perceived their teachers to be in the bottom quartile of effectiveness. 
+
+**Student surveys can improve classroom environments:** [Potvin (2021)](https://link.springer.com/article/10.1007/s10984-020-09330-1#citeas) conducted a study to evaluate the impact of student surveys on classroom environments and teachers’ pedagogical practices. Results indicated that regular discussion of student survey results encouraged teachers to adapt their practices, assess their classroom environments formatively, and contribute to a teacher learning environment. 
+
+**Teachers have control over many aspects of students’ behaviors that impact their learning:** [Jackson (2019)](https://www.educationnext.org/full-measure-of-a-teacher-using-value-added-assess-effects-student-behavior/) found that teachers influence students’ attendance, behavior, and engagement, dimensions of their learning experiences which are highly predictive of high school graduation and college outcomes. Jackson (2019) estimated that the impact of teachers on behavior is about 10 times more predictive of whether they increase students’ high-school completion than their impacts on test scores. Specifically, the following are within the teacher's control and have documented impacts on student learning.
+
+![](images/image2.png){fig-align="center" width="600"}
+
+-   **Teacher-Student Relationships:** Often perceived as the softer aspect of education, teacher-student relationships are actually crucial to the success of especially underserved students ([Wacker and Olson, 2019](https://www.future-ed.org/wp-content/uploads/2019/06/Final-report_Teacher-Mindsets.pdf)). These relationships significantly impact academic achievement, with [Riorda et al.'s 2011](https://www.jstor.org/stable/41408670?read-now=1&seq=21#page_scan_tab_contents) meta-analysis showing an effect size of 0.16. [Hattie (2017)](https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf) suggests they are more influential than programs like Reading Recovery and other instructional strategies.
+
+-   **Self-Efficacy**: Self-efficacy, or the belief in one’s ability to achieve a goal, greatly influences student engagement and resilience ([Blazar & Kraft, 2017](https://journals.sagepub.com/doi/10.3102/0162373716670260); [Transforming Education, 2019](https://www.transformingeducation.org/introduction-to-self-efficacy/)). [Hattie (2017)](https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf) also notes its strong potential to boost academic performance.
+
+-   **Being Challenged:** Teachers are key to ensuring students are consistently academically challenged. Significant correlations were found in the Tripod student survey between teacher effectiveness and students learning a lot almost every day (ρ=0.273) and learning to correct mistakes (ρ=0.264) ([MET Project, 2010](https://docs.gatesfoundation.org/documents/preliminary-findings-research-paper.pdf)).
+
+-   **Happiness and Sense of Belonging:** Teachers play a pivotal role in influencing students' happiness, which in turn affects academic performance ([Blazar & Kraft, 2017](https://journals.sagepub.com/doi/10.3102/0162373716670260); [Quinn & Duckworth, 2006](https://www.researchgate.net/profile/Angela_Duckworth2/publication/237751866_Happiness_and_Academic_Achievement_Evidence_for_Reciprocal_Causality/links/558fc09508ae1e1f9bacf98d/Happiness-and-Academic-Achievement-Evidence-for-Reciprocal-Causality.pdf)).
+
+**Culturally Responsive and Sustaining Education (CRSE):** Combining rigorous academic content with culturally responsive practices significantly enhances student outcomes ([Gay, 2018](https://www.google.com/books/edition/Culturally_Responsive_Teaching/0ZlNDwAAQBAJ?hl=en&gbpv=0); [Hammond, 2014](https://www.google.com/books/edition/Culturally_Responsive_Teaching_and_The_B/BxGoBQAAQBAJ?hl=en&gbpv=0); [Ladson-Billings, 2021](https://www.google.com/books/edition/Culturally_Relevant_Pedagogy/l29jzgEACAAJ?hl=en)). Thorough research, including experimental and advanced statistical models, confirms the impact of culturally responsive teaching on academic achievement ([Bradshaw et al., 2018](https://eric.ed.gov/?id=EJ1181996); [Byrd, 2016](https://journals.sagepub.com/doi/pdf/10.1177/2158244016660744); [Dee & Penner, 2017](https://journals.sagepub.com/doi/abs/10.3102/0002831216677002); [Kelley et al. 2015](https://eric.ed.gov/?id=EJ1070705); [Portes et al. 2017](https://eric.ed.gov/?id=EJ1180090)).
+
+### **Background and Methodology for New Mexico Student Surveys** 
+
+During SY22-23 and SY23-24, Teaching Lab engaged in an external research project with the University of Maryland to examine the impact of our Professional Learning on secondary mathematics educators across New Mexico. In partnership with NMPED staff at the Math and Science Bureau, Teaching Lab provided professional learning (PL) aimed at exploring teacher and student math identities to 19 teachers from six secondary schools in SY22-23 to 22 teachers from 12 schools in SY23-24.
+
+Using a staggered cohort design, half of the participants were randomly assigned to participate in PL in the fall semester (treatment group) and the other half to take part in the spring (control group). Teachers were randomly assigned within school “blocks” to ensure that, for each school, half of the teachers participated in PL in the fall and the other half participated in the spring. We compared outcomes between the treatment and control groups at the end of the fall semesters, when the treatment group had completed one semester of PL, and the control group had not yet started their PL. Included in the data collection was a student survey that measured their beliefs about how their teacher engaged in culturally responsive and sustaining education (CRSE) practices and built meaningful relationships with students, as well as how students rated their own self-efficacy, happiness, and feeling of being challenged in their math class.
+
+### **Preliminary Descriptive Results**
+
+In total 461 New Mexico students completed Teaching Lab’s PL student survey across SY2022-2023 and SY2023-2024. Of these students, 282 were taught by teachers who had already participated in PL, while 179 students were taught by teachers who had not yet participated in PL at the time of the survey administration.
+
+### **Student Demographics**
+
+Of the 461 students who were surveyed, approximately 58% identified as non-white or more than one race. Additionally, approximately 49% of students were female and 67% identified as Hispanic. There were some imbalances between the intervention and control group, specifically for students identifying as White, more than one race, and other.
+
+![](images/image4.png)
+
+### **Overall Results**
+
+Preliminary findings based on descriptive analyses indicate promising impacts on students' educational experiences in math classrooms. In particular, students whose teachers had already participated in the intervention reported **more positive perceptions of their teachers' use of culturally responsive teaching methods,** in addition to **greater self-confidence in their mathematical skills.**
+
+![](images/image3.png){fig-align="center"}
+
+### **CRSE**
+
+Students whose teachers participated in the professional learning intervention noted a **greater frequency of culturally responsive and sustaining educational practices** compared to their counterparts in the control group. This observation is particularly favorable considering the intervention's emphasis on nurturing students' mathematical identities by applying CRSE methodologies. Such feedback from students underscores the promising effects of the PL on improving teachers’ CRSE awareness and related instructional practices. 
+
+![Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.](images/image5.png){fig-align="center"}
+
+### **Student Self-Efficacy**
+
+Alongside CRSE practices, **students of teachers in the intervention group exhibited higher self-efficacy** in math learning than students of teachers in the control group. This finding suggests that the intervention’s focus on promoting students’ unique math identities not only enhances instructional methods, but also cultivates students’ self-confidence in their learning abilities.
+
+![Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.](images/image1.png){fig-align="center"}
+
+### **Future Implications**
+
+Across both academic years, student-reported CRSE practices have been consistently higher for teachers in the treatment group compared to teachers in the control group, indicating that **Teaching Lab’s PL has been effective at improving teachers’ CRSE practices.** Moreover, the reported increase in students' self-efficacy related to their mathematical skills highlights a shift towards a more holistic approach to instruction, where fostering positive identities and growth mindsets for students becomes as pivotal as mastering the subject matter itself.
+
+These results suggest a promising avenue for future educational strategies, where targeted PL initiatives could serve as a key lever in advancing equity and inclusion within classrooms. Such an approach could have far-reaching implications beyond math classrooms, suggesting a roadmap for enhancing student outcomes across a wide range of academic disciplines.
+
+### **What’s Next for Student Surveys at Teaching Lab?**
+
+The New Mexico research study has revealed promising results about Teaching Lab’s impact on not only teachers, but also students’ self-efficacy and self-reported CRSE practices. **Our external evaluator, Dr. David Blazer from the University of Maryland, and his team are in the process of performing rigorous analysis and drafting a research report to detail the findings, which the L&R team will share in the coming months.** These data insights are invaluable for funders, external partners, and internal team members alike. Although it may require some legwork to secure district approval, we encourage more project teams to incorporate student surveys into their data collection plan. 
+
+If you are interested in checking out our student survey results from other sites (i.e. EIC-Rochester, D11, or Arkansas), you can head to Section 7 of their respective [Ongoing Reports](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/).

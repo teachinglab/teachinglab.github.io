@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duncan Gates">
-<meta name="dcterms.date" content="2024-03-15">
-<meta name="description" content="Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.">
+<meta name="author" content="Ching Sullivan and Mary Kate Dykes">
+<meta name="dcterms.date" content="2024-05-08">
+<meta name="description" content="Preliminary results from the New Mexico RCT indicate that Teaching Lab PL positively impacts students’ learning experiences. Students whose teachers had participated in PL reported more positive perceptions of their teachers’ use of culturally responsive teaching methods in addition to greater self-confidence in their mathematical skills, compared to students whose teachers had not yet participated in PL.">
 
-<title>Teaching Lab Data Hub - The Basics: What is NPS?</title>
+<title>Teaching Lab Data Hub - Voices from the Classroom: Student Survey Findings from a Rigorous Research Study in New Mexico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,8 +47,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -109,12 +107,12 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Teaching Lab Data Hub - The Basics: What is NPS?">
-<meta property="og:description" content="Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.">
-<meta property="og:image" content="https://datahub.teachinglab.org/blog/03_what_is_nps/images/blog_header_3.png">
+<meta property="og:title" content="Teaching Lab Data Hub - Voices from the Classroom: Student Survey Findings from a Rigorous Research Study in New Mexico">
+<meta property="og:description" content="Preliminary results from the New Mexico RCT indicate that Teaching Lab PL positively impacts students’ learning experiences. Students whose teachers had participated in PL reported more positive perceptions of their teachers’ use of culturally responsive teaching methods in addition to greater self-confidence in their mathematical skills, compared to students whose teachers had not yet participated in PL.">
+<meta property="og:image" content="https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/images/blog_header_4.png">
 <meta property="og:site_name" content="Teaching Lab Data Hub">
 <meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1792">
+<meta property="og:image:width" content="1024">
 </head>
 
 <body class="nav-fixed">
@@ -224,11 +222,16 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#history-controversy-applicability-alternatives" id="toc-history-controversy-applicability-alternatives" class="nav-link active" data-scroll-target="#history-controversy-applicability-alternatives"><strong>History, controversy, applicability, alternatives</strong></a></li>
-  <li><a href="#predict-your-nps" id="toc-predict-your-nps" class="nav-link" data-scroll-target="#predict-your-nps">Predict your NPS</a></li>
-  <li><a href="#the-argument-for-continuing-to-use-nps" id="toc-the-argument-for-continuing-to-use-nps" class="nav-link" data-scroll-target="#the-argument-for-continuing-to-use-nps"><strong>The argument for continuing to use NPS</strong></a></li>
-  <li><a href="#the-argument-against-continuing-to-use-nps" id="toc-the-argument-against-continuing-to-use-nps" class="nav-link" data-scroll-target="#the-argument-against-continuing-to-use-nps"><strong>The argument against continuing to use NPS</strong></a></li>
-  <li><a href="#no-metric-is-perfect" id="toc-no-metric-is-perfect" class="nav-link" data-scroll-target="#no-metric-is-perfect"><strong>No metric is perfect</strong></a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-does-research-tell-us-about-student-surveys" id="toc-what-does-research-tell-us-about-student-surveys" class="nav-link" data-scroll-target="#what-does-research-tell-us-about-student-surveys"><strong>What Does Research Tell Us About Student Surveys?</strong></a></li>
+  <li><a href="#background-and-methodology-for-new-mexico-student-surveys" id="toc-background-and-methodology-for-new-mexico-student-surveys" class="nav-link" data-scroll-target="#background-and-methodology-for-new-mexico-student-surveys"><strong>Background and Methodology for New Mexico Student Surveys</strong></a></li>
+  <li><a href="#preliminary-descriptive-results" id="toc-preliminary-descriptive-results" class="nav-link" data-scroll-target="#preliminary-descriptive-results"><strong>Preliminary Descriptive Results</strong></a></li>
+  <li><a href="#student-demographics" id="toc-student-demographics" class="nav-link" data-scroll-target="#student-demographics"><strong>Student Demographics</strong></a></li>
+  <li><a href="#overall-results" id="toc-overall-results" class="nav-link" data-scroll-target="#overall-results"><strong>Overall Results</strong></a></li>
+  <li><a href="#crse" id="toc-crse" class="nav-link" data-scroll-target="#crse"><strong>CRSE</strong></a></li>
+  <li><a href="#student-self-efficacy" id="toc-student-self-efficacy" class="nav-link" data-scroll-target="#student-self-efficacy"><strong>Student Self-Efficacy</strong></a></li>
+  <li><a href="#future-implications" id="toc-future-implications" class="nav-link" data-scroll-target="#future-implications"><strong>Future Implications</strong></a></li>
+  <li><a href="#whats-next-for-student-surveys-at-teaching-lab" id="toc-whats-next-for-student-surveys-at-teaching-lab" class="nav-link" data-scroll-target="#whats-next-for-student-surveys-at-teaching-lab"><strong>What’s Next for Student Surveys at Teaching Lab?</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -237,7 +240,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Basics: What is NPS?</h1>
+<h1 class="title">Voices from the Classroom: Student Survey Findings from a Rigorous Research Study in New Mexico</h1>
   <div class="quarto-categories">
     <div class="quarto-category">metrics</div>
     <div class="quarto-category">business growth</div>
@@ -246,7 +249,7 @@ cookieconsent.run({
 
 <div>
   <div class="description">
-    Exploring the Net Promoter Score (NPS), this blog post unpacks its role as a key metric for assessing customer loyalty and predicting business growth, despite its critiques and complexities. We delve into why Teaching Lab adopts NPS, its advantages, and the nuanced challenges it presents. Through a balanced examination, we present NPS as a valuable, though not flawless, tool in the broader landscape of customer feedback.
+    Preliminary results from the New Mexico RCT indicate that Teaching Lab PL positively impacts students’ learning experiences. Students whose teachers had participated in PL reported more positive perceptions of their teachers’ use of culturally responsive teaching methods in addition to greater self-confidence in their mathematical skills, compared to students whose teachers had not yet participated in PL.
   </div>
 </div>
 
@@ -256,14 +259,14 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Duncan Gates </p>
+             <p>Ching Sullivan and Mary Kate Dykes </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 15, 2024</p>
+      <p class="date">May 8, 2024</p>
     </div>
   </div>
   
@@ -275,125 +278,93 @@ cookieconsent.run({
 </header>
 
 
-<p>The Net Promoter Score (NPS) first appeared in the <a href="https://hbr.org/2003/12/the-one-number-you-need-to-grow">Harvard Business Review</a> in 2003, and has since become the prominent and crucial metric for measuring the customer experience and predicting business success. It is, however, not without critique and can often be confusing. In this blog post, we will explore the reasons Teaching Lab uses NPS, its benefits, and its critiques.&nbsp;</p>
-<p>NPS’s are measured with a single question and reported with a number from the range -100 to +100, a higher score being desirable.</p>
-<p>The NPS question is framed as:</p>
-<blockquote class="blockquote">
-<p><em>How likely is it that you would recommend our company/product/service to a friend or colleague?</em></p>
-</blockquote>
-<p>i.e.&nbsp;How likely are you to <strong>promote us</strong>?</p>
-<p>Notice that the question is explicitly not about whether the customer is happy, but about whether the product (in Teaching Lab’s case, service) is something they would attach their own name and credibility to by <strong>recommending</strong> it to someone they personally know. By this methodology, NPS indicates not only customer satisfaction but customer loyalty. The former indicates attitude, and the latter is behavioral, which has much more remunerative implications.&nbsp;</p>
-<p>Respondents answer the question by choosing a number on a scale of 0-10, with 10 meaning they are “extremely likely” to recommend something.&nbsp;</p>
-<p><a href="images/image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/image1.png" class="img-fluid"></a></p>
-<p><strong>Respondents are divided into three groups as shown in the above graphic: Promoters, Passives, and Detractors based on their answers.</strong></p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Student surveys provide invaluable insights directly from Teaching Lab’s most important stakeholders: students. By tapping into their perceptions, we can gauge the impact of professional learning on teaching practices, especially those aimed at enhancing students’ learning experiences. Through a partnership with the New Mexico Public Education Department (NMPED) and University of Maryland, Teaching Lab has administered student surveys for the past two academic years as part of a rigorous research study, allowing us to capture information about various dimensions of students’ experiences using a unique research design. In this blog post, we will dive deeper into the methodology of the New Mexico study, explore key findings from both the treatment and control groups, and discuss the broader implications of these results.</p>
+</section>
+<section id="what-does-research-tell-us-about-student-surveys" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-research-tell-us-about-student-surveys"><strong>What Does Research Tell Us About Student Surveys?</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/image6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/image6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></a></p>
+</figure>
+</div>
+<p>There is an abundance of research that finds (1) teachers impact student perceptions of their classroom environments, and (2) student perceptions of their classroom environments correlate with student learning outcomes. Therefore, we have included student surveys on classroom learning environments as part of Teaching Lab’s research agenda and theory of evaluation.&nbsp;</p>
+<p><strong>We can rely on students’ perceptions of teachers because students know good teaching when they see it</strong>: The Measures of Effective Teaching (<a href="https://docs.gatesfoundation.org/documents/preliminary-findings-research-paper.pdf">MET Project, 2010</a>) project found that students perceived clear differences among teachers. Student feedback about teachers is more consistent than that provided by administrators after classroom observations or those based solely on student test scores.&nbsp;</p>
+<p><strong>It is important to understand student perceptions of teacher quality because this perception is correlated to students’ learning outcomes:</strong> <a href="https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf">Hattie (2017)’</a>s meta-analysis of 1,400 studies found that overall, student ratings of teaching quality has a 0.50 effect size, which means that students’ evaluations of their teachers are significantly correlated with their academic achievement. Additionally, the <a href="https://cepr.harvard.edu/sites/hwpi.harvard.edu/files/cepr/files/met-brief-learning-about-teaching.pdf?m=1430506670">MET Project (2012)</a> found that students in classes where students perceived their teachers to be in the top quartile of effectiveness learned 4.8 months of schooling more in math compared to students in classes where students perceived their teachers to be in the bottom quartile of effectiveness.&nbsp;</p>
+<p><strong>Student surveys can improve classroom environments:</strong> <a href="https://link.springer.com/article/10.1007/s10984-020-09330-1#citeas">Potvin (2021)</a> conducted a study to evaluate the impact of student surveys on classroom environments and teachers’ pedagogical practices. Results indicated that regular discussion of student survey results encouraged teachers to adapt their practices, assess their classroom environments formatively, and contribute to a teacher learning environment.&nbsp;</p>
+<p><strong>Teachers have control over many aspects of students’ behaviors that impact their learning:</strong> <a href="https://www.educationnext.org/full-measure-of-a-teacher-using-value-added-assess-effects-student-behavior/">Jackson (2019)</a> found that teachers influence students’ attendance, behavior, and engagement, dimensions of their learning experiences which are highly predictive of high school graduation and college outcomes. Jackson (2019) estimated that the impact of teachers on behavior is about 10 times more predictive of whether they increase students’ high-school completion than their impacts on test scores. Specifically, the following are within the teacher’s control and have documented impacts on student learning.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/image2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/image2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></a></p>
+</figure>
+</div>
 <ul>
-<li><p><strong>Promoters:</strong> Promoters are likely to enthusiastically recommend your company or service. As stated in the Harvard Business Review: “The only path to profitable growth may lie in a company’s ability to get its loyal customers to become, in effect, its marketing department.”</p></li>
-<li><p><strong>Passives:</strong> Passives are probably satisfied but not as enthusiastic about the company or service compared to a promoter. If another company offers an excellent option, these customers might choose it, as they are not as loyal to you. On a scale of 1-10, their answers are 7 or 8.</p></li>
-<li><p><strong>Detractor:</strong> Detractors can destroy a company with negative reviews. Whether they had an adverse experience or didn’t like the font you use, detractors will likely post about how much they do not like your business. On the other hand, every detractor represents a missed opportunity to add a promoter.</p></li>
+<li><p><strong>Teacher-Student Relationships:</strong> Often perceived as the softer aspect of education, teacher-student relationships are actually crucial to the success of especially underserved students (<a href="https://www.future-ed.org/wp-content/uploads/2019/06/Final-report_Teacher-Mindsets.pdf">Wacker and Olson, 2019</a>). These relationships significantly impact academic achievement, with <a href="https://www.jstor.org/stable/41408670?read-now=1&amp;seq=21#page_scan_tab_contents">Riorda et al.’s 2011</a> meta-analysis showing an effect size of 0.16. <a href="https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf">Hattie (2017)</a> suggests they are more influential than programs like Reading Recovery and other instructional strategies.</p></li>
+<li><p><strong>Self-Efficacy</strong>: Self-efficacy, or the belief in one’s ability to achieve a goal, greatly influences student engagement and resilience (<a href="https://journals.sagepub.com/doi/10.3102/0162373716670260">Blazar &amp; Kraft, 2017</a>; <a href="https://www.transformingeducation.org/introduction-to-self-efficacy/">Transforming Education, 2019</a>). <a href="https://www.visiblelearningplus.com/sites/default/files/250%20Influences.pdf">Hattie (2017)</a> also notes its strong potential to boost academic performance.</p></li>
+<li><p><strong>Being Challenged:</strong> Teachers are key to ensuring students are consistently academically challenged. Significant correlations were found in the Tripod student survey between teacher effectiveness and students learning a lot almost every day (ρ=0.273) and learning to correct mistakes (ρ=0.264) (<a href="https://docs.gatesfoundation.org/documents/preliminary-findings-research-paper.pdf">MET Project, 2010</a>).</p></li>
+<li><p><strong>Happiness and Sense of Belonging:</strong> Teachers play a pivotal role in influencing students’ happiness, which in turn affects academic performance (<a href="https://journals.sagepub.com/doi/10.3102/0162373716670260">Blazar &amp; Kraft, 2017</a>; <a href="https://www.researchgate.net/profile/Angela_Duckworth2/publication/237751866_Happiness_and_Academic_Achievement_Evidence_for_Reciprocal_Causality/links/558fc09508ae1e1f9bacf98d/Happiness-and-Academic-Achievement-Evidence-for-Reciprocal-Causality.pdf">Quinn &amp; Duckworth, 2006</a>).</p></li>
 </ul>
-<p>Finally, the answers from all individual customers are then aggregated into one single number, a single company statistic, which is the company’s Net Promoter Score.</p>
-<p><a href="images/image7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/image7.png" class="img-fluid"></a></p>
-<p>Again, the NPS can range from -100 to 100.&nbsp;</p>
-<p>Once calculated, <strong>what is a good NPS?</strong></p>
-<p>This question is tougher to answer than you might think. Technically, any score above 0 can be considered a “good” score, since it means you have more Promoters than Detractors. According to global NPS standards, a score of above 50 is good, and above 70 is outstanding. Survey Monkey’s global benchmark of 150,000 organizations finds that the average NPS is 32.</p>
-<p>And importantly, “good NPS” is industry-specific. In a Qualtrics <a href="https://delighted.com/blog/what-is-a-good-nps-score#:~:text=The%20creators%20of%20the%20NPS,absolute%20or%20relative%20NPS%20method.">blog post</a> by Adam Lang that reviews 2020 data for automakers, software, and more, the following ranges were found to be standard for each industry:</p>
-<p><a href="images/image3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/image3.png" class="img-fluid"></a></p>
-<p>To further complicate things, the NPS can change dramatically given the number of responses. Here is a fun animation from Qualtrics showing how the overall NPS changes as responses come in, giving great insight into the ultimate number. (Note: This is not Teaching Lab data.)&nbsp;</p>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://www.qualtrics.com/m/assets/wp-content/uploads/2021/11/NPS-Simulation-2.mp4"></video></div>
-<section id="history-controversy-applicability-alternatives" class="level3">
-<h3 class="anchored" data-anchor-id="history-controversy-applicability-alternatives"><strong>History, controversy, applicability, alternatives</strong></h3>
-<p>Net Promoter Score rose to prominence after the release of a 2003 Harvard Business Review article titled “<a href="https://hbr.org/2003/12/the-one-number-you-need-to-grow">The One Number You Need to Grow</a>.” The overarching message of the article is that the measurement of customer satisfaction and customer retention does not help firms achieve growth; instead, word of mouth is the metric that is linked to growth. In the foundational study for the article by Bain &amp; Company, 400 companies across more than a dozen industries collected data, and then correlations were run comparing NPS to each company’s revenue growth rate (Satmetrix, 2004).&nbsp;</p>
-<p>The attention-grabbing headline has, however, had its fair share of critique. Subsequent scholarly research has found that “Net Promoter in no way would be categorized as the single most reliable indicator of a company’s ability to grow“ (Keiningham, 2007). Bain &amp; Company study author Fred Reichheld has even acknowledged its imperfections in the analytics that were used to support Net Promoter:&nbsp;</p>
-<p>“All we did was quantify this common sense in a way that made sense to business leaders—the target audience for my book. These practical leaders have little interest in advanced statistical methods. Frankly, we see little value in continued debate about cause versus correlation, timeframes, or statistical methods.”</p>
-<p>Further studies have found that actual consumer behavior (recommendation giving) does not necessarily reflect the uniform idea of the question (HBR, 2019), suggesting that human complexity throws yet more issues into the calculation. Another paper, “Measuring Customer Satisfaction and Loyalty: Improving the ‘Net-Promoter’ Score” has even counterintuitively demonstrated that “satisfaction” and “liking” are better predictors of recommendations than “likelihood to recommend” (Schneider, 2008). We can actually even see the potential for this likelihood in Teaching Lab’s data.</p>
-<p><a href="images/image5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/image5.png" class="img-fluid"></a></p>
-<p>The above figure shows the relationship between NPS and facilitation feedback where each “strongly agree” has been recoded to a 5, “agree” to a 4, and so on until “strongly disagree” is a 1. <strong>The data clearly demonstrates that participants can enjoy the facilitation or coaching, but still give a “passive” rating.</strong> Additionally, a clear upward diagonal pull in the local polynomial regression model implemented shows that Net Promoter Scores occur at the highest frequency in the 7, 8, 9, and 10 groups, with 5’s across the board being crucial to get a 9 or 10 score. Unfortunately, the 7 and 8 scores are discounted in the NPS calculation. It can at least be clearly stated that NPS is not the only metric to rely on, as promised by Bain &amp; Company.&nbsp;</p>
-<p><strong>Hidden behind a low NPS can often be a lot of passive (7 or 8) ratings - check out one of Teaching Lab’s current NPS’s; 31.55% of people giving a 7 or 8 rating can really impact the ultimate, overall NPS.</strong></p>
+<p><strong>Culturally Responsive and Sustaining Education (CRSE):</strong> Combining rigorous academic content with culturally responsive practices significantly enhances student outcomes (<a href="https://www.google.com/books/edition/Culturally_Responsive_Teaching/0ZlNDwAAQBAJ?hl=en&amp;gbpv=0">Gay, 2018</a>; <a href="https://www.google.com/books/edition/Culturally_Responsive_Teaching_and_The_B/BxGoBQAAQBAJ?hl=en&amp;gbpv=0">Hammond, 2014</a>; <a href="https://www.google.com/books/edition/Culturally_Relevant_Pedagogy/l29jzgEACAAJ?hl=en">Ladson-Billings, 2021</a>). Thorough research, including experimental and advanced statistical models, confirms the impact of culturally responsive teaching on academic achievement (<a href="https://eric.ed.gov/?id=EJ1181996">Bradshaw et al., 2018</a>; <a href="https://journals.sagepub.com/doi/pdf/10.1177/2158244016660744">Byrd, 2016</a>; <a href="https://journals.sagepub.com/doi/abs/10.3102/0002831216677002">Dee &amp; Penner, 2017</a>; <a href="https://eric.ed.gov/?id=EJ1070705">Kelley et al.&nbsp;2015</a>; <a href="https://eric.ed.gov/?id=EJ1180090">Portes et al.&nbsp;2017</a>).</p>
+</section>
+<section id="background-and-methodology-for-new-mexico-student-surveys" class="level3">
+<h3 class="anchored" data-anchor-id="background-and-methodology-for-new-mexico-student-surveys"><strong>Background and Methodology for New Mexico Student Surveys</strong></h3>
+<p>During SY22-23 and SY23-24, Teaching Lab engaged in an external research project with the University of Maryland to examine the impact of our Professional Learning on secondary mathematics educators across New Mexico. In partnership with NMPED staff at the Math and Science Bureau, Teaching Lab provided professional learning (PL) aimed at exploring teacher and student math identities to 19 teachers from six secondary schools in SY22-23 to 22 teachers from 12 schools in SY23-24.</p>
+<p>Using a staggered cohort design, half of the participants were randomly assigned to participate in PL in the fall semester (treatment group) and the other half to take part in the spring (control group). Teachers were randomly assigned within school “blocks” to ensure that, for each school, half of the teachers participated in PL in the fall and the other half participated in the spring. We compared outcomes between the treatment and control groups at the end of the fall semesters, when the treatment group had completed one semester of PL, and the control group had not yet started their PL. Included in the data collection was a student survey that measured their beliefs about how their teacher engaged in culturally responsive and sustaining education (CRSE) practices and built meaningful relationships with students, as well as how students rated their own self-efficacy, happiness, and feeling of being challenged in their math class.</p>
+</section>
+<section id="preliminary-descriptive-results" class="level3">
+<h3 class="anchored" data-anchor-id="preliminary-descriptive-results"><strong>Preliminary Descriptive Results</strong></h3>
+<p>In total 461 New Mexico students completed Teaching Lab’s PL student survey across SY2022-2023 and SY2023-2024. Of these students, 282 were taught by teachers who had already participated in PL, while 179 students were taught by teachers who had not yet participated in PL at the time of the survey administration.</p>
+</section>
+<section id="student-demographics" class="level3">
+<h3 class="anchored" data-anchor-id="student-demographics"><strong>Student Demographics</strong></h3>
+<p>Of the 461 students who were surveyed, approximately 58% identified as non-white or more than one race. Additionally, approximately 49% of students were female and 67% identified as Hispanic. There were some imbalances between the intervention and control group, specifically for students identifying as White, more than one race, and other.</p>
+<p><a href="images/image4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/image4.png" class="img-fluid"></a></p>
+</section>
+<section id="overall-results" class="level3">
+<h3 class="anchored" data-anchor-id="overall-results"><strong>Overall Results</strong></h3>
+<p>Preliminary findings based on descriptive analyses indicate promising impacts on students’ educational experiences in math classrooms. In particular, students whose teachers had already participated in the intervention reported <strong>more positive perceptions of their teachers’ use of culturally responsive teaching methods,</strong> in addition to <strong>greater self-confidence in their mathematical skills.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-271239126.png" class="img-fluid figure-img"></p>
-<figcaption>From Ongoing Report, March 12</figcaption>
+<p><a href="images/image3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/image3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
-<p>This is the essence of NPS: even though this number might be lower than our goal, it does <strong>not</strong> necessarily mean people didn’t like the service; instead, it is intended to measure whether or not they would <strong>advocate</strong> for the service, something that is much harder to achieve. Think about it: How often do you advocate for a product?</p>
-<p>Interestingly, there is a big difference in Teaching Lab’s NPS, depending on the PL audience!</p>
-<p>For teachers, the NPS is currently 33.12, which is the lowest among all the PL audience types.</p>
+</section>
+<section id="crse" class="level3">
+<h3 class="anchored" data-anchor-id="crse"><strong>CRSE</strong></h3>
+<p>Students whose teachers participated in the professional learning intervention noted a <strong>greater frequency of culturally responsive and sustaining educational practices</strong> compared to their counterparts in the control group. This observation is particularly favorable considering the intervention’s emphasis on nurturing students’ mathematical identities by applying CRSE methodologies. Such feedback from students underscores the promising effects of the PL on improving teachers’ CRSE awareness and related instructional practices.&nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-4206239914.png" class="img-fluid figure-img"></p>
-<figcaption>From Ongoing Report, March 12</figcaption>
+<p><a href="images/image5.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="images/image5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+<figcaption>Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</figcaption>
 </figure>
 </div>
-<p>And for contact leads, we have the highest overall NPS!</p>
+</section>
+<section id="student-self-efficacy" class="level3">
+<h3 class="anchored" data-anchor-id="student-self-efficacy"><strong>Student Self-Efficacy</strong></h3>
+<p>Alongside CRSE practices, <strong>students of teachers in the intervention group exhibited higher self-efficacy</strong> in math learning than students of teachers in the control group. This finding suggests that the intervention’s focus on promoting students’ unique math identities not only enhances instructional methods, but also cultivates students’ self-confidence in their learning abilities.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-4141439629.png" class="img-fluid figure-img"></p>
-<figcaption>From Ongoing Report, March 12</figcaption>
+<p><a href="images/image1.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="images/image1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+<figcaption>Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</figcaption>
 </figure>
 </div>
-<p>These bar charts demonstrate the range of the reality of what is being measured - certain people might be more likely to <strong>recommend</strong> a service in the first place. Additionally note what is impacting the NPS the most here - “other educator” and “teacher” have about the same percent of passive scores, but teachers tend to be detractors (0-6 rating) more often, whereas contact leads in general are more likely to be promoters, and less likely to be either detractors or passive.</p>
 </section>
-<section id="predict-your-nps" class="level3">
-<h3 class="anchored" data-anchor-id="predict-your-nps">Predict your NPS</h3>
-<p>Use the following model and parameters to predict what your next NPS rating will be! Note that this predictive model is by no means a guarantee, but it predicted today’s NPS scores with 82% accuracy!</p>
-<div class="cell">
-<iframe src="https://teachinglabhq.shinyapps.io/nps_predict/?showcase=0" width="672" height="950px" data-external="1">
-</iframe>
-</div>
+<section id="future-implications" class="level3">
+<h3 class="anchored" data-anchor-id="future-implications"><strong>Future Implications</strong></h3>
+<p>Across both academic years, student-reported CRSE practices have been consistently higher for teachers in the treatment group compared to teachers in the control group, indicating that <strong>Teaching Lab’s PL has been effective at improving teachers’ CRSE practices.</strong> Moreover, the reported increase in students’ self-efficacy related to their mathematical skills highlights a shift towards a more holistic approach to instruction, where fostering positive identities and growth mindsets for students becomes as pivotal as mastering the subject matter itself.</p>
+<p>These results suggest a promising avenue for future educational strategies, where targeted PL initiatives could serve as a key lever in advancing equity and inclusion within classrooms. Such an approach could have far-reaching implications beyond math classrooms, suggesting a roadmap for enhancing student outcomes across a wide range of academic disciplines.</p>
 </section>
-<section id="the-argument-for-continuing-to-use-nps" class="level3">
-<h3 class="anchored" data-anchor-id="the-argument-for-continuing-to-use-nps"><strong>The argument for continuing to use NPS</strong></h3>
-<ol type="1">
-<li><p><strong>It’s a leading indicator of business growth.</strong></p>
-<ul>
-<li>The logic follows that the more enthusiastic customers you have, the more new customers you can attract (and with less effort or investment), and this cycle becomes a growth engine.</li>
-</ul></li>
-<li><p><strong>It’s simpler and more productive than traditional customer satisfaction surveys.</strong></p>
-<ul>
-<li>NPS is low friction on both sides, it is easy to evaluate and easy to answer.</li>
-</ul></li>
-<li><p><strong>It clearly shows where pain points are on the aggregate.</strong></p>
-<ul>
-<li>NPS results show strengths and weaknesses in the customer base, identifying where teams can work to improve customer relations.</li>
-</ul></li>
-</ol>
-</section>
-<section id="the-argument-against-continuing-to-use-nps" class="level3">
-<h3 class="anchored" data-anchor-id="the-argument-against-continuing-to-use-nps"><strong>The argument against continuing to use NPS</strong></h3>
-<ol type="1">
-<li><p><strong>It doesn’t accurately differentiate promoters and detractors.</strong></p>
-<ul>
-<li>The rule-of-thumb score classifications proposed by Reichheld (promoters are those respondents who give a likelihood of recommendation of 9 or 10 while the detractors give 6 or less) could be further refined.&nbsp; This approach may not fully capture the statistical nuances between different respondent groups.&nbsp; Additionally, it might obscure significant trends and lead to misunderstandings about the Net Promoter Score (NPS), suggesting a negative score when the actual scenario might be different.</li>
-</ul></li>
-<li><p><strong>It can be used incorrectly.</strong></p>
-<ul>
-<li>A common criticism is that companies send the survey too frequently. There are eventually diminishing returns on customer surveys. Results become less representative when survey fatigue starts to set in.&nbsp;</li>
-</ul></li>
-<li><p><strong>If it is used as the only measure.</strong></p>
-<ul>
-<li>The other common criticism is that companies rely too heavily on NPS alone. They don’t use any other measurements of customer experience and satisfaction to complement the Net Promoter Score. To note: Teaching Lab has comprehensive post-session and post-PL Series participant feedback surveys, in addition to the contact lead survey. NPS is one of many measures for our impact on teaching and learning.&nbsp;</li>
-</ul></li>
-<li><p><strong>Customer feedback experts have diverse opinions on its applicability across all scenarios.</strong></p>
-<ul>
-<li>When asked to compare the NPS with other loyalty indices, again, only 19% of the customer feedback professionals agreed that the NPS is a better predictor of growth compared to other loyalty indices. The remaining 81% of the customer feedback professionals either disagreed with (~40%) or remained neutral toward (~40%) the statements regarding the merits of the NPS (Hayes, 2008).</li>
-</ul></li>
-</ol>
-</section>
-<section id="no-metric-is-perfect" class="level3">
-<h3 class="anchored" data-anchor-id="no-metric-is-perfect"><strong>No metric is perfect</strong></h3>
-<p>“All models are wrong, some are useful” - George Box (British statistician). A statement that is especially true for the less than straightforward NPS metric can be shown to be wrong, <strong>but if wielded well, it can be useful</strong>. Most research suggests sending the surveys frequently, but to different subsets of customers, at regular milestones in the customer lifecycle. Using this methodology you can pivot and tweak your service, rather than getting a static feedback dump every quarter. Teaching Lab adheres to this practice, including it in participant feedback surveys rather than only doing it quarterly or otherwise infrequently.</p>
-<p>Lastly, using a customer loyalty index with other questions relevant to your business can be essential in finding specific issues and highlights in customer feedback. Teaching Lab also does this; our participant feedback surveys incorporate 5-point Likert-scale items as well as open-ended items in conjunction with the NPS to provide a more holistic view of participants’ experiences and opinions.</p>
-<section id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner" class="level4">
-<h4 class="anchored" data-anchor-id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner"><strong>What does this mean for how I interpret feedback data for my partner?</strong></h4>
-<p>In wrapping up our analysis, it’s crucial to not only consider NPS but also to delve into other vital metrics that offer a broader view of customer satisfaction and loyalty Recently, at Teaching Lab, we’ve introduced targeted qualitative questions based on the respondents’ NPS category to enrich our understanding and add depth to our quantitative data. Detractors are optionally prompted with, “We’re sorry to hear that. What would you like us to improve on?” to identify areas for enhancement. Passive respondents are optionally prompted with “Thank you for your feedback. Would you like to tell us why you would score us that way?” to uncover underlying reasons for their neutrality. Lastly, promoters are asked, “We’re glad you like us. Would you like to tell us what exactly excites you?” to highlight strengths and areas of excellence. This strategic addition aims to provide a more nuanced view of our customer experience, allowing us to tailor our strategies more effectively to meet and exceed customer expectations. To see this new data (and more on participant feedback), head to the <a href="https://teachinglabhq.shinyapps.io/tl_facilitator_data/">Facilitator/Coaching Dashboard</a> and check out the NPS rollup!</p>
+<section id="whats-next-for-student-surveys-at-teaching-lab" class="level3">
+<h3 class="anchored" data-anchor-id="whats-next-for-student-surveys-at-teaching-lab"><strong>What’s Next for Student Surveys at Teaching Lab?</strong></h3>
+<p>The New Mexico research study has revealed promising results about Teaching Lab’s impact on not only teachers, but also students’ self-efficacy and self-reported CRSE practices. <strong>Our external evaluator, Dr.&nbsp;David Blazer from the University of Maryland, and his team are in the process of performing rigorous analysis and drafting a research report to detail the findings, which the L&amp;R team will share in the coming months.</strong> These data insights are invaluable for funders, external partners, and internal team members alike. Although it may require some legwork to secure district approval, we encourage more project teams to incorporate student surveys into their data collection plan.&nbsp;</p>
+<p>If you are interested in checking out our student survey results from other sites (i.e.&nbsp;EIC-Rochester, D11, or Arkansas), you can head to Section 7 of their respective <a href="https://teachinglabhq.shinyapps.io/OngoingReport_23_24/">Ongoing Reports</a>.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-5">From Ongoing Report, March 12</span>
-<span class="glightbox-desc lightbox-desc-6">From Ongoing Report, March 12</span>
-<span class="glightbox-desc lightbox-desc-7">From Ongoing Report, March 12</span>
+<span class="glightbox-desc lightbox-desc-5">Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</span>
+<span class="glightbox-desc lightbox-desc-6">Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</span>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -986,8 +957,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
