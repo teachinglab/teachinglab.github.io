@@ -20,7 +20,7 @@ execute:
 
 Student surveys provide invaluable insights directly from Teaching Lab’s most important stakeholders: students. By tapping into their perceptions, we can gauge the impact of professional learning on teaching practices, especially those aimed at enhancing students’ learning experiences. Through a partnership with the New Mexico Public Education Department (NMPED) and University of Maryland, Teaching Lab has administered student surveys for the past two academic years as part of a rigorous research study, allowing us to capture information about various dimensions of students’ experiences using a unique research design. In this blog post, we will dive deeper into the methodology of the New Mexico study, explore key findings from both the treatment and control groups, and discuss the broader implications of these results.
 
-### **What Does Research Tell Us About Student Surveys?** 
+### **What Does Research Tell Us About Student Surveys?**
 
 ![](images/image6.png){fig-align="center" width="600"}
 
@@ -46,7 +46,7 @@ There is an abundance of research that finds (1) teachers impact student percept
 
 **Culturally Responsive and Sustaining Education (CRSE):** Combining rigorous academic content with culturally responsive practices significantly enhances student outcomes ([Gay, 2018](https://www.google.com/books/edition/Culturally_Responsive_Teaching/0ZlNDwAAQBAJ?hl=en&gbpv=0); [Hammond, 2014](https://www.google.com/books/edition/Culturally_Responsive_Teaching_and_The_B/BxGoBQAAQBAJ?hl=en&gbpv=0); [Ladson-Billings, 2021](https://www.google.com/books/edition/Culturally_Relevant_Pedagogy/l29jzgEACAAJ?hl=en)). Thorough research, including experimental and advanced statistical models, confirms the impact of culturally responsive teaching on academic achievement ([Bradshaw et al., 2018](https://eric.ed.gov/?id=EJ1181996); [Byrd, 2016](https://journals.sagepub.com/doi/pdf/10.1177/2158244016660744); [Dee & Penner, 2017](https://journals.sagepub.com/doi/abs/10.3102/0002831216677002); [Kelley et al. 2015](https://eric.ed.gov/?id=EJ1070705); [Portes et al. 2017](https://eric.ed.gov/?id=EJ1180090)).
 
-### **Background and Methodology for New Mexico Student Surveys** 
+### **Background and Methodology for New Mexico Student Surveys**
 
 During SY22-23 and SY23-24, Teaching Lab engaged in an external research project with the University of Maryland to examine the impact of our Professional Learning on secondary mathematics educators across New Mexico. In partnership with NMPED staff at the Math and Science Bureau, Teaching Lab provided professional learning (PL) aimed at exploring teacher and student math identities to 19 teachers from six secondary schools in SY22-23 to 22 teachers from 12 schools in SY23-24.
 
