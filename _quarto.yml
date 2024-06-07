@@ -20,6 +20,7 @@ website:
     show-item-context: true
   # language:
     # search-box-placeholder: Search
+  page-navigation: true
   page-footer:
     left: |
       [![](https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w){fig-alt="Teaching Lab" width=200px}](https://www.teachinglab.org/)
@@ -59,10 +60,12 @@ website:
             href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
           - text: "NPS by site"
             href: https://teachinglabhq.shinyapps.io/nps_monitoring_tl/
-          - text: Coaching Data Tracker Dashboard
+          - text: "Coaching Data Tracker Dashboard"
             href: https://teachinglabhq.shinyapps.io/CoachingDataCollection/
-          - text: Coaching Data Collection Tracker Raw Spreadsheet
+          - text: "Coaching Data Collection Tracker Raw Spreadsheet"
             href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
+          - text: "Partner by Partner Goals Tracking"
+            href: https://docs.google.com/spreadsheets/d/1oFXoOf8p475BgWNuy0Cm9nZRitc1jxTrPSZRPqrvkqs/edit#gid=0
       - text: "Reports"
         href: Reports.qmd
       - text: "Dashboards"
