@@ -1,0 +1,52 @@
+---
+title: "Advancing Data Equity: Progress and Future Strategies"
+lightbox: true
+author: "Mary Kate Dykes"
+date: 06/24/24
+description: "Teaching Lab is committed to minimizing bias in research through our Data Equity Plan. We've prioritized stakeholder feedback, improved survey accessibility, and educated our team on data equity to ensure diverse experiences are represented and equity goals are met."
+image: "images/blog_header_5.png"
+bibliography: references.bib
+comments: 
+    utterances:
+      repo: teachinglab/teachinglab.github.io
+categories: 
+  - equity
+execute: 
+  echo: false
+---
+
+### **Advancing Data Equity: Progress and Future Strategies**
+
+![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeQJUrct-3hnKJErDoty_zNzFhJgU5JupFs9E2p4DPT0AMYHAjiDnTnWmBEtyTplIttD4xKBr07QK5bBtPlUtYK7Cg4S0BGHw74Pr3V06I6qsd-wqFJNTNorW6PNwtOanMD7XobR86fA3ysktedBBKUauPt?key=1yeYrRe3WRrdSQFsRB4AIA)
+
+## **Background**
+
+Program evaluation and research are not objective; at minimum, inherent biases can affect research design, execution, or results. At Teaching Lab, it is our responsibility to implement equitable practices into our research with the ultimate goal of minimizing bias. In alignment with Teaching Lab’s mission to advance educational equity, the Learning & Research (L&R) Team has designed a comprehensive Data Equity Plan, implementing several key initiatives in FY24 that will continue into FY25. The purpose of this plan is threefold: define action steps that the L&R Team may take to mitigate bias in our evaluation, center the lived experiences of the educators we serve, and promote our organization’s pursuit of educational equity. 
+
+## **What is Data Equity?**
+
+Data equity refers to the intentional and transparent process of making decisions in data projects to ensure fair representation and outcomes. It acknowledges that while data science tools are unbiased, the human decisions involved can embed subjective perspectives. In our Data Equity Plan, the L&R Team has adopted the[ Data Equity Framework by data equity consultants at We All Count](https://weallcount.com/the-data-process/) that helps identify and address these equity-impacting choices across seven stages: funding, motivation, project design, data collection, analysis, interpretation, and communication. This systematic approach ensures that data projects reflect diverse experiences and achieve specified equity goals.
+
+## **Our Progress Thus Far**
+
+In FY24, the L&R team made strides in prioritizing data equity in our work. Specifically, we achieved several key goals of our Data Equity Plan:
+
+-   **Seeking & Integrating Stakeholder Feedback to Revise Survey Instruments**
+
+We solicited feedback on our program evaluation plan from two stakeholder groups: our Teacher Advisory Board and the Programmatic Research & Evaluation Partnership (PREP) working group. TAB members provided valuable firsthand insight as educators on our Theory of Evaluation, as well as the survey-taking experience. Additionally, we received feedback from our colleagues on the PREP working group around the constructs on our Educator Survey. Feedback gathered from both stakeholder groups is currently being used to modify and refine our surveys for FY25, ensuring our surveys are more effective and relevant to our unique partnerships. The full report of stakeholder feedback can be accessed [here](https://docs.google.com/document/d/121W2ag5vBlaid68Y6ZGPxKZBP8DWfciLORMqMPP8zQI/edit). 
+
+-   Improved Student Survey Accessibility: Recognizing the diverse linguistic needs of our student population, we have made several enhancements to ensure our surveys are more accessible and comprehensible to all students. All student surveys have been translated into Spanish, with select student surveys additionally being available in French and Arabic (students have the option to self-select their preferred language). We also added visual indicators (1-Strongly disagree 👎👎, 2-Somewhat disagree 👎, 3-Neither agree nor disagree 😐, 4-Somewhat agree 👍, 5-Strongly agree 👍👍) for student survey response options where applicable, making it easier for students to understand response choices and accurately complete the survey. 
+
+-   Evaluating Our Motivations: At our FY24 in-person retreat, we discussed and defined our implicit and explicit motivations that impact our program evaluation work, such as alignment with programmatic implementation, data reporting timelines, organizational & individual goals, funding sources, and business development goals. From this conversation, we achieved a greater understanding and awareness amongst our team of the impacts these motivations have on our data collection and reporting processes.
+
+-   Data Equity Education: As of FY24, five L&R team members have engaged in the Foundations of Data Equity Course from We All Count, meaning over half of our team has received formal training on the fundamental cornerstones of data equity. 
+
+## **Our Future Goals**
+
+Looking ahead to FY25, the L&R team is committed to continuing our data equity work through the following actions:
+
+-   **Sharing Data Insights with Educators:** We plan to explore and develop methods for sharing highlights and trends with participants that may be useful to their practice or support their growth, such as working with coaches to understand what data can and should be uplifted to teachers and how, in addition to exploring how to directly share information with teachers. 
+
+-   **Increasing Transparency:** We aim to increase transparency with stakeholders regarding the motivations that influence our work. This includes clarifying how and why certain decisions are made throughout our data projects.
+
+-   **Ongoing Training:** We will continue to develop our team’s knowledge of data equity through continuous training and learning opportunities. This will involve both formal courses and informal learning sessions, ensuring that our team stays updated on the latest best practices and research in data equity.
