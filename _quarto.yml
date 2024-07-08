@@ -54,7 +54,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: "FY24 Trackers"
+      - text: "FY25 Trackers"
         menu:
           - text: "Overall data collection by site"
             href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
@@ -63,7 +63,7 @@ website:
           - text: "Coaching Data Tracker Dashboard"
             href: https://teachinglabhq.shinyapps.io/CoachingDataCollection/
           - text: "Coaching Data Collection Tracker Raw Spreadsheet"
-            href: https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit#gid=0
+            href: https://docs.google.com/spreadsheets/d/1zAFN3aN9Lh4QNH931xFp95M09tIcDn1WIbapTF3cgTI/edit?gid=0
           - text: "Partner by Partner Goals Tracking"
             href: https://docs.google.com/spreadsheets/d/1oFXoOf8p475BgWNuy0Cm9nZRitc1jxTrPSZRPqrvkqs/edit#gid=0
       - text: "Reports"

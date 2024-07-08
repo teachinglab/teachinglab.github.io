@@ -25,7 +25,7 @@ Program evaluation and research are not objective; at minimum, inherent biases c
 
 ## **What is Data Equity?**
 
-Data equity refers to the intentional and transparent process of making decisions in data projects to ensure fair representation and outcomes. It acknowledges that while data science tools are unbiased, the human decisions involved can embed subjective perspectives. In our Data Equity Plan, the L&R Team has adopted the[ Data Equity Framework by data equity consultants at We All Count](https://weallcount.com/the-data-process/) that helps identify and address these equity-impacting choices across seven stages: funding, motivation, project design, data collection, analysis, interpretation, and communication. This systematic approach ensures that data projects reflect diverse experiences and achieve specified equity goals.
+Data equity refers to the intentional and transparent process of making decisions in data projects to ensure fair representation and outcomes. It acknowledges that while data science tools are unbiased, the human decisions involved can embed subjective perspectives. In our Data Equity Plan, the L&R Team has adopted the[Data Equity Framework by data equity consultants at We All Count](https://weallcount.com/the-data-process/) that helps identify and address these equity-impacting choices across seven stages: funding, motivation, project design, data collection, analysis, interpretation, and communication. This systematic approach ensures that data projects reflect diverse experiences and achieve specified equity goals.
 
 ## **Our Progress Thus Far**
 
