@@ -17,7 +17,123 @@
 <width>144</width>
 </image>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Mon, 24 Jun 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jul 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Quality At Teaching Lab: Definitions, Examples, and Best Practices</title>
+  <dc:creator>Lauren Hartmann</dc:creator>
+  <link>https://datahub.teachinglab.org/blog/06_maintaining_data_quality/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"><img src="https://datahub.teachinglab.org/blog/06_maintaining_data_quality/images/image2.png" class="img-fluid"></h3>
+<p><strong>Data quality is defined as the degree to which data meets a company’s expectations of accuracy, validity, completeness, and consistency.</strong></p>
+</section>
+<section id="why-do-we-care-about-data-quality" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-we-care-about-data-quality"><strong>Why Do We Care About Data Quality?</strong></h2>
+<p>It is critical to ensure that the data used for analysis, reporting, and decision-making is reliable and trustworthy. At Teaching Lab, if our data fails to meet our expectations of accuracy, validity, completeness, and consistency, it can have significant negative impacts on our responsive service to partnerships and funders, employee productivity, and key strategies.</p>
+</section>
+<section id="what-does-data-quality-mean-at-teaching-lab" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-data-quality-mean-at-teaching-lab"><strong>What Does Data Quality Mean At Teaching Lab?</strong></h2>
+<p>At Teaching Lab, quality data is key to making accurate, informed decisions regarding the content and focus of our services, dosage and frequency of PL and facilitation, recommendations to external stakeholders, reporting to external funders, etc. The idea of data “quality” can seem ambiguous, however, there are a variety of characteristics that can help us determine what quality data means at Teaching Lab, including:&nbsp;</p>
+<p><a href="https://lh7-us.googleusercontent.com/docsz/AD_4nXddkfdzxR5R2B4t6rucX30UB4TLr2H4tG70FsKykir_NDNXS0q9eEWiPB_krd5nguwU99qN1wi-hMrcIfQDWxx31W-OJygrPaU3gFgplqTyiLGAiuSGF3DtRfMqYhB-LjFjDDGAodKzdQP9sawC6w-E_yFR?key=_O9z0XA8zh5IA6y9uejmgQ.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXddkfdzxR5R2B4t6rucX30UB4TLr2H4tG70FsKykir_NDNXS0q9eEWiPB_krd5nguwU99qN1wi-hMrcIfQDWxx31W-OJygrPaU3gFgplqTyiLGAiuSGF3DtRfMqYhB-LjFjDDGAodKzdQP9sawC6w-E_yFR?key=_O9z0XA8zh5IA6y9uejmgQ.png" class="img-fluid"></a></p>
+<p>A majority of Data Quality Assessment Frameworks, including the one used by Teaching Lab’s Learning &amp; Research team, considers the following 6 elements to be the most important when evaluating the quality of data at any point in time: timeliness, completeness, consistency, uniqueness, integrity, and validity.&nbsp;</p>
+<p><strong>Timeliness:</strong> Timeliness refers to how up-to-date data is in collection and reporting. At Teaching Lab, the timeliness of data includes delivery of data for processing (i.e., data collection), and timing (of use) throughout a partnership. For example, baseline data should be collected at baseline and used to inform decisions at the beginning of the year/of a partnership, while end of year data should be collected at end of year and used to report on growth over the course of a partnership and to inform decisions about next steps for a partnership.&nbsp;</p>
+<p><strong>Completeness:</strong> Completeness refers to the percentage of data that is missing within a dataset. Completeness of our data includes the expected vs the actual amount of data that is collected, the expected vs the actual amount of data that is usable for reporting, and the percent completion of individual pieces of data that is collected (e.g., surveys, rubrics, etc.).&nbsp;</p>
+<p><strong>Consistency:</strong> Consistency checks that data values in different locations are identical. This applies to naming conventions, contact information, demographics, etc. in data collection, as well as calculated metrics in our reporting. For example, the NPS reported in a Qualtrics dashboard should match the NPS reported in the Ongoing Reports, or teacher information in our Coaching Log should be the same in our Coaching Data Tracker.&nbsp;</p>
+<p><strong>Uniqueness:</strong> Uniqueness refers to the existence (or lack) of duplicates in our data. Much of our end of year reporting is contingent on a single pre and post instance of data. The existence of duplicate data can skew trends and cause pre-post matching to become exceedingly difficult.&nbsp;</p>
+<p><strong>Integrity:</strong> Integrity refers to how reliable or trustworthy our data is. Integrity looks at the accuracy of our data throughout its lifecycle. The biggest threat to data integrity is user error; this includes mistakes in data entry, accidental deletion or modification of data, and data system misconfigurations.</p>
+<p><strong>Validity:</strong> Validity looks at how much our data adheres to our expected data types, formats, value ranges, and internal business rules.</p>
+<p><em>Note On Data Quality Intersections</em></p>
+<p>At Teaching Lab, it’s important we consider each individual characteristic of data quality, and their intersections. For example, data completeness can impact data’s timeliness and accuracy. If we have incomplete data by mid-year, we may fail to provide an accurate picture of a partnership thereby impacting the timeliness and usefulness of our insights and recommendations to district leaders at mid-year stepbacks.&nbsp;</p>
+</section>
+<section id="what-are-some-examples-of-data-quality-red-flags" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-some-examples-of-data-quality-red-flags"><strong>What Are Some Examples of Data Quality Red Flags?</strong></h2>
+<p>One of the most crucial pieces of data quality management is the identification and resolution of potential problems. A key tool for identifying these potential data issues at Teaching Lab is our <a href="https://forms.monday.com/forms/04f52d925a5ea36294ed6914063fcd84?r=use1">Shared Operations Request form</a>. Following an analysis of the requests submitted throughout SY23-24, the following examples of data quality red flags have been identified:</p>
+<p>🚩 Completeness:&nbsp;</p>
+<ul>
+<li><p>About 30% of Educator Surveys started in SY23-24 have remained In Progress/Incomplete as of June 2024.</p></li>
+<li><p>Missing data at baseline or end of year impacts pre-post comparison n sizes. In order to measure teachers’ growth as well as Teaching Lab’s impact, data needs to be collected at strategic points in the year (baseline and end of year) for the same teachers.</p></li>
+</ul>
+<p>🚩 Consistency:</p>
+<ul>
+<li><p>Non-standardized naming conventions in the classroom observation tool. For example, “Smith” could be matched to any one of “J Smith”, “John Smith”, “Carrie Smith”, “Ms.&nbsp;Smith”, etc. By first registering teachers we will support with direct-to-teacher coaching in the teacher roster with both their first and last names, we can avoid write-in names in our data instruments.</p></li>
+<li><p>Participants selecting courses in our Participant Feedback survey that are not consistent with their site’s services.&nbsp;</p></li>
+<li><p>Raters submitting classroom observations on different rubrics at the beginning of year and mid or end of year.</p></li>
+</ul>
+<p>🚩 Timeliness:</p>
+<ul>
+<li>Baseline data collected outside the beginning of year/ beginning of partnership time period does not provide an accurate picture of the starting point of a partnership.&nbsp;</li>
+</ul>
+<p>🚩 Uniqueness:</p>
+<ul>
+<li><p>Participants taking our Educator Survey more than once in a given data collection time period.</p></li>
+<li><p>Raters submitting multiple observations for a single teacher at baseline, mid, or end of year.</p></li>
+</ul>
+<p>🚩 Integrity:</p>
+<ul>
+<li><p>Edits to linked Google Sheets impact the reporting on internal tracking and external facing sheets.&nbsp;</p></li>
+<li><p>Mistagged services, course names, teacher names, etc. in Qualtrics data.</p></li>
+</ul>
+<p>🚩 Validity:</p>
+<ul>
+<li>Participants misread Likert scale questions and select values that do not adhere to statistically expected responses or are not reflective of qualitative responses.&nbsp;</li>
+</ul>
+<p>If data issues, such as duplicate data, missing values, outliers, etc. aren’t properly addressed, we increase our risk for negative outcomes for the organization and within partnerships.</p>
+</section>
+<section id="how-does-teaching-lab-ensure-data-quality" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-teaching-lab-ensure-data-quality"><strong>How Does Teaching Lab Ensure Data Quality?</strong></h2>
+<p>The <a href="https://forms.monday.com/forms/04f52d925a5ea36294ed6914063fcd84?r=use1">Shared Operations Request form</a> helps Learning &amp; Research reactively ensure data quality, however the proactive resolution of potential problems is just as important.&nbsp;</p>
+<p>Data Quality in Action: How L&amp;R is Currently Ensuring Data Quality</p>
+<p>Listed below are a few of the main steps Learning &amp; Research takes to maintain data quality at Teaching Lab:</p>
+<p><strong>✅ Data “Stewards”</strong> - The data analysts on L&amp;R are responsible for cleaning and maintaining the data in each of their assigned data collection instruments.</p>
+<p><br>
+</p>
+<p><strong>✅ Access Controls</strong> - Data access controls and user permissions in Qualtrics, Google Suite, and Shiny apps limit who can view and modify data.&nbsp;</p>
+<p><br>
+</p>
+<p><strong>✅ Instrument Revision</strong> - At the close of each school year, L&amp;R conducts a construct analysis of applicable surveys using factor analysis, statistical correlations, and internal consistency measures to (1) ensure our tools measure what they are intended to measure, and (2) guide the revision process of making our tools more user-friendly while still providing the necessary data to inform actionable insights.&nbsp;</p>
+<p><br>
+</p>
+<p><strong>✅ Data Collection Plans</strong> - L&amp;R uses the collaboratively developed data collection plans to inform the timeliness and completeness of our data.</p>
+<p><br>
+</p>
+<p><strong>✅ Data Trackers</strong> - The <a href="https://teachinglabhq.shinyapps.io/OngoingSurveyCount/">Ongoing Survey Count</a> and <a href="https://teachinglabhq.shinyapps.io/CoachingDataCollection/">Coaching Data Collection</a> trackers provide ongoing updates on the timeliness and completeness of our data.&nbsp;</p>
+<p><br>
+</p>
+<p><strong>✅ Monday.com Integrations</strong> - L&amp;R leverages boards in Monday.com to provide consistent site, course, and teacher names in our data collection and reporting tools, such as the Project Overview Board (based on logistics boards) and direct-to-teacher coaching roster.&nbsp;</p>
+<p><br>
+</p>
+<p><strong>✅ Ongoing Reporting</strong> - L&amp;R ensures accessible, ongoing reporting of key metrics through various tools on the <a href="https://datahub.teachinglab.org">DataHub</a>. These tools offer summaries to reflect pre and post breakdowns, granular views of data, and tracking of trends in the data.</p>
+<p>Upcoming: How L&amp;R Will Continue Ensuring Data Quality</p>
+<p>The insights gained from the Shared Operations Request form, the Programmatic Research &amp; Evaluation Partnership (PREP) Working Group (which fosters collaboration between the Learning and Research team and the Program team to review and refine data collection protocols, instruments, and tools), and L&amp;R Feedback surveys have helped inform next steps for the Learning &amp; Research team. Listed below are key considerations for Learning &amp; Research in the coming school year to continue improving and maintaining data quality at Teaching Lab:&nbsp;</p>
+<p><strong>🔜 Data Auditing</strong> - In SY24-25, the data analysts will aim to launch a data auditing process (or data “health check” reporting) that will monitor the timeliness, completeness, consistency, uniqueness, integrity, and validity of data collected throughout the school year on an ongoing basis.</p>
+<p><strong>🔜 Data Literacy Training</strong> - Through SY24-25 Learning &amp; Research will be updating/introducing organization wide training to improve data literacy at all levels of Teaching Lab.</p>
+</section>
+<section id="how-can-i-maintain-teaching-labs-data-quality" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-maintain-teaching-labs-data-quality"><strong>How Can I Maintain Teaching Lab’s Data Quality?</strong></h2>
+<p>While the Learning &amp; Research team owns data cleaning and reporting, instrument revision, and theory of evaluation, it is <strong>everyone’s</strong> responsibility to ensure data quality at Teaching Lab. Here’s some examples of how you can help:</p>
+<ul>
+<li><p><strong>Prepare For Success</strong>: Collaborate on and follow the data collection plans established for your work, complete teacher rosters, and update logistics boards.</p></li>
+<li><p><strong>Monitor Your Progress</strong>: Reference our data trackers to ensure timely completion of collection throughout the year.</p></li>
+<li><p><strong>Stay Informed</strong>: Familiarize yourself with what data is available and relevant to your work at a given point in time.</p></li>
+<li><p><strong>See Something, Say Something</strong>: If you notice an inconsistency in reporting, reach out using the <a href="https://forms.monday.com/forms/04f52d925a5ea36294ed6914063fcd84?r=use1">Shared Operations Request form</a>.&nbsp;</p></li>
+<li><p><strong>Contribute To The Conversation:</strong>&nbsp; Consider attending Learning &amp; Research or Data Consultation office hours, partaking in data literacy training initiatives, and joining our PREP working group to continue the cycle of learning and collaboration for you and L&amp;R. &nbsp;</p></li>
+</ul>
+<p><br>
+</p>
+
+
+</section>
+
+ ]]></description>
+  <category>equity</category>
+  <guid>https://datahub.teachinglab.org/blog/06_maintaining_data_quality/</guid>
+  <pubDate>Mon, 15 Jul 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://datahub.teachinglab.org/blog/06_maintaining_data_quality/images/blog_header_6.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
 <item>
   <title>Advancing Data Equity: Progress and Future Strategies</title>
   <dc:creator>Mary Kate Dykes</dc:creator>
