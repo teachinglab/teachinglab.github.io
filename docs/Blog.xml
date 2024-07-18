@@ -89,23 +89,11 @@
 <p>Data Quality in Action: How L&amp;R is Currently Ensuring Data Quality</p>
 <p>Listed below are a few of the main steps Learning &amp; Research takes to maintain data quality at Teaching Lab:</p>
 <p><strong>✅ Data “Stewards”</strong> - The data analysts on L&amp;R are responsible for cleaning and maintaining the data in each of their assigned data collection instruments.</p>
-<p><br>
-</p>
 <p><strong>✅ Access Controls</strong> - Data access controls and user permissions in Qualtrics, Google Suite, and Shiny apps limit who can view and modify data.&nbsp;</p>
-<p><br>
-</p>
 <p><strong>✅ Instrument Revision</strong> - At the close of each school year, L&amp;R conducts a construct analysis of applicable surveys using factor analysis, statistical correlations, and internal consistency measures to (1) ensure our tools measure what they are intended to measure, and (2) guide the revision process of making our tools more user-friendly while still providing the necessary data to inform actionable insights.&nbsp;</p>
-<p><br>
-</p>
 <p><strong>✅ Data Collection Plans</strong> - L&amp;R uses the collaboratively developed data collection plans to inform the timeliness and completeness of our data.</p>
-<p><br>
-</p>
 <p><strong>✅ Data Trackers</strong> - The <a href="https://teachinglabhq.shinyapps.io/OngoingSurveyCount/">Ongoing Survey Count</a> and <a href="https://teachinglabhq.shinyapps.io/CoachingDataCollection/">Coaching Data Collection</a> trackers provide ongoing updates on the timeliness and completeness of our data.&nbsp;</p>
-<p><br>
-</p>
 <p><strong>✅ Monday.com Integrations</strong> - L&amp;R leverages boards in Monday.com to provide consistent site, course, and teacher names in our data collection and reporting tools, such as the Project Overview Board (based on logistics boards) and direct-to-teacher coaching roster.&nbsp;</p>
-<p><br>
-</p>
 <p><strong>✅ Ongoing Reporting</strong> - L&amp;R ensures accessible, ongoing reporting of key metrics through various tools on the <a href="https://datahub.teachinglab.org">DataHub</a>. These tools offer summaries to reflect pre and post breakdowns, granular views of data, and tracking of trends in the data.</p>
 <p>Upcoming: How L&amp;R Will Continue Ensuring Data Quality</p>
 <p>The insights gained from the Shared Operations Request form, the Programmatic Research &amp; Evaluation Partnership (PREP) Working Group (which fosters collaboration between the Learning and Research team and the Program team to review and refine data collection protocols, instruments, and tools), and L&amp;R Feedback surveys have helped inform next steps for the Learning &amp; Research team. Listed below are key considerations for Learning &amp; Research in the coming school year to continue improving and maintaining data quality at Teaching Lab:&nbsp;</p>
@@ -120,10 +108,8 @@
 <li><p><strong>Monitor Your Progress</strong>: Reference our data trackers to ensure timely completion of collection throughout the year.</p></li>
 <li><p><strong>Stay Informed</strong>: Familiarize yourself with what data is available and relevant to your work at a given point in time.</p></li>
 <li><p><strong>See Something, Say Something</strong>: If you notice an inconsistency in reporting, reach out using the <a href="https://forms.monday.com/forms/04f52d925a5ea36294ed6914063fcd84?r=use1">Shared Operations Request form</a>.&nbsp;</p></li>
-<li><p><strong>Contribute To The Conversation:</strong>&nbsp; Consider attending Learning &amp; Research or Data Consultation office hours, partaking in data literacy training initiatives, and joining our PREP working group to continue the cycle of learning and collaboration for you and L&amp;R. &nbsp;</p></li>
+<li><p><strong>Contribute To The Conversation:</strong>&nbsp; Consider attending Learning &amp; Research or Data Consultation office hours, partaking in data literacy training initiatives, and joining our PREP working group to continue the cycle of learning and collaboration for you and L&amp;R.</p></li>
 </ul>
-<p><br>
-</p>
 
 
 </section>
@@ -691,7 +677,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
 <p>Teaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/person_plot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
+<p><a href="images/person_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
 <figcaption>Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.</figcaption>
 </figure>
 </div>
