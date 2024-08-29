@@ -1,13 +1,13 @@
 ---
 title: "IPG Ongoing Report Data"
-image: imgs/Ongoing23_24Report.png
-description: View % positive indicators over time in section 6b and 6c, and select specific ipg rubrics to see improvements in core action over time.
+image: imgs/ongoing_report_24_25.png
+description: View % positive indicators over the course of the year in section 4a, 4b, and 4c, and select specific ipg rubrics to see improvements in core action over time.
 order: 2
 categories: [Classroom Observations, IPG]
 author: Duncan Gates
 date: "02-02-2024"
 ---
 
-[Go to section 6 of the ongoing report ➡️](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6)
+[Go to section 4 of the ongoing report ➡️](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section4)
 
-[![](imgs/Ongoing23_24Report.png)](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section6)
+[![](imgs/ongoing_report_24_25.png)](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section4)

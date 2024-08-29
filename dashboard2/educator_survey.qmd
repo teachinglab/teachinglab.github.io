@@ -1,13 +1,13 @@
 ---
 title: "Educator Survey // Ongoing Report"
-image: imgs/Ongoing23_24Report.png
-description: View demographic information in section 1, teacher mindsets in section 4, school leader mindsets in section 5, and CRSE data in section 6a.
+image: imgs/ongoing_report_24_25.png
+description: See teacher mindset data in section 3a, or school leader mindsets in the alternative 3a selection, and CRSE data in section 3c.
 order: 1
 categories: [Educator Survey, Mindsets, CRSE]
 author: Duncan Gates
-date: "02-01-2024"
+date: "08-28-2024"
 ---
 
-[Go to the ongoing report ➡️](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section4)
+[Go to section 3 of the ongoing report ➡️](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section3)
 
-[![](imgs/Ongoing23_24Report.png)](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section4)
+[![](imgs/ongoing_report_24_25.png)](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section3)

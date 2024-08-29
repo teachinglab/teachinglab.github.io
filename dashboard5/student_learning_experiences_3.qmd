@@ -1,13 +1,15 @@
 ---
 title: "Student Work Graded Dashboard"
 image: imgs/StudentWorkGraded.png
-description: View the % proficient and on grade level after assignments have been submitted and graded in the above dashboard.
-order: 3
+description: View graded student work, remaining files, contest grades, and see the % proficient and on grade level after assignments have been submitted and graded in the above dashboard.
+order: 1
 categories: [Student Work]
 author: Duncan Gates
-date: "02-02-2024"
+date: "08-28-2024"
 ---
 
-[Go to the student work grades dashboard ➡️](https://teachinglabhq.shinyapps.io/student_work_graded)
+[Go to the student work grades dashboard ➡️](https://tl-data.teachinglab.org/shiny/student_work_graded/ "Student Work Graded Dashboard")
 
-[![](imgs/StudentWorkGraded.png)](https://teachinglabhq.shinyapps.io/student_work_graded/)
+![](imgs/student_work_viewer.png)
+
+See the Loom Tutorial Here

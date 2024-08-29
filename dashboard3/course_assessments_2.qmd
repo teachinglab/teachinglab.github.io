@@ -1,13 +1,13 @@
 ---
 title: "Course Assessments // Ongoing Report"
-image: imgs/Ongoing23_24Report.png
-description: View course assessments data in the ongoing report!
+image: imgs/ongoing_report_24_25.png
+description: View course assessments overall pre-post scores in section 2 the ongoing report!
 order: 2
 categories: [Course Assessments, Mindsets]
 author: Duncan Gates
-date: "02-02-2024"
+date: "08-28-2024"
 ---
 
-[Go to section 3 of the Ongoing Report ➡️](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section3)
+[Go to section 2 of the Ongoing Report ➡️](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section2)
 
-[![](imgs/Ongoing23_24Report.png)](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/?section=section3)
+[![](imgs/ongoing_report_24_25.png)](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section2)

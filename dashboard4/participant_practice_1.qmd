@@ -1,11 +1,11 @@
 ---
 title: "IPG Raw Data/Downloadable Dashboard"
 image: imgs/IPGRawDashboard.png
-description: Download classroom observations data in a rolled up summative form, or view entire responses on a per-teacher basis
+description: Download classroom observations data in a rolled up summative form, or view entire responses on a per-teacher basis in this interactive dashboard
 order: 1
 categories: [IPG, Raw Data, Classroom Observations]
 author: Duncan Gates
-date: "02-02-2024"
+date: "08-28-2024"
 ---
 
 [Go to the IPG Raw/Downloadable Dashboard ➡️](https://teachinglabhq.shinyapps.io/IPGRawDataDashboard/)

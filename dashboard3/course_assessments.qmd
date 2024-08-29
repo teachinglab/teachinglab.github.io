@@ -5,9 +5,9 @@ description: View course assessments data as % correct before/after, % correct b
 order: 1
 categories: [Course Assessments, Mindsets]
 author: Duncan Gates
-date: "02-02-2024"
+date: "08-28-2024"
 ---
 
 [Go to the course assessments dashboard ➡️](https://teachinglabhq.shinyapps.io/course_assessments)
 
-[![](imgs/CourseAssessment.png)](https://teachinglabhq.shinyapps.io/course_assessments/)
+[![](imgs/course_assessments_nav.gif)](https://teachinglabhq.shinyapps.io/course_assessments/)

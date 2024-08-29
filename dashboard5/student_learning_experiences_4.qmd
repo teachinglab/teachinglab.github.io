@@ -2,7 +2,7 @@
 title: "Student Work Grading Web App"
 image: imgs/StudentWorkGrader.png
 description: Grade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates.
-order: 4
+order: 2
 categories: [Student Work]
 author: Duncan Gates
 date: "02-02-2024"

@@ -27,6 +27,28 @@ Reports on Teaching Lab Data
 
 ------------------------------------------------------------------------
 
+# SY24-25
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="70%"}
+## [Ongoing Report](https://tl-data.teachinglab.org/shiny/ongoing_report/)
+
+A dashboard to comprehensively provide an overview of Teaching Lab's L&R data, as well as handy site-specific summaries.
+:::
+
+::: {.column width="30%"}
+```{r ongoing-report-25, out.width=450, echo=F}
+knitr::include_graphics("Images/Reports/ongoing_report_25.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
 # SY23-24
 
 ------------------------------------------------------------------------
