@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "08-28-2024"
 ---
 
-[Go to the course assessments dashboard ➡️](https://teachinglabhq.shinyapps.io/course_assessments)
+[Go to the course assessments dashboard ➡️](https://tl-data.teachinglab.org/shiny/course_assessments/)
 
-[![](imgs/course_assessments_nav.gif)](https://teachinglabhq.shinyapps.io/course_assessments/)
+[![](imgs/course_assessments_nav.gif)](https://tl-data.teachinglab.org/shiny/course_assessments/)

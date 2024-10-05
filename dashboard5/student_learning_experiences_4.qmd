@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "02-02-2024"
 ---
 
-[Go to the student work grading app ➡️](https://teachinglabhq.shinyapps.io/student_work_samples)
+[Go to the student work grading app ➡️](https://tl-data.teachinglab.org/shiny/student_work_samples/)
 
-[![](imgs/StudentWorkGrader.png)](https://teachinglabhq.shinyapps.io/student_work_samples/)
+[![](imgs/StudentWorkGrader.png)](https://tl-data.teachinglab.org/shiny/student_work_samples/)

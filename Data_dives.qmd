@@ -49,7 +49,7 @@ knitr::include_graphics("images/data_dives/data_collection.png")
 ::: {.column width="70%"}
 ## [Evaluating Excellence: Insights into Our Student Work Analysis](https://docs.google.com/presentation/d/1yG2WX0EpVryk5drCzqm25YmJhb34lZN4RTTyDpIempY/edit)
 
-A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [student work graded dashboard](https://teachinglabhq.shinyapps.io/student_work_graded/) which has the ability to explore aggregate data and individual student work samples! Zoom recording [here](https://drive.google.com/file/d/1pm6LGwAuZF3r1fqqYQ261W_eYbOCBafn/view?usp=drive_link).
+A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [student work graded dashboard](https://tl-data.teachinglab.org/shiny/student_work_graded/) which has the ability to explore aggregate data and individual student work samples! Zoom recording [here](https://drive.google.com/file/d/1pm6LGwAuZF3r1fqqYQ261W_eYbOCBafn/view?usp=drive_link).
 :::
 
 ::: {.column width="30%"}
@@ -65,7 +65,7 @@ knitr::include_graphics("dashboard5/imgs/StudentWorkGraded.png")
 ::: {.column width="70%"}
 ## [Course Assessments: How We Know We’re Increasing Participant Knowledge](https://docs.google.com/presentation/d/1XvrtVlVVnz3b1Sr-_xdkYq2vV7eogtZ0feI3KHYyXO8/edit#slide=id.p)
 
-A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [course assessment dashboard](https://teachinglabhq.shinyapps.io/course_assessments/) which has many fun levels of data! Zoom recording [here](https://drive.google.com/drive/folders/17aIskSziSPidP4YbUjhkQL-uARv2XSP8).
+A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the [course assessment dashboard](https://tl-data.teachinglab.org/shiny/course_assessments/) which has many fun levels of data! Zoom recording [here](https://drive.google.com/drive/folders/17aIskSziSPidP4YbUjhkQL-uARv2XSP8).
 :::
 
 ::: {.column width="30%"}

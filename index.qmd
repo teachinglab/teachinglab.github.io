@@ -18,7 +18,7 @@ listing:
   id: front-list
   sort: "order"
   type: grid
-  grid-columns: 3
+  grid-columns: 4
   categories: false
   image-align: 'right'
   image-height: '100%'
@@ -59,14 +59,25 @@ p {
 
 ```
 
-```{r banner}
-#| echo: FALSE
-#| out.width: 60%
-#| fig.align: "center"
-knitr::include_graphics('teachinglab_logo.png')
-```
-
 <center>Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.</center>
+
+## FAQ
+
+-   How do I navigate the data hub?
+
+    -   Check out this Loom Tutorial for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
+
+-   How do I know what dashboard I want?
+
+    -   That depends on what kind of data you are looking for, one likely answer is the ongoing report since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the "Dashboards" Page, with detailed descriptions and tutorials describing their individual use cases.
+
+-   What is on here?
+
+    -   Here's a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R content under the resources page - check that out!
+
+-   How often does the data update?
+
+    -   It depends! Generally speaking with the frequency necessary for each data tools business case. For more details read [here](https://datahub.teachinglab.org/On_the_data.html).
 
 ## Pages
 
@@ -77,7 +88,7 @@ knitr::include_graphics('teachinglab_logo.png')
 
 [Duncan Gates](https://datahub.teachinglab.org/people/duncan_gates.html)
 
--   Data Analyst
+-   Staff Data Scientist
 -   [Learning & Research Staff Page](https://sites.google.com/teachinglab.org/staff-site/learning-research)
 -   [Slack](https://teachinglabhq.slack.com/team/U01MRR8KBRU)
 -   email: [duncan.gates\@teachinglab.org](mailto:duncan.gates@teachinglab.org){.email}

@@ -15,4 +15,4 @@ about:
       href: https://github.com/TeachingLabHQ
 ---
 
-On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an \[coach_facilitator_external_internal\] user. Please reach out to Duncan if your authentication is not correct.
+On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an \[coach_facilitator_external_internal\] user.

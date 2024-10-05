@@ -1,6 +1,6 @@
 ---
 title: "Dashboards"
-description: "Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates."
+description: "Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please reach out with any concerns."
 image: "Images/Dashboards/dashboards.png"
 listing:
   - id: dashboard_list
@@ -42,7 +42,7 @@ listing:
     categories: true
     image-align: 'right'
     image-height: '100%'
-    grid-columns: 4
+    grid-columns: 3
 format:
   html:
     page-layout: full

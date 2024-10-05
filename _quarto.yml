@@ -6,7 +6,7 @@ project:
     port: 4200
 
 website:
-  title: "Teaching Lab Data Hub"
+  title: "Data Hub"
   favicon: favicon.ico
   google-analytics: "G-2P0MJ9QPG4"
   cookie-consent: 
@@ -56,16 +56,10 @@ website:
         text: Home
       - text: "FY25 Trackers"
         menu:
-          - text: "Overall data collection by site"
-            href: https://teachinglabhq.shinyapps.io/OngoingSurveyCount/
-          - text: "NPS by site"
-            href: https://teachinglabhq.shinyapps.io/nps_monitoring_tl/
           - text: "Coaching Data Tracker Dashboard"
-            href: https://teachinglabhq.shinyapps.io/CoachingDataCollection/
+            href: https://tl-data.teachinglab.org/shiny/coaching_tracker/
           - text: "Coaching Data Collection Tracker Raw Spreadsheet"
             href: https://docs.google.com/spreadsheets/d/1zAFN3aN9Lh4QNH931xFp95M09tIcDn1WIbapTF3cgTI/edit?gid=0
-          - text: "Partner by Partner Goals Tracking"
-            href: https://docs.google.com/spreadsheets/d/1oFXoOf8p475BgWNuy0Cm9nZRitc1jxTrPSZRPqrvkqs/edit#gid=0
       - text: "Reports"
         href: Reports.qmd
       - text: "Dashboards"

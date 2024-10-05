@@ -1,13 +1,13 @@
 ---
 title: "Participant Feedback Rollup"
 image: imgs/FacilitatorRollup.png
-description: View all participant feedback data with facilitator competency feedback included in a more detailed breakdown. Oriented more towards considering specific facilitator feedback as opposed to overall site feedback.
+description: View all participant feedback data with facilitator competency feedback included in a more detailed breakdown. Oriented towards considering specific facilitator feedback as well as overall site feedback when utilizing filters to narrow in on a specific focus.
 order: 2
 categories: [Participant Feedback, NPS, Over Time, AI]
 author: Duncan Gates
 date: "08-28-2024"
 ---
 
-[Go to the facilitator feedback report ➡️](https://teachinglabhq.shinyapps.io/tl_facilitator_data)
+[Go to the facilitator feedback report ➡️]https://tl-data.teachinglab.org/shiny/tl_facilitator_data)
 
-[![](imgs/FacilitatorRollup.png)](https://teachinglabhq.shinyapps.io/tl_facilitator_data/)
+[![](imgs/FacilitatorRollup.png)](https://tl-data.teachinglab.org/shiny/tl_facilitator_data/)
