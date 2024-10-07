@@ -65,7 +65,7 @@ p {
 
 -   How do I navigate the data hub?
 
-    -   Check out this Loom Tutorial for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
+    -   Check out this Loom Tutorial (to be added soon) for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
 
 -   How do I know what dashboard I want?
 
