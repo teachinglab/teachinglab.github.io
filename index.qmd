@@ -65,7 +65,7 @@ p {
 
 -   How do I navigate the data hub?
 
-    -   Check out this Loom Tutorial (to be added soon) for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
+    -   Check out this Zoom Clip (to be added soon) for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
 
 -   How do I know what dashboard I want?
 
@@ -73,11 +73,15 @@ p {
 
 -   What is on here?
 
-    -   Here's a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R content under the resources page - check that out!
+    -   Here's a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!
 
 -   How often does the data update?
 
     -   It depends! Generally speaking with the frequency necessary for each data tools business case. For more details read [here](https://datahub.teachinglab.org/On_the_data.html).
+
+-   Where is data from previous years?
+
+    -   Check out the archives tab!
 
 ## Pages
 

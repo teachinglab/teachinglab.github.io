@@ -76,6 +76,8 @@ website:
             href: data_collection_overview.html
       - text: "Blog"
         href: blog.html
+      - text: "Archives"
+        href: archives.html
     right:
       - about.qmd
       - icon: github

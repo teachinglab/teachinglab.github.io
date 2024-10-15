@@ -29,7 +29,7 @@ knitr::include_graphics('Images/data_dives/data_dive_banner.png')
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Beyond the Basics: Mastering the Data Collection Lifecycle in Partner Projects](https://docs.google.com/presentation/d/1qz9my35ePG4JGdSAuoSfFHbaLBHh97uqOnkeW8CXDdI/edit)
 
@@ -41,11 +41,11 @@ Exploring the data collection lifecycle in partner projects. Zoom recording [her
 knitr::include_graphics("images/data_dives/data_collection.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Evaluating Excellence: Insights into Our Student Work Analysis](https://docs.google.com/presentation/d/1yG2WX0EpVryk5drCzqm25YmJhb34lZN4RTTyDpIempY/edit)
 
@@ -57,11 +57,11 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 knitr::include_graphics("dashboard5/imgs/StudentWorkGraded.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Course Assessments: How We Know We’re Increasing Participant Knowledge](https://docs.google.com/presentation/d/1XvrtVlVVnz3b1Sr-_xdkYq2vV7eogtZ0feI3KHYyXO8/edit#slide=id.p)
 
@@ -73,11 +73,11 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 knitr::include_graphics("Images/data_overview/course_assessments3.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Behind the Numbers: What We Measure & Why](https://docs.google.com/presentation/d/1n8k5ZqgUwQESjxcgzJ8E7CFNRVevssX-gyUgmealKnU/edit#slide=id.p)
 
@@ -89,6 +89,6 @@ A thorough review of why we use the Guskey Framework, specifically what does Tea
 knitr::include_graphics("Images/Reports/ongoing_report.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
