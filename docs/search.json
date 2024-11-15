@@ -123,7 +123,7 @@
     "href": "index.html#faq",
     "title": "Data Hub",
     "section": "FAQ",
-    "text": "FAQ\n\nHow do I navigate the data hub?\n\nCheck out this Zoom Clip (to be added soon) for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.\n\nHow do I know what dashboard I want?\n\nThat depends on what kind of data you are looking for, one likely answer is the ongoing report since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the “Dashboards” Page, with detailed descriptions and tutorials describing their individual use cases.\n\nWhat is on here?\n\nHere’s a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!\n\nHow often does the data update?\n\nIt depends! Generally speaking with the frequency necessary for each data tools business case. For more details read here.\n\nWhere is data from previous years?\n\nCheck out the archives tab!"
+    "text": "FAQ\n\nHow do I navigate the data hub?\n\nCheck out this Zoom Clip for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.\n\nHow do I know what dashboard I want?\n\nThat depends on what kind of data you are looking for, the most likely answer is the “Ongoing Report” on the “Reports” page, since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the “Dashboards” Page, with detailed descriptions and tutorials describing their individual use cases.\n\nWhat is on here?\n\nHere’s a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!\n\nHow often does the data update?\n\nAll custom dashboards should update within 10-15 minutes, except for the course assessments dashboard since they are highly customized. Trackers should update on an hourly, or daily basis, the FY24-25 Coaching Data Collection Tracker updates hourly. For specific details read here.\n\nWhere is data from previous years?\n\nCheck out the archives tab!"
   },
   {
     "objectID": "index.html#pages",
@@ -214,7 +214,7 @@
     "href": "On_the_data.html",
     "title": "On the Data",
     "section": "",
-    "text": "This page is currently under maintenance, check back later for more information!"
+    "text": "Data pipelines can be explored on the data route chart below. Everything updates based on API requests from Qualtrics to FERPA-protected data storage, which is then securely accessed via shiny dashboards.\n&lt;iframe frameborder=\"0\" style=\"width:100%;height:3180px;\" src=\"https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#G1xk-YR3Hpq8xURlrlfkmBXsRVW-sdTC7M\"&gt;&lt;/iframe&gt;"
   },
   {
     "objectID": "posts/post-with-code/index.html",
