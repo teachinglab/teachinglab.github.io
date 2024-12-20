@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "08-28-2024"
 ---
 
-\[Go to the facilitator feedback report ➡️\]https://tl-data.teachinglab.org/shiny/tl_facilitator_data)
+[Go to the facilitator feedback report ➡️](https://tl-data.teachinglab.org/shiny/tl_facilitator_data)
 
 [![](imgs/FacilitatorRollup.png)](https://tl-data.teachinglab.org/shiny/tl_facilitator_data/)

@@ -16,7 +16,7 @@
 <height>144</height>
 <width>144</width>
 </image>
-<generator>quarto-1.4.549</generator>
+<generator>quarto-1.6.39</generator>
 <lastBuildDate>Mon, 15 Jul 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Data Quality At Teaching Lab: Definitions, Examples, and Best Practices</title>
@@ -238,7 +238,11 @@
 <p>Students whose teachers participated in the professional learning intervention noted a <strong>greater frequency of culturally responsive and sustaining educational practices</strong> compared to their counterparts in the control group. This observation is particularly favorable considering the intervention’s emphasis on nurturing students’ mathematical identities by applying CRSE methodologies. Such feedback from students underscores the promising effects of the PL on improving teachers’ CRSE awareness and related instructional practices.&nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/image5.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/images/image5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/image5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/images/image5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+</figure>
+</div>
 <figcaption>Note: % positive indicators refers to the percentage of students that responded “often” or “always” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</figcaption>
 </figure>
 </div>
@@ -248,7 +252,11 @@
 <p>Alongside CRSE practices, <strong>students of teachers in the intervention group exhibited higher self-efficacy</strong> in math learning than students of teachers in the control group. This finding suggests that the intervention’s focus on promoting students’ unique math identities not only enhances instructional methods, but also cultivates students’ self-confidence in their learning abilities.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/image1.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/images/image1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."><img src="https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/images/image1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items."></a></p>
+</figure>
+</div>
 <figcaption>Note: % positive indicators refers to the percentage of students that responded “somewhat agree” or “agree” on a five-point Likert scale. The overall score is a composite measure derived from the individual items.</figcaption>
 </figure>
 </div>
@@ -262,7 +270,6 @@
 <h3 class="anchored" data-anchor-id="whats-next-for-student-surveys-at-teaching-lab"><strong>What’s Next for Student Surveys at Teaching Lab?</strong></h3>
 <p>The New Mexico research study has revealed promising results about Teaching Lab’s impact on not only teachers, but also students’ self-efficacy and self-reported CRSE practices. <strong>Our external evaluator, Dr.&nbsp;David Blazer from the University of Maryland, and his team are in the process of performing rigorous analysis and drafting a research report to detail the findings, which the L&amp;R team will share in the coming months.</strong> These data insights are invaluable for funders, external partners, and internal team members alike. Although it may require some legwork to secure district approval, we encourage more project teams to incorporate student surveys into their data collection plan.&nbsp;</p>
 <p>If you are interested in checking out our student survey results from other sites (i.e.&nbsp;EIC-Rochester, D11, or Arkansas), you can head to Section 7 of their respective <a href="https://teachinglabhq.shinyapps.io/OngoingReport_23_24/">Ongoing Reports</a>.</p>
-
 
 
 </section>
@@ -394,7 +401,6 @@
 <section id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner" class="level4">
 <h4 class="anchored" data-anchor-id="what-does-this-mean-for-how-i-interpret-feedback-data-for-my-partner"><strong>What does this mean for how I interpret feedback data for my partner?</strong></h4>
 <p>In wrapping up our analysis, it’s crucial to not only consider NPS but also to delve into other vital metrics that offer a broader view of customer satisfaction and loyalty Recently, at Teaching Lab, we’ve introduced targeted qualitative questions based on the respondents’ NPS category to enrich our understanding and add depth to our quantitative data. Detractors are optionally prompted with, “We’re sorry to hear that. What would you like us to improve on?” to identify areas for enhancement. Passive respondents are optionally prompted with “Thank you for your feedback. Would you like to tell us why you would score us that way?” to uncover underlying reasons for their neutrality. Lastly, promoters are asked, “We’re glad you like us. Would you like to tell us what exactly excites you?” to highlight strengths and areas of excellence. This strategic addition aims to provide a more nuanced view of our customer experience, allowing us to tailor our strategies more effectively to meet and exceed customer expectations. To see this new data (and more on participant feedback), head to the <a href="https://teachinglabhq.shinyapps.io/tl_facilitator_data/">Facilitator/Coaching Dashboard</a> and check out the NPS rollup!</p>
-
 
 
 </section>
@@ -582,7 +588,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
 <p><a href="images/image5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://datahub.teachinglab.org/blog/02_beyond_the_basics/images/image5.png" class="img-fluid"></a></p>
 <p><a href="images/image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://datahub.teachinglab.org/blog/02_beyond_the_basics/images/image1.png" class="img-fluid"></a></p>
 <p>The majority of Teaching Lab participants (1500) opt for fully In-Person Sessions (28%) or Virtual Sessions (25%); slightly fewer prefer a hybrid model (19%). Below we outline the advantages and considerations of different PL formats.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 39%">
@@ -677,7 +683,7 @@ Naturally, teachers want to invest their time and effort in activities that are 
 <p>Teaching Lab also analyzed over 2000+ work samples from our direct-to-teacher coaching partnerships in SY22-23. Overall, we saw a 14 percentage point increase in the percentage of students demonstrating proficiency on grade-level tasks for these sites, from 30% to 44% at the beginning and end of our time working with teachers. (Note: scoring a 2 on the 2-point student sample scoring rubrics is considered to demonstrate proficiency.)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/person_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
+<p><a href="images/person_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."><img src="https://datahub.teachinglab.org/blog/01_changing_the_game/images/person_plot.png" class="img-fluid figure-img" alt="Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s."></a></p>
 <figcaption>Each “student” represents 1%, looking at the students you can see more work got a 2 on the 2nd iteration of student work grading, and fewer received 0’s.</figcaption>
 </figure>
 </div>
@@ -690,7 +696,6 @@ Naturally, teachers want to invest their time and effort in activities that are 
 <p><strong>What’s next for understanding the impact of Teaching Lab’s coaching model?</strong></p>
 <p>As we grow and scale our model, data collection and analysis is becoming more robust and richer. By utilizing data collected from the coaching log, the Learning &amp; Research Team will explore correlations between the frequency and duration of coaching sessions, the specific areas of focus and goals within coaching cycles, and the resulting outcomes at the end of SY23-24. We will also participate in an exploratory <a href="https://annenberg.brown.edu/rppl">RPPL</a> study to better understand the “moves” our coaches make with teachers and how they could be leveraged in the development of an AI feedback tool. Finally, through two federal grants that Teaching Lab has won, the <a href="https://oese.ed.gov/offices/office-of-discretionary-grants-support-services/innovation-early-learning/education-innovation-and-research-eir/">Education Innovation Research</a> mid-phase grant in partnership with <a href="https://new.assistments.org/">ASSISTments</a> and the <a href="https://oese.ed.gov/offices/office-of-discretionary-grants-support-services/effective-educator-development-programs/teacher-and-school-leader-incentive-program/">Teacher and School Leader Incentive</a> grant, we will engage in randomized control trials that will rigorously evaluate the effectiveness of our coaching model.</p>
 <p>For more information on Teaching Lab’s impact, see <a href="https://view.genial.ly/653ad43e39b26a00115c9a89/interactive-image-teaching-labs-impact">here.</a></p>
-
 
 
 </section>
