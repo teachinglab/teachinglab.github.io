@@ -1,5 +1,5 @@
 ---
-title: "Participant Feedback Individual Feedback"
+title: "ndividualized Participant Feedback Dashboards for Facilitators and Coaches"
 image: imgs/FacilitatorRollup.png
 description: View all participant feedback data with facilitator competency feedback based on your google login.
 order: 2
