@@ -1,0 +1,13 @@
+---
+title: "Participant Feedback Individual Feedback"
+image: imgs/FacilitatorRollup.png
+description: View all participant feedback data with facilitator competency feedback based on your google login.
+order: 2
+categories: [Participant Feedback, NPS, Over Time, AI]
+author: Duncan Gates
+date: "01-23-2025"
+---
+
+[Go to the individualized facilitator feedback dashboard ➡️](https://tl-data.teachinglab.org/shiny/tl_individual_feedback/)
+
+[![](imgs/FacilitatorRollup.png)](https://tl-data.teachinglab.org/shiny/tl_facilitator_data/)

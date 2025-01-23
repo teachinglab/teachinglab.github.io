@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Duncan Gates">
+<meta name="dcterms.date" content="2025-01-23">
+<meta name="description" content="View all participant feedback data with facilitator competency feedback based on your google login.">
 
-<title>Data Hub</title>
+<title>Participant Feedback Individual Feedback – Data Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7ed987945253a767ac9d6b1689810c8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c1ffca22f5e98574f390b5d7a84aa886.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7ed987945253a767ac9d6b1689810c8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c1ffca22f5e98574f390b5d7a84aa886.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-front-list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-front-list'] = new List('listing-front-list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -130,43 +102,14 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="– Data Hub">
-<meta property="og:description" content="Website for sharing and exploring Teaching Lab data and resources.">
-<meta property="og:image" content="https://datahub.teachinglab.org/teachinglab_logo.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Participant Feedback Individual Feedback – Data Hub">
+<meta property="og:description" content="View all participant feedback data with facilitator competency feedback based on your google login.">
+<meta property="og:image" content="https://datahub.teachinglab.org/dashboard/imgs/FacilitatorRollup.png">
 <meta property="og:site_name" content="Data Hub">
-<meta property="og:image:height" content="451">
-<meta property="og:image:width" content="1500">
+<meta property="og:image:height" content="1568">
+<meta property="og:image:width" content="3006">
 </head>
 
 <body class="nav-fixed">
@@ -176,7 +119,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Hub</span>
     </a>
   </div>
@@ -187,7 +130,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -210,11 +153,11 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Reports.html"> 
+    <a class="nav-link" href="../Reports.html"> 
 <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dashboards.html"> 
+    <a class="nav-link" href="../Dashboards.html"> 
 <span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -223,35 +166,35 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
         <li>
-    <a class="dropdown-item" href="./evaluation_plan.html">
+    <a class="dropdown-item" href="../evaluation_plan.html">
  <span class="dropdown-text">Evaluation Plan</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Data_dives.html">
+    <a class="dropdown-item" href="../Data_dives.html">
  <span class="dropdown-text">Data Dives</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./On_the_data.html">
+    <a class="dropdown-item" href="../On_the_data.html">
  <span class="dropdown-text">On the Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data_collection_overview.html">
+    <a class="dropdown-item" href="../data_collection_overview.html">
  <span class="dropdown-text">Data Collection Overview</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archives.html"> 
+    <a class="nav-link" href="../archives.html"> 
 <span class="menu-text">Archives</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -268,263 +211,61 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Participant Feedback Individual Feedback</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Participant Feedback</div>
+    <div class="quarto-category">NPS</div>
+    <div class="quarto-category">Over Time</div>
+    <div class="quarto-category">AI</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    View all participant feedback data with facilitator competency feedback based on your google login.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-
-<div class="cell">
-<style type="text/css">
-.quarto-title {
-    display: none;
-  }
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Duncan Gates </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 23, 2025</p>
+    </div>
+  </div>
   
-.description {
-    display: none;
-  }
+    
+  </div>
   
-div.quarto-post .metadata {
-    display: none;
-  }
-  
-div.quarto-post .thumbnail {
-    flex-basis: 50%;
-}
-
-p {
-    max-width: 100%;
-}
-
-</style>
-</div>
-<center>
-Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.
-</center>
-<section id="faq" class="level2">
-<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
-<ul>
-<li><p>How do I navigate the data hub?</p>
-<ul>
-<li>Check out <a href="https://us02web.zoom.us/clips/share/8-SmBuAp23k0bKP0fnL59kyCcG-IzMSYEAslNCHTKjVzdTjthA6MSvmTGKO2GSm3DrR2vPP6.gFkJWCOhvBE0OO3Y" target="_blank">this Zoom Clip</a> for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.</li>
-</ul></li>
-<li><p>How do I know what dashboard I want?</p>
-<ul>
-<li>That depends on what kind of data you are looking for, the <em>most likely answer</em> is the “Ongoing Report” on the “Reports” page, since it has a broad overview of all L&amp;R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the “Dashboards” Page, with detailed descriptions and tutorials describing their individual use cases.</li>
-</ul></li>
-<li><p>What is on here?</p>
-<ul>
-<li>Here’s a short list: L&amp;R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&amp;R informative content under the resources page - check that out!</li>
-</ul></li>
-<li><p>How often does the data update?</p>
-<ul>
-<li>All custom dashboards should update within 10-15 minutes, except for the course assessments dashboard since they are highly customized. Trackers should update on an hourly, or daily basis, the FY24-25 Coaching Data Collection Tracker updates <em>hourly</em>. For specific details read <a href="https://datahub.teachinglab.org/On_the_data.html">here</a>.</li>
-</ul></li>
-<li><p>Where is data from previous years?</p>
-<ul>
-<li>Check out the archives tab!</li>
-</ul></li>
-</ul>
-</section>
-<section id="pages" class="level2">
-<h2 class="anchored" data-anchor-id="pages">Pages</h2>
-<div id="listing-front-list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1724900677156" data-listing-reading-time-sort="2" data-listing-word-count-sort="239">
-<a href="./Reports.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/Reports/reports.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Reports
-</h5>
-<div class="card-text listing-description">
-Reports from previous years, and this year’s ongoing report which provides continuous updated data by site.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1724913058744" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
-<a href="./Dashboards.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/Dashboards/dashboards.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dashboards
-</h5>
-<div class="card-text listing-description">
-Dashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1706992107024" data-listing-reading-time-sort="6" data-listing-word-count-sort="1085">
-<a href="./evaluation_plan.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/Surveys/guskey_framework.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Teaching Lab: Professional Learning Evaluation Plan
-</h5>
-<div class="card-text listing-description">
-A background on who, why, and what we measure with links to specific survey instruments
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1710256386407" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
-<a href="./blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/blog/blog_banner_2.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blog
-</h5>
-<div class="card-text listing-description">
-Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1729016462215" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
-<a href="./Data_dives.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/data_dives/data_dive.webp" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Dives
-</h5>
-<div class="card-text listing-description">
-The Learning &amp; Research team’s series on how, what, why and where we use data - with video recordings and slides linked.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1734716711996" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
-<a href="./Org_goals.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/tl_scrollytell.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Organizational Goal Tracking
-</h5>
-<div class="card-text listing-description">
-Check in on how Teaching Lab is doing at achieving it’s organizational goals - animated by quarter with the ability to view each quarter individually
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1737652038094" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
-<a href="./On_the_data.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./Images/on_the_data/on_the_data.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-On the Data
-</h5>
-<div class="card-text listing-description">
-Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7">
-<a href="https://www.loom.com/profile/Duncan-6058b002-e045-437d-84b5-a551c871f053" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="teachinglab_logo.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Loom Channel
-</h5>
-<div class="card-text listing-description">
-This channel tutorials for dashboards and reports and the learning evaluation plan.
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p><a href="https://datahub.teachinglab.org/people/duncan_gates.html">Duncan Gates</a></p>
-<ul>
-<li>Staff Data Scientist</li>
-<li><a href="https://sites.google.com/teachinglab.org/staff-site/learning-research">Learning &amp; Research Staff Page</a></li>
-<li><a href="https://teachinglabhq.slack.com/team/U01MRR8KBRU">Slack</a></li>
-<li>email: <a href="mailto:duncan.gates@teachinglab.org" class="email">duncan.gates@teachinglab.org</a></li>
-<li>Current Time Zone: MST</li>
-</ul>
 
 
+</header>
 
-</section>
+
+<p><a href="https://tl-data.teachinglab.org/shiny/tl_individual_feedback/">Go to the individualized facilitator feedback dashboard ➡️</a></p>
+<p><a href="https://tl-data.teachinglab.org/shiny/tl_facilitator_data/"><img src="imgs/FacilitatorRollup.png" class="img-fluid"></a></p>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1099,22 +840,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../about.html">
 <p>About</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./On_the_data.html">
+    <a class="nav-link" href="../On_the_data.html">
 <p>FAQ</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./license.html">
+    <a class="nav-link" href="../license.html">
 <p>License</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./trademark.html">
+    <a class="nav-link" href="../trademark.html">
 <p>Trademark</p>
 </a>
   </li>  
