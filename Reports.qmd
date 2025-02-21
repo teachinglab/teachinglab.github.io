@@ -109,7 +109,7 @@ knitr::include_graphics("Images/Reports/cleveland_lbtt.png")
 ::: {.column width="70%"}
 ## [Previous Year's Reports (Static)](https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5)
 
-R-studio project template and workflow for sharing psychological research projects in the form of a website.
+Reportgs from SY22-23. To view, click the link, find the relevant file according to its name, and then download that file. Once it is downloaded right click on it and open the HTML file in Google Chrome, Safari, or another web browser of choice.
 :::
 
 ::: {.column width="30%"}
@@ -129,7 +129,7 @@ knitr::include_graphics("Images/Reports/google_drive.png")
 ::: {.column width="70%"}
 ## [SY21-22 Reports (Static)](https://drive.google.com/drive/folders/1QB6co7iB38ECPWfSzg82roANgQBcy50C)
 
-R-studio project template and workflow for sharing psychological research projects in the form of a website.
+Reports from SY21-22. To view, click the link, find the relevant file according to its name, and then download that file. Once it is downloaded right click on it and open the HTML file in Google Chrome, Safari, or another web browser of choice.
 :::
 
 ::: {.column width="30%"}
@@ -149,7 +149,7 @@ knitr::include_graphics("Images/Reports/google_drive.png")
 ::: {.column width="70%"}
 ## [SY20-21 Reports (Static)](https://drive.google.com/drive/folders/1hqjczciGHCfl5tdu_z8hyIXI0D5gKUip)
 
-R-studio project template and workflow for sharing psychological research projects in the form of a website.
+Reports from SY20-21. To view, click the link, find the relevant file according to its name, and then download that file. Once it is downloaded right click on it and open the HTML file in Google Chrome, Safari, or another web browser of choice.
 :::
 
 ::: {.column width="30%"}
