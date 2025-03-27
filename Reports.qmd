@@ -31,7 +31,7 @@ Reports on Teaching Lab Data
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Ongoing Report](https://tl-data.teachinglab.org/shiny/ongoing_report/)
 
@@ -43,7 +43,7 @@ A dashboard to comprehensively provide an overview of Teaching Lab's L&R data, a
 knitr::include_graphics("Images/Reports/ongoing_report_25.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ knitr::include_graphics("Images/Reports/ongoing_report_25.png")
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Ongoing Report](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/)
 
@@ -65,11 +65,11 @@ A fully compiled, updating, interactive AI-utilizing report for all L&R data rep
 knitr::include_graphics("Images/Reports/ongoing_report.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [CPS Skyline PL Participant Feedback](https://lookerstudio.google.com/reporting/d893b206-4d7f-4c87-966a-e7f9f733f529/page/UJUkD?s=rFEFXNvc2RE)
 
@@ -81,11 +81,11 @@ A custom built CPS Skyline Report on Participant Feedback
 knitr::include_graphics("Images/Reports/skyline.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Cleveland SY23-24 LBTT](https://lookerstudio.google.com/reporting/e105f773-a9de-4557-854c-25507d6b532b/page/juHnD?s=toOvTMv_m4U)
 
@@ -97,7 +97,7 @@ A custom built report on trends, environment, planning, and writing for Clevelan
 knitr::include_graphics("Images/Reports/cleveland_lbtt.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ knitr::include_graphics("Images/Reports/cleveland_lbtt.png")
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [Previous Year's Reports (Static)](https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5)
 
@@ -117,7 +117,7 @@ Reportgs from SY22-23. To view, click the link, find the relevant file according
 knitr::include_graphics("Images/Reports/google_drive.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -125,7 +125,7 @@ knitr::include_graphics("Images/Reports/google_drive.png")
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [SY21-22 Reports (Static)](https://drive.google.com/drive/folders/1QB6co7iB38ECPWfSzg82roANgQBcy50C)
 
@@ -137,7 +137,7 @@ Reports from SY21-22. To view, click the link, find the relevant file according 
 knitr::include_graphics("Images/Reports/google_drive.png")
 ```
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -145,7 +145,7 @@ knitr::include_graphics("Images/Reports/google_drive.png")
 
 ------------------------------------------------------------------------
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
 ## [SY20-21 Reports (Static)](https://drive.google.com/drive/folders/1hqjczciGHCfl5tdu_z8hyIXI0D5gKUip)
 
@@ -157,4 +157,4 @@ Reports from SY20-21. To view, click the link, find the relevant file according 
 knitr::include_graphics("Images/Reports/google_drive.png")
 ```
 :::
-:::
+:::::
