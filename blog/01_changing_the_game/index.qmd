@@ -48,7 +48,7 @@ We saw the most growth in Chicago Network 7 and New York City District 9.
 \
 \
 
-Finally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. **Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments**. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.![](images/student_performance.png "Chart"){width="774"}
+Finally, for one of our district partners, we were able to conduct the first-ever classroom-level analysis of student assessment data in which we compared student assessment scores from classrooms Teaching Lab coached to scores from classrooms we did not. **Results demonstrated that classrooms of teachers coached by Teaching Lab outperformed classrooms not coached by Teaching Lab at the same schools on early literacy assessments**. Specifically, Teaching Lab-coached classrooms had a higher average percentage of students at/above benchmark in the spring (29 percentage point difference) and demonstrating typical/better progress from fall to spring (18 percentage point difference) compared to non-Teaching Lab classrooms.
 
 **What’s next for understanding the impact of Teaching Lab’s coaching model?**
 

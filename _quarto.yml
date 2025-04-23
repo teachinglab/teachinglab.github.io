@@ -54,6 +54,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: pds.qmd
+        text: PDS
       - text: "FY25 Trackers"
         menu:
           - text: "Coaching Data Tracker Dashboard"
