@@ -1,7 +1,9 @@
 ---
-title: "PDS"
-description: "FY25 PDS Dashboards"
+title: "FY25 PDS - Select Your Name Below to view your Individual Dashboard"
+description: "While you're here - did you know about the data hub? Check out all the other resources available here on the dashboards page!"
 image: "Images/pds/pds.png"
+execute:
+  cache: false
 format:
   html:
     page-layout: full
@@ -20,15 +22,20 @@ library(dplyr)
 
 # Generate HTML links
 html_links <- pds_dashboards |>
-  mutate(link_html = glue("<a href='{Link}' target='_blank'>{Person}</a>")) |>
-  pull(link_html)
+  dplyr::mutate(link_html = glue::glue("<a href='{Link}' target='_blank'>{Person}</a>")) |>
+  dplyr::pull(link_html)
+
+length(html_links) <- ceiling(length(html_links) / 4) * 4
+
+# Replace NA with empty strings
+html_links[is.na(html_links)] <- ""
 
 # Break into chunks of 3
-html_matrix <- matrix(html_links, ncol = 3, byrow = TRUE)
+html_matrix <- matrix(html_links, ncol = 4, byrow = TRUE)
 
 # Turn into HTML rows
 html_output <- apply(html_matrix, 1, function(row) {
-  paste("<div style='display: flex; gap: 2em;'>", 
+  paste("<div style='display: flex; gap: 2em; margin-bottom: 0.35em;'>", 
         paste0("<div style='flex: 1;'>", row, "</div>", collapse = ""), 
         "</div>")
 }) |> paste(collapse = "\n")
