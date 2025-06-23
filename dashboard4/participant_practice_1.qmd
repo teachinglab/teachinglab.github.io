@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "08-28-2024"
 ---
 
-[Go to the IPG Raw/Downloadable Dashboard ➡️](https://tl-data.teachinglab.org/shiny/IPGRawDataDashboard/)
+[Go to the IPG Raw/Downloadable Dashboard ➡️](https://tl-data.teachinglab.org/ipg_raw_reports/)
 
-[![](imgs/IPGRawDashboard.png)](https://tl-data.teachinglab.org/shiny/IPGRawDataDashboard/)
+[![](imgs/IPGRawDashboard.png)](https://tl-data.teachinglab.org/ipg_raw_reports/)

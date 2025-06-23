@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "01-23-2025"
 ---
 
-[Go to the individualized facilitator feedback dashboard ➡️](https://tl-data.teachinglab.org/shiny/tl_individual_feedback/)
+[Go to the individualized facilitator feedback dashboard ➡️](https://tl-data.teachinglab.org/individual_feedback/)
 
-[![](imgs/FacilitatorRollup.png)](https://tl-data.teachinglab.org/shiny/tl_facilitator_data/)
+[![](imgs/FacilitatorRollup.png)](https://tl-data.teachinglab.org/participant_feedback/)

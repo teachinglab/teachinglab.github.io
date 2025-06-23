@@ -58,12 +58,8 @@ website:
         text: PDS
       - text: "FY25 Trackers"
         menu:
-          - text: "Coaching Data Tracker Dashboard"
-            href: https://tl-data.teachinglab.org/shiny/coaching_tracker/
           - text: "Coaching Data Collection Tracker Raw Spreadsheet"
             href: https://docs.google.com/spreadsheets/d/1zAFN3aN9Lh4QNH931xFp95M09tIcDn1WIbapTF3cgTI/edit?gid=0
-          - text: "Data Collection Tracker"
-            href: https://tl-data.teachinglab.org/pds_table/
       - text: "Reports"
         href: Reports.qmd
       - text: "Dashboards"

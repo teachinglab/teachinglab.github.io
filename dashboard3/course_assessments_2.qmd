@@ -8,6 +8,6 @@ author: Duncan Gates
 date: "08-28-2024"
 ---
 
-[Go to section 2 of the Ongoing Report ➡️](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section2)
+[Go to section 2 of the Ongoing Report ➡️](https://tl-data.teachinglab.org/ongoing_report/?section=section2)
 
-[![](imgs/ongoing_report_24_25.png)](https://tl-data.teachinglab.org/shiny/ongoing_report/?section=section2)
+[![](imgs/ongoing_report_24_25.png)](https://tl-data.teachinglab.org/ongoing_report/?section=section2)

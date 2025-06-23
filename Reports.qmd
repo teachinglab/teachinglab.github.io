@@ -33,7 +33,7 @@ Reports on Teaching Lab Data
 
 ::::: columns
 ::: {.column width="70%"}
-## [Ongoing Report](https://tl-data.teachinglab.org/shiny/ongoing_report/)
+## [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/)
 
 A dashboard to comprehensively provide an overview of Teaching Lab's L&R data, as well as handy site-specific summaries.
 :::
