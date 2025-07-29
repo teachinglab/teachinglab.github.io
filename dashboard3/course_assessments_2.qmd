@@ -1,9 +1,9 @@
 ---
-title: "Course Assessments // Ongoing Report"
+title: "Learning Assessments // Ongoing Report"
 image: imgs/ongoing_report_24_25.png
-description: View course assessments overall pre-post scores in section 2 the ongoing report!
+description: View learning assessments overall pre-post scores in section 2 the ongoing report!
 order: 2
-categories: [Course Assessments, Mindsets]
+categories: [Learning Assessments, Mindsets]
 author: Duncan Gates
 date: "08-28-2024"
 ---

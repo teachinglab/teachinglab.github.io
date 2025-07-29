@@ -75,7 +75,7 @@ Participant mindsets come from the diagnostic educator survey and follow up educ
 
 ## Participant Knowledge
 
-Participants that completed <a href = "https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">course assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.
+Participants that completed <a href = "https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">learning assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.
 
 ::: {#dashboard3_list}
 :::

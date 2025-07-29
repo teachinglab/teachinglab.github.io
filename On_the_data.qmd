@@ -1,7 +1,7 @@
 ---
 title: "On the Data"
 image: "Images/on_the_data/on_the_data.png"
-description: Learn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.
+description: Learn how often the data updates, where it comes from, and how items like student work, learning assessments, or mindsets are scored.
 footer: "Confidential"
 ---
 

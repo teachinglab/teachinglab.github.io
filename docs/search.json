@@ -25,7 +25,7 @@
     "href": "Dashboards.html#participant-knowledge",
     "title": "Dashboards",
     "section": "Participant Knowledge",
-    "text": "Participant Knowledge\nParticipants that completed course assessments will answer multiple choice quiz questions that address pedagogical content knowledge.\n\n\n\n\n\n\n\n\n\n\nCourse Assessments Dashboard\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments data as % correct before/after, % correct by each question, and finally % selected within each question!\n\n\n\nDuncan Gates\n\n\nAug 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCourse Assessments // Ongoing Report\n\n\n\nCourse Assessments\n\n\nMindsets\n\n\n\nView course assessments overall pre-post scores in section 2 the ongoing report!\n\n\n\nDuncan Gates\n\n\nAug 28, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Participant Knowledge\nParticipants that completed learning assessments will answer multiple choice quiz questions that address pedagogical content knowledge.\n\n\n\n\n\n\n\n\n\n\nLearning Assessments Dashboard\n\n\n\nLearning Assessments\n\n\nMindsets\n\n\n\nView learning assessments data as % correct before/after, % correct by each question, and finally % selected within each question!\n\n\n\nDuncan Gates\n\n\nAug 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLearning Assessments // Ongoing Report\n\n\n\nLearning Assessments\n\n\nMindsets\n\n\n\nView learning assessments overall pre-post scores in section 2 the ongoing report!\n\n\n\nDuncan Gates\n\n\nAug 28, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Dashboards.html#participant-practices",
@@ -130,14 +130,14 @@
     "href": "index.html#faq",
     "title": "Data Hub",
     "section": "FAQ",
-    "text": "FAQ\n\nHow do I navigate the data hub?\n\nCheck out this Zoom Clip for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.\n\nHow do I know what dashboard I want?\n\nThat depends on what kind of data you are looking for, the most likely answer is the “Ongoing Report” on the “Reports” page, since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the “Dashboards” Page, with detailed descriptions and tutorials describing their individual use cases.\n\nWhat is on here?\n\nHere’s a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!\n\nHow often does the data update?\n\nAll custom dashboards should update within 10-15 minutes, except for the course assessments dashboard since they are highly customized. Trackers should update on an hourly, or daily basis, the FY24-25 Coaching Data Collection Tracker updates hourly. For specific details read here.\n\nWhere is data from previous years?\n\nCheck out the archives tab!"
+    "text": "FAQ\n\nHow do I navigate the data hub?\n\nCheck out this Zoom Clip for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.\n\nHow do I know what dashboard I want?\n\nThat depends on what kind of data you are looking for, the most likely answer is the “Ongoing Report” on the “Reports” page, since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the “Dashboards” Page, with detailed descriptions and tutorials describing their individual use cases.\n\nWhat is on here?\n\nHere’s a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!\n\nHow often does the data update?\n\nAll custom dashboards should update within 10-15 minutes, except for the learning assessments dashboard since assessments are highly customized. Trackers should update on an hourly, or daily basis, the FY24-25 Coaching Data Collection Tracker updates hourly. For specific details read here.\n\nWhere is data from previous years?\n\nCheck out the archives tab!"
   },
   {
     "objectID": "index.html#pages",
     "href": "index.html#pages",
     "title": "Data Hub",
     "section": "Pages",
-    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nReports\n\n\nReports from previous years, and this year’s ongoing report which provides continuous updated data by site.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards\n\n\nDashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching Lab: Professional Learning Evaluation Plan\n\n\nA background on who, why, and what we measure with links to specific survey instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\nVarious musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Dives\n\n\nThe Learning & Research team’s series on how, what, why and where we use data - with video recordings and slides linked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganizational Goal Tracking\n\n\nCheck in on how Teaching Lab is doing at achieving it’s organizational goals - animated by quarter with the ability to view each quarter individually\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn the Data\n\n\nLearn how often the data updates, where it comes from, and how items like student work, course assessments, or mindsets are scored.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoom Channel\n\n\nThis channel tutorials for dashboards and reports and the learning evaluation plan.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Pages\n\n\n\n\n\n\n\n\n\n\nReports\n\n\nReports from previous years, and this year’s ongoing report which provides continuous updated data by site.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards\n\n\nDashboards are available to review data frome each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching Lab: Professional Learning Evaluation Plan\n\n\nA background on who, why, and what we measure with links to specific survey instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\nVarious musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Dives\n\n\nThe Learning & Research team’s series on how, what, why and where we use data - with video recordings and slides linked.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganizational Goal Tracking\n\n\nCheck in on how Teaching Lab is doing at achieving it’s organizational goals - animated by quarter with the ability to view each quarter individually\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn the Data\n\n\nLearn how often the data updates, where it comes from, and how items like student work, learning assessments, or mindsets are scored.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLoom Channel\n\n\nThis channel tutorials for dashboards and reports and the learning evaluation plan.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#contact",
@@ -184,9 +184,9 @@
   {
     "objectID": "dashboard3/course_assessments.html",
     "href": "dashboard3/course_assessments.html",
-    "title": "Course Assessments Dashboard",
+    "title": "Learning Assessments Dashboard",
     "section": "",
-    "text": "Go to the course assessments dashboard ➡️"
+    "text": "Go to the learning assessments dashboard ➡️"
   },
   {
     "objectID": "dashboard2/educator_survey.html",
@@ -254,7 +254,7 @@
   {
     "objectID": "dashboard3/course_assessments_2.html",
     "href": "dashboard3/course_assessments_2.html",
-    "title": "Course Assessments // Ongoing Report",
+    "title": "Learning Assessments // Ongoing Report",
     "section": "",
     "text": "Go to section 2 of the Ongoing Report ➡️"
   },
