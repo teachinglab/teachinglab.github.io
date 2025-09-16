@@ -56,10 +56,10 @@ website:
         text: Home
       - href: pds.qmd
         text: PDS
-      - text: "FY25 Trackers"
+      - text: "FY26 Trackers"
         menu:
-          - text: "Coaching Data Collection Tracker Raw Spreadsheet"
-            href: https://docs.google.com/spreadsheets/d/1zAFN3aN9Lh4QNH931xFp95M09tIcDn1WIbapTF3cgTI/edit?gid=0
+          - text: "Data Collection Tracker"
+            href: https://docs.google.com/spreadsheets/d/1V3yu5vfrbeRWyMn0nY6POHZHehBpO28QayY2hn6pAe4/edit?gid=0#gid=0
       - text: "Reports"
         href: Reports.qmd
       - text: "Dashboards"
