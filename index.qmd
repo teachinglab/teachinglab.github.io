@@ -77,7 +77,7 @@ p {
 
 -   How often does the data update?
 
-    -   All custom dashboards should update within 10-15 minutes, except for the learning assessments dashboard since assessments are highly customized. Trackers should update on an hourly, or daily basis, the FY24-25 Coaching Data Collection Tracker updates *hourly*. For specific details read [here](https://datahub.teachinglab.org/On_the_data.html).
+    -   All dashboards (except for the learning assessments, and CAP dashboard) should update within 10-15 minutes. Trackers should update on an hourly, or daily basis, the FY25-26 Coaching Data Collection Tracker updates *every 3 hours*. For specific details read [here](https://datahub.teachinglab.org/On_the_data.html).
 
 -   Where is data from previous years?
 
