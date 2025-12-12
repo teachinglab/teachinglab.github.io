@@ -1,0 +1,7 @@
+---
+title: "Gifts Table"
+---
+
+<iframe src="gifts_table/all_goody_gifts.html" width="100%" height="900">
+
+</iframe>
