@@ -80,6 +80,8 @@ website:
         href: blog.html
       - text: "Archives"
         href: archives.html
+      - text: "Program FAQ"
+        href: https://docs.google.com/document/d/1sBJP9Bgl-gt-_HELb9Z6QvGVjimumAWg5xRAt-bea_c/edit?tab=t.0
     right:
       - about.qmd
       - icon: github
