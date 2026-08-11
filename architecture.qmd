@@ -415,9 +415,9 @@ scheduling.
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-11 02:31 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-11 02:48 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
-**Connect server:** https://tl-data.teachinglab.org/ — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
+**Connect server:** https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
 ### Active scheduled jobs (30)
 
