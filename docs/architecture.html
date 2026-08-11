@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a9a9abb714d0f28914fd5d62775fe131.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-696db09837577b101ad78de6518e0afb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a9a9abb714d0f28914fd5d62775fe131.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2df48709b76d14063553b40dabc082e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c29a6f502cd3fa13139a543f2cde6073.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2df48709b76d14063553b40dabc082e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,6 +108,10 @@ cookieconsent.run({
 });
 </script> 
   
+<meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -397,11 +401,9 @@ cookieconsent.run({
   <li><a href="#event-driven-flows" id="toc-event-driven-flows" class="nav-link" data-scroll-target="#event-driven-flows">Event-driven flows</a></li>
   <li><a href="#cross-system-data-routing" id="toc-cross-system-data-routing" class="nav-link" data-scroll-target="#cross-system-data-routing">Cross-system data routing</a></li>
   <li><a href="#s3-buckets" id="toc-s3-buckets" class="nav-link" data-scroll-target="#s3-buckets">S3 buckets</a></li>
-  <li><a href="#student-work-a-google-sheet-as-the-backend" id="toc-student-work-a-google-sheet-as-the-backend" class="nav-link" data-scroll-target="#student-work-a-google-sheet-as-the-backend">Student work: a Google Sheet as the backend</a></li>
   <li><a href="#operational-monitoring" id="toc-operational-monitoring" class="nav-link" data-scroll-target="#operational-monitoring">Operational monitoring</a></li>
   <li><a href="#cicd-github-actions-in-the-package-repo" id="toc-cicd-github-actions-in-the-package-repo" class="nav-link" data-scroll-target="#cicd-github-actions-in-the-package-repo">CI/CD (GitHub Actions in the package repo)</a></li>
   <li><a href="#working-with-the-connect-schedules-api" id="toc-working-with-the-connect-schedules-api" class="nav-link" data-scroll-target="#working-with-the-connect-schedules-api">Working with the Connect schedules API</a></li>
-  <li><a href="#loose-ends" id="toc-loose-ends" class="nav-link" data-scroll-target="#loose-ends">Loose ends</a></li>
   <li><a href="#live-connect-inventory" id="toc-live-connect-inventory" class="nav-link" data-scroll-target="#live-connect-inventory">Live Connect inventory</a>
   <ul class="collapse">
   <li><a href="#active-scheduled-jobs-30" id="toc-active-scheduled-jobs-30" class="nav-link" data-scroll-target="#active-scheduled-jobs-30">Active scheduled jobs (30)</a></li>
@@ -473,28 +475,33 @@ cookieconsent.run({
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>dungates/TeachingLab</code> (the package repo)</td>
+<td><code>TeachingLab</code> (the package repo)</td>
 <td>R package, scheduled Connect jobs (<code>posit_automations/</code>), Connect plumber APIs (<code>api/</code>), dashboards</td>
 <td><code>rsconnect::deploy*</code> to Posit Connect</td>
 </tr>
 <tr class="even">
-<td><code>dungates/ec2_tl_scripts</code></td>
+<td><code>ec2_tl_scripts</code></td>
 <td>Qualtrics → S3 survey ETL scripts</td>
 <td>Lives at <code>/home/ubuntu/scripts</code> on the EC2 box</td>
 </tr>
 <tr class="odd">
-<td><code>dungates/tl-api</code></td>
+<td><code>tl-api</code></td>
 <td>Standalone plumber API (port 8000)</td>
 <td>Lives at <code>/home/ubuntu/plumber-apis</code>, run by pm2 (<code>@reboot pm2 resurrect</code>)</td>
 </tr>
 <tr class="even">
-<td><code>TeachingLabHQ/teachinglab.github.io</code></td>
+<td><code>teachinglab.github.io</code></td>
 <td>Data Hub Quarto site</td>
 <td>Azure Static Web Apps (Entra ID auth) at datahub.teachinglab.org</td>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>flowchart LR
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
     subgraph sources["Data Sources"]
         qualtrics["Qualtrics&lt;br/&gt;(surveys.teachinglab.org)"]
         monday["Monday.com boards&lt;br/&gt;(coaching logs, rosters,&lt;br/&gt;project log, logistics)"]
@@ -565,13 +572,24 @@ cookieconsent.run({
     class s3 aws
     class pins,sched_jobs,connect_apis,apps connect
     class update_ep,userdb_ep,connect_ep,sheets_ep,etl_scripts ec2svc
-    class dashboards,datahub,emails output</code></pre>
+    class dashboards,datahub,emails output
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p><em>Solid arrows = scheduled or on-load; dashed = event-driven (webhooks, survey-flow web services). Node colors: red Monday, teal Qualtrics, green Google, orange AWS, slate EC2 services, blue Posit Connect / outputs.</em></p>
 </section>
 <section id="event-driven-flows" class="level2">
 <h2 class="anchored" data-anchor-id="event-driven-flows">Event-driven flows</h2>
-<p>Three kinds of triggers exist besides the Connect schedules — Qualtrics survey flows, Monday webhooks, and Google Apps Scripts bound to sheets. The first two are diagrammed below; the third is covered under <a href="#student-work-a-google-sheet-as-the-backend">Student work</a>, which is the case we know about.</p>
-<pre class="mermaid"><code>flowchart TD
+<p>Three kinds of triggers exist besides the Connect schedules: Qualtrics survey flows, Monday webhooks, and Google Apps Scripts bound to sheets. The first two are diagrammed below; the third is described in the notes underneath.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
     subgraph survey_flow["Survey lifecycle (Qualtrics)"]
         open["Participant opens survey"] -.-&gt;|"JS calls tl-api&lt;br/&gt;/check_email_or_name"| autofill["Autofill site/role/demographics,&lt;br/&gt;skip already-answered blocks&lt;br/&gt;(user_database.parquet, survey-ids bucket)"]
         submit["Participant submits survey"] -.-&gt;|"web service on completion&lt;br/&gt;POST /update/update_survey_s3"| debounce["Debounced async run of&lt;br/&gt;ec2_tl_scripts/update_&amp;lt;survey&amp;gt;.R"]
@@ -594,7 +612,13 @@ cookieconsent.run({
     class autofill,debounce ec2svc
     class s3w,cal aws
     class board_change,tracker_change monday
-    class mw,tw connect</code></pre>
+    class mw,tw connect
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Notes:</p>
 <ul>
 <li><code>run_all_files.r</code> in <code>ec2_tl_scripts</code> batch-runs every non-archived <code>update_*.R</code>; there is <strong>no crontab entry</strong> for it on the box — survey ETL is event-driven via the plumber <code>/update</code> endpoint (plus manual batch runs).</li>
@@ -606,7 +630,12 @@ cookieconsent.run({
 <section id="cross-system-data-routing" class="level2">
 <h2 class="anchored" data-anchor-id="cross-system-data-routing">Cross-system data routing</h2>
 <p>How data moves <em>between</em> platforms — including the write-backs, which are the easy ones to forget. S3 is the hub: almost everything lands there as parquet before going anywhere else, and two S3 objects get read back into Qualtrics at survey runtime.</p>
-<pre class="mermaid"><code>flowchart LR
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
     monday["Monday.com"]
     qualtrics["Qualtrics"]
     gsheets["Google Sheets / Drive"]
@@ -647,7 +676,13 @@ cookieconsent.run({
     class gslides gslides
     class s3 aws
     class serving output
-    class yc wip</code></pre>
+    class yc wip
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p><em>Solid arrows = scheduled; dashed = event-driven or on-use (webhooks, survey runtime, user input). An interactive version of this map — hover to trace a system’s routes, click an edge for the jobs behind it — is published alongside this doc.</em></p>
 <p>Route detail:</p>
 <table class="caption-top table">
@@ -817,56 +852,6 @@ cookieconsent.run({
 </tbody>
 </table>
 </section>
-<section id="student-work-a-google-sheet-as-the-backend" class="level2">
-<h2 class="anchored" data-anchor-id="student-work-a-google-sheet-as-the-backend">Student work: a Google Sheet as the backend</h2>
-<p>Student work grading is the one pipeline that does not follow the usual “source → S3 → dashboard” shape. A Google Sheet (<code>1snMytJMFiuiVj7F167jfrLq-WSFOTKD0cOD40WtTSgY</code>, tab <em>Student Work Scores</em>) is the actual system of record for grades, and the PDFs live in S3 alongside it. Nothing about that arrangement is inferable from the Connect inventory, which is why it gets its own section.</p>
-<pre class="mermaid"><code>flowchart TD
-    teacher["Teacher / coach uploads&lt;br/&gt;student work (Qualtrics&lt;br/&gt;SV_0H7xUSb8qixVCDk)"]
-    job["update_student_work&lt;br/&gt;(Connect, daily 04:21)"]
-    parquet["tl-surveys-27/&lt;br/&gt;student_work.parquet"]
-    pdfs[("tl-student-work-27&lt;br/&gt;one PDF per sample")]
-    sheet[/"Google Sheet&lt;br/&gt;'Student Work Scores'&lt;br/&gt;= system of record"/]
-    grading["student_work_samples app&lt;br/&gt;(dashboards/posit-connect/&lt;br/&gt;student_work_grading)"]
-    graded["student_work_graded app&lt;br/&gt;(review + grade contests)"]
-    ongoing["ongoing_report&lt;br/&gt;+ update_student_outcomes"]
-    email["weekly_sw_grading_upload_email"]
-
-    teacher --&gt; job
-    job -- "responses" --&gt; parquet
-    job -- "zips converted to PDFs,&lt;br/&gt;deduped against the sheet" --&gt; pdfs
-    job -- "appends a metadata row&lt;br/&gt;per new file" --&gt; sheet
-    sheet -- "grading queue +&lt;br/&gt;approved grader list" --&gt; grading
-    pdfs -- "presigned URLs" --&gt; grading
-    grading -- "scores written back&lt;br/&gt;(range_write)" --&gt; sheet
-    sheet --&gt; graded
-    pdfs --&gt; graded
-    graded -- "grade contests" --&gt; sheet
-    sheet --&gt; ongoing
-    sheet --&gt; email
-    script["Apps Script bound to the sheet&lt;br/&gt;update_data() → tl-api&lt;br/&gt;/update/update_survey_s3?survey=student_work"]
-    sheet -.-&gt; script
-    script -. "run_delay=300 debounce" .-&gt; parquet
-
-    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
-    classDef google fill:#188038,stroke:#12602a,color:#ffffff
-    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
-    classDef connect fill:#447099,stroke:#335577,color:#ffffff
-    classDef output fill:#04abeb,stroke:#0380b0,color:#ffffff
-
-    class teacher qualtrics
-    class sheet,script google
-    class parquet,pdfs aws
-    class job,grading,graded connect
-    class ongoing,email output</code></pre>
-<p>Things to know before touching it:</p>
-<ul>
-<li><p><strong>There is a Google Apps Script in the loop.</strong> A script bound to the grading sheet (<code>update_data()</code>) POSTs to the tl-api plumber at <code>https://api.teachinglab.org/update/update_survey_s3?survey=student_work&amp;run_delay=300</code>, which re-runs the <code>ec2_tl_scripts</code> survey ETL for student work with a five-minute debounce. It authenticates with a static shared secret in an <code>Authorization</code> header, hardcoded in the script. So the student work parquet refreshes on sheet activity as well as on the daily Connect job — if data looks stale, check the Apps Script’s execution log in the sheet (Extensions → Apps Script → Executions), not just the Connect job history.</p></li>
-<li><p><strong>The sheet is the write target, not a cache.</strong> Both grading apps write scores back into it with <code>googlesheets4::range_write()</code> at fixed ranges, so inserting or reordering columns breaks grading silently.</p></li>
-<li><p><strong>Deduplication happens against the sheet</strong>, not against S3: the daily job reads existing rows and only uploads files it does not already see there.</p></li>
-<li><p><strong>Bucket, sheet, and survey are all fiscal-year scoped.</strong> Rolling to a new year means a new <code>tl-student-work-&lt;FY&gt;</code> bucket, a fresh copy of the grading sheet, and a new Qualtrics survey ID — four hardcoded places in total.</p></li>
-<li><p>Zip uploads are renamed to <code>.pdf</code> wholesale by the daily job; anything that is genuinely a zip of several samples will not render in the grading app.</p></li>
-</ul>
-</section>
 <section id="operational-monitoring" class="level2">
 <h2 class="anchored" data-anchor-id="operational-monitoring">Operational monitoring</h2>
 <p>The published inventory below is a <em>design-time</em> view: what exists and when it is supposed to run. The runtime view lives in the <strong>Connect Infrastructure Monitor</strong> (<code>posit_automations/monitor_connect_scripts.qmd</code>, published at <a href="https://tl-data.teachinglab.org/monitor_connect_scripts/" class="uri">https://tl-data.teachinglab.org/monitor_connect_scripts/</a>, itself a daily scheduled job). It queries the Connect API for every static-rendered script and shows last run time, success rate, run duration trends, and anything overdue by more than 15 minutes.</p>
@@ -958,22 +943,10 @@ cookieconsent.run({
 <p>Schedules are owned by <code>/__api__/schedules/{id}</code>. <code>/__api__/variants/{id}/schedules</code> is a read-only collection view and 404s on DELETE, so that is the wrong path to reach for when retiring a job.</p>
 <p>A schedule record’s <code>activate: FALSE</code> means “don’t activate the rendered output” — it does <strong>not</strong> mean the schedule is off. A job with that flag still runs on time. The only reliable way to stop one is to delete the schedule; the content itself can stay deployed and simply becomes unscheduled.</p>
 </section>
-<section id="loose-ends" class="level2">
-<h2 class="anchored" data-anchor-id="loose-ends">Loose ends</h2>
-<p>Things that are true right now and want attention.</p>
-<ul>
-<li><strong><code>daily_percent_completion</code> is pinned to SY24-25.</strong> It calls <code>get_coach_roster(year = "24_25")</code> and reads the FY25 tracker sheet, so the <code>tl-daily-stats/percent_complete.parquet</code> it writes daily at 00:30 describes a school year that ended over a year ago. It exits 0 every night, so nothing flags it. Roll it forward or retire the schedule.</li>
-<li><strong><code>dashboards/shiny-server/</code> is kept for reference only.</strong> It holds the app sources from before everything moved to Posit Connect, where all dashboards now live. Nothing deploys from it — the workflow that used to rsync it to the Shiny Server host is gone — so treat it as an archive, not as live code.</li>
-<li><strong>Two EC2 hosts in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) have no known purpose</strong> — they date from the Shiny Server era. Check the AWS console for whether they are still running and billing.</li>
-<li><strong>Sheet-bound Apps Scripts are infrastructure with no inventory.</strong> At least one (the student work grading sheet) calls tl-api on a cadence of its own, with the shared secret hardcoded in the script body. The other operational sheets have not been audited for bound scripts; the secret belongs in Script Properties, and whatever is found belongs in this document.</li>
-<li><strong><code>DATAHUB_PUSH_TOKEN</code> is a personal gh CLI OAuth token.</strong> It carries write access to every repo its owner can reach, and it stops working the next time they run <code>gh auth login</code> — at which point the Data Hub half of <code>update-architecture.yml</code> starts failing. A fine-grained PAT scoped to <code>teachinglab.github.io</code> with Contents: write would fix both problems.</li>
-<li><strong>Four Connect apps have not been deployed in 6+ months</strong> — <code>ongoing_report_24_25</code>, <code>TeachingLLM</code>, <code>nps_monitoring_tl</code>, <code>tl_scrollytell</code> — and are likely inactive.</li>
-</ul>
-</section>
 <section id="live-connect-inventory" class="level2">
 <h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
 <!-- BEGIN GENERATED: connect-inventory -->
-<p><em>Auto-generated from the Posit Connect API on 2026-08-11 12:25 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><em>Auto-generated from the Posit Connect API on 2026-08-11 12:36 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
 <p><strong>Connect server:</strong> https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.</p>
 <section id="active-scheduled-jobs-30" class="level3">
 <h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>

@@ -32,12 +32,12 @@ by pm2. Three GitHub repos feed it:
 
 | Repo | What it holds | How it deploys |
 |---|---|---|
-| `dungates/TeachingLab` (the package repo) | R package, scheduled Connect jobs (`posit_automations/`), Connect plumber APIs (`api/`), dashboards | `rsconnect::deploy*` to Posit Connect |
-| `dungates/ec2_tl_scripts` | Qualtrics → S3 survey ETL scripts | Lives at `/home/ubuntu/scripts` on the EC2 box |
-| `dungates/tl-api` | Standalone plumber API (port 8000) | Lives at `/home/ubuntu/plumber-apis`, run by pm2 (`@reboot pm2 resurrect`) |
-| `TeachingLabHQ/teachinglab.github.io` | Data Hub Quarto site | Azure Static Web Apps (Entra ID auth) at datahub.teachinglab.org |
+| `TeachingLab` (the package repo) | R package, scheduled Connect jobs (`posit_automations/`), Connect plumber APIs (`api/`), dashboards | `rsconnect::deploy*` to Posit Connect |
+| `ec2_tl_scripts` | Qualtrics → S3 survey ETL scripts | Lives at `/home/ubuntu/scripts` on the EC2 box |
+| `tl-api` | Standalone plumber API (port 8000) | Lives at `/home/ubuntu/plumber-apis`, run by pm2 (`@reboot pm2 resurrect`) |
+| `teachinglab.github.io` | Data Hub Quarto site | Azure Static Web Apps (Entra ID auth) at datahub.teachinglab.org |
 
-```mermaid
+```{mermaid}
 flowchart LR
     subgraph sources["Data Sources"]
         qualtrics["Qualtrics<br/>(surveys.teachinglab.org)"]
@@ -118,13 +118,11 @@ Google, orange AWS, slate EC2 services, blue Posit Connect / outputs.*
 
 ## Event-driven flows
 
-Three kinds of triggers exist besides the Connect schedules — Qualtrics survey
+Three kinds of triggers exist besides the Connect schedules: Qualtrics survey
 flows, Monday webhooks, and Google Apps Scripts bound to sheets. The first two
-are diagrammed below; the third is covered under
-[Student work](#student-work-a-google-sheet-as-the-backend), which is the case
-we know about.
+are diagrammed below; the third is described in the notes underneath.
 
-```mermaid
+```{mermaid}
 flowchart TD
     subgraph survey_flow["Survey lifecycle (Qualtrics)"]
         open["Participant opens survey"] -.->|"JS calls tl-api<br/>/check_email_or_name"| autofill["Autofill site/role/demographics,<br/>skip already-answered blocks<br/>(user_database.parquet, survey-ids bucket)"]
@@ -177,7 +175,7 @@ easy ones to forget. S3 is the hub: almost everything lands there as parquet
 before going anywhere else, and two S3 objects get read back into Qualtrics at
 survey runtime.
 
-```mermaid
+```{mermaid}
 flowchart LR
     monday["Monday.com"]
     qualtrics["Qualtrics"]
@@ -263,79 +261,6 @@ once the current-year object appears. Bind both years rather than falling back.
 | `tl-shiny-cap-usage-2` | CAP usage events plus weekly and monthly rollups | CAP dashboard, `update_cap_usage_weekly/monthly` | CAP usage dashboard |
 | `tl-file-upload`, `tl-miscellaneous`, `tl-daily-stats`, `tl-capacity-plots`, `course-assessments-raw` | Supporting odds and ends: uploaded files, backups, cached stats and plots, raw assessment exports | `tl_file_upload`, `Daily Data Backup`, assorted jobs | The apps that produced them |
 
-## Student work: a Google Sheet as the backend
-
-Student work grading is the one pipeline that does not follow the usual
-"source → S3 → dashboard" shape. A Google Sheet
-(`1snMytJMFiuiVj7F167jfrLq-WSFOTKD0cOD40WtTSgY`, tab *Student Work Scores*) is
-the actual system of record for grades, and the PDFs live in S3 alongside it.
-Nothing about that arrangement is inferable from the Connect inventory, which is
-why it gets its own section.
-
-```mermaid
-flowchart TD
-    teacher["Teacher / coach uploads<br/>student work (Qualtrics<br/>SV_0H7xUSb8qixVCDk)"]
-    job["update_student_work<br/>(Connect, daily 04:21)"]
-    parquet["tl-surveys-27/<br/>student_work.parquet"]
-    pdfs[("tl-student-work-27<br/>one PDF per sample")]
-    sheet[/"Google Sheet<br/>'Student Work Scores'<br/>= system of record"/]
-    grading["student_work_samples app<br/>(dashboards/posit-connect/<br/>student_work_grading)"]
-    graded["student_work_graded app<br/>(review + grade contests)"]
-    ongoing["ongoing_report<br/>+ update_student_outcomes"]
-    email["weekly_sw_grading_upload_email"]
-
-    teacher --> job
-    job -- "responses" --> parquet
-    job -- "zips converted to PDFs,<br/>deduped against the sheet" --> pdfs
-    job -- "appends a metadata row<br/>per new file" --> sheet
-    sheet -- "grading queue +<br/>approved grader list" --> grading
-    pdfs -- "presigned URLs" --> grading
-    grading -- "scores written back<br/>(range_write)" --> sheet
-    sheet --> graded
-    pdfs --> graded
-    graded -- "grade contests" --> sheet
-    sheet --> ongoing
-    sheet --> email
-    script["Apps Script bound to the sheet<br/>update_data() → tl-api<br/>/update/update_survey_s3?survey=student_work"]
-    sheet -.-> script
-    script -. "run_delay=300 debounce" .-> parquet
-
-    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
-    classDef google fill:#188038,stroke:#12602a,color:#ffffff
-    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
-    classDef connect fill:#447099,stroke:#335577,color:#ffffff
-    classDef output fill:#04abeb,stroke:#0380b0,color:#ffffff
-
-    class teacher qualtrics
-    class sheet,script google
-    class parquet,pdfs aws
-    class job,grading,graded connect
-    class ongoing,email output
-```
-
-Things to know before touching it:
-
-- **There is a Google Apps Script in the loop.** A script bound to the grading
-  sheet (`update_data()`) POSTs to the tl-api plumber at
-  `https://api.teachinglab.org/update/update_survey_s3?survey=student_work&run_delay=300`,
-  which re-runs the `ec2_tl_scripts` survey ETL for student work with a
-  five-minute debounce. It authenticates with a static shared secret in an
-  `Authorization` header, hardcoded in the script. So the student work parquet
-  refreshes on sheet activity as well as on the daily Connect job — if data looks
-  stale, check the Apps Script's execution log in the sheet
-  (Extensions → Apps Script → Executions), not just the Connect job history.
-
-- **The sheet is the write target, not a cache.** Both grading apps write scores
-  back into it with `googlesheets4::range_write()` at fixed ranges, so inserting
-  or reordering columns breaks grading silently.
-- **Deduplication happens against the sheet**, not against S3: the daily job
-  reads existing rows and only uploads files it does not already see there.
-- **Bucket, sheet, and survey are all fiscal-year scoped.** Rolling to a new
-  year means a new `tl-student-work-<FY>` bucket, a fresh copy of the grading
-  sheet, and a new Qualtrics survey ID — four hardcoded places in total.
-- Zip uploads are renamed to `.pdf` wholesale by the daily job; anything that is
-  genuinely a zip of several samples will not render in the grading app.
-
 ## Operational monitoring
 
 The published inventory below is a *design-time* view: what exists and when it
@@ -386,41 +311,11 @@ output" — it does **not** mean the schedule is off. A job with that flag still
 runs on time. The only reliable way to stop one is to delete the schedule; the
 content itself can stay deployed and simply becomes unscheduled.
 
-## Loose ends
-
-Things that are true right now and want attention.
-
-- **`daily_percent_completion` is pinned to SY24-25.** It calls
-  `get_coach_roster(year = "24_25")` and reads the FY25 tracker sheet, so the
-  `tl-daily-stats/percent_complete.parquet` it writes daily at 00:30 describes a
-  school year that ended over a year ago. It exits 0 every night, so nothing
-  flags it. Roll it forward or retire the schedule.
-- **`dashboards/shiny-server/` is kept for reference only.** It holds the app
-  sources from before everything moved to Posit Connect, where all dashboards
-  now live. Nothing deploys from it — the workflow that used to rsync it to the
-  Shiny Server host is gone — so treat it as an archive, not as live code.
-- **Two EC2 hosts in `~/.ssh/config` (3.17.162.157, 13.59.10.1) have no known
-  purpose** — they date from the Shiny Server era. Check the AWS console for
-  whether they are still running and billing.
-- **Sheet-bound Apps Scripts are infrastructure with no inventory.** At least
-  one (the student work grading sheet) calls tl-api on a cadence of its own,
-  with the shared secret hardcoded in the script body. The other operational
-  sheets have not been audited for bound scripts; the secret belongs in Script
-  Properties, and whatever is found belongs in this document.
-- **`DATAHUB_PUSH_TOKEN` is a personal gh CLI OAuth token.** It carries write
-  access to every repo its owner can reach, and it stops working the next time
-  they run `gh auth login` — at which point the Data Hub half of
-  `update-architecture.yml` starts failing. A fine-grained PAT scoped to
-  `teachinglab.github.io` with Contents: write would fix both problems.
-- **Four Connect apps have not been deployed in 6+ months** —
-  `ongoing_report_24_25`, `TeachingLLM`, `nps_monitoring_tl`, `tl_scrollytell` —
-  and are likely inactive.
-
 ## Live Connect inventory
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-11 12:25 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-11 12:36 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
 **Connect server:** https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
