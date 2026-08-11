@@ -392,6 +392,12 @@ scheduling.
   don't read that flag as an off switch. Schedules are owned by
   `/__api__/schedules/{id}`; `/__api__/variants/{id}/schedules` is a read-only
   collection view and 404s on DELETE.
+- **`update-architecture.yml` has never completed successfully.** Its first
+  scheduled run (2026-08-10) died on `CONNECT_API_KEY is not set` — the secret
+  does not exist on the repo. The Data Hub sync step additionally needs a
+  `DATAHUB_PUSH_TOKEN` with write access to `teachinglab/teachinglab.github.io`.
+  Until both secrets are added, the inventory below and the published Data Hub
+  page only refresh when someone runs the scripts by hand.
 - **Apps Scripts are undocumented infrastructure.** At least one sheet-bound
   script (the student work grading sheet) calls tl-api on a schedule of its own,
   with the shared secret hardcoded in the script body. Worth auditing the other
@@ -400,24 +406,24 @@ scheduling.
   whoever remembers writing them.
 - Older Connect apps (`ongoing_report_24_25`, `TeachingLLM`, `nps_monitoring_tl`,
   `tl_scrollytell`) have not been deployed in 6+ months and are likely inactive.
-- Two *active* daily schedules run from sources that sit in
-  `posit_automations/deprecated/`: `Coach/Facilitator Board Save` and
-  `daily_percent_completion`. Either un-deprecate the sources or retire the
-  schedules.
+- One *active* daily schedule still runs from a source in
+  `posit_automations/deprecated/`: `daily_percent_completion` (00:30). Either
+  un-deprecate the source or retire the schedule. (`Coach/Facilitator Board
+  Save` was the other one; its source has since moved to `data_updates/`.)
 
 ## Live Connect inventory
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-06 01:45 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-11 02:31 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
-**Connect server:** https://tl-data.teachinglab.org/ — 261 content items, 30 active schedules, 4 APIs, 28 interactive apps.
+**Connect server:** https://tl-data.teachinglab.org/ — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
 ### Active scheduled jobs (30)
 
 |Job                                              |Cadence         |Run Time (ET) |Source in Repo                 |
 |:------------------------------------------------|:---------------|:-------------|:------------------------------|
-|Coach/Facilitator Board Save                     |Daily           |01:00         |posit_automations/deprecated   |
+|Coach/Facilitator Board Save                     |Daily           |01:00         |posit_automations/data_updates |
 |Employee Information                             |Daily           |00:00         |posit_automations/data_updates |
 |Monitor Connect Scripts                          |Daily           |12:24         |posit_automations              |
 |Qualtrics Checks                                 |Daily           |01:00         |posit_automations/validation   |
@@ -463,8 +469,9 @@ Apps not deployed recently may be inactive — check before assuming they are li
 
 |App                      |Framework        |Last Deployed |Source in Repo                                    |
 |:------------------------|:----------------|:-------------|:-------------------------------------------------|
-|ongoing_report           |shiny            |2026-08-05    |dashboards/posit-connect/ongoing_report           |
-|participant_feedback     |shiny            |2026-08-05    |dashboards/posit-connect/participant_feedback     |
+|Teaching Lab API Monitor |shiny            |2026-08-07    |dashboards/posit-connect/api_monitor              |
+|participant_feedback     |shiny            |2026-08-07    |dashboards/posit-connect/participant_feedback     |
+|ongoing_report           |shiny            |2026-08-06    |dashboards/posit-connect/ongoing_report           |
 |tl_individual_feedback   |shiny            |2026-08-05    |dashboards/posit-connect/tl_individual_feedback   |
 |course_assessments       |shiny            |2026-08-05    |dashboards/deprecated/course_assessments          |
 |ongoing_report_sidebot   |shiny            |2026-08-04    |dashboards/posit-connect/ongoing_report_sidebot   |
@@ -494,8 +501,6 @@ Apps not deployed recently may be inactive — check before assuming they are li
 
 ### Disabled schedules still on the server
 
-|Job                                                            |Cadence |
-|:--------------------------------------------------------------|:-------|
-|update_coachee_selection (FY26 - deprecated, replaced by FY27) |Daily   |
+None.
 
 <!-- END GENERATED: connect-inventory -->

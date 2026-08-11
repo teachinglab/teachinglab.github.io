@@ -791,16 +791,17 @@ cookieconsent.run({
 <li><strong>Old Shiny Server is retired</strong> (confirmed 2026-08-06): all dashboards now live on Posit Connect. Cleanup still pending: delete <code>rsync-deploy.yml</code> (it rsyncs <code>dashboards/shiny-server/</code> to the dead server on every push) and archive <code>dashboards/shiny-server/</code>.</li>
 <li><strong>Two other EC2 hosts</strong> exist in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) — presumably the retired Shiny Server era instances; worth terminating if they’re still running (check the AWS console for billing).</li>
 <li><code>update_coachee_selection</code> (FY26) had a live daily schedule running alongside the FY27 replacement for months, emailing analysts unfixable roster warnings off the stale FY26 roster. Schedule 171 (variant 179) was <strong>deleted 2026-08-08</strong>; the content itself is left in place, unscheduled. Note the schedule record’s <code>activate: FALSE</code> meant “don’t activate the rendered output”, <em>not</em> “disabled” — don’t read that flag as an off switch. Schedules are owned by <code>/__api__/schedules/{id}</code>; <code>/__api__/variants/{id}/schedules</code> is a read-only collection view and 404s on DELETE.</li>
+<li><strong><code>update-architecture.yml</code> has never completed successfully.</strong> Its first scheduled run (2026-08-10) died on <code>CONNECT_API_KEY is not set</code> — the secret does not exist on the repo. The Data Hub sync step additionally needs a <code>DATAHUB_PUSH_TOKEN</code> with write access to <code>teachinglab/teachinglab.github.io</code>. Until both secrets are added, the inventory below and the published Data Hub page only refresh when someone runs the scripts by hand.</li>
 <li><strong>Apps Scripts are undocumented infrastructure.</strong> At least one sheet-bound script (the student work grading sheet) calls tl-api on a schedule of its own, with the shared secret hardcoded in the script body. Worth auditing the other operational sheets for bound scripts, moving the secret into Script Properties, and listing whatever is found here — right now the only record of them is whoever remembers writing them.</li>
 <li>Older Connect apps (<code>ongoing_report_24_25</code>, <code>TeachingLLM</code>, <code>nps_monitoring_tl</code>, <code>tl_scrollytell</code>) have not been deployed in 6+ months and are likely inactive.</li>
-<li>Two <em>active</em> daily schedules run from sources that sit in <code>posit_automations/deprecated/</code>: <code>Coach/Facilitator Board Save</code> and <code>daily_percent_completion</code>. Either un-deprecate the sources or retire the schedules.</li>
+<li>One <em>active</em> daily schedule still runs from a source in <code>posit_automations/deprecated/</code>: <code>daily_percent_completion</code> (00:30). Either un-deprecate the source or retire the schedule. (<code>Coach/Facilitator Board   Save</code> was the other one; its source has since moved to <code>data_updates/</code>.)</li>
 </ul>
 </section>
 <section id="live-connect-inventory" class="level2">
 <h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
 <!-- BEGIN GENERATED: connect-inventory -->
-<p><em>Auto-generated from the Posit Connect API on 2026-08-06 01:45 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
-<p><strong>Connect server:</strong> https://tl-data.teachinglab.org/ — 261 content items, 30 active schedules, 4 APIs, 28 interactive apps.</p>
+<p><em>Auto-generated from the Posit Connect API on 2026-08-11 02:31 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><strong>Connect server:</strong> https://tl-data.teachinglab.org/ — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.</p>
 <section id="active-scheduled-jobs-30" class="level3">
 <h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>
 <table class="caption-top table">
@@ -823,7 +824,7 @@ cookieconsent.run({
 <td style="text-align: left;">Coach/Facilitator Board Save</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">01:00</td>
-<td style="text-align: left;">posit_automations/deprecated</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Employee Information</td>
@@ -1056,168 +1057,174 @@ cookieconsent.run({
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">ongoing_report</td>
+<td style="text-align: left;">Teaching Lab API Monitor</td>
 <td style="text-align: left;">shiny</td>
-<td style="text-align: left;">2026-08-05</td>
-<td style="text-align: left;">dashboards/posit-connect/ongoing_report</td>
+<td style="text-align: left;">2026-08-07</td>
+<td style="text-align: left;">dashboards/posit-connect/api_monitor</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">participant_feedback</td>
 <td style="text-align: left;">shiny</td>
-<td style="text-align: left;">2026-08-05</td>
+<td style="text-align: left;">2026-08-07</td>
 <td style="text-align: left;">dashboards/posit-connect/participant_feedback</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">ongoing_report</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-06</td>
+<td style="text-align: left;">dashboards/posit-connect/ongoing_report</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">tl_individual_feedback</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-05</td>
 <td style="text-align: left;">dashboards/posit-connect/tl_individual_feedback</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">course_assessments</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-05</td>
 <td style="text-align: left;">dashboards/deprecated/course_assessments</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ongoing_report_sidebot</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-04</td>
 <td style="text-align: left;">dashboards/posit-connect/ongoing_report_sidebot</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">calendar_refresh_monitor</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-03</td>
 <td style="text-align: left;">dashboards/posit-connect/calendar_refresh_monitor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">tl_pl_calendar</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-03</td>
 <td style="text-align: left;">dashboards/posit-connect/tl_pl_calendar</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cap_usage_dashboard</td>
 <td style="text-align: left;">python-streamlit</td>
 <td style="text-align: left;">2026-07-24</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">d9_d11_coaching_outcomes</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-07-24</td>
 <td style="text-align: left;">dashboards/posit-connect/d9_d11_coaching_outcomes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">project_log_tl</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-07-22</td>
 <td style="text-align: left;">dashboards/posit-connect/project_log_tl</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">coaching_action_plans_v2</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-07-14</td>
 <td style="text-align: left;">dashboards/posit-connect/coaching_action_plans_v2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">student_work_samples</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-07-03</td>
 <td style="text-align: left;">dashboards/posit-connect/student_work_grading</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">project_log_report_2</td>
 <td style="text-align: left;">quarto-shiny</td>
 <td style="text-align: left;">2026-05-19</td>
 <td style="text-align: left;">posit_automations/reports</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">guskey_app</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-05-11</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">IPGRawDataDashboard</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-04-13</td>
 <td style="text-align: left;">dashboards/posit-connect/ipg_raw_reports</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">student_work_graded</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-04-02</td>
 <td style="text-align: left;">dashboards/posit-connect/student_work_graded</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">plumber-logging</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-03-13</td>
 <td style="text-align: left;">dashboards/posit-connect/plumber-logging</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cap_validation</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-03-11</td>
 <td style="text-align: left;">dashboards/posit-connect/cap_validation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">file-upload-tl</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-02-17</td>
 <td style="text-align: left;">dashboards/posit-connect/file-upload-tl</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">tl_coteach</td>
 <td style="text-align: left;">python-streamlit</td>
 <td style="text-align: left;">2026-02-02</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ongoing_report_24_25</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-01-05</td>
 <td style="text-align: left;">dashboards/posit-connect/ongoing_report_24_25</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">generate_slide_deck</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2025-11-30</td>
 <td style="text-align: left;">dashboards/posit-connect/generate_slide_deck</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cap_survey</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2025-11-24</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">coaching_action_plans</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2025-11-03</td>
 <td style="text-align: left;">analysis/sy25_26/coaching_action_plans</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cap_naming_validator</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2025-10-16</td>
 <td style="text-align: left;">dashboards/posit-connect/cap_naming_validator</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">tl_scrollytell</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2025-08-07</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TeachingLLM</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2024-06-04</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">nps_monitoring_tl</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2024-06-03</td>
@@ -1228,24 +1235,7 @@ cookieconsent.run({
 </section>
 <section id="disabled-schedules-still-on-the-server" class="level3">
 <h3 class="anchored" data-anchor-id="disabled-schedules-still-on-the-server">Disabled schedules still on the server</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 88%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Job</th>
-<th style="text-align: left;">Cadence</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">update_coachee_selection (FY26 - deprecated, replaced by FY27)</td>
-<td style="text-align: left;">Daily</td>
-</tr>
-</tbody>
-</table>
+<p>None.</p>
 <!-- END GENERATED: connect-inventory -->
 
 
