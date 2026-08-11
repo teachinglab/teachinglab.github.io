@@ -76,6 +76,8 @@ website:
             href: On_the_data.html
           - text: "Data Collection Overview"
             href: data_collection_overview.html
+          - text: "Data Infrastructure Architecture"
+            href: architecture.html
       - text: "Blog"
         href: blog.html
       - text: "Archives"

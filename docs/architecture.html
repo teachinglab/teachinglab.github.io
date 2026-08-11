@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="How Teaching Lab data moves between Qualtrics, Monday.com, Google, S3, and Posit Connect — sources, schedules, and outputs.">
+
+<title>Data Infrastructure Architecture – Data Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7ed987945253a767ac9d6b1689810c8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c1ffca22f5e98574f390b5d7a84aa886.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2P0MJ9QPG4"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2P0MJ9QPG4', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Data Infrastructure Architecture – Data Hub">
+<meta property="og:description" content="How Teaching Lab data moves between Qualtrics, Monday.com, Google, S3, and Posit Connect — sources, schedules, and outputs.">
+<meta property="og:site_name" content="Data Hub">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy26-trackersslides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">FY26 Trackers/Slides</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fy26-trackersslides">    
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1V3yu5vfrbeRWyMn0nY6POHZHehBpO28QayY2hn6pAe4/edit?gid=0#gid=0">
+ <span class="dropdown-text">FY26 Data Collection Tracker – Rostered Participants Only</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1m8K4gpf5jctyMWpo7Qt3Aa0CQh9-wwGeVTyDuEtkrlk/edit?gid=0#gid=0">
+ <span class="dropdown-text">FY26 Data Submissions &amp; Key Outcomes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://tl-data.teachinglab.org/generate_slide_deck/">
+ <span class="dropdown-text">Slide Deck Generator</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./Reports.html"> 
+<span class="menu-text">Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Dashboards.html"> 
+<span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="./evaluation_plan.html">
+ <span class="dropdown-text">Evaluation Plan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Data_dives.html">
+ <span class="dropdown-text">Data Dives</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./On_the_data.html">
+ <span class="dropdown-text">On the Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./data_collection_overview.html">
+ <span class="dropdown-text">Data Collection Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./architecture.html">
+ <span class="dropdown-text">Data Infrastructure Architecture</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./archives.html"> 
+<span class="menu-text">Archives</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://docs.google.com/document/d/1sBJP9Bgl-gt-_HELb9Z6QvGVjimumAWg5xRAt-bea_c/edit?tab=t.0"> 
+<span class="menu-text">Program FAQ</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#system-overview" id="toc-system-overview" class="nav-link active" data-scroll-target="#system-overview">System overview</a></li>
+  <li><a href="#event-driven-flows" id="toc-event-driven-flows" class="nav-link" data-scroll-target="#event-driven-flows">Event-driven flows</a></li>
+  <li><a href="#cross-system-data-routing" id="toc-cross-system-data-routing" class="nav-link" data-scroll-target="#cross-system-data-routing">Cross-system data routing</a></li>
+  <li><a href="#s3-buckets" id="toc-s3-buckets" class="nav-link" data-scroll-target="#s3-buckets">S3 buckets</a></li>
+  <li><a href="#student-work-a-google-sheet-as-the-backend" id="toc-student-work-a-google-sheet-as-the-backend" class="nav-link" data-scroll-target="#student-work-a-google-sheet-as-the-backend">Student work: a Google Sheet as the backend</a></li>
+  <li><a href="#operational-monitoring" id="toc-operational-monitoring" class="nav-link" data-scroll-target="#operational-monitoring">Operational monitoring</a></li>
+  <li><a href="#cicd-github-actions-in-the-package-repo" id="toc-cicd-github-actions-in-the-package-repo" class="nav-link" data-scroll-target="#cicd-github-actions-in-the-package-repo">CI/CD (GitHub Actions in the package repo)</a></li>
+  <li><a href="#known-loose-ends-as-of-2026-08-06" id="toc-known-loose-ends-as-of-2026-08-06" class="nav-link" data-scroll-target="#known-loose-ends-as-of-2026-08-06">Known loose ends (as of 2026-08-06)</a></li>
+  <li><a href="#live-connect-inventory" id="toc-live-connect-inventory" class="nav-link" data-scroll-target="#live-connect-inventory">Live Connect inventory</a>
+  <ul class="collapse">
+  <li><a href="#active-scheduled-jobs-30" id="toc-active-scheduled-jobs-30" class="nav-link" data-scroll-target="#active-scheduled-jobs-30">Active scheduled jobs (30)</a></li>
+  <li><a href="#deployed-apis-on-connect" id="toc-deployed-apis-on-connect" class="nav-link" data-scroll-target="#deployed-apis-on-connect">Deployed APIs on Connect</a></li>
+  <li><a href="#interactive-apps-on-connect" id="toc-interactive-apps-on-connect" class="nav-link" data-scroll-target="#interactive-apps-on-connect">Interactive apps on Connect</a></li>
+  <li><a href="#disabled-schedules-still-on-the-server" id="toc-disabled-schedules-still-on-the-server" class="nav-link" data-scroll-target="#disabled-schedules-still-on-the-server">Disabled schedules still on the server</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Infrastructure Architecture</h1>
+</div>
+
+<div>
+  <div class="description">
+    How Teaching Lab data moves between Qualtrics, Monday.com, Google, S3, and Posit Connect — sources, schedules, and outputs.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This page is generated from <code>ARCHITECTURE.md</code> in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-11). Edit it there, not here.</p>
+</div>
+</div>
+</div>
+<p>Internal (login-required) hosted versions on Posit Connect:</p>
+<ul>
+<li><strong>Interactive routing map</strong>: <a href="https://tl-data.teachinglab.org/architecture/" class="uri">https://tl-data.teachinglab.org/architecture/</a> (source: <code>dashboards/posit-connect/architecture_map/</code> — the generator splices live inventory JSON into it; redeploy with <code>rsconnect::deployApp()</code> after the weekly refresh to pick up new data)</li>
+<li><strong>Stakeholder overview</strong> (non-technical, where data lives / how often it updates): <a href="https://tl-data.teachinglab.org/data-overview/" class="uri">https://tl-data.teachinglab.org/data-overview/</a> (source: <code>dashboards/posit-connect/data_overview/</code>)</li>
+</ul>
+<section id="system-overview" class="level2">
+<h2 class="anchored" data-anchor-id="system-overview">System overview</h2>
+<p>Everything runs on or through one EC2 instance (<code>tl-data.teachinglab.org</code>, 3.131.192.25), which hosts Posit Connect and a standalone plumber API managed by pm2. Three GitHub repos feed it:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Repo</th>
+<th>What it holds</th>
+<th>How it deploys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dungates/TeachingLab</code> (the package repo)</td>
+<td>R package, scheduled Connect jobs (<code>posit_automations/</code>), Connect plumber APIs (<code>api/</code>), dashboards</td>
+<td><code>rsconnect::deploy*</code> to Posit Connect</td>
+</tr>
+<tr class="even">
+<td><code>dungates/ec2_tl_scripts</code></td>
+<td>Qualtrics → S3 survey ETL scripts</td>
+<td>Lives at <code>/home/ubuntu/scripts</code> on the EC2 box</td>
+</tr>
+<tr class="odd">
+<td><code>dungates/tl-api</code></td>
+<td>Standalone plumber API (port 8000)</td>
+<td>Lives at <code>/home/ubuntu/plumber-apis</code>, run by pm2 (<code>@reboot pm2 resurrect</code>)</td>
+</tr>
+<tr class="even">
+<td><code>TeachingLabHQ/teachinglab.github.io</code></td>
+<td>Data Hub Quarto site</td>
+<td>Azure Static Web Apps (Entra ID auth) at datahub.teachinglab.org</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    subgraph sources["Data Sources"]
+        qualtrics["Qualtrics&lt;br/&gt;(surveys.teachinglab.org)"]
+        monday["Monday.com boards&lt;br/&gt;(coaching logs, rosters,&lt;br/&gt;project log, logistics)"]
+        gsheets["Google Sheets&lt;br/&gt;(student work grades,&lt;br/&gt;attendance, trackers)"]
+    end
+
+    subgraph ec2["AWS EC2 — tl-data.teachinglab.org"]
+        subgraph connect["Posit Connect"]
+            sched_jobs["~30 scheduled Quarto jobs&lt;br/&gt;(posit_automations/)"]
+            connect_apis["4 plumber APIs&lt;br/&gt;(api/): monday-webhook,&lt;br/&gt;tracker-webhook, automated_decks,&lt;br/&gt;tl-survey-comm-api"]
+            apps["Shiny + Streamlit dashboards&lt;br/&gt;(dashboards/posit-connect/)"]
+        end
+        subgraph pm2_api["tl-api plumber — pm2, port 8000"]
+            update_ep["/update — survey ETL trigger"]
+            userdb_ep["/check_email_or_name — survey autofill"]
+            connect_ep["/connect — force Connect re-render"]
+            sheets_ep["/create_sheet_copy"]
+        end
+        etl_scripts["ec2_tl_scripts&lt;br/&gt;/home/ubuntu/scripts&lt;br/&gt;update_*.R"]
+    end
+
+    subgraph storage["Storage"]
+        s3["AWS S3&lt;br/&gt;tl-surveys-27 / -26 / -25 (FY buckets)&lt;br/&gt;coaching-data-tl, tl-monday,&lt;br/&gt;survey-ids, tl-cap-usage"]
+        pins["Connect pins"]
+    end
+
+    subgraph outputs["Outputs"]
+        dashboards["Dashboards on Connect&lt;br/&gt;(tl-data.teachinglab.org/...)"]
+        datahub["Data Hub&lt;br/&gt;datahub.teachinglab.org&lt;br/&gt;(Azure SWA + Entra auth)"]
+        emails["Automated emails&lt;br/&gt;(blastula / SMTP)"]
+        sheets_out["Google Sheets trackers&lt;br/&gt;+ Google Slides decks"]
+        qualtrics_wb["Qualtrics survey updates&lt;br/&gt;(site/course/facilitator choices,&lt;br/&gt;display logic)"]
+    end
+
+    qualtrics -. "on survey completion&lt;br/&gt;(web service in survey flow)" .-&gt; update_ep
+    update_ep -. "sources" .-&gt; etl_scripts
+    etl_scripts -. "clean parquet" .-&gt; s3
+    qualtrics -. "embedded JS on survey open" .-&gt; userdb_ep
+    userdb_ep -. "reads user_database.parquet" .-&gt; s3
+
+    monday -. "webhooks on board change" .-&gt; connect_apis
+    monday -- "API pulls" --&gt; sched_jobs
+    qualtrics -- "API pulls" --&gt; sched_jobs
+    gsheets --&gt; sched_jobs
+
+    sched_jobs --&gt; s3
+    sched_jobs --&gt; pins
+    sched_jobs --&gt; emails
+    sched_jobs --&gt; sheets_out
+    sched_jobs -- "writes choices back" --&gt; qualtrics_wb
+
+    s3 --&gt; apps
+    pins --&gt; apps
+    apps --&gt; dashboards
+    dashboards --&gt; datahub
+
+    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
+    classDef monday fill:#e2445c,stroke:#b23548,color:#ffffff
+    classDef google fill:#188038,stroke:#12602a,color:#ffffff
+    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
+    classDef connect fill:#447099,stroke:#335577,color:#ffffff
+    classDef ec2svc fill:#37474f,stroke:#263238,color:#ffffff
+    classDef output fill:#04abeb,stroke:#0380b0,color:#ffffff
+
+    class qualtrics,qualtrics_wb qualtrics
+    class monday monday
+    class gsheets,sheets_out google
+    class s3 aws
+    class pins,sched_jobs,connect_apis,apps connect
+    class update_ep,userdb_ep,connect_ep,sheets_ep,etl_scripts ec2svc
+    class dashboards,datahub,emails output</code></pre>
+<p><em>Solid arrows = scheduled or on-load; dashed = event-driven (webhooks, survey-flow web services). Node colors: red Monday, teal Qualtrics, green Google, orange AWS, slate EC2 services, blue Posit Connect / outputs.</em></p>
+</section>
+<section id="event-driven-flows" class="level2">
+<h2 class="anchored" data-anchor-id="event-driven-flows">Event-driven flows</h2>
+<p>Three kinds of triggers exist besides the Connect schedules — Qualtrics survey flows, Monday webhooks, and Google Apps Scripts bound to sheets. The first two are diagrammed below; the third is covered under <a href="#student-work-a-google-sheet-as-the-backend">Student work</a>, which is the case we know about.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph survey_flow["Survey lifecycle (Qualtrics)"]
+        open["Participant opens survey"] -.-&gt;|"JS calls tl-api&lt;br/&gt;/check_email_or_name"| autofill["Autofill site/role/demographics,&lt;br/&gt;skip already-answered blocks&lt;br/&gt;(user_database.parquet, survey-ids bucket)"]
+        submit["Participant submits survey"] -.-&gt;|"web service on completion&lt;br/&gt;POST /update/update_survey_s3"| debounce["Debounced async run of&lt;br/&gt;ec2_tl_scripts/update_&amp;lt;survey&amp;gt;.R"]
+        debounce -.-&gt; s3w["Fresh parquet in FY bucket&lt;br/&gt;(tl-surveys-27)"]
+    end
+
+    subgraph monday_flow["Monday.com webhooks (Connect APIs)"]
+        board_change["Coaching log / calendar&lt;br/&gt;board change"] -.-&gt;|webhook| mw["monday-webhook API&lt;br/&gt;(api/monday-webhook)"]
+        mw -.-&gt; cal["PL/coaching calendar parquet&lt;br/&gt;+ /calendar endpoints"]
+        tracker_change["Tracker board events"] -.-&gt;|webhook| tw["tracker-webhook API&lt;br/&gt;(api/tracker-webhook)"]
+    end
+
+    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
+    classDef monday fill:#e2445c,stroke:#b23548,color:#ffffff
+    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
+    classDef connect fill:#447099,stroke:#335577,color:#ffffff
+    classDef ec2svc fill:#37474f,stroke:#263238,color:#ffffff
+
+    class open,submit qualtrics
+    class autofill,debounce ec2svc
+    class s3w,cal aws
+    class board_change,tracker_change monday
+    class mw,tw connect</code></pre>
+<p>Notes:</p>
+<ul>
+<li><code>run_all_files.r</code> in <code>ec2_tl_scripts</code> batch-runs every non-archived <code>update_*.R</code>; there is <strong>no crontab entry</strong> for it on the box — survey ETL is event-driven via the plumber <code>/update</code> endpoint (plus manual batch runs).</li>
+<li>The tl-api plumber also exposes <code>/connect/schedule_posit_script</code>, which lets a Qualtrics flow (or anything else) force an immediate re-render of a Connect job by GUID.</li>
+<li>Scheduled Connect jobs write <em>back</em> to Qualtrics too: site/course/facilitator choice lists and display logic are updated daily from Monday data.</li>
+<li>The tl-api plumber is reachable publicly at <code>https://api.teachinglab.org</code>, not only from the box — that is what lets Qualtrics survey flows and Google Apps Scripts call it. Callers authenticate with a static shared secret in an <code>Authorization</code> header. <strong>Google Apps Scripts are the least discoverable trigger in the whole system</strong>: they live inside individual Google Sheets, not in any repo, so nothing here shows them and grep will never find them. If a dataset refreshes at a time no Connect schedule explains, look for a bound script before anything else.</li>
+</ul>
+</section>
+<section id="cross-system-data-routing" class="level2">
+<h2 class="anchored" data-anchor-id="cross-system-data-routing">Cross-system data routing</h2>
+<p>How data moves <em>between</em> platforms — including the write-backs, which are the easy ones to forget. S3 is the hub: almost everything lands there as parquet before going anywhere else, and two S3 objects get read back into Qualtrics at survey runtime.</p>
+<pre class="mermaid"><code>flowchart LR
+    monday["Monday.com"]
+    qualtrics["Qualtrics"]
+    gsheets["Google Sheets / Drive"]
+    gslides["Google Slides"]
+    s3[("AWS S3")]
+    serving["Connect dashboards,&lt;br/&gt;pins, emails"]
+
+    qualtrics -. "survey responses, on submission&lt;br/&gt;(ec2_tl_scripts via tl-api /update)" .-&gt; s3
+    monday -- "nightly board saves&lt;br/&gt;(coaching log, rosters, project log,&lt;br/&gt;staffing, logistics, deck list)" --&gt; s3
+    monday -. "calendar parquet&lt;br/&gt;(monday-webhook, on board change)" .-&gt; s3
+    gsheets -- "student work grades, daily" --&gt; s3
+
+    monday -- "daily dropdown sync:&lt;br/&gt;coach / coachee / facilitator /&lt;br/&gt;course choices + PF flow" --&gt; qualtrics
+    gsheets -- "Master Survey Input →&lt;br/&gt;site choices + display logic, daily" --&gt; qualtrics
+    s3 -. "runtime lookups on survey open:&lt;br/&gt;user_database autofill,&lt;br/&gt;today's facilitators (tl-api)" .-&gt; qualtrics
+
+    s3 -- "coaching tracker,&lt;br/&gt;student outcomes, daily" --&gt; gsheets
+    monday -- "logistics subitems sync,&lt;br/&gt;D75 sub-school (daily + webhook)" --&gt; monday
+    monday -- "deck list → automated decks" --&gt; gslides
+
+    s3 --&gt; serving
+    serving -. "user-entered data:&lt;br/&gt;student work grades,&lt;br/&gt;CAP usage events" .-&gt; s3
+
+    yc["YC's stuff (WIP)&lt;br/&gt;web forms + bulk upload"] -. "coaching log form (TBD)" .-&gt; monday
+    yc -. "roster form + bulk upload (TBD)" .-&gt; monday
+
+    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
+    classDef monday fill:#e2445c,stroke:#b23548,color:#ffffff
+    classDef google fill:#188038,stroke:#12602a,color:#ffffff
+    classDef gslides fill:#f9ab00,stroke:#c78900,color:#20242a
+    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
+    classDef output fill:#04abeb,stroke:#0380b0,color:#ffffff
+    classDef wip fill:#8a63c9,stroke:#6b48a8,color:#ffffff,stroke-dasharray:6 4
+
+    class qualtrics qualtrics
+    class monday monday
+    class gsheets google
+    class gslides gslides
+    class s3 aws
+    class serving output
+    class yc wip</code></pre>
+<p><em>Solid arrows = scheduled; dashed = event-driven or on-use (webhooks, survey runtime, user input). An interactive version of this map — hover to trace a system’s routes, click an edge for the jobs behind it — is published alongside this doc.</em></p>
+<p>Route detail:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>What moves</th>
+<th>Jobs / mechanisms</th>
+<th>Cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Qualtrics → S3</td>
+<td>Survey responses → cleaned parquet in the FY bucket (<code>tl-surveys-27</code>)</td>
+<td><code>ec2_tl_scripts/update_&lt;survey&gt;.R</code>, triggered by the completion web service in each survey flow (tl-api <code>/update</code>)</td>
+<td>Minutes after each submission</td>
+</tr>
+<tr class="even">
+<td>Monday → S3</td>
+<td>Coaching log, coach roster, project log, staffing match, facilitator board, logistics lookups, deck list, misc boards → <code>tl-monday</code> / <code>coaching-data-tl</code></td>
+<td><code>update_coaching_log_27</code>, <code>update_coaching_roster_27</code>, <code>update_project_log</code>, <code>employee_info</code>, <code>update_fac_board</code>, <code>save_various_monday_boards</code>, <code>update_fac_course_list_daily_fy27</code>, <code>update_deck_list</code></td>
+<td>Nightly</td>
+</tr>
+<tr class="odd">
+<td>Monday → S3 (event)</td>
+<td>PL/coaching calendar parquet</td>
+<td><code>monday-webhook</code> Connect API (+ daily rebuild)</td>
+<td>On board change</td>
+</tr>
+<tr class="even">
+<td>Monday → Qualtrics</td>
+<td>Survey dropdowns and logic: coach, teacher/coachee, facilitator, and course choices; participant feedback survey flow</td>
+<td><code>update_coach_selection</code>, <code>update_coachee_selection_27</code>, <code>update_facilitator_choices</code>, <code>update_course_choices</code>, <code>update_pf_flow</code></td>
+<td>Daily</td>
+</tr>
+<tr class="odd">
+<td>Google Sheets → Qualtrics</td>
+<td>Master Survey Input workbook → site/subsite choices and display logic across surveys</td>
+<td><code>update_site_choices</code></td>
+<td>Daily</td>
+</tr>
+<tr class="even">
+<td>Qualtrics → S3 (files)</td>
+<td>Student work PDFs uploaded by teachers → <code>tl-student-work-27</code>, plus a metadata row per file in the grading sheet</td>
+<td><code>update_student_work</code></td>
+<td>Daily</td>
+</tr>
+<tr class="odd">
+<td>Google Sheets → S3</td>
+<td>Student work grades → parquet</td>
+<td><code>update_student_work</code></td>
+<td>Daily</td>
+</tr>
+<tr class="even">
+<td>S3 → Google Sheets</td>
+<td>Coaching tracker completion status; student outcomes</td>
+<td><code>tracker_27</code>, <code>update_student_outcomes(_2)</code></td>
+<td>Daily</td>
+</tr>
+<tr class="odd">
+<td>S3 → Qualtrics (runtime)</td>
+<td><code>survey-ids/user_database.parquet</code> (autofill + skip logic) and <code>tl-monday/pl_today_facilitators_fy27.rds</code> (today’s facilitator list), read when a participant opens a survey</td>
+<td>tl-api <code>/check_email_or_name</code>, <code>/facilitators_coaches</code>, called from survey-embedded JS</td>
+<td>On survey open</td>
+</tr>
+<tr class="even">
+<td>Monday → Monday</td>
+<td>Coaching log entries → logistics board subitems; D75 sub-school routing</td>
+<td><code>monday_subitems_logistics</code> (daily), <code>monday-webhook</code> (event)</td>
+<td>Daily + webhook</td>
+</tr>
+<tr class="odd">
+<td>Monday → Google Slides</td>
+<td>Deck list board → generated slide decks</td>
+<td><code>update_deck_list</code> + <code>automated_decks</code> Connect API</td>
+<td>Daily / on demand</td>
+</tr>
+<tr class="even">
+<td>S3 → serving</td>
+<td>Everything above feeds Connect dashboards, pins, reports, and emails</td>
+<td>Connect apps and scheduled jobs</td>
+<td>On load / per schedule</td>
+</tr>
+<tr class="odd">
+<td>Serving → S3</td>
+<td>User-entered data flowing back: student work grading inputs, CAP usage events (rolled up weekly/monthly)</td>
+<td>Grading apps, CAP dashboard, <code>update_cap_usage_weekly/monthly</code></td>
+<td>On use</td>
+</tr>
+<tr class="even">
+<td>YC’s stuff → Monday <em>(WIP)</em></td>
+<td>Planned: web forms for coaching log and coaching roster entry, plus a bulk upload feeding the roster — details deliberately TBD for now</td>
+<td>TBD</td>
+<td>On submit / on upload</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="s3-buckets" class="level2">
+<h2 class="anchored" data-anchor-id="s3-buckets">S3 buckets</h2>
+<p>S3 is the hub, so it is worth knowing which bucket holds what. Fiscal-year buckets are the trap: a job pinned to <code>tl-surveys-27</code> sees nothing from SY25-26, and a “fall back to last year’s bucket” pattern silently drops the prior year once the current-year object appears. Bind both years rather than falling back.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bucket</th>
+<th>Holds</th>
+<th>Written by</th>
+<th>Read by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tl-surveys-27</code> (also <code>-26</code>, <code>-25</code>, and the unsuffixed <code>tl-surveys</code>)</td>
+<td>Cleaned survey parquet, one object per survey per fiscal year</td>
+<td><code>ec2_tl_scripts/update_&lt;survey&gt;.R</code>, <code>update_student_work</code></td>
+<td>Nearly every dashboard, report, and email</td>
+</tr>
+<tr class="even">
+<td><code>tl-monday</code></td>
+<td>Monday board saves: coaching log, rosters, facilitator board, staffing, logistics lookups, deck list, today’s facilitators</td>
+<td><code>update_coaching_log_27</code>, <code>update_coaching_roster_27</code>, <code>save_various_monday_boards</code>, <code>update_fac_board</code>, <code>update_fac_course_list_daily_fy27</code>, <code>update_deck_list</code></td>
+<td>Dashboards, trackers, the Qualtrics choice-list jobs, tl-api</td>
+</tr>
+<tr class="odd">
+<td><code>coaching-data-tl</code></td>
+<td>Coaching-specific derived data (CAPs, coaching outcomes, calendar parquet)</td>
+<td>Coaching jobs, <code>monday-webhook</code></td>
+<td>Coaching dashboards, <code>/calendar</code> endpoints</td>
+</tr>
+<tr class="even">
+<td><code>tl-student-work-27</code></td>
+<td>The actual student work PDFs, one object per uploaded sample</td>
+<td><code>update_student_work</code></td>
+<td><code>student_work_samples</code> and <code>student_work_graded</code> apps</td>
+</tr>
+<tr class="odd">
+<td><code>survey-ids</code></td>
+<td><code>user_database.parquet</code> — the participant lookup Qualtrics reads at survey open</td>
+<td><code>ec2_tl_scripts</code></td>
+<td>tl-api <code>/check_email_or_name</code></td>
+</tr>
+<tr class="even">
+<td><code>tl-shiny-cap-usage-2</code></td>
+<td>CAP usage events plus weekly and monthly rollups</td>
+<td>CAP dashboard, <code>update_cap_usage_weekly/monthly</code></td>
+<td>CAP usage dashboard</td>
+</tr>
+<tr class="odd">
+<td><code>tl-file-upload</code>, <code>tl-miscellaneous</code>, <code>tl-daily-stats</code>, <code>tl-capacity-plots</code>, <code>course-assessments-raw</code></td>
+<td>Supporting odds and ends: uploaded files, backups, cached stats and plots, raw assessment exports</td>
+<td><code>tl_file_upload</code>, <code>Daily Data Backup</code>, assorted jobs</td>
+<td>The apps that produced them</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="student-work-a-google-sheet-as-the-backend" class="level2">
+<h2 class="anchored" data-anchor-id="student-work-a-google-sheet-as-the-backend">Student work: a Google Sheet as the backend</h2>
+<p>Student work grading is the one pipeline that does not follow the usual “source → S3 → dashboard” shape. A Google Sheet (<code>1snMytJMFiuiVj7F167jfrLq-WSFOTKD0cOD40WtTSgY</code>, tab <em>Student Work Scores</em>) is the actual system of record for grades, and the PDFs live in S3 alongside it. Nothing about that arrangement is inferable from the Connect inventory, which is why it gets its own section.</p>
+<pre class="mermaid"><code>flowchart TD
+    teacher["Teacher / coach uploads&lt;br/&gt;student work (Qualtrics&lt;br/&gt;SV_0H7xUSb8qixVCDk)"]
+    job["update_student_work&lt;br/&gt;(Connect, daily 04:21)"]
+    parquet["tl-surveys-27/&lt;br/&gt;student_work.parquet"]
+    pdfs[("tl-student-work-27&lt;br/&gt;one PDF per sample")]
+    sheet[/"Google Sheet&lt;br/&gt;'Student Work Scores'&lt;br/&gt;= system of record"/]
+    grading["student_work_samples app&lt;br/&gt;(dashboards/posit-connect/&lt;br/&gt;student_work_grading)"]
+    graded["student_work_graded app&lt;br/&gt;(review + grade contests)"]
+    ongoing["ongoing_report&lt;br/&gt;+ update_student_outcomes"]
+    email["weekly_sw_grading_upload_email"]
+
+    teacher --&gt; job
+    job -- "responses" --&gt; parquet
+    job -- "zips converted to PDFs,&lt;br/&gt;deduped against the sheet" --&gt; pdfs
+    job -- "appends a metadata row&lt;br/&gt;per new file" --&gt; sheet
+    sheet -- "grading queue +&lt;br/&gt;approved grader list" --&gt; grading
+    pdfs -- "presigned URLs" --&gt; grading
+    grading -- "scores written back&lt;br/&gt;(range_write)" --&gt; sheet
+    sheet --&gt; graded
+    pdfs --&gt; graded
+    graded -- "grade contests" --&gt; sheet
+    sheet --&gt; ongoing
+    sheet --&gt; email
+    script["Apps Script bound to the sheet&lt;br/&gt;update_data() → tl-api&lt;br/&gt;/update/update_survey_s3?survey=student_work"]
+    sheet -.-&gt; script
+    script -. "run_delay=300 debounce" .-&gt; parquet
+
+    classDef qualtrics fill:#0f9d8f,stroke:#0b7568,color:#ffffff
+    classDef google fill:#188038,stroke:#12602a,color:#ffffff
+    classDef aws fill:#ec7211,stroke:#b85a0e,color:#ffffff
+    classDef connect fill:#447099,stroke:#335577,color:#ffffff
+    classDef output fill:#04abeb,stroke:#0380b0,color:#ffffff
+
+    class teacher qualtrics
+    class sheet,script google
+    class parquet,pdfs aws
+    class job,grading,graded connect
+    class ongoing,email output</code></pre>
+<p>Things to know before touching it:</p>
+<ul>
+<li><p><strong>There is a Google Apps Script in the loop.</strong> A script bound to the grading sheet (<code>update_data()</code>) POSTs to the tl-api plumber at <code>https://api.teachinglab.org/update/update_survey_s3?survey=student_work&amp;run_delay=300</code>, which re-runs the <code>ec2_tl_scripts</code> survey ETL for student work with a five-minute debounce. It authenticates with a static shared secret in an <code>Authorization</code> header, hardcoded in the script. So the student work parquet refreshes on sheet activity as well as on the daily Connect job — if data looks stale, check the Apps Script’s execution log in the sheet (Extensions → Apps Script → Executions), not just the Connect job history.</p></li>
+<li><p><strong>The sheet is the write target, not a cache.</strong> Both grading apps write scores back into it with <code>googlesheets4::range_write()</code> at fixed ranges, so inserting or reordering columns breaks grading silently.</p></li>
+<li><p><strong>Deduplication happens against the sheet</strong>, not against S3: the daily job reads existing rows and only uploads files it does not already see there.</p></li>
+<li><p><strong>Bucket, sheet, and survey are all fiscal-year scoped.</strong> Rolling to a new year means a new <code>tl-student-work-&lt;FY&gt;</code> bucket, a fresh copy of the grading sheet, and a new Qualtrics survey ID — four hardcoded places in total.</p></li>
+<li><p>Zip uploads are renamed to <code>.pdf</code> wholesale by the daily job; anything that is genuinely a zip of several samples will not render in the grading app.</p></li>
+</ul>
+</section>
+<section id="operational-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="operational-monitoring">Operational monitoring</h2>
+<p>The published inventory below is a <em>design-time</em> view: what exists and when it is supposed to run. The runtime view lives in the <strong>Connect Infrastructure Monitor</strong> (<code>posit_automations/monitor_connect_scripts.qmd</code>, published at <a href="https://tl-data.teachinglab.org/monitor_connect_scripts/" class="uri">https://tl-data.teachinglab.org/monitor_connect_scripts/</a>, itself a daily scheduled job). It queries the Connect API for every static-rendered script and shows last run time, success rate, run duration trends, and anything overdue by more than 15 minutes.</p>
+<p>The two views deliberately cover different sets:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>This document</th>
+<th>Connect Monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scheduled Quarto/R Markdown jobs</td>
+<td>✅ the 30 active ones, with cadence and repo path</td>
+<td>✅ all of them, with health and timing</td>
+</tr>
+<tr class="even">
+<td>Deployed-but-unscheduled static content</td>
+<td>❌ omitted</td>
+<td>✅ shown (with no next run)</td>
+</tr>
+<tr class="odd">
+<td>Plumber APIs, Shiny/Streamlit apps</td>
+<td>✅ listed with repo paths</td>
+<td>❌ out of scope (static content only)</td>
+</tr>
+<tr class="even">
+<td>Data flows, buckets, write-backs, event triggers</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td>Per-analyst PDS goal pages</td>
+<td>❌</td>
+<td>❌ filtered out by name (<code>_pds_</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>As of the latest inventory refresh the server holds <strong>199 static-rendered content items, only 30 of which are scheduled</strong>. The other ~169 are one-off analysis renders, superseded FY26 jobs left in place after their FY27 successors shipped (<code>update_coaching_log_26</code>, <code>update_coaching_roster_26</code>, <code>update_coachee_selection</code>, <code>tracker_26</code>, <code>validate_roster_26</code>, <code>update_caps_26</code>), and ~130 per-analyst FY25 PDS goal pages. They cost nothing to leave deployed, but they make the Connect content list hard to read — a periodic sweep is worth scheduling.</p>
+</section>
+<section id="cicd-github-actions-in-the-package-repo" class="level2">
+<h2 class="anchored" data-anchor-id="cicd-github-actions-in-the-package-repo">CI/CD (GitHub Actions in the package repo)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Workflow</th>
+<th>Trigger</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>render-posit-automations-index.yml</code></td>
+<td>push to <code>posit_automations/</code></td>
+<td>Regenerates <code>posit_automations/INDEX.md</code></td>
+</tr>
+<tr class="even">
+<td><code>update-architecture.yml</code></td>
+<td>weekly + manual</td>
+<td>Regenerates the inventory below from the Connect API, then syncs this file to the Data Hub as <code>architecture.qmd</code>, renders it, and pushes so Azure redeploys</td>
+</tr>
+<tr class="odd">
+<td><code>pkgdown.yaml</code></td>
+<td>push</td>
+<td>Builds package docs (datadocs.teachinglab.org)</td>
+</tr>
+<tr class="even">
+<td><code>rsync-deploy.yml</code></td>
+<td>push</td>
+<td>Rsyncs <code>dashboards/shiny-server/</code> to the old Shiny Server — <strong>server is retired; workflow and <code>dashboards/shiny-server/</code> are safe to delete</strong></td>
+</tr>
+<tr class="odd">
+<td><code>run_daily_scripts.yml</code></td>
+<td>—</td>
+<td>Fully commented out (SY23-24 era)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="known-loose-ends-as-of-2026-08-06" class="level2">
+<h2 class="anchored" data-anchor-id="known-loose-ends-as-of-2026-08-06">Known loose ends (as of 2026-08-06)</h2>
+<ul>
+<li><strong>Old Shiny Server is retired</strong> (confirmed 2026-08-06): all dashboards now live on Posit Connect. Cleanup still pending: delete <code>rsync-deploy.yml</code> (it rsyncs <code>dashboards/shiny-server/</code> to the dead server on every push) and archive <code>dashboards/shiny-server/</code>.</li>
+<li><strong>Two other EC2 hosts</strong> exist in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) — presumably the retired Shiny Server era instances; worth terminating if they’re still running (check the AWS console for billing).</li>
+<li><code>update_coachee_selection</code> (FY26) had a live daily schedule running alongside the FY27 replacement for months, emailing analysts unfixable roster warnings off the stale FY26 roster. Schedule 171 (variant 179) was <strong>deleted 2026-08-08</strong>; the content itself is left in place, unscheduled. Note the schedule record’s <code>activate: FALSE</code> meant “don’t activate the rendered output”, <em>not</em> “disabled” — don’t read that flag as an off switch. Schedules are owned by <code>/__api__/schedules/{id}</code>; <code>/__api__/variants/{id}/schedules</code> is a read-only collection view and 404s on DELETE.</li>
+<li><strong>Apps Scripts are undocumented infrastructure.</strong> At least one sheet-bound script (the student work grading sheet) calls tl-api on a schedule of its own, with the shared secret hardcoded in the script body. Worth auditing the other operational sheets for bound scripts, moving the secret into Script Properties, and listing whatever is found here — right now the only record of them is whoever remembers writing them.</li>
+<li>Older Connect apps (<code>ongoing_report_24_25</code>, <code>TeachingLLM</code>, <code>nps_monitoring_tl</code>, <code>tl_scrollytell</code>) have not been deployed in 6+ months and are likely inactive.</li>
+<li>Two <em>active</em> daily schedules run from sources that sit in <code>posit_automations/deprecated/</code>: <code>Coach/Facilitator Board Save</code> and <code>daily_percent_completion</code>. Either un-deprecate the sources or retire the schedules.</li>
+</ul>
+</section>
+<section id="live-connect-inventory" class="level2">
+<h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
+<!-- BEGIN GENERATED: connect-inventory -->
+<p><em>Auto-generated from the Posit Connect API on 2026-08-06 01:45 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><strong>Connect server:</strong> https://tl-data.teachinglab.org/ — 261 content items, 30 active schedules, 4 APIs, 28 interactive apps.</p>
+<section id="active-scheduled-jobs-30" class="level3">
+<h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Job</th>
+<th style="text-align: left;">Cadence</th>
+<th style="text-align: left;">Run Time (ET)</th>
+<th style="text-align: left;">Source in Repo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Coach/Facilitator Board Save</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">01:00</td>
+<td style="text-align: left;">posit_automations/deprecated</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Employee Information</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">00:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Monitor Connect Scripts</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">12:24</td>
+<td style="text-align: left;">posit_automations</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Qualtrics Checks</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">01:00</td>
+<td style="text-align: left;">posit_automations/validation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Score Course Assessments (FY27)</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">09:51</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Staffing Dashboard Targets Workflow</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">01:00</td>
+<td style="text-align: left;">posit_automations/cap_targets</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Update Project Log</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">00:30</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Update Qualtrics Survey Teacher Selection (FY27)</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">03:54</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">daily_percent_completion</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">00:30</td>
+<td style="text-align: left;">posit_automations/deprecated</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">save_various_monday_boards</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">05:58</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tl_file_upload</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">19:00</td>
+<td style="text-align: left;">posit_automations/emails</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_coach_selection</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">04:54</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">update_coaching_roster_27</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">00:30</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_course_choices</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">07:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">update_deck_list</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">02:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_fac_course_list_daily_fy27</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">06:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">update_facilitator_choices</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">07:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_pf_flow</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">07:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">update_site_choices</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">06:30</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_student_outcomes</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">02:46</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">update_student_work</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">04:21</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_cap_usage_monthly</td>
+<td style="text-align: left;">Monthly (day 3)</td>
+<td style="text-align: left;">06:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">automated_biweekly_reports</td>
+<td style="text-align: left;">Twice monthly</td>
+<td style="text-align: left;">02:38</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daily Data Backup</td>
+<td style="text-align: left;">Weekdays</td>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FacT Tier Progression Monitoring</td>
+<td style="text-align: left;">Weekdays</td>
+<td style="text-align: left;">04:00</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">generate_daily_reports</td>
+<td style="text-align: left;">Weekdays</td>
+<td style="text-align: left;">03:58</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sarah_tierney_custom_design_loops</td>
+<td style="text-align: left;">Weekly (Mon)</td>
+<td style="text-align: left;">01:10</td>
+<td style="text-align: left;">posit_automations/misc</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">update_cap_usage_weekly</td>
+<td style="text-align: left;">Weekly (Mon)</td>
+<td style="text-align: left;">06:00</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">managers_automated_weekly_project_log_emails</td>
+<td style="text-align: left;">Weekly (Thu)</td>
+<td style="text-align: left;">05:00</td>
+<td style="text-align: left;">posit_automations/emails</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">project_manager_leads_automated_staffing_emails</td>
+<td style="text-align: left;">Weekly (Thu)</td>
+<td style="text-align: left;">05:05</td>
+<td style="text-align: left;">posit_automations/emails</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="deployed-apis-on-connect" class="level3">
+<h3 class="anchored" data-anchor-id="deployed-apis-on-connect">Deployed APIs on Connect</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">API</th>
+<th style="text-align: left;">Last Deployed</th>
+<th style="text-align: left;">Source in Repo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">monday-webhook</td>
+<td style="text-align: left;">2026-08-03</td>
+<td style="text-align: left;">api/monday-webhook</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">automated_decks</td>
+<td style="text-align: left;">2026-06-10</td>
+<td style="text-align: left;">api/automated_decks</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tracker-webhook</td>
+<td style="text-align: left;">2026-02-10</td>
+<td style="text-align: left;">api/tracker-webhook</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tl-survey-comm-api</td>
+<td style="text-align: left;">2025-10-15</td>
+<td style="text-align: left;">api/tl-survey-comm-api</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="interactive-apps-on-connect" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-apps-on-connect">Interactive apps on Connect</h3>
+<p>Apps not deployed recently may be inactive — check before assuming they are live.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">App</th>
+<th style="text-align: left;">Framework</th>
+<th style="text-align: left;">Last Deployed</th>
+<th style="text-align: left;">Source in Repo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ongoing_report</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-05</td>
+<td style="text-align: left;">dashboards/posit-connect/ongoing_report</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">participant_feedback</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-05</td>
+<td style="text-align: left;">dashboards/posit-connect/participant_feedback</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tl_individual_feedback</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-05</td>
+<td style="text-align: left;">dashboards/posit-connect/tl_individual_feedback</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">course_assessments</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-05</td>
+<td style="text-align: left;">dashboards/deprecated/course_assessments</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ongoing_report_sidebot</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-04</td>
+<td style="text-align: left;">dashboards/posit-connect/ongoing_report_sidebot</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">calendar_refresh_monitor</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-03</td>
+<td style="text-align: left;">dashboards/posit-connect/calendar_refresh_monitor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tl_pl_calendar</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-03</td>
+<td style="text-align: left;">dashboards/posit-connect/tl_pl_calendar</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cap_usage_dashboard</td>
+<td style="text-align: left;">python-streamlit</td>
+<td style="text-align: left;">2026-07-24</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">d9_d11_coaching_outcomes</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-07-24</td>
+<td style="text-align: left;">dashboards/posit-connect/d9_d11_coaching_outcomes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">project_log_tl</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-07-22</td>
+<td style="text-align: left;">dashboards/posit-connect/project_log_tl</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">coaching_action_plans_v2</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-07-14</td>
+<td style="text-align: left;">dashboards/posit-connect/coaching_action_plans_v2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">student_work_samples</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-07-03</td>
+<td style="text-align: left;">dashboards/posit-connect/student_work_grading</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">project_log_report_2</td>
+<td style="text-align: left;">quarto-shiny</td>
+<td style="text-align: left;">2026-05-19</td>
+<td style="text-align: left;">posit_automations/reports</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">guskey_app</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-05-11</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IPGRawDataDashboard</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-04-13</td>
+<td style="text-align: left;">dashboards/posit-connect/ipg_raw_reports</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">student_work_graded</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-04-02</td>
+<td style="text-align: left;">dashboards/posit-connect/student_work_graded</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">plumber-logging</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-03-13</td>
+<td style="text-align: left;">dashboards/posit-connect/plumber-logging</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cap_validation</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-03-11</td>
+<td style="text-align: left;">dashboards/posit-connect/cap_validation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">file-upload-tl</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-02-17</td>
+<td style="text-align: left;">dashboards/posit-connect/file-upload-tl</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tl_coteach</td>
+<td style="text-align: left;">python-streamlit</td>
+<td style="text-align: left;">2026-02-02</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ongoing_report_24_25</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-01-05</td>
+<td style="text-align: left;">dashboards/posit-connect/ongoing_report_24_25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">generate_slide_deck</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2025-11-30</td>
+<td style="text-align: left;">dashboards/posit-connect/generate_slide_deck</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cap_survey</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2025-11-24</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">coaching_action_plans</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2025-11-03</td>
+<td style="text-align: left;">analysis/sy25_26/coaching_action_plans</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cap_naming_validator</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2025-10-16</td>
+<td style="text-align: left;">dashboards/posit-connect/cap_naming_validator</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tl_scrollytell</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2025-08-07</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TeachingLLM</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2024-06-04</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nps_monitoring_tl</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2024-06-03</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="disabled-schedules-still-on-the-server" class="level3">
+<h3 class="anchored" data-anchor-id="disabled-schedules-still-on-the-server">Disabled schedules still on the server</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 88%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Job</th>
+<th style="text-align: left;">Cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">update_coachee_selection (FY26 - deprecated, replaced by FY27)</td>
+<td style="text-align: left;">Daily</td>
+</tr>
+</tbody>
+</table>
+<!-- END GENERATED: connect-inventory -->
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/datahub\.teachinglab\.org\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://www.teachinglab.org/"><img src="https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w" class="img-fluid" alt="Teaching Lab" width="200"></a></p>
+<p>Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.</p>
+<p>Great Teachers Make The Difference: <a href="https://www.teachinglab.org/donate">Support Our Work.</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./On_the_data.html">
+<p>FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.html">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/teachinglabhq">
+      <i class="bi bi-twitter" role="img" aria-label="Teaching Lab Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/teachinglabhq">
+      <i class="bi bi-github" role="img" aria-label="Teaching Lab GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://datahub.teachinglab.org/docs/blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="TL Blog RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
