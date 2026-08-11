@@ -946,14 +946,9 @@ cookieconsent.run({
 <td>Builds package docs (datadocs.teachinglab.org)</td>
 </tr>
 <tr class="even">
-<td><code>rsync-deploy.yml</code></td>
-<td>push</td>
-<td>Rsyncs <code>dashboards/shiny-server/</code> to a host that no longer exists — <strong>safe to delete, along with the directory it copies</strong></td>
-</tr>
-<tr class="odd">
 <td><code>run_daily_scripts.yml</code></td>
 <td>—</td>
-<td>Fully commented out; does nothing</td>
+<td>The old script runner from before everything moved to Posit Connect: it ran the daily SY23-24 automations on a GitHub-hosted Windows runner. Fully commented out and kept for reference</td>
 </tr>
 </tbody>
 </table>
@@ -968,7 +963,7 @@ cookieconsent.run({
 <p>Things that are true right now and want attention.</p>
 <ul>
 <li><strong><code>daily_percent_completion</code> is pinned to SY24-25.</strong> It calls <code>get_coach_roster(year = "24_25")</code> and reads the FY25 tracker sheet, so the <code>tl-daily-stats/percent_complete.parquet</code> it writes daily at 00:30 describes a school year that ended over a year ago. It exits 0 every night, so nothing flags it. Roll it forward or retire the schedule.</li>
-<li><strong><code>dashboards/shiny-server/</code> and <code>rsync-deploy.yml</code> target a server that no longer exists.</strong> Every push still rsyncs that directory to the dead host; all dashboards live on Posit Connect. Both are safe to delete.</li>
+<li><strong><code>dashboards/shiny-server/</code> is kept for reference only.</strong> It holds the app sources from before everything moved to Posit Connect, where all dashboards now live. Nothing deploys from it — the workflow that used to rsync it to the Shiny Server host is gone — so treat it as an archive, not as live code.</li>
 <li><strong>Two EC2 hosts in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) have no known purpose</strong> — they date from the Shiny Server era. Check the AWS console for whether they are still running and billing.</li>
 <li><strong>Sheet-bound Apps Scripts are infrastructure with no inventory.</strong> At least one (the student work grading sheet) calls tl-api on a cadence of its own, with the shared secret hardcoded in the script body. The other operational sheets have not been audited for bound scripts; the secret belongs in Script Properties, and whatever is found belongs in this document.</li>
 <li><strong><code>DATAHUB_PUSH_TOKEN</code> is a personal gh CLI OAuth token.</strong> It carries write access to every repo its owner can reach, and it stops working the next time they run <code>gh auth login</code> — at which point the Data Hub half of <code>update-architecture.yml</code> starts failing. A fine-grained PAT scoped to <code>teachinglab.github.io</code> with Contents: write would fix both problems.</li>
@@ -978,7 +973,7 @@ cookieconsent.run({
 <section id="live-connect-inventory" class="level2">
 <h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
 <!-- BEGIN GENERATED: connect-inventory -->
-<p><em>Auto-generated from the Posit Connect API on 2026-08-11 12:20 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><em>Auto-generated from the Posit Connect API on 2026-08-11 12:25 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
 <p><strong>Connect server:</strong> https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.</p>
 <section id="active-scheduled-jobs-30" class="level3">
 <h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>
@@ -1050,7 +1045,7 @@ cookieconsent.run({
 <td style="text-align: left;">daily_percent_completion</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">00:30</td>
-<td style="text-align: left;">posit_automations/deprecated</td>
+<td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">save_various_monday_boards</td>

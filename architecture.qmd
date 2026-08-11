@@ -373,8 +373,7 @@ scheduling.
 | `render-posit-automations-index.yml` | push to `posit_automations/` | Regenerates `posit_automations/INDEX.md` |
 | `update-architecture.yml` | weekly + manual | Regenerates the inventory below from the Connect API, then syncs this file to the Data Hub as `architecture.qmd`, renders it, and pushes so Azure redeploys |
 | `pkgdown.yaml` | push | Builds package docs (datadocs.teachinglab.org) |
-| `rsync-deploy.yml` | push | Rsyncs `dashboards/shiny-server/` to a host that no longer exists — **safe to delete, along with the directory it copies** |
-| `run_daily_scripts.yml` | — | Fully commented out; does nothing |
+| `run_daily_scripts.yml` | — | The old script runner from before everything moved to Posit Connect: it ran the daily SY23-24 automations on a GitHub-hosted Windows runner. Fully commented out and kept for reference |
 
 ## Working with the Connect schedules API
 
@@ -396,9 +395,10 @@ Things that are true right now and want attention.
   `tl-daily-stats/percent_complete.parquet` it writes daily at 00:30 describes a
   school year that ended over a year ago. It exits 0 every night, so nothing
   flags it. Roll it forward or retire the schedule.
-- **`dashboards/shiny-server/` and `rsync-deploy.yml` target a server that no
-  longer exists.** Every push still rsyncs that directory to the dead host; all
-  dashboards live on Posit Connect. Both are safe to delete.
+- **`dashboards/shiny-server/` is kept for reference only.** It holds the app
+  sources from before everything moved to Posit Connect, where all dashboards
+  now live. Nothing deploys from it — the workflow that used to rsync it to the
+  Shiny Server host is gone — so treat it as an archive, not as live code.
 - **Two EC2 hosts in `~/.ssh/config` (3.17.162.157, 13.59.10.1) have no known
   purpose** — they date from the Shiny Server era. Check the AWS console for
   whether they are still running and billing.
@@ -420,7 +420,7 @@ Things that are true right now and want attention.
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-11 12:20 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-11 12:25 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
 **Connect server:** https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
@@ -436,7 +436,7 @@ _Auto-generated from the Posit Connect API on 2026-08-11 12:20 EDT by `data_scri
 |Staffing Dashboard Targets Workflow              |Daily           |01:00         |posit_automations/cap_targets  |
 |Update Project Log                               |Daily           |00:30         |posit_automations/data_updates |
 |Update Qualtrics Survey Teacher Selection (FY27) |Daily           |03:54         |posit_automations/data_updates |
-|daily_percent_completion                         |Daily           |00:30         |posit_automations/deprecated   |
+|daily_percent_completion                         |Daily           |00:30         |posit_automations/data_updates |
 |save_various_monday_boards                       |Daily           |05:58         |posit_automations/data_updates |
 |tl_file_upload                                   |Daily           |19:00         |posit_automations/emails       |
 |update_coach_selection                           |Daily           |04:54         |posit_automations/data_updates |
