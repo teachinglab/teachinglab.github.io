@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2df48709b76d14063553b40dabc082e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c29a6f502cd3fa13139a543f2cde6073.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2df48709b76d14063553b40dabc082e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a9a9abb714d0f28914fd5d62775fe131.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-696db09837577b101ad78de6518e0afb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a9a9abb714d0f28914fd5d62775fe131.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -400,7 +400,8 @@ cookieconsent.run({
   <li><a href="#student-work-a-google-sheet-as-the-backend" id="toc-student-work-a-google-sheet-as-the-backend" class="nav-link" data-scroll-target="#student-work-a-google-sheet-as-the-backend">Student work: a Google Sheet as the backend</a></li>
   <li><a href="#operational-monitoring" id="toc-operational-monitoring" class="nav-link" data-scroll-target="#operational-monitoring">Operational monitoring</a></li>
   <li><a href="#cicd-github-actions-in-the-package-repo" id="toc-cicd-github-actions-in-the-package-repo" class="nav-link" data-scroll-target="#cicd-github-actions-in-the-package-repo">CI/CD (GitHub Actions in the package repo)</a></li>
-  <li><a href="#known-loose-ends-as-of-2026-08-06" id="toc-known-loose-ends-as-of-2026-08-06" class="nav-link" data-scroll-target="#known-loose-ends-as-of-2026-08-06">Known loose ends (as of 2026-08-06)</a></li>
+  <li><a href="#working-with-the-connect-schedules-api" id="toc-working-with-the-connect-schedules-api" class="nav-link" data-scroll-target="#working-with-the-connect-schedules-api">Working with the Connect schedules API</a></li>
+  <li><a href="#loose-ends" id="toc-loose-ends" class="nav-link" data-scroll-target="#loose-ends">Loose ends</a></li>
   <li><a href="#live-connect-inventory" id="toc-live-connect-inventory" class="nav-link" data-scroll-target="#live-connect-inventory">Live Connect inventory</a>
   <ul class="collapse">
   <li><a href="#active-scheduled-jobs-30" id="toc-active-scheduled-jobs-30" class="nav-link" data-scroll-target="#active-scheduled-jobs-30">Active scheduled jobs (30)</a></li>
@@ -911,7 +912,7 @@ cookieconsent.run({
 </tr>
 </tbody>
 </table>
-<p>As of the latest inventory refresh the server holds <strong>199 static-rendered content items, only 30 of which are scheduled</strong>. The other ~169 are one-off analysis renders, superseded FY26 jobs left in place after their FY27 successors shipped (<code>update_coaching_log_26</code>, <code>update_coaching_roster_26</code>, <code>update_coachee_selection</code>, <code>tracker_26</code>, <code>validate_roster_26</code>, <code>update_caps_26</code>), and ~130 per-analyst FY25 PDS goal pages. They cost nothing to leave deployed, but they make the Connect content list hard to read — a periodic sweep is worth scheduling.</p>
+<p>Most static-rendered content on the server is <strong>not</strong> scheduled — roughly 200 items against the ~30 in the generated table below (that table carries the exact current count). The unscheduled remainder is one-off analysis renders, FY26 jobs superseded by their FY27 replacements but still deployed (<code>update_coaching_log_26</code>, <code>update_coaching_roster_26</code>, <code>update_coachee_selection</code>, <code>tracker_26</code>, <code>validate_roster_26</code>, <code>update_caps_26</code>), and ~130 per-analyst FY25 PDS goal pages. They cost nothing to leave deployed, but they make the Connect content list hard to read — a periodic sweep is worth scheduling.</p>
 </section>
 <section id="cicd-github-actions-in-the-package-repo" class="level2">
 <h2 class="anchored" data-anchor-id="cicd-github-actions-in-the-package-repo">CI/CD (GitHub Actions in the package repo)</h2>
@@ -947,32 +948,37 @@ cookieconsent.run({
 <tr class="even">
 <td><code>rsync-deploy.yml</code></td>
 <td>push</td>
-<td>Rsyncs <code>dashboards/shiny-server/</code> to the old Shiny Server — <strong>server is retired; workflow and <code>dashboards/shiny-server/</code> are safe to delete</strong></td>
+<td>Rsyncs <code>dashboards/shiny-server/</code> to a host that no longer exists — <strong>safe to delete, along with the directory it copies</strong></td>
 </tr>
 <tr class="odd">
 <td><code>run_daily_scripts.yml</code></td>
 <td>—</td>
-<td>Fully commented out (SY23-24 era)</td>
+<td>Fully commented out; does nothing</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="known-loose-ends-as-of-2026-08-06" class="level2">
-<h2 class="anchored" data-anchor-id="known-loose-ends-as-of-2026-08-06">Known loose ends (as of 2026-08-06)</h2>
+<section id="working-with-the-connect-schedules-api" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-the-connect-schedules-api">Working with the Connect schedules API</h2>
+<p>Schedules are owned by <code>/__api__/schedules/{id}</code>. <code>/__api__/variants/{id}/schedules</code> is a read-only collection view and 404s on DELETE, so that is the wrong path to reach for when retiring a job.</p>
+<p>A schedule record’s <code>activate: FALSE</code> means “don’t activate the rendered output” — it does <strong>not</strong> mean the schedule is off. A job with that flag still runs on time. The only reliable way to stop one is to delete the schedule; the content itself can stay deployed and simply becomes unscheduled.</p>
+</section>
+<section id="loose-ends" class="level2">
+<h2 class="anchored" data-anchor-id="loose-ends">Loose ends</h2>
+<p>Things that are true right now and want attention.</p>
 <ul>
-<li><strong>Old Shiny Server is retired</strong> (confirmed 2026-08-06): all dashboards now live on Posit Connect. Cleanup still pending: delete <code>rsync-deploy.yml</code> (it rsyncs <code>dashboards/shiny-server/</code> to the dead server on every push) and archive <code>dashboards/shiny-server/</code>.</li>
-<li><strong>Two other EC2 hosts</strong> exist in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) — presumably the retired Shiny Server era instances; worth terminating if they’re still running (check the AWS console for billing).</li>
-<li><code>update_coachee_selection</code> (FY26) had a live daily schedule running alongside the FY27 replacement for months, emailing analysts unfixable roster warnings off the stale FY26 roster. Schedule 171 (variant 179) was <strong>deleted 2026-08-08</strong>; the content itself is left in place, unscheduled. Note the schedule record’s <code>activate: FALSE</code> meant “don’t activate the rendered output”, <em>not</em> “disabled” — don’t read that flag as an off switch. Schedules are owned by <code>/__api__/schedules/{id}</code>; <code>/__api__/variants/{id}/schedules</code> is a read-only collection view and 404s on DELETE.</li>
-<li><strong><code>update-architecture.yml</code> has never completed successfully.</strong> Its first scheduled run (2026-08-10) died on <code>CONNECT_API_KEY is not set</code> — the secret does not exist on the repo. The Data Hub sync step additionally needs a <code>DATAHUB_PUSH_TOKEN</code> with write access to <code>teachinglab/teachinglab.github.io</code>. Until both secrets are added, the inventory below and the published Data Hub page only refresh when someone runs the scripts by hand.</li>
-<li><strong>Apps Scripts are undocumented infrastructure.</strong> At least one sheet-bound script (the student work grading sheet) calls tl-api on a schedule of its own, with the shared secret hardcoded in the script body. Worth auditing the other operational sheets for bound scripts, moving the secret into Script Properties, and listing whatever is found here — right now the only record of them is whoever remembers writing them.</li>
-<li>Older Connect apps (<code>ongoing_report_24_25</code>, <code>TeachingLLM</code>, <code>nps_monitoring_tl</code>, <code>tl_scrollytell</code>) have not been deployed in 6+ months and are likely inactive.</li>
-<li>One <em>active</em> daily schedule still runs from a source in <code>posit_automations/deprecated/</code>: <code>daily_percent_completion</code> (00:30). Either un-deprecate the source or retire the schedule. (<code>Coach/Facilitator Board Save</code> was the other one; its source has since moved to <code>data_updates/</code>.)</li>
+<li><strong><code>daily_percent_completion</code> is pinned to SY24-25.</strong> It calls <code>get_coach_roster(year = "24_25")</code> and reads the FY25 tracker sheet, so the <code>tl-daily-stats/percent_complete.parquet</code> it writes daily at 00:30 describes a school year that ended over a year ago. It exits 0 every night, so nothing flags it. Roll it forward or retire the schedule.</li>
+<li><strong><code>dashboards/shiny-server/</code> and <code>rsync-deploy.yml</code> target a server that no longer exists.</strong> Every push still rsyncs that directory to the dead host; all dashboards live on Posit Connect. Both are safe to delete.</li>
+<li><strong>Two EC2 hosts in <code>~/.ssh/config</code> (3.17.162.157, 13.59.10.1) have no known purpose</strong> — they date from the Shiny Server era. Check the AWS console for whether they are still running and billing.</li>
+<li><strong>Sheet-bound Apps Scripts are infrastructure with no inventory.</strong> At least one (the student work grading sheet) calls tl-api on a cadence of its own, with the shared secret hardcoded in the script body. The other operational sheets have not been audited for bound scripts; the secret belongs in Script Properties, and whatever is found belongs in this document.</li>
+<li><strong><code>DATAHUB_PUSH_TOKEN</code> is a personal gh CLI OAuth token.</strong> It carries write access to every repo its owner can reach, and it stops working the next time they run <code>gh auth login</code> — at which point the Data Hub half of <code>update-architecture.yml</code> starts failing. A fine-grained PAT scoped to <code>teachinglab.github.io</code> with Contents: write would fix both problems.</li>
+<li><strong>Four Connect apps have not been deployed in 6+ months</strong> — <code>ongoing_report_24_25</code>, <code>TeachingLLM</code>, <code>nps_monitoring_tl</code>, <code>tl_scrollytell</code> — and are likely inactive.</li>
 </ul>
 </section>
 <section id="live-connect-inventory" class="level2">
 <h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
 <!-- BEGIN GENERATED: connect-inventory -->
-<p><em>Auto-generated from the Posit Connect API on 2026-08-11 02:48 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><em>Auto-generated from the Posit Connect API on 2026-08-11 12:20 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
 <p><strong>Connect server:</strong> https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.</p>
 <section id="active-scheduled-jobs-30" class="level3">
 <h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>
@@ -1229,6 +1235,18 @@ cookieconsent.run({
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">student_work_samples</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-11</td>
+<td style="text-align: left;">dashboards/posit-connect/student_work_grading</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">student_work_graded</td>
+<td style="text-align: left;">shiny</td>
+<td style="text-align: left;">2026-08-11</td>
+<td style="text-align: left;">dashboards/posit-connect/student_work_graded</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">Teaching Lab API Monitor</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-08-07</td>
@@ -1301,34 +1319,22 @@ cookieconsent.run({
 <td style="text-align: left;">dashboards/posit-connect/coaching_action_plans_v2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">student_work_samples</td>
-<td style="text-align: left;">shiny</td>
-<td style="text-align: left;">2026-07-03</td>
-<td style="text-align: left;">dashboards/posit-connect/student_work_grading</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">project_log_report_2</td>
 <td style="text-align: left;">quarto-shiny</td>
 <td style="text-align: left;">2026-05-19</td>
 <td style="text-align: left;">posit_automations/reports</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">guskey_app</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-05-11</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">IPGRawDataDashboard</td>
 <td style="text-align: left;">shiny</td>
 <td style="text-align: left;">2026-04-13</td>
 <td style="text-align: left;">dashboards/posit-connect/ipg_raw_reports</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">student_work_graded</td>
-<td style="text-align: left;">shiny</td>
-<td style="text-align: left;">2026-04-02</td>
-<td style="text-align: left;">dashboards/posit-connect/student_work_graded</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">plumber-logging</td>

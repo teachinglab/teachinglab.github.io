@@ -356,10 +356,11 @@ The two views deliberately cover different sets:
 | Data flows, buckets, write-backs, event triggers | ✅ | ❌ |
 | Per-analyst PDS goal pages | ❌ | ❌ filtered out by name (`_pds_`) |
 
-As of the latest inventory refresh the server holds **199 static-rendered
-content items, only 30 of which are scheduled**. The other ~169 are one-off
-analysis renders, superseded FY26 jobs left in place after their FY27 successors
-shipped (`update_coaching_log_26`, `update_coaching_roster_26`,
+Most static-rendered content on the server is **not** scheduled — roughly 200
+items against the ~30 in the generated table below (that table carries the exact
+current count). The unscheduled remainder is one-off analysis renders, FY26 jobs
+superseded by their FY27 replacements but still deployed
+(`update_coaching_log_26`, `update_coaching_roster_26`,
 `update_coachee_selection`, `tracker_26`, `validate_roster_26`, `update_caps_26`),
 and ~130 per-analyst FY25 PDS goal pages. They cost nothing to leave deployed,
 but they make the Connect content list hard to read — a periodic sweep is worth
@@ -372,50 +373,54 @@ scheduling.
 | `render-posit-automations-index.yml` | push to `posit_automations/` | Regenerates `posit_automations/INDEX.md` |
 | `update-architecture.yml` | weekly + manual | Regenerates the inventory below from the Connect API, then syncs this file to the Data Hub as `architecture.qmd`, renders it, and pushes so Azure redeploys |
 | `pkgdown.yaml` | push | Builds package docs (datadocs.teachinglab.org) |
-| `rsync-deploy.yml` | push | Rsyncs `dashboards/shiny-server/` to the old Shiny Server — **server is retired; workflow and `dashboards/shiny-server/` are safe to delete** |
-| `run_daily_scripts.yml` | — | Fully commented out (SY23-24 era) |
+| `rsync-deploy.yml` | push | Rsyncs `dashboards/shiny-server/` to a host that no longer exists — **safe to delete, along with the directory it copies** |
+| `run_daily_scripts.yml` | — | Fully commented out; does nothing |
 
-## Known loose ends (as of 2026-08-06)
+## Working with the Connect schedules API
 
-- **Old Shiny Server is retired** (confirmed 2026-08-06): all dashboards now
-  live on Posit Connect. Cleanup still pending: delete `rsync-deploy.yml`
-  (it rsyncs `dashboards/shiny-server/` to the dead server on every push) and
-  archive `dashboards/shiny-server/`.
-- **Two other EC2 hosts** exist in `~/.ssh/config` (3.17.162.157, 13.59.10.1) —
-  presumably the retired Shiny Server era instances; worth terminating if
-  they're still running (check the AWS console for billing).
-- `update_coachee_selection` (FY26) had a live daily schedule running alongside
-  the FY27 replacement for months, emailing analysts unfixable roster warnings
-  off the stale FY26 roster. Schedule 171 (variant 179) was **deleted 2026-08-08**;
-  the content itself is left in place, unscheduled. Note the schedule record's
-  `activate: FALSE` meant "don't activate the rendered output", *not* "disabled" —
-  don't read that flag as an off switch. Schedules are owned by
-  `/__api__/schedules/{id}`; `/__api__/variants/{id}/schedules` is a read-only
-  collection view and 404s on DELETE.
-- **`update-architecture.yml` has never completed successfully.** Its first
-  scheduled run (2026-08-10) died on `CONNECT_API_KEY is not set` — the secret
-  does not exist on the repo. The Data Hub sync step additionally needs a
-  `DATAHUB_PUSH_TOKEN` with write access to `teachinglab/teachinglab.github.io`.
-  Until both secrets are added, the inventory below and the published Data Hub
-  page only refresh when someone runs the scripts by hand.
-- **Apps Scripts are undocumented infrastructure.** At least one sheet-bound
-  script (the student work grading sheet) calls tl-api on a schedule of its own,
-  with the shared secret hardcoded in the script body. Worth auditing the other
-  operational sheets for bound scripts, moving the secret into Script Properties,
-  and listing whatever is found here — right now the only record of them is
-  whoever remembers writing them.
-- Older Connect apps (`ongoing_report_24_25`, `TeachingLLM`, `nps_monitoring_tl`,
-  `tl_scrollytell`) have not been deployed in 6+ months and are likely inactive.
-- One *active* daily schedule still runs from a source in
-  `posit_automations/deprecated/`: `daily_percent_completion` (00:30). Either
-  un-deprecate the source or retire the schedule. (`Coach/Facilitator Board
-  Save` was the other one; its source has since moved to `data_updates/`.)
+Schedules are owned by `/__api__/schedules/{id}`. `/__api__/variants/{id}/schedules`
+is a read-only collection view and 404s on DELETE, so that is the wrong path to
+reach for when retiring a job.
+
+A schedule record's `activate: FALSE` means "don't activate the rendered
+output" — it does **not** mean the schedule is off. A job with that flag still
+runs on time. The only reliable way to stop one is to delete the schedule; the
+content itself can stay deployed and simply becomes unscheduled.
+
+## Loose ends
+
+Things that are true right now and want attention.
+
+- **`daily_percent_completion` is pinned to SY24-25.** It calls
+  `get_coach_roster(year = "24_25")` and reads the FY25 tracker sheet, so the
+  `tl-daily-stats/percent_complete.parquet` it writes daily at 00:30 describes a
+  school year that ended over a year ago. It exits 0 every night, so nothing
+  flags it. Roll it forward or retire the schedule.
+- **`dashboards/shiny-server/` and `rsync-deploy.yml` target a server that no
+  longer exists.** Every push still rsyncs that directory to the dead host; all
+  dashboards live on Posit Connect. Both are safe to delete.
+- **Two EC2 hosts in `~/.ssh/config` (3.17.162.157, 13.59.10.1) have no known
+  purpose** — they date from the Shiny Server era. Check the AWS console for
+  whether they are still running and billing.
+- **Sheet-bound Apps Scripts are infrastructure with no inventory.** At least
+  one (the student work grading sheet) calls tl-api on a cadence of its own,
+  with the shared secret hardcoded in the script body. The other operational
+  sheets have not been audited for bound scripts; the secret belongs in Script
+  Properties, and whatever is found belongs in this document.
+- **`DATAHUB_PUSH_TOKEN` is a personal gh CLI OAuth token.** It carries write
+  access to every repo its owner can reach, and it stops working the next time
+  they run `gh auth login` — at which point the Data Hub half of
+  `update-architecture.yml` starts failing. A fine-grained PAT scoped to
+  `teachinglab.github.io` with Contents: write would fix both problems.
+- **Four Connect apps have not been deployed in 6+ months** —
+  `ongoing_report_24_25`, `TeachingLLM`, `nps_monitoring_tl`, `tl_scrollytell` —
+  and are likely inactive.
 
 ## Live Connect inventory
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-11 02:48 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-11 12:20 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
 **Connect server:** https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
@@ -469,6 +474,8 @@ Apps not deployed recently may be inactive — check before assuming they are li
 
 |App                      |Framework        |Last Deployed |Source in Repo                                    |
 |:------------------------|:----------------|:-------------|:-------------------------------------------------|
+|student_work_samples     |shiny            |2026-08-11    |dashboards/posit-connect/student_work_grading     |
+|student_work_graded      |shiny            |2026-08-11    |dashboards/posit-connect/student_work_graded      |
 |Teaching Lab API Monitor |shiny            |2026-08-07    |dashboards/posit-connect/api_monitor              |
 |participant_feedback     |shiny            |2026-08-07    |dashboards/posit-connect/participant_feedback     |
 |ongoing_report           |shiny            |2026-08-06    |dashboards/posit-connect/ongoing_report           |
@@ -481,11 +488,9 @@ Apps not deployed recently may be inactive — check before assuming they are li
 |d9_d11_coaching_outcomes |shiny            |2026-07-24    |dashboards/posit-connect/d9_d11_coaching_outcomes |
 |project_log_tl           |shiny            |2026-07-22    |dashboards/posit-connect/project_log_tl           |
 |coaching_action_plans_v2 |shiny            |2026-07-14    |dashboards/posit-connect/coaching_action_plans_v2 |
-|student_work_samples     |shiny            |2026-07-03    |dashboards/posit-connect/student_work_grading     |
 |project_log_report_2     |quarto-shiny     |2026-05-19    |posit_automations/reports                         |
 |guskey_app               |shiny            |2026-05-11    |*(not in this repo)*                              |
 |IPGRawDataDashboard      |shiny            |2026-04-13    |dashboards/posit-connect/ipg_raw_reports          |
-|student_work_graded      |shiny            |2026-04-02    |dashboards/posit-connect/student_work_graded      |
 |plumber-logging          |shiny            |2026-03-13    |dashboards/posit-connect/plumber-logging          |
 |cap_validation           |shiny            |2026-03-11    |dashboards/posit-connect/cap_validation           |
 |file-upload-tl           |shiny            |2026-02-17    |dashboards/posit-connect/file-upload-tl           |
