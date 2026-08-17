@@ -11,7 +11,7 @@ mermaid:
 ---
 
 ::: {.callout-note appearance="simple"}
-This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-11). Edit it there, not here.
+This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-17). Edit it there, not here.
 :::
 
 Internal (login-required) hosted versions on Posit Connect:
@@ -315,7 +315,7 @@ content itself can stay deployed and simply becomes unscheduled.
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-11 12:36 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-08-17 08:10 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
 **Connect server:** https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
@@ -329,6 +329,7 @@ _Auto-generated from the Posit Connect API on 2026-08-11 12:36 EDT by `data_scri
 |Qualtrics Checks                                 |Daily           |01:00         |posit_automations/validation   |
 |Score Course Assessments (FY27)                  |Daily           |09:51         |posit_automations/data_updates |
 |Staffing Dashboard Targets Workflow              |Daily           |01:00         |posit_automations/cap_targets  |
+|Student Work Update (FY27)                       |Daily           |04:21         |posit_automations/data_updates |
 |Update Project Log                               |Daily           |00:30         |posit_automations/data_updates |
 |Update Qualtrics Survey Teacher Selection (FY27) |Daily           |03:54         |posit_automations/data_updates |
 |daily_percent_completion                         |Daily           |00:30         |posit_automations/data_updates |
@@ -343,7 +344,6 @@ _Auto-generated from the Posit Connect API on 2026-08-11 12:36 EDT by `data_scri
 |update_pf_flow                                   |Daily           |07:00         |posit_automations/data_updates |
 |update_site_choices                              |Daily           |06:30         |posit_automations/data_updates |
 |update_student_outcomes                          |Daily           |02:46         |posit_automations/data_updates |
-|update_student_work                              |Daily           |04:21         |posit_automations/data_updates |
 |update_cap_usage_monthly                         |Monthly (day 3) |06:00         |posit_automations/data_updates |
 |automated_biweekly_reports                       |Twice monthly   |02:38         |*(not in this repo)*           |
 |Daily Data Backup                                |Weekdays        |14:00         |posit_automations/data_updates |
@@ -369,11 +369,12 @@ Apps not deployed recently may be inactive — check before assuming they are li
 
 |App                      |Framework        |Last Deployed |Source in Repo                                    |
 |:------------------------|:----------------|:-------------|:-------------------------------------------------|
+|project_log_report_2     |quarto-shiny     |2026-08-12    |posit_automations/reports                         |
+|ongoing_report           |shiny            |2026-08-11    |dashboards/posit-connect/ongoing_report           |
 |student_work_samples     |shiny            |2026-08-11    |dashboards/posit-connect/student_work_grading     |
 |student_work_graded      |shiny            |2026-08-11    |dashboards/posit-connect/student_work_graded      |
 |Teaching Lab API Monitor |shiny            |2026-08-07    |dashboards/posit-connect/api_monitor              |
 |participant_feedback     |shiny            |2026-08-07    |dashboards/posit-connect/participant_feedback     |
-|ongoing_report           |shiny            |2026-08-06    |dashboards/posit-connect/ongoing_report           |
 |tl_individual_feedback   |shiny            |2026-08-05    |dashboards/posit-connect/tl_individual_feedback   |
 |course_assessments       |shiny            |2026-08-05    |dashboards/deprecated/course_assessments          |
 |ongoing_report_sidebot   |shiny            |2026-08-04    |dashboards/posit-connect/ongoing_report_sidebot   |
@@ -383,7 +384,6 @@ Apps not deployed recently may be inactive — check before assuming they are li
 |d9_d11_coaching_outcomes |shiny            |2026-07-24    |dashboards/posit-connect/d9_d11_coaching_outcomes |
 |project_log_tl           |shiny            |2026-07-22    |dashboards/posit-connect/project_log_tl           |
 |coaching_action_plans_v2 |shiny            |2026-07-14    |dashboards/posit-connect/coaching_action_plans_v2 |
-|project_log_report_2     |quarto-shiny     |2026-05-19    |posit_automations/reports                         |
 |guskey_app               |shiny            |2026-05-11    |*(not in this repo)*                              |
 |IPGRawDataDashboard      |shiny            |2026-04-13    |dashboards/posit-connect/ipg_raw_reports          |
 |plumber-logging          |shiny            |2026-03-13    |dashboards/posit-connect/plumber-logging          |
