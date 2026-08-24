@@ -406,7 +406,7 @@ cookieconsent.run({
   <li><a href="#working-with-the-connect-schedules-api" id="toc-working-with-the-connect-schedules-api" class="nav-link" data-scroll-target="#working-with-the-connect-schedules-api">Working with the Connect schedules API</a></li>
   <li><a href="#live-connect-inventory" id="toc-live-connect-inventory" class="nav-link" data-scroll-target="#live-connect-inventory">Live Connect inventory</a>
   <ul class="collapse">
-  <li><a href="#active-scheduled-jobs-30" id="toc-active-scheduled-jobs-30" class="nav-link" data-scroll-target="#active-scheduled-jobs-30">Active scheduled jobs (30)</a></li>
+  <li><a href="#active-scheduled-jobs-31" id="toc-active-scheduled-jobs-31" class="nav-link" data-scroll-target="#active-scheduled-jobs-31">Active scheduled jobs (31)</a></li>
   <li><a href="#deployed-apis-on-connect" id="toc-deployed-apis-on-connect" class="nav-link" data-scroll-target="#deployed-apis-on-connect">Deployed APIs on Connect</a></li>
   <li><a href="#interactive-apps-on-connect" id="toc-interactive-apps-on-connect" class="nav-link" data-scroll-target="#interactive-apps-on-connect">Interactive apps on Connect</a></li>
   <li><a href="#disabled-schedules-still-on-the-server" id="toc-disabled-schedules-still-on-the-server" class="nav-link" data-scroll-target="#disabled-schedules-still-on-the-server">Disabled schedules still on the server</a></li>
@@ -448,7 +448,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This page is generated from <code>ARCHITECTURE.md</code> in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-17). Edit it there, not here.</p>
+<p>This page is generated from <code>ARCHITECTURE.md</code> in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-24). Edit it there, not here.</p>
 </div>
 </div>
 </div>
@@ -946,10 +946,10 @@ cookieconsent.run({
 <section id="live-connect-inventory" class="level2">
 <h2 class="anchored" data-anchor-id="live-connect-inventory">Live Connect inventory</h2>
 <!-- BEGIN GENERATED: connect-inventory -->
-<p><em>Auto-generated from the Posit Connect API on 2026-08-17 08:10 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
-<p><strong>Connect server:</strong> https://tl-data.teachinglab.org — 265 content items, 30 active schedules, 4 APIs, 29 interactive apps.</p>
-<section id="active-scheduled-jobs-30" class="level3">
-<h3 class="anchored" data-anchor-id="active-scheduled-jobs-30">Active scheduled jobs (30)</h3>
+<p><em>Auto-generated from the Posit Connect API on 2026-08-24 08:12 EDT by <code>data_scripts/generate_architecture.R</code>. Do not edit this section by hand.</em></p>
+<p><strong>Connect server:</strong> https://tl-data.teachinglab.org — 268 content items, 31 active schedules, 4 APIs, 29 interactive apps.</p>
+<section id="active-scheduled-jobs-31" class="level3">
+<h3 class="anchored" data-anchor-id="active-scheduled-jobs-31">Active scheduled jobs (31)</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 44%">
@@ -985,162 +985,168 @@ cookieconsent.run({
 <td style="text-align: left;">posit_automations</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">Nisa Quarantine Watchdog</td>
+<td style="text-align: left;">Daily</td>
+<td style="text-align: left;">07:00</td>
+<td style="text-align: left;"><em>(not in this repo)</em></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">Qualtrics Checks</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">01:00</td>
 <td style="text-align: left;">posit_automations/validation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Score Course Assessments (FY27)</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">09:51</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Staffing Dashboard Targets Workflow</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">01:00</td>
 <td style="text-align: left;">posit_automations/cap_targets</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Student Work Update (FY27)</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">04:21</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Update Project Log</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">00:30</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Update Qualtrics Survey Teacher Selection (FY27)</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">03:54</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">daily_percent_completion</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">00:30</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">save_various_monday_boards</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">05:58</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">tl_file_upload</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">19:00</td>
 <td style="text-align: left;">posit_automations/emails</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">update_coach_selection</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">04:54</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_coaching_roster_27</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">00:30</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">update_course_choices</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">07:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_deck_list</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">02:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">update_fac_course_list_daily_fy27</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">06:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_facilitator_choices</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">07:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">update_pf_flow</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">07:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_site_choices</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">06:30</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">update_student_outcomes</td>
 <td style="text-align: left;">Daily</td>
 <td style="text-align: left;">02:46</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_cap_usage_monthly</td>
 <td style="text-align: left;">Monthly (day 3)</td>
 <td style="text-align: left;">06:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">automated_biweekly_reports</td>
 <td style="text-align: left;">Twice monthly</td>
 <td style="text-align: left;">02:38</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Daily Data Backup</td>
 <td style="text-align: left;">Weekdays</td>
 <td style="text-align: left;">14:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">FacT Tier Progression Monitoring</td>
 <td style="text-align: left;">Weekdays</td>
 <td style="text-align: left;">04:00</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">generate_daily_reports</td>
 <td style="text-align: left;">Weekdays</td>
 <td style="text-align: left;">03:58</td>
 <td style="text-align: left;"><em>(not in this repo)</em></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">sarah_tierney_custom_design_loops</td>
 <td style="text-align: left;">Weekly (Mon)</td>
 <td style="text-align: left;">01:10</td>
 <td style="text-align: left;">posit_automations/misc</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">update_cap_usage_weekly</td>
 <td style="text-align: left;">Weekly (Mon)</td>
 <td style="text-align: left;">06:00</td>
 <td style="text-align: left;">posit_automations/data_updates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">managers_automated_weekly_project_log_emails</td>
 <td style="text-align: left;">Weekly (Thu)</td>
 <td style="text-align: left;">05:00</td>
 <td style="text-align: left;">posit_automations/emails</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">project_manager_leads_automated_staffing_emails</td>
 <td style="text-align: left;">Weekly (Thu)</td>
 <td style="text-align: left;">05:05</td>
@@ -1161,19 +1167,19 @@ cookieconsent.run({
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">monday-webhook</td>
-<td style="text-align: left;">2026-08-03</td>
-<td style="text-align: left;">api/monday-webhook</td>
+<td style="text-align: left;">tracker-webhook</td>
+<td style="text-align: left;">2026-08-20</td>
+<td style="text-align: left;">api/tracker-webhook</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">monday-webhook</td>
+<td style="text-align: left;">2026-08-19</td>
+<td style="text-align: left;">api/monday-webhook</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">automated_decks</td>
 <td style="text-align: left;">2026-06-10</td>
 <td style="text-align: left;">api/automated_decks</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">tracker-webhook</td>
-<td style="text-align: left;">2026-02-10</td>
-<td style="text-align: left;">api/tracker-webhook</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">tl-survey-comm-api</td>
