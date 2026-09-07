@@ -11,7 +11,7 @@ mermaid:
 ---
 
 ::: {.callout-note appearance="simple"}
-This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-08-31). Edit it there, not here.
+This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-09-07). Edit it there, not here.
 :::
 
 Internal (login-required) hosted versions on Posit Connect:
@@ -315,7 +315,7 @@ content itself can stay deployed and simply becomes unscheduled.
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-08-31 08:22 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-09-07 08:21 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
 **Connect server:** https://tl-data.teachinglab.org — 269 content items, 30 active schedules, 4 APIs, 29 interactive apps.
 
@@ -358,7 +358,7 @@ _Auto-generated from the Posit Connect API on 2026-08-31 08:22 EDT by `data_scri
 
 |API                |Last Deployed |Source in Repo         |
 |:------------------|:-------------|:----------------------|
-|monday-webhook     |2026-08-30    |api/monday-webhook     |
+|monday-webhook     |2026-09-01    |api/monday-webhook     |
 |tracker-webhook    |2026-08-20    |api/tracker-webhook    |
 |automated_decks    |2026-06-10    |api/automated_decks    |
 |tl-survey-comm-api |2025-10-15    |api/tl-survey-comm-api |
