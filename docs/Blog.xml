@@ -10,11 +10,9 @@
 <atom:link href="https://datahub.teachinglab.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.</description>
 <image>
-<url>https://datahub.teachinglab.org/Images/blog/blog_banner_2.png</url>
+<url>https://datahub.teachinglab.org/Images/cards/blog.jpg</url>
 <title>Data Hub</title>
 <link>https://datahub.teachinglab.org/blog.html</link>
-<height>144</height>
-<width>144</width>
 </image>
 <generator>quarto-1.10.18</generator>
 <lastBuildDate>Mon, 15 Jul 2024 05:00:00 GMT</lastBuildDate>

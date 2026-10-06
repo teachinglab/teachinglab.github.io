@@ -1,7 +1,7 @@
 ---
 title: "Data Dives"
 description: "The Learning & Research team's series on how, what, why and where we use data - with video recordings and slides linked."
-image: "Images/data_dives/data_dive.webp"
+image: "Images/cards/data_dives.jpg"
 format:
   html:
     page-layout: full

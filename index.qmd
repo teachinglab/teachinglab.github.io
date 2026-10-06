@@ -15,10 +15,10 @@ listing:
   id: front-list
   sort: "order"
   type: grid
-  grid-columns: 4
+  grid-columns: 3
   categories: false
   image-align: 'right'
-  image-height: '100%'
+  image-height: 220px
 format:
   html:
     page-layout: full
@@ -58,6 +58,11 @@ p {
 
 <center>Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.</center>
 
+## Pages
+
+::: {#front-list}
+:::
+
 ## FAQ
 
 -   How do I navigate the data hub?
@@ -79,8 +84,3 @@ p {
 -   Where is data from previous years?
 
     -   Check out the archives tab!
-
-## Pages
-
-::: {#front-list}
-:::

@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://datahub.teachinglab.org/blog.html</loc>
-    <lastmod>2026-09-03T17:28:12.743Z</lastmod>
+    <lastmod>2026-10-06T16:13:11.180Z</lastmod>
   </url>
   <url>
     <loc>https://datahub.teachinglab.org/Dashboards.html</loc>
-    <lastmod>2026-09-03T17:28:12.743Z</lastmod>
+    <lastmod>2026-10-06T16:14:01.835Z</lastmod>
   </url>
   <url>
     <loc>https://datahub.teachinglab.org/facilitator_coach_map.html</loc>
@@ -29,23 +29,87 @@
     <lastmod>2026-09-03T17:28:12.825Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/employee_map.html</loc>
+    <loc>https://datahub.teachinglab.org/blog/02_beyond_the_basics/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.038Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/blog/06_maintaining_data_quality/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.068Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/index.html</loc>
+    <lastmod>2026-10-06T16:13:11.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/trademark.html</loc>
+    <lastmod>2026-09-03T17:28:13.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/educator_survey_2.html</loc>
     <lastmod>2026-09-03T17:28:13.390Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/blog/03_what_is_nps/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.048Z</lastmod>
+    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_1.html</loc>
+    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/blog/05_advancing_data_equity/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.062Z</lastmod>
+    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_3.html</loc>
+    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/blog/01_changing_the_game/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.034Z</lastmod>
+    <loc>https://datahub.teachinglab.org/dashboard3/course_assessments.html</loc>
+    <lastmod>2026-09-03T17:28:13.087Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/Reports.html</loc>
+    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_4.html</loc>
+    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_3.html</loc>
+    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/posts/post-with-code/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.651Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/evaluation_plan.html</loc>
+    <lastmod>2026-10-06T16:13:11.176Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/On_the_data.html</loc>
+    <lastmod>2026-10-06T16:13:11.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/gifts_table.html</loc>
+    <lastmod>2026-09-03T17:28:13.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/posts/welcome/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.652Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_1.html</loc>
+    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/dashboard2/educator_survey.html</loc>
+    <lastmod>2026-09-03T17:28:13.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/dashboard3/course_assessments_2.html</loc>
+    <lastmod>2026-09-03T17:28:13.087Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_2.html</loc>
+    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datahub.teachinglab.org/archives.html</loc>
     <lastmod>2026-10-06T04:35:13.456Z</lastmod>
   </url>
   <url>
@@ -53,92 +117,24 @@
     <lastmod>2026-09-03T17:28:13.109Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/archives.html</loc>
-    <lastmod>2026-10-06T04:35:13.456Z</lastmod>
+    <loc>https://datahub.teachinglab.org/Reports.html</loc>
+    <lastmod>2026-10-06T16:13:11.169Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_2.html</loc>
-    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
+    <loc>https://datahub.teachinglab.org/blog/01_changing_the_game/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.034Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/dashboard3/course_assessments_2.html</loc>
-    <lastmod>2026-09-03T17:28:13.087Z</lastmod>
+    <loc>https://datahub.teachinglab.org/blog/05_advancing_data_equity/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.062Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/dashboard2/educator_survey.html</loc>
-    <lastmod>2026-09-03T17:28:13.082Z</lastmod>
+    <loc>https://datahub.teachinglab.org/blog/03_what_is_nps/index.html</loc>
+    <lastmod>2026-09-03T17:28:13.048Z</lastmod>
   </url>
   <url>
-    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_1.html</loc>
-    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/posts/welcome/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/gifts_table.html</loc>
-    <lastmod>2026-09-03T17:28:13.414Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/On_the_data.html</loc>
-    <lastmod>2026-09-03T17:28:12.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/evaluation_plan.html</loc>
-    <lastmod>2026-09-03T17:28:12.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/posts/post-with-code/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_3.html</loc>
-    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/dashboard5/student_learning_experiences_4.html</loc>
-    <lastmod>2026-09-03T17:28:13.109Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/dashboard3/course_assessments.html</loc>
-    <lastmod>2026-09-03T17:28:13.087Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_3.html</loc>
-    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/dashboard4/participant_practice_1.html</loc>
-    <lastmod>2026-09-03T17:28:13.101Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/educator_survey_2.html</loc>
+    <loc>https://datahub.teachinglab.org/employee_map.html</loc>
     <lastmod>2026-09-03T17:28:13.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/trademark.html</loc>
-    <lastmod>2026-09-03T17:28:13.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/index.html</loc>
-    <lastmod>2026-10-06T12:37:10.717Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/blog/04_new_mexico_student_survey/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.059Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/blog/06_maintaining_data_quality/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/blog/02_beyond_the_basics/index.html</loc>
-    <lastmod>2026-09-03T17:28:13.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datahub.teachinglab.org/pds.html</loc>
-    <lastmod>2026-09-03T17:28:13.638Z</lastmod>
   </url>
   <url>
     <loc>https://datahub.teachinglab.org/dashboard/participant_feedback_2.html</loc>
@@ -162,6 +158,6 @@
   </url>
   <url>
     <loc>https://datahub.teachinglab.org/Data_dives.html</loc>
-    <lastmod>2026-09-03T17:28:12.745Z</lastmod>
+    <lastmod>2026-10-06T16:13:11.184Z</lastmod>
   </url>
 </urlset>
