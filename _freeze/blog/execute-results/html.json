@@ -1,0 +1,15 @@
+{
+  "hash": "3b31f55e7e5ebd5569fec5efee3712e2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Blog\"\ndescription: \"Various musings and writings on the data that Teaching Lab collects, and how it is used to conduct research and improve student and teacher outcomes.\"\nimage: \"Images/blog/blog_banner_2.png\"\nlisting:\n  contents: blog\n  id: blog-list\n  sort: \"date desc\"\n  type: default\n  categories: true\n  image-align: 'right'\n  image-placeholder: 'teachinglab_logo.png'\n  feed: true\nformat: \n  html: \n    page-layout: full\n---\n\n::: {.cell}\n<style type=\"text/css\">\n.quarto-title {\n    display: none;\n  }\n  \n.description {\n    display: none;\n  }\n</style>\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](Images/blog/blog_banner.png){width=100%}\n:::\n:::\n\nWelcome to the Teaching Lab blog, where data science and education converge to inspire transformative teaching and learning. Our data scientists and educators dive deep into data to uncover insights that shape effective, equitable teaching strategies. From student performance analyses to innovative educational tools, we explore how data can inform and revolutionize education. Join us for cutting-edge research, case studies, and practical tips to empower your teaching. Dive into the future of education with us.\n\n::: {#blog-list}\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

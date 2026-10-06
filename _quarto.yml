@@ -102,4 +102,7 @@ resources:
   - CNAME
 
 execute:
+  # Reuse frozen R output so CI can build the site with Quarto alone;
+  # a page re-executes only when its source changes
+  freeze: auto
   cache: true
