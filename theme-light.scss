@@ -1,2 +1,11 @@
 /*-- scss:defaults --*/
-$navbar-bg: #04abeb !default;
+// White navbar so the two-tone logo reads; brand blue carries the accents
+$navbar-bg: #ffffff;
+$navbar-fg: #1b1818;
+$navbar-hl: #04abeb;
+$footer-bg: #f6f8fa;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 3px solid #04abeb;
+}

@@ -1,9 +1,14 @@
 /*-- scss:defaults --*/
-// Base document colors
-$body-bg: #181818;
-$body-color: white;
-$link-color: #75AADB;
-$navbar-bg: #04abeb !default;
+$navbar-bg: #1d2024;
+$navbar-fg: #e8eaed;
+$navbar-hl: #04abeb;
+$link-color: #5cc8f2;
+$footer-bg: #1d2024;
 
 // Code blocks
 $code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 3px solid #04abeb;
+}

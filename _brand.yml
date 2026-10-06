@@ -1,0 +1,51 @@
+# Teaching Lab brand, shared with dashboards/tl_template_dashboard/_brand.yml
+# in the TeachingLab package (fonts load from Google here instead of local files)
+meta:
+  name:
+    short: TL
+    full: Teaching Lab
+  link:
+    home: https://www.teachinglab.org
+    github: https://github.com/teachinglab
+
+logo:
+  images:
+    icon-light: Images/brand/tl_icon.png
+    icon-dark: Images/brand/tl_icon_dark.png
+  small:
+    light: icon-light
+    dark: icon-dark
+
+color:
+  palette:
+    blue: "#04abeb"
+    blue-dark: "#0284c7"
+    pink: "#FF3D7F"
+    red: "#E5383B"
+  primary: blue
+  secondary: pink
+  danger: red
+  foreground:
+    light: "#1b1818"
+    dark: "#e8eaed"
+  background:
+    light: "#ffffff"
+    dark: "#15171a"
+
+typography:
+  fonts:
+    - family: Poppins
+      source: google
+      weight: [400, 500, 600, 700]
+    - family: Lora
+      source: google
+      weight: [400, 500, 600]
+      style: [normal, italic]
+  base:
+    family: Lora
+    line-height: 1.6
+  headings:
+    family: Poppins
+    weight: 600
+  link:
+    weight: 500

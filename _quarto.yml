@@ -21,9 +21,10 @@ website:
   # language:
     # search-box-placeholder: Search
   page-navigation: true
+  back-to-top-navigation: true
   page-footer:
     left: |
-      [![](https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w){fig-alt="Teaching Lab" width=200px}](https://www.teachinglab.org/)
+      [![](/Images/brand/tl_logo_light.png){.light-content fig-alt="Teaching Lab" width=200px}![](/Images/brand/tl_logo_dark.png){.dark-content fig-alt="Teaching Lab" width=200px}](https://www.teachinglab.org/)
       
       Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.
       
@@ -38,18 +39,21 @@ website:
       - text: "Trademark"
         href: trademark.qmd
     right:
-      - icon: twitter
+      - icon: twitter-x
         href: https://twitter.com/teachinglabhq
-        aria-label: Teaching Lab Twitter
+        aria-label: Teaching Lab on X
       - icon: github
         href: https://github.com/teachinglabhq
         aria-label: Teaching Lab GitHub
       - icon: rss
         href: https://datahub.teachinglab.org/docs/blog/index.xml
         aria-label: TL Blog RSS
-  # announcement: 
-    # content: "🎉 Quarto 1.4 released! [Download](/docs/download/), [Read More](/docs/blog/posts/2024-01-24-1.4-release/)"
-    # position: below-navbar
+  announcement:
+    icon: info-circle
+    dismissable: true
+    type: primary
+    position: below-navbar
+    content: "**FY27 is live:** the FY27 Data Collection Tracker and Project Health sheet are under *FY27 Trackers/Slides* in the menu above."
   navbar:
     left:
       - href: index.qmd
@@ -90,9 +94,12 @@ website:
         href: https://github.com/teachinglab/teachinglab.github.io
 format:
   html:
-    theme: 
-      light: [journal, theme-light.scss]
-      dark: [journal, theme-dark.scss]
+    # Colors, fonts and logo come from _brand.yml
+    theme:
+      light: [brand, theme-light.scss]
+      dark: [brand, theme-dark.scss]
+    respect-user-color-scheme: true
+    lightbox: auto
     css: styles.css
     toc: true
 

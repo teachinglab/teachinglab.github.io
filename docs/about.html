@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-087139183311ad54cfdac43d6c6ce732.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e67878dd4c038a7bd4c2541957dc55f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-087139183311ad54cfdac43d6c6ce732.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c65b5991bb8365c92b140bd180f6292f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-be0c69b5b2e9ad15b6a9575aa8e0e2f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c65b5991bb8365c92b140bd180f6292f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -258,7 +258,8 @@ cookieconsent.run({
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -271,6 +272,14 @@ cookieconsent.run({
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -284,6 +293,10 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./Images/brand/tl_icon.png" alt="" class="navbar-logo light-content">
+    <img src="./Images/brand/tl_icon_dark.png" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Data Hub</span>
     </a>
@@ -382,6 +395,9 @@ cookieconsent.run({
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="cb2a1b2a5985a424fd8e390ed2013523" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>FY27 is live:</strong> the FY27 Data Collection Tracker and Project Health sheet are under <em>FY27 Trackers/Slides</em> in the menu above.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -403,7 +419,7 @@ cookieconsent.run({
 <p>On this website you will see information about Teaching Lab data according to your role. At the moment you are signed in as an [coach_facilitator_external_internal] user.</p>
 
 
-</main> 
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> 
   <hr class="about-sep">
    <div class="about-links">
   <a href="https://twitter.com/teachinglabhq" class="about-link" rel="" target="">
@@ -831,7 +847,7 @@ cookieconsent.run({
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.teachinglab.org/"><img src="https://images.squarespace-cdn.com/content/v1/5ef2087220c7256a8632676b/86dbfc41-323a-4550-9eb6-3d9bb7358ad6/20160223+Teaching+Lab+Logo+Final_SM+HORIZONTAL+v3.png?format=1500w" class="img-fluid" alt="Teaching Lab" width="200"></a></p>
+<p><a href="https://www.teachinglab.org/"><img src="./Images/brand/tl_logo_light.png" class="light-content img-fluid" alt="Teaching Lab" width="200"><img src="./Images/brand/tl_logo_dark.png" class="dark-content img-fluid" alt="Teaching Lab" width="200"></a></p>
 <p>Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.</p>
 <p>Great Teachers Make The Difference: <a href="https://www.teachinglab.org/donate">Support Our Work.</a></p>
 </div>   
@@ -863,7 +879,7 @@ cookieconsent.run({
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/teachinglabhq">
-      <i class="bi bi-twitter" role="img" aria-label="Teaching Lab Twitter">
+      <i class="bi bi-twitter-x" role="img" aria-label="Teaching Lab on X">
 </i> 
     </a>
   </li>  

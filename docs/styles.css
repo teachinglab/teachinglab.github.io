@@ -7,3 +7,48 @@
 p,li,h1, .description {
     max-width: 100ch;
 }
+/* Compact cookie notice: a slim bar along the bottom instead of a quarter-screen box */
+#termsfeed-com---nb.termsfeed-com---nb-simple {
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  border-top: 2px solid #04abeb;
+}
+#termsfeed-com---nb .cc-nb-main-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem !important;
+}
+#termsfeed-com---nb .cc-nb-title {
+  display: none;
+}
+#termsfeed-com---nb .cc-nb-text {
+  margin: 0 !important;
+  font-size: 0.8rem !important;
+  flex: 1;
+}
+#termsfeed-com---nb .cc-nb-buttons-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+#termsfeed-com---nb .cc-nb-buttons-container button {
+  margin: 0 !important;
+  padding: 0.3rem 0.8rem !important;
+  font-size: 0.8rem !important;
+}
+#termsfeed-com---nb .cc-nb-okagree {
+  background-color: #04abeb !important;
+}
+
+/* Listing cards: soft lift on hover */
+.quarto-grid-item.card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.quarto-grid-item.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(4, 171, 235, 0.18);
+}
