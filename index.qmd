@@ -9,7 +9,6 @@ listing:
     - evaluation_plan.qmd
     - blog.qmd
     - Data_dives.qmd
-    - Trackers.qmd
     - Org_goals.qmd
     - On_the_data.qmd
     - front_page/front_page.yaml
@@ -77,7 +76,7 @@ p {
 
 -   How often does the data update?
 
-    -   All dashboards (except for the learning assessments, and CAP dashboard) should update within 10-15 minutes. Trackers should update on an hourly, or daily basis, the FY25-26 Coaching Data Collection Tracker updates *every 3 hours*. For specific details read [here](https://datahub.teachinglab.org/On_the_data.html).
+    -   All dashboards (except for the learning assessments, and CAP dashboard) should update within 10-15 minutes. Trackers should update on an hourly, or daily basis, the FY26-27 Data Collection Tracker and Project Health sheet update *every hour*. For specific details read [here](https://datahub.teachinglab.org/On_the_data.html).
 
 -   Where is data from previous years?
 

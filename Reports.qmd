@@ -27,7 +27,7 @@ Reports on Teaching Lab Data
 
 ------------------------------------------------------------------------
 
-# SY25-26
+# SY26-27 & SY25-26
 
 ------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ Reports on Teaching Lab Data
 ::: {.column width="70%"}
 ## [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/)
 
-A dashboard to comprehensively provide an overview of Teaching Lab's L&R data, as well as handy site-specific summaries.
+A dashboard to comprehensively provide an overview of Teaching Lab's L&R data, as well as handy site-specific summaries. Covers SY26-27 and SY25-26 data, filter by date range to view a single school year.
 :::
 
 ::: {.column width="30%"}

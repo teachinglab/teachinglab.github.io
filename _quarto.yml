@@ -54,12 +54,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: "FY26 Trackers/Slides"
+      - text: "FY27 Trackers/Slides"
         menu:
-          - text: "FY26 Data Collection Tracker – Rostered Participants Only"
-            href: https://docs.google.com/spreadsheets/d/1V3yu5vfrbeRWyMn0nY6POHZHehBpO28QayY2hn6pAe4/edit?gid=0#gid=0
-          - text: "FY26 Data Submissions & Key Outcomes"
-            href: https://docs.google.com/spreadsheets/d/1m8K4gpf5jctyMWpo7Qt3Aa0CQh9-wwGeVTyDuEtkrlk/edit?gid=0#gid=0
+          - text: "FY27 Data Collection Tracker – Rostered Participants Only"
+            href: https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0
+          - text: "FY27 Response Rates & Key Outcomes (Project Health)"
+            href: https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit
           - text: "Slide Deck Generator"
             href: https://tl-data.teachinglab.org/generate_slide_deck/
       - text: "Reports"
