@@ -9,9 +9,7 @@ listing:
     - evaluation_plan.qmd
     - blog.qmd
     - Data_dives.qmd
-    - Org_goals.qmd
     - On_the_data.qmd
-    - front_page/front_page.yaml
   sort-ui: false
   filter-ui: false
   id: front-list
@@ -86,13 +84,3 @@ p {
 
 ::: {#front-list}
 :::
-
-## Contact
-
-[Duncan Gates](https://datahub.teachinglab.org/people/duncan_gates.html)
-
--   Staff Data Scientist
--   [Learning & Research Staff Page](https://sites.google.com/teachinglab.org/staff-site/learning-research)
--   [Slack](https://teachinglabhq.slack.com/team/U01MRR8KBRU)
--   email: [duncan.gates\@teachinglab.org](mailto:duncan.gates@teachinglab.org){.email}
--   Current Time Zone: MST
