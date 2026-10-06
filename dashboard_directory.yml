@@ -1,0 +1,119 @@
+# Every live dashboard, tracker, and tool on the Data Hub, one entry each.
+# Dashboards.qmd lists this file; cards link straight to the app.
+# categories: first the Guskey level ("All levels" for cross-cutting), then the kind
+# (Summary, Deep dive, Raw data, Tracker, Tool), so the category filter works on both.
+
+- title: "Ongoing Report"
+  path: https://tl-data.teachinglab.org/ongoing_report/
+  image: Images/dashboards/ongoing_report_24_25.png
+  description: "How is my site doing across every part of the Guskey framework? Start here: filter to your site, subsite, and dates."
+  categories: [All levels, Summary]
+  audience: "Everyone: site leads, PMs, leadership"
+  years: "SY25-26 and SY26-27"
+  updates: "Within 10–15 minutes of a new response"
+  access: "Teaching Lab Google login"
+  order: 1
+
+- title: "FY27 Data Collection Tracker"
+  path: https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0
+  image: Images/dashboards/google_sheets.png
+  description: "Which rostered participants have completed each survey, observation, and student work submission?"
+  categories: [All levels, Tracker]
+  audience: "Site leads, coaches, PMs"
+  years: "SY26-27"
+  updates: "Hourly"
+  access: "Teaching Lab Google account"
+  order: 2
+
+- title: "FY27 Response Rates & Key Outcomes (Project Health)"
+  path: https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit
+  image: Images/dashboards/google_sheets.png
+  description: "Are projects on track? Response rates and headline outcomes by project in one sheet."
+  categories: [All levels, Tracker]
+  audience: "PMs, leadership"
+  years: "SY26-27"
+  updates: "Hourly"
+  access: "Teaching Lab Google account"
+  order: 3
+
+- title: "Slide Deck Generator"
+  path: https://tl-data.teachinglab.org/generate_slide_deck/
+  image: teachinglab_logo.png
+  description: "Build a partner-ready slide deck from the latest data for a project."
+  categories: [All levels, Tool]
+  audience: "PMs, site leads"
+  access: "Teaching Lab Google login"
+  order: 4
+
+- title: "Participant Feedback Rollup"
+  path: https://tl-data.teachinglab.org/participant_feedback/
+  image: Images/dashboards/FacilitatorRollup.png
+  description: "What do participants say about sessions, courses, and coaching? Detailed breakdowns with facilitator competency feedback, NPS, and trends over time."
+  categories: [Perceptions, Deep dive]
+  audience: "PMs, facilitator and coach leads"
+  years: "SY25-26 and SY26-27"
+  updates: "Within 10–15 minutes of a new response"
+  access: "Teaching Lab Google login"
+  order: 10
+
+- title: "Individual Feedback for Facilitators and Coaches"
+  path: https://tl-data.teachinglab.org/individual_feedback/
+  image: Images/dashboards/FacilitatorRollup.png
+  description: "How did my sessions and coaching go? Shows the feedback on you, based on your Google login."
+  categories: [Perceptions, Deep dive]
+  audience: "Facilitators and coaches"
+  years: "SY24-25 to SY26-27"
+  updates: "Within 10–15 minutes of a new response"
+  access: "Teaching Lab Google login; shows your own data"
+  order: 11
+
+- title: "Learning Assessments Dashboard"
+  path: https://tl-data.teachinglab.org/learning_assessments/
+  image: Images/dashboards/CourseAssessment.png
+  description: "Did participants' content knowledge grow? % correct before and after, by question, and by answer choice."
+  categories: [Knowledge, Deep dive]
+  audience: "PMs, course designers"
+  years: "SY24-25 to SY26-27"
+  updates: "After assessments are scored (not real time)"
+  access: "Teaching Lab Google login"
+  order: 20
+
+- title: "IPG Raw Data / Downloads"
+  path: https://tl-data.teachinglab.org/ipg_raw_reports/
+  image: Images/dashboards/IPGRawDashboard.png
+  description: "Every classroom observation response, per teacher, with a summative download."
+  categories: [Practice, Raw data]
+  audience: "Coaches, data requests"
+  years: "Current observation survey"
+  updates: "Pulled live from Qualtrics on load"
+  access: "Teaching Lab Google login"
+  order: 40
+
+- title: "Classroom Observations in Google Sheets"
+  path: https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt
+  image: Images/dashboards/google_sheets.png
+  description: "Raw spreadsheet copies of submitted IPG data by site. By-coach copies are in the folder linked from the matrix above."
+  categories: [Practice, Raw data]
+  audience: "Coaches, site leads"
+  access: "Teaching Lab Google account"
+  order: 41
+
+- title: "Student Work Graded Dashboard"
+  path: https://tl-data.teachinglab.org/student_work_graded/
+  image: Images/dashboards/StudentWorkGraded.png
+  description: "Is student work on grade level? % proficient and on grade level after grading, plus remaining files and contested grades."
+  categories: [Student Learning, Deep dive]
+  audience: "PMs, site leads, graders"
+  years: "SY25-26 and SY26-27"
+  updates: "As grades are submitted"
+  access: "Teaching Lab Google login"
+  order: 50
+
+- title: "Student Work Grading App"
+  path: https://tl-data.teachinglab.org/student_work_grading/
+  image: Images/dashboards/StudentWorkGrader.png
+  description: "Grade submitted student work samples."
+  categories: [Student Learning, Tool]
+  audience: "Approved graders"
+  access: "Approved graders only; ask Duncan Gates for access"
+  order: 51

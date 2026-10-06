@@ -56,7 +56,7 @@ website:
     dismissable: true
     type: primary
     position: below-navbar
-    content: "**FY27 is live:** the FY27 Data Collection Tracker and Project Health sheet are under *FY27 Trackers/Slides* in the menu above."
+    content: "**The Data Hub is reorganized:** the home page starts from the question you're asking, and [Dashboards](/Dashboards.html) lists everything by Guskey level. Older reports moved to [Archives](/archives.html)."
   navbar:
     left:
       - href: index.qmd
@@ -69,8 +69,6 @@ website:
             href: https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit
           - text: "Slide Deck Generator"
             href: https://tl-data.teachinglab.org/generate_slide_deck/
-      - text: "Reports"
-        href: Reports.qmd
       - text: "Dashboards"
         href: Dashboards.qmd
       - text: "Resources"

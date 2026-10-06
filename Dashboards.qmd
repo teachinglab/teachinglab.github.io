@@ -1,95 +1,58 @@
 ---
 title: "Dashboards"
-description: "Dashboards are available to review data from each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please reach out with any concerns."
+description: "Every dashboard, tracker, and tool, organized by Guskey level and by how deep you want to go."
 image: "Images/cards/dashboards.jpg"
+order: 2
 listing:
-  - id: dashboard_list
-    contents: dashboard
+  - id: directory
+    contents: dashboard_directory.yml
     sort: "order"
     type: grid
-    categories: true
-    image-align: 'right'
-    image-height: '100%'
     grid-columns: 3
-  - id: dashboard2_list
-    contents: dashboard2
-    sort: "order"
-    type: grid
     categories: true
-    image-align: 'right'
-    image-height: '100%'
-    grid-columns: 3
-  - id: dashboard3_list
-    contents: dashboard3
-    sort: "order"
-    type: grid
-    categories: true
-    image-align: 'right'
-    image-height: '100%'
-    grid-columns: 3
-  - id: dashboard4_list
-    contents: dashboard4
-    sort: "order"
-    type: grid
-    categories: true
-    image-align: 'right'
-    image-height: '100%'
-    grid-columns: 4
-  - id: dashboard5_list
-    contents: dashboard5
-    sort: "order"
-    type: grid
-    categories: true
-    image-align: 'right'
-    image-height: '100%'
-    grid-columns: 3
+    image-height: 180px
+    image-placeholder: teachinglab_logo.png
+    fields: [image, title, categories, description, audience, years, updates, access]
+    field-display-names:
+      audience: "For"
+      years: "Years"
+      updates: "Updates"
+      access: "Access"
 format:
   html:
     page-layout: full
-engine: knitr
+    toc: false
 ---
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+```{=html}
+<style>
+.quarto-title, .description { display: none; }
+</style>
 ```
 
-## Participant Perceptions
+## Find a dashboard by Guskey level
 
-Participant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.
+Rows follow the [Guskey framework](evaluation_plan.qmd). Columns go from least to most detail: the **Summary** is a section of the Ongoing Report, the **Deep dive** is a dedicated dashboard, and **Raw data** is for downloading responses.
 
-::: {#dashboard_list}
+::: {.guskey-matrix}
+
+| Level | Summary | Deep dive | Raw data |
+|---|---|---|---|
+| **Participant perceptions**<br><span class="matrix-note">Session, course, and coaching feedback; NPS</span> | [Ongoing Report §1](https://tl-data.teachinglab.org/ongoing_report/?section=section1) | [Participant Feedback Rollup](https://tl-data.teachinglab.org/participant_feedback/)<br>[Individual Feedback](https://tl-data.teachinglab.org/individual_feedback/) | |
+| **Participant knowledge**<br><span class="matrix-note">Learning assessments</span> | [Ongoing Report §2](https://tl-data.teachinglab.org/ongoing_report/?section=section2) | [Learning Assessments](https://tl-data.teachinglab.org/learning_assessments/) | |
+| **Participant mindsets**<br><span class="matrix-note">Diagnostic and follow-up educator surveys</span> | [Ongoing Report §3](https://tl-data.teachinglab.org/ongoing_report/?section=section3) | | |
+| **Participant practice**<br><span class="matrix-note">IPG classroom observations</span> | [Ongoing Report §4](https://tl-data.teachinglab.org/ongoing_report/?section=section4) | | [IPG Raw Data / Downloads](https://tl-data.teachinglab.org/ipg_raw_reports/)<br>Sheets: [by site](https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt) · [by coach](https://drive.google.com/drive/u/0/folders/15IW_4hNSFZO-_GFLk3GCNxuO3EfUVLwE) · [by rubric](https://docs.google.com/spreadsheets/d/1fqth9x9wXITqFONJKT_8MGHdyIsWiHCP-dgVLEzRsJs/edit?gid=1191104641#gid=1191104641) |
+| **Student learning**<br><span class="matrix-note">Student survey and student work</span> | [Ongoing Report §5](https://tl-data.teachinglab.org/ongoing_report/?section=section5) | [Student Work Graded](https://tl-data.teachinglab.org/student_work_graded/) | |
+
 :::
 
-## Participant Mindsets
+**Tip:** add `&site=` and a site name to any Ongoing Report link to open it already filtered, for example [`...ongoing_report/?section=section1&site=NY_D11`](https://tl-data.teachinglab.org/ongoing_report/?section=section1&site=NY_D11).
 
-Participant mindsets come from the diagnostic educator survey and follow up educator survey.
+## All dashboards, trackers, and tools
 
-::: {#dashboard2_list}
+Filter by Guskey level or by kind (Summary, Deep dive, Raw data, Tracker, Tool) with the categories on the right. Cards link straight to the dashboard.
+
+::: {#directory}
 :::
 
-## Participant Knowledge
-
-Participants that completed <a href = "https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">learning assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.
-
-::: {#dashboard3_list}
-:::
-
-## Participant Practices
-
-Teaching Lab staff conduct classroom observations and capture <a href = "https://achievethecore.org/category/1155/printable-versions">standards and shifts aligned instruction</a> in the classroom observations survey. Those results will appear in the following dashboards.
-
-::: {#dashboard4_list}
-:::
-
-## Student Learning Experiences
-
-Respondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.
-
-::: {#dashboard5_list}
-:::
+Looking for SY24-25 or earlier? See the [Archives](archives.qmd).

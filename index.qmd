@@ -2,85 +2,92 @@
 title: ""
 image: teachinglab_logo.png
 toc: false
-listing:
-  contents: 
-    - Reports.qmd
-    - Dashboards.qmd
-    - evaluation_plan.qmd
-    - blog.qmd
-    - Data_dives.qmd
-    - On_the_data.qmd
-  sort-ui: false
-  filter-ui: false
-  id: front-list
-  sort: "order"
-  type: grid
-  grid-columns: 3
-  categories: false
-  image-align: 'right'
-  image-height: 220px
 format:
   html:
     page-layout: full
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  echo= FALSE,
-  comment = "#>",
-  out.width = "100%"
-)
+```{=html}
+<style>
+.quarto-title, .description { display: none; }
+</style>
 ```
 
-```{css, echo=FALSE}
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
-  
-div.quarto-post .metadata {
-    display: none;
-  }
-  
-div.quarto-post .thumbnail {
-    flex-basis: 50%;
-}
+<p class="hub-intro">Welcome to Teaching Lab's Data Hub. Start with the question you're trying to answer.</p>
 
-p {
-    max-width: 100%;
-}
+::: {.grid .question-grid}
 
-```
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### How is my site or project doing?
 
-<center>Welcome to Teaching Lab’s Data Hub! Here you can find an overview of our evaluation plan, current survey links, dashboards, reports, trackers, and more.</center>
+Outcomes for every Guskey level, filtered to your site.
 
-## Pages
+- [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/): start here, then pick your site
+- [FY27 Response Rates & Key Outcomes (Project Health)](https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit)
+- [Slide Deck Generator](https://tl-data.teachinglab.org/generate_slide_deck/)
+:::
 
-::: {#front-list}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### Are we collecting the data we need?
+
+Who has completed each survey, observation, and student work submission.
+
+- [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) (rostered participants)
+- [Response rates in Project Health](https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit)
+- [Evaluation Plan](evaluation_plan.qmd): what we collect, when, and the survey links
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### How did my sessions or coaching go?
+
+Participant feedback on facilitators and coaches.
+
+- [Individual Feedback](https://tl-data.teachinglab.org/individual_feedback/): your own feedback, by Google login
+- [Participant Feedback Rollup](https://tl-data.teachinglab.org/participant_feedback/): every site and facilitator
+- [Ongoing Report §1](https://tl-data.teachinglab.org/ongoing_report/?section=section1): headline NPS and feedback
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### I'm looking for a specific dashboard
+
+Everything, organized by Guskey level: perceptions, knowledge, mindsets, practice, and student learning.
+
+- [Dashboards](Dashboards.qmd): the full directory and Guskey matrix
+- [Learning Assessments](https://tl-data.teachinglab.org/learning_assessments/) · [Student Work Graded](https://tl-data.teachinglab.org/student_work_graded/)
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### I need the raw data
+
+Individual responses and downloads.
+
+- [IPG Raw Data / Downloads](https://tl-data.teachinglab.org/ipg_raw_reports/)
+- [Classroom observations in Google Sheets](https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt)
+- [Student Work Grading App](https://tl-data.teachinglab.org/student_work_grading/) (approved graders)
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### What does this data mean?
+
+How it's collected, scored, and refreshed.
+
+- [On the Data](On_the_data.qmd): sources, refresh timing, scoring
+- [Data Collection Overview](data_collection_overview.qmd) · [Data Dives](Data_dives.qmd)
+- [Data Infrastructure Architecture](architecture.qmd) · [Blog](blog.qmd)
+:::
+
 :::
 
 ## FAQ
 
--   How do I navigate the data hub?
+-   **How often does the data update?**
 
-    -   Check out [this Zoom Clip](https://us02web.zoom.us/clips/share/8-SmBuAp23k0bKP0fnL59kyCcG-IzMSYEAslNCHTKjVzdTjthA6MSvmTGKO2GSm3DrR2vPP6.gFkJWCOhvBE0OO3Y){target="_blank"} for a full breakdown! Generally the content is organized by the navigation bar above, but also feel free to use the search bar. The key pages to know about are dashboards, trackers, and reports, which are all listed in the navigation bar.
+    -   Most dashboards update within 10–15 minutes of a new response. Learning assessments update after they're scored, and IPG Raw Data pulls live from Qualtrics. The FY27 Data Collection Tracker and Project Health sheet update every hour. Each card on the [Dashboards](Dashboards.qmd) page lists its refresh timing; the details are in [On the Data](On_the_data.qmd).
 
--   How do I know what dashboard I want?
+-   **Which school years are on here?**
 
-    -   That depends on what kind of data you are looking for, the *most likely answer* is the "Ongoing Report" on the "Reports" page, since it has a broad overview of all L&R data, but there are more detailed, custom dashboards for other purposes organized by the Guskey Framework which drives all of our research, on the "Dashboards" Page, with detailed descriptions and tutorials describing their individual use cases.
+    -   Current dashboards cover SY25-26 and SY26-27 (filter by date to see one year). Each card on the [Dashboards](Dashboards.qmd) page lists its years. Earlier years are in the [Archives](archives.qmd).
 
--   What is on here?
+-   **Something looks wrong or missing.**
 
-    -   Here's a short list: L&R Dashboards, Reports, and Trackers. Additionally our blog, data dives, and much more L&R informative content under the resources page - check that out!
-
--   How often does the data update?
-
-    -   All dashboards (except for the learning assessments, and CAP dashboard) should update within 10-15 minutes. Trackers should update on an hourly, or daily basis, the FY26-27 Data Collection Tracker and Project Health sheet update *every hour*. For specific details read [here](https://datahub.teachinglab.org/On_the_data.html).
-
--   Where is data from previous years?
-
-    -   Check out the archives tab!
+    -   Reach out to the Learning & Research team with the dashboard link and the filters you used.

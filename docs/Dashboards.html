@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Dashboards are available to review data from each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please reach out with any concerns.">
+<meta name="description" content="Every dashboard, tracker, and tool, organized by Guskey level and by how deep you want to go.">
 
 <title>Dashboards – Data Hub</title>
 <style>
@@ -86,132 +86,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dashboard_list .list');
+    const listingTargetEl = window.document.querySelector('#listing-directory .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-categories','listing-description','listing-audience','listing-years','listing-updates','listing-access',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-image","listing-description","listing-categories","listing-audience","listing-years","listing-updates","listing-access","listing-order"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dashboard_list'] = new List('listing-dashboard_list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dashboard2_list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dashboard2_list'] = new List('listing-dashboard2_list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dashboard3_list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dashboard3_list'] = new List('listing-dashboard3_list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dashboard4_list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dashboard4_list'] = new List('listing-dashboard4_list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dashboard5_list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dashboard5_list'] = new List('listing-dashboard5_list', options);
+    window['quarto-listings']['listing-directory'] = new List('listing-directory', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -284,7 +172,7 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Dashboards – Data Hub">
-<meta property="og:description" content="Dashboards are available to review data from each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please reach out with any concerns.">
+<meta property="og:description" content="Every dashboard, tracker, and tool, organized by Guskey level and by how deep you want to go.">
 <meta property="og:image" content="https://datahub.teachinglab.org/Images/cards/dashboards.jpg">
 <meta property="og:site_name" content="Data Hub">
 </head>
@@ -505,10 +393,6 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./Reports.html"> 
-<span class="menu-text">Reports</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./Dashboards.html" aria-current="page"> 
 <span class="menu-text">Dashboards</span></a>
   </li>  
@@ -569,8 +453,8 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="cb2a1b2a5985a424fd8e390ed2013523" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>FY27 is live:</strong> the FY27 Data Collection Tracker and Project Health sheet are under <em>FY27 Trackers/Slides</em> in the menu above.</p>
+  <div id="quarto-announcement" data-announcement-id="0bb2c11d906d61defe37bdd63c15a536" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>The Data Hub is reorganized:</strong> the home page starts from the question you’re asking, and <a href="./Dashboards.html">Dashboards</a> lists everything by Guskey level. Older reports moved to <a href="./archives.html">Archives</a>.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -578,18 +462,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#participant-perceptions" id="toc-participant-perceptions" class="nav-link active" data-scroll-target="#participant-perceptions">Participant Perceptions</a></li>
-  <li><a href="#participant-mindsets" id="toc-participant-mindsets" class="nav-link" data-scroll-target="#participant-mindsets">Participant Mindsets</a></li>
-  <li><a href="#participant-knowledge" id="toc-participant-knowledge" class="nav-link" data-scroll-target="#participant-knowledge">Participant Knowledge</a></li>
-  <li><a href="#participant-practices" id="toc-participant-practices" class="nav-link" data-scroll-target="#participant-practices">Participant Practices</a></li>
-  <li><a href="#student-learning-experiences" id="toc-student-learning-experiences" class="nav-link" data-scroll-target="#student-learning-experiences">Student Learning Experiences</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2xhc3Nyb29tJTIwT2JzZXJ2YXRpb25z">Classroom Observations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q1JTRQ==">CRSE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWR1Y2F0b3IlMjBTdXJ2ZXk=">Educator Survey <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R29vZ2xlJTIwU2hlZXRz">Google Sheets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SVBH">IPG <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGVhcm5pbmclMjBBc3Nlc3NtZW50cw==">Learning Assessments <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWluZHNldHM=">Mindsets <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TlBT">NPS <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3ZlciUyMFRpbWU=">Over Time <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGFydGljaXBhbnQlMjBGZWVkYmFjaw==">Participant Feedback <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhbGl0YXRpdmU=">Qualitative <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhbHRyaWNz">Qualtrics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmF3JTIwRGF0YQ==">Raw Data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3R1ZGVudCUyMFN1cnZleQ==">Student Survey <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3R1ZGVudCUyMFdvcms=">Student Work <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWxsJTIwbGV2ZWxz">All levels <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RGVlcCUyMGRpdmU=">Deep dive <span class="quarto-category-count">(4)</span></div><div class="category" data-category="S25vd2xlZGdl">Knowledge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGVyY2VwdGlvbnM=">Perceptions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHJhY3RpY2U=">Practice <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmF3JTIwZGF0YQ==">Raw data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3R1ZGVudCUyMExlYXJuaW5n">Student Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3VtbWFyeQ==">Summary <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9vbA==">Tool <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VHJhY2tlcg==">Tracker <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -601,7 +474,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Dashboards are available to review data from each individual survey instrument and part of the Guskey Framework. They are developed and maintained by Duncan Gates, please reach out with any concerns.
+    Every dashboard, tracker, and tool, organized by Guskey level and by how deep you want to go.
   </div>
 </div>
 
@@ -618,60 +491,316 @@ window.Quarto = {
 </header>
 
 
-<div class="cell">
-<style type="text/css">
-.quarto-title {
-    display: none;
-  }
-  
-.description {
-    display: none;
-  }
+<style>
+.quarto-title, .description { display: none; }
 </style>
+<section id="find-a-dashboard-by-guskey-level" class="level2">
+<h2 class="anchored" data-anchor-id="find-a-dashboard-by-guskey-level">Find a dashboard by Guskey level</h2>
+<p>Rows follow the <a href="./evaluation_plan.html">Guskey framework</a>. Columns go from least to most detail: the <strong>Summary</strong> is a section of the Ongoing Report, the <strong>Deep dive</strong> is a dedicated dashboard, and <strong>Raw data</strong> is for downloading responses.</p>
+<div class="guskey-matrix">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Summary</th>
+<th>Deep dive</th>
+<th>Raw data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Participant perceptions</strong><br><span class="matrix-note">Session, course, and coaching feedback; NPS</span></td>
+<td><a href="https://tl-data.teachinglab.org/ongoing_report/?section=section1">Ongoing Report §1</a></td>
+<td><a href="https://tl-data.teachinglab.org/participant_feedback/">Participant Feedback Rollup</a><br><a href="https://tl-data.teachinglab.org/individual_feedback/">Individual Feedback</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Participant knowledge</strong><br><span class="matrix-note">Learning assessments</span></td>
+<td><a href="https://tl-data.teachinglab.org/ongoing_report/?section=section2">Ongoing Report §2</a></td>
+<td><a href="https://tl-data.teachinglab.org/learning_assessments/">Learning Assessments</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Participant mindsets</strong><br><span class="matrix-note">Diagnostic and follow-up educator surveys</span></td>
+<td><a href="https://tl-data.teachinglab.org/ongoing_report/?section=section3">Ongoing Report §3</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Participant practice</strong><br><span class="matrix-note">IPG classroom observations</span></td>
+<td><a href="https://tl-data.teachinglab.org/ongoing_report/?section=section4">Ongoing Report §4</a></td>
+<td></td>
+<td><a href="https://tl-data.teachinglab.org/ipg_raw_reports/">IPG Raw Data / Downloads</a><br>Sheets: <a href="https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt">by site</a> · <a href="https://drive.google.com/drive/u/0/folders/15IW_4hNSFZO-_GFLk3GCNxuO3EfUVLwE">by coach</a> · <a href="https://docs.google.com/spreadsheets/d/1fqth9x9wXITqFONJKT_8MGHdyIsWiHCP-dgVLEzRsJs/edit?gid=1191104641#gid=1191104641">by rubric</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Student learning</strong><br><span class="matrix-note">Student survey and student work</span></td>
+<td><a href="https://tl-data.teachinglab.org/ongoing_report/?section=section5">Ongoing Report §5</a></td>
+<td><a href="https://tl-data.teachinglab.org/student_work_graded/">Student Work Graded</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
-<section id="participant-perceptions" class="level2">
-<h2 class="anchored" data-anchor-id="participant-perceptions">Participant Perceptions</h2>
-<p>Participant perceptions include data from the end of session survey administered at the end of each PL session, end of course survey administered at the end of each PL course, ongoing coaching survey administered at the end of each coaching session, and end of coaching data, administered at the end of every coaching series. Lastly, NPS data is also prompted in this survey.</p>
-<div id="listing-dashboard_list" class="quarto-listing quarto-listing-container-grid">
+<p><strong>Tip:</strong> add <code>&amp;site=</code> and a site name to any Ongoing Report link to open it already filtered, for example <a href="https://tl-data.teachinglab.org/ongoing_report/?section=section1&amp;site=NY_D11"><code>...ongoing_report/?section=section1&amp;site=NY_D11</code></a>.</p>
+</section>
+<section id="all-dashboards-trackers-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="all-dashboards-trackers-and-tools">All dashboards, trackers, and tools</h2>
+<p>Filter by Guskey level or by kind (Summary, Deep dive, Raw data, Tracker, Tool) with the categories on the right. Cards link straight to the dashboard.</p>
+<div id="listing-directory" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UGFydGljaXBhbnQlMjBGZWVkYmFjayUyQ05QUyUyQ1F1YWxpdGF0aXZl" data-listing-date-sort="1706763600000" data-listing-file-modified-sort="1788456493081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./dashboard/participant_feedback_1.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="QWxsJTIwbGV2ZWxzJTJDU3VtbWFyeQ==">
+<a href="https://tl-data.teachinglab.org/ongoing_report/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard/imgs/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Participant Feedback // Ongoing Report
+Ongoing Report
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UGFydGljaXBhbnQlMjBGZWVkYmFjaw=='); return false;">Participant Feedback</div>
+<div class="listing-category" onclick="window.quartoListingCategory('QWxsJTIwbGV2ZWxz'); return false;">All levels</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TlBT'); return false;">NPS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhbGl0YXRpdmU='); return false;">Qualitative</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U3VtbWFyeQ=='); return false;">Summary</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View ALL participant feedback data in the overall form including quantitative and qualitative feedback, and all NPS in section 1 of the ongoing report.</p>
+<p>How is my site doing across every part of the Guskey framework? Start here: filter to your site, subsite, and dates.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Feb 1, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Everyone: site leads, PMs, leadership
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY25-26 and SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Within 10–15 minutes of a new response
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="UGFydGljaXBhbnQlMjBGZWVkYmFjayUyQ05QUyUyQ092ZXIlMjBUaW1lJTJDQUk=" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<a href="./dashboard/participant_feedback_2.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="1" data-categories="QWxsJTIwbGV2ZWxzJTJDVHJhY2tlcg==">
+<a href="https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard/imgs/FacilitatorRollup.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/google_sheets.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+FY27 Data Collection Tracker
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxsJTIwbGV2ZWxz'); return false;">All levels</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHJhY2tlcg=='); return false;">Tracker</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Which rostered participants have completed each survey, observation, and student work submission?</p>
+</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Site leads, coaches, PMs
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Hourly
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google account
+</td>
+</tr>
+
+</tbody></table>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="QWxsJTIwbGV2ZWxzJTJDVHJhY2tlcg==">
+<a href="https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="Images/dashboards/google_sheets.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+FY27 Response Rates &amp; Key Outcomes (Project Health)
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxsJTIwbGV2ZWxz'); return false;">All levels</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHJhY2tlcg=='); return false;">Tracker</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Are projects on track? Response rates and headline outcomes by project in one sheet.</p>
+</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+PMs, leadership
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Hourly
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google account
+</td>
+</tr>
+
+</tbody></table>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="QWxsJTIwbGV2ZWxzJTJDVG9vbA==">
+<a href="https://tl-data.teachinglab.org/generate_slide_deck/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="teachinglab_logo.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Slide Deck Generator
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWxsJTIwbGV2ZWxz'); return false;">All levels</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VG9vbA=='); return false;">Tool</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Build a partner-ready slide deck from the latest data for a project.</p>
+</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+PMs, site leads
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="UGVyY2VwdGlvbnMlMkNEZWVwJTIwZGl2ZQ==">
+<a href="https://tl-data.teachinglab.org/participant_feedback/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="Images/dashboards/FacilitatorRollup.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -679,120 +808,123 @@ Participant Feedback Rollup
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UGFydGljaXBhbnQlMjBGZWVkYmFjaw=='); return false;">Participant Feedback</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UGVyY2VwdGlvbnM='); return false;">Perceptions</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TlBT'); return false;">NPS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlciUyMFRpbWU='); return false;">Over Time</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMGRpdmU='); return false;">Deep dive</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View all participant feedback data with facilitator competency feedback included in a more detailed breakdown. Oriented towards considering specific facilitator feedback as…</p>
+<p>What do participants say about sessions, courses, and coaching? Detailed breakdowns with facilitator competency feedback, NPS, and trends over time.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+PMs, facilitator and coach leads
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY25-26 and SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Within 10–15 minutes of a new response
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="UGFydGljaXBhbnQlMjBGZWVkYmFjayUyQ05QUyUyQ092ZXIlMjBUaW1lJTJDQUk=" data-listing-date-sort="1737608400000" data-listing-file-modified-sort="1788456493082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./dashboard/participant_feedback_4.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="5" data-categories="UGVyY2VwdGlvbnMlMkNEZWVwJTIwZGl2ZQ==">
+<a href="https://tl-data.teachinglab.org/individual_feedback/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard/imgs/FacilitatorRollup.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/FacilitatorRollup.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Individualized Participant Feedback Dashboards for Facilitators and Coaches
+Individual Feedback for Facilitators and Coaches
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UGFydGljaXBhbnQlMjBGZWVkYmFjaw=='); return false;">Participant Feedback</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UGVyY2VwdGlvbnM='); return false;">Perceptions</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TlBT'); return false;">NPS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3ZlciUyMFRpbWU='); return false;">Over Time</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMGRpdmU='); return false;">Deep dive</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View all participant feedback data with facilitator competency feedback based on your google login.</p>
+<p>How did my sessions and coaching go? Shows the feedback on you, based on your Google login.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Jan 23, 2025
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Facilitators and coaches
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY24-25 to SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Within 10–15 minutes of a new response
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login; shows your own data
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="participant-mindsets" class="level2">
-<h2 class="anchored" data-anchor-id="participant-mindsets">Participant Mindsets</h2>
-<p>Participant mindsets come from the diagnostic educator survey and follow up educator survey.</p>
-<div id="listing-dashboard2_list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2F0b3IlMjBTdXJ2ZXklMkNNaW5kc2V0cyUyQ0NSU0U=" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./dashboard2/educator_survey.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="6" data-categories="S25vd2xlZGdlJTJDRGVlcCUyMGRpdmU=">
+<a href="https://tl-data.teachinglab.org/learning_assessments/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard2/imgs/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Educator Survey // Ongoing Report
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2F0b3IlMjBTdXJ2ZXk='); return false;">Educator Survey</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWluZHNldHM='); return false;">Mindsets</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q1JTRQ=='); return false;">CRSE</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>See teacher mindset data in section 3a, or school leader mindsets in the alternative 3a selection, and CRSE data in section 3c.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="participant-knowledge" class="level2">
-<h2 class="anchored" data-anchor-id="participant-knowledge">Participant Knowledge</h2>
-<p>Participants that completed <a href="https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">learning assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.</p>
-<div id="listing-dashboard3_list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGVhcm5pbmclMjBBc3Nlc3NtZW50cyUyQ01pbmRzZXRz" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1791306134678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<a href="./dashboard3/course_assessments.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./dashboard3/imgs/CourseAssessment.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/CourseAssessment.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -800,176 +932,185 @@ Learning Assessments Dashboard
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmclMjBBc3Nlc3NtZW50cw=='); return false;">Learning Assessments</div>
+<div class="listing-category" onclick="window.quartoListingCategory('S25vd2xlZGdl'); return false;">Knowledge</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWluZHNldHM='); return false;">Mindsets</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMGRpdmU='); return false;">Deep dive</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View learning assessments data as % correct before/after, % correct by each question, and finally % selected within each question!</p>
+<p>Did participants’ content knowledge grow? % correct before and after, by question, and by answer choice.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+PMs, course designers
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY24-25 to SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+After assessments are scored (not real time)
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="TGVhcm5pbmclMjBBc3Nlc3NtZW50cyUyQ01pbmRzZXRz" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./dashboard3/course_assessments_2.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="7" data-categories="UHJhY3RpY2UlMkNSYXclMjBkYXRh">
+<a href="https://tl-data.teachinglab.org/ipg_raw_reports/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard3/imgs/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/IPGRawDashboard.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Learning Assessments // Ongoing Report
+IPG Raw Data / Downloads
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('TGVhcm5pbmclMjBBc3Nlc3NtZW50cw=='); return false;">Learning Assessments</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UHJhY3RpY2U='); return false;">Practice</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWluZHNldHM='); return false;">Mindsets</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UmF3JTIwZGF0YQ=='); return false;">Raw data</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View learning assessments overall pre-post scores in section 2 the ongoing report!</p>
+<p>Every classroom observation response, per teacher, with a summative download.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Coaches, data requests
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+Current observation survey
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+Pulled live from Qualtrics on load
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="participant-practices" class="level2">
-<h2 class="anchored" data-anchor-id="participant-practices">Participant Practices</h2>
-<p>Teaching Lab staff conduct classroom observations and capture <a href="https://achievethecore.org/category/1155/printable-versions">standards and shifts aligned instruction</a> in the classroom observations survey. Those results will appear in the following dashboards.</p>
-<div id="listing-dashboard4_list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="SVBHJTJDUmF3JTIwRGF0YSUyQ0NsYXNzcm9vbSUyME9ic2VydmF0aW9ucw==" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<a href="./dashboard4/participant_practice_1.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="8" data-categories="UHJhY3RpY2UlMkNSYXclMjBkYXRh">
+<a href="https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard4/imgs/IPGRawDashboard.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/google_sheets.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-IPG Raw Data/Downloadable Dashboard
+Classroom Observations in Google Sheets
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('SVBH'); return false;">IPG</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UHJhY3RpY2U='); return false;">Practice</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UmF3JTIwRGF0YQ=='); return false;">Raw Data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3Nyb29tJTIwT2JzZXJ2YXRpb25z'); return false;">Classroom Observations</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UmF3JTIwZGF0YQ=='); return false;">Raw data</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>Download classroom observations data in a rolled up summative form, or view entire responses on a per-teacher basis in this interactive dashboard</p>
+<p>Raw spreadsheet copies of submitted IPG data by site. By-coach copies are in the folder linked from the matrix above.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Coaches, site leads
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google account
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Q2xhc3Nyb29tJTIwT2JzZXJ2YXRpb25zJTJDSVBH" data-listing-date-sort="1706850000000" data-listing-file-modified-sort="1788456493101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./dashboard4/participant_practice_2.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="9" data-categories="U3R1ZGVudCUyMExlYXJuaW5nJTJDRGVlcCUyMGRpdmU=">
+<a href="https://tl-data.teachinglab.org/student_work_graded/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard4/imgs/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-IPG Ongoing Report Data
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3Nyb29tJTIwT2JzZXJ2YXRpb25z'); return false;">Classroom Observations</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SVBH'); return false;">IPG</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>View % positive indicators over the course of the year in section 4a, 4b, and 4c, and select specific ipg rubrics to see improvements in core action over time.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Feb 2, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UXVhbHRyaWNzJTJDUmF3JTIwRGF0YSUyQ0dvb2dsZSUyMFNoZWV0cw==" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
-<a href="./dashboard4/participant_practice_3.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./dashboard4/imgs/google_sheets.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Google Sheets Raw Copy of Classroom Observations
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhbHRyaWNz'); return false;">Qualtrics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmF3JTIwRGF0YQ=='); return false;">Raw Data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R29vZ2xlJTIwU2hlZXRz'); return false;">Google Sheets</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>See a raw spreadsheet copy of all submitted IPG data, each tab contains responses from a specific IPG rubric.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="student-learning-experiences" class="level2">
-<h2 class="anchored" data-anchor-id="student-learning-experiences">Student Learning Experiences</h2>
-<p>Respondents to the student survey and submissions of student work samples have their responses rolled up and graded in the following dashboards.</p>
-<div id="listing-dashboard5_list" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="U3R1ZGVudCUyMFdvcms=" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493109" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./dashboard5/student_learning_experiences_3.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./dashboard5/imgs/StudentWorkGraded.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/StudentWorkGraded.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -977,84 +1118,122 @@ Student Work Graded Dashboard
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('U3R1ZGVudCUyMFdvcms='); return false;">Student Work</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U3R1ZGVudCUyMExlYXJuaW5n'); return false;">Student Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMGRpdmU='); return false;">Deep dive</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>View graded student work, remaining files, contest grades, and see the % proficient and on grade level after assignments have been submitted and graded in the above…</p>
+<p>Is student work on grade level? % proficient and on grade level after grading, plus remaining files and contested grades.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<table class="card-other-values">
+
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+PMs, site leads, graders
+</td>
+</tr>
+
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+SY25-26 and SY26-27
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+As grades are submitted
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Teaching Lab Google login
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="U3R1ZGVudCUyMFdvcms=" data-listing-date-sort="1706850000000" data-listing-file-modified-sort="1788456493109" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
-<a href="./dashboard5/student_learning_experiences_4.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="10" data-categories="U3R1ZGVudCUyMExlYXJuaW5nJTJDVG9vbA==">
+<a href="https://tl-data.teachinglab.org/student_work_grading/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./dashboard5/imgs/StudentWorkGrader.png" class="thumbnail-image card-img" style="height: 100%;">
+<img loading="lazy" src="Images/dashboards/StudentWorkGrader.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Student Work Grading Web App
+Student Work Grading App
 </h5>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('U3R1ZGVudCUyMFdvcms='); return false;">Student Work</div>
+<div class="listing-category" onclick="window.quartoListingCategory('U3R1ZGVudCUyMExlYXJuaW5n'); return false;">Student Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VG9vbA=='); return false;">Tool</div>
 
 </div>
 <div class="card-text listing-description delink">
-<p>Grade student work assignments that have been submitted to Teaching Lab! For approval to grade please reach out to Duncan Gates.</p>
+<p>Grade submitted student work samples.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Feb 2, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="U3R1ZGVudCUyMFN1cnZleQ==" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493109" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./dashboard5/student_learning_experiences_1.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./dashboard5/imgs/ongoing_report_24_25.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Student Outcomes // Ongoing Report
-</h5>
-<div class="listing-categories">
+<table class="card-other-values">
 
-<div class="listing-category" onclick="window.quartoListingCategory('U3R1ZGVudCUyMFN1cnZleQ=='); return false;">Student Survey</div>
+<tbody><tr>
+<td>
+For
+</td>
+<td class="audience">
+Approved graders
+</td>
+</tr>
 
-</div>
-<div class="card-text listing-description delink">
-<p>View % agree/strongly agree on the student survey in section 5a (student survey &amp; student work).</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Duncan Gates
-</div>
-<div class="listing-date">
-Aug 28, 2024
-</div>
-</div>
+<tr>
+<td>
+Years
+</td>
+<td class="years">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Updates
+</td>
+<td class="updates">
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td>
+Access
+</td>
+<td class="access">
+Approved graders only; ask Duncan Gates for access
+</td>
+</tr>
+
+</tbody></table>
 </div>
 </div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+<p>Looking for SY24-25 or earlier? See the <a href="./archives.html">Archives</a>.</p>
 
 
 

@@ -1,14 +1,31 @@
 ---
 title: "Data Archives"
 image: "Images/blog/blog_banner.png"
-description: Archives of resources no longer being used, that could still be useful!
+description: Dashboards, reports, and trackers from previous school years. Current years are on the Dashboards page.
 footer: "Confidential"
 ---
 
--   [Ongoing Report SY23-24](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/)
+## SY25-26 (FY26)
 
+-   [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/): the current Ongoing Report still covers SY25-26; filter by date to see that year alone
+-   [FY26 Data Collection Tracker – Rostered Participants Only](https://docs.google.com/spreadsheets/d/1V3yu5vfrbeRWyMn0nY6POHZHehBpO28QayY2hn6pAe4/edit?gid=0#gid=0)
+-   [FY26 Data Submissions & Key Outcomes](https://docs.google.com/spreadsheets/d/1m8K4gpf5jctyMWpo7Qt3Aa0CQh9-wwGeVTyDuEtkrlk/edit?gid=0#gid=0)
+
+## SY24-25 (FY25)
+
+-   [Ongoing Report SY24-25](https://tl-data.teachinglab.org/ongoing_report_24_25/)
+
+## SY23-24 (FY24)
+
+-   [Ongoing Report SY23-24](https://teachinglabhq.shinyapps.io/OngoingReport_23_24/): every Guskey level, plus a PDS page in the last section
+-   [CPS Skyline PL Participant Feedback](https://lookerstudio.google.com/reporting/d893b206-4d7f-4c87-966a-e7f9f733f529/page/UJUkD?s=rFEFXNvc2RE)
+-   [Cleveland SY23-24 LBTT](https://lookerstudio.google.com/reporting/e105f773-a9de-4557-854c-25507d6b532b/page/juHnD?s=toOvTMv_m4U): trends, environment, planning, and writing
 -   [FY24 Coaching Tracker](https://docs.google.com/spreadsheets/d/13d5l1k_oTiEKmnKIAFzoBMFWsr1f__JWkFpLmDesacw/edit?gid=0#gid=0)
 
--   [FY26 Data Collection Tracker – Rostered Participants Only](https://docs.google.com/spreadsheets/d/1V3yu5vfrbeRWyMn0nY6POHZHehBpO28QayY2hn6pAe4/edit?gid=0#gid=0)
+## SY22-23 and earlier (static reports)
 
--   [FY26 Data Submissions & Key Outcomes](https://docs.google.com/spreadsheets/d/1m8K4gpf5jctyMWpo7Qt3Aa0CQh9-wwGeVTyDuEtkrlk/edit?gid=0#gid=0)
+These are HTML files in Google Drive. Download the file you need, then open it in a web browser.
+
+-   [SY22-23 reports](https://drive.google.com/drive/folders/1xi_8BgYrYfdVgSSMDF_exQo9AFCs92s5)
+-   [SY21-22 reports](https://drive.google.com/drive/folders/1QB6co7iB38ECPWfSzg82roANgQBcy50C)
+-   [SY20-21 reports](https://drive.google.com/drive/folders/1hqjczciGHCfl5tdu_z8hyIXI0D5gKUip)

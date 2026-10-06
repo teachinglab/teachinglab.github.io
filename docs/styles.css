@@ -52,3 +52,85 @@ p,li,h1, .description {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(4, 171, 235, 0.18);
 }
+
+/* Home page: one card per question people bring to the Data Hub */
+.hub-intro {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: none;
+  margin: 0.5rem auto 1.5rem;
+}
+.question-grid {
+  margin-bottom: 2rem;
+}
+.question-card {
+  border: 1px solid var(--bs-border-color);
+  border-top: 4px solid var(--bs-primary);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem 0.5rem;
+  background: var(--bs-body-bg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.question-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(4, 171, 235, 0.18);
+}
+.question-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  border-bottom: none;
+}
+.question-card p {
+  color: rgba(var(--bs-body-color-rgb), 0.7);
+  font-size: 0.95rem;
+}
+.question-card ul {
+  padding-left: 1.1rem;
+}
+.question-card li {
+  margin-bottom: 0.35rem;
+}
+
+/* Dashboards page: Guskey level x depth matrix */
+.guskey-matrix table {
+  width: 100%;
+  table-layout: fixed;
+}
+.guskey-matrix th,
+.guskey-matrix td {
+  vertical-align: top;
+  padding: 0.6rem 0.75rem;
+}
+.guskey-matrix td:first-child {
+  width: 26%;
+}
+.guskey-matrix td:empty::after,
+.guskey-matrix td:not(:has(*)):not(:first-child)::after {
+  content: "—";
+  color: rgba(var(--bs-body-color-rgb), 0.7);
+}
+.matrix-note {
+  font-size: 0.85rem;
+  color: rgba(var(--bs-body-color-rgb), 0.7);
+}
+@media (max-width: 767.98px) {
+  .guskey-matrix {
+    overflow-x: auto;
+  }
+  .guskey-matrix table {
+    table-layout: auto;
+    min-width: 640px;
+  }
+}
+
+/* Directory cards: the For / Years / Updates / Access rows */
+.card-other-values {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+.card-other-values td:first-child {
+  color: rgba(var(--bs-body-color-rgb), 0.7);
+  padding-right: 0.75rem;
+  white-space: nowrap;
+  vertical-align: top;
+}

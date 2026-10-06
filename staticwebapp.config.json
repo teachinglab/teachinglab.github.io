@@ -1,8 +1,40 @@
 {
   "routes": [
     {
+      "route": "/Reports.html",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/dashboard/*",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/dashboard2/*",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/dashboard3/*",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/dashboard4/*",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/dashboard5/*",
+      "redirect": "/Dashboards.html",
+      "statusCode": 301
+    },
+    {
       "route": "/*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": [
+        "authenticated"
+      ]
     }
   ],
   "responseOverrides": {

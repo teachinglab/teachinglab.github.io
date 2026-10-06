@@ -54,7 +54,7 @@ A demonstration of how course assessments work to evaluate teacher content knowl
 
 ::: {.column width="30%"}
 ```{r data-dive-3, out.width=350, echo=F}
-knitr::include_graphics("dashboard5/imgs/StudentWorkGraded.png")
+knitr::include_graphics("Images/dashboards/StudentWorkGraded.png")
 ```
 :::
 :::::
