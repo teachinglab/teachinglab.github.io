@@ -1,7 +1,10 @@
 project:
   type: website
   output-dir: docs
-  resources: staticwebapp.config.json
+  resources:
+    - staticwebapp.config.json
+    # Dark-mode card thumbnails, swapped in by _includes/dark-card-images.html
+    - Images/cards/*_dark.jpg
   preview:
     port: 4200
 
@@ -101,6 +104,7 @@ format:
     respect-user-color-scheme: true
     lightbox: auto
     css: styles.css
+    include-after-body: _includes/dark-card-images.html
     toc: true
 
 editor: visual

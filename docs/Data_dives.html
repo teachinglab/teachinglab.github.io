@@ -511,7 +511,7 @@ cookieconsent.run({
 <div class="column" style="width:70%;">
 <section id="course-assessments-how-we-know-were-increasing-participant-knowledge" class="level2">
 <h2 class="anchored" data-anchor-id="course-assessments-how-we-know-were-increasing-participant-knowledge"><a href="https://docs.google.com/presentation/d/1XvrtVlVVnz3b1Sr-_xdkYq2vV7eogtZ0feI3KHYyXO8/edit#slide=id.p">Course Assessments: How We Know We’re Increasing Participant Knowledge</a></h2>
-<p>A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the <a href="https://tl-data.teachinglab.org/course_assessments/">course assessment dashboard</a> which has many fun levels of data! Zoom recording <a href="https://drive.google.com/drive/folders/17aIskSziSPidP4YbUjhkQL-uARv2XSP8">here</a>.</p>
+<p>A demonstration of how course assessments work to evaluate teacher content knowledge, and a dive into the <a href="https://tl-data.teachinglab.org/learning_assessments/">course assessment dashboard</a> which has many fun levels of data! Zoom recording <a href="https://drive.google.com/drive/folders/17aIskSziSPidP4YbUjhkQL-uARv2XSP8">here</a>.</p>
 </section>
 </div><div class="column" style="width:30%;">
 <div class="cell">
@@ -550,6 +550,29 @@ cookieconsent.run({
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+// Home page cards: swap each Images/cards/*.jpg thumbnail for its *_dark.jpg
+// twin whenever the site is in dark mode, and back when it isn't
+(() => {
+  const card_image_pattern = /Images\/cards\/([a-z_]+?)(_dark)?\.jpg$/;
+  const swap_card_images = () => {
+    const is_dark = document.body.classList.contains("quarto-dark");
+    document.querySelectorAll("img").forEach((img) => {
+      const src = img.getAttribute("src") || "";
+      const match = src.match(card_image_pattern);
+      if (!match) {
+        return;
+      }
+      const wanted = src.replace(card_image_pattern, `Images/cards/${match[1]}${is_dark ? "_dark" : ""}.jpg`);
+      if (wanted !== src) {
+        img.setAttribute("src", wanted);
+      }
+    });
+  };
+  swap_card_images();
+  new MutationObserver(swap_card_images).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

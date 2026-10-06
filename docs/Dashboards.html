@@ -788,7 +788,7 @@ Aug 28, 2024
 <p>Participants that completed <a href="https://docs.google.com/document/d/1t43JudOR4AlIk8ALdPp1V9UgZH8mWmybrDdDp2085mQ/edit?usp=sharing">learning assessments</a> will answer multiple choice quiz questions that address pedagogical content knowledge.</p>
 <div id="listing-dashboard3_list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGVhcm5pbmclMjBBc3Nlc3NtZW50cyUyQ01pbmRzZXRz" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1788456493087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="0" data-categories="TGVhcm5pbmclMjBBc3Nlc3NtZW50cyUyQ01pbmRzZXRz" data-listing-date-sort="1724821200000" data-listing-file-modified-sort="1791306134678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="./dashboard3/course_assessments.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1061,6 +1061,29 @@ Aug 28, 2024
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+// Home page cards: swap each Images/cards/*.jpg thumbnail for its *_dark.jpg
+// twin whenever the site is in dark mode, and back when it isn't
+(() => {
+  const card_image_pattern = /Images\/cards\/([a-z_]+?)(_dark)?\.jpg$/;
+  const swap_card_images = () => {
+    const is_dark = document.body.classList.contains("quarto-dark");
+    document.querySelectorAll("img").forEach((img) => {
+      const src = img.getAttribute("src") || "";
+      const match = src.match(card_image_pattern);
+      if (!match) {
+        return;
+      }
+      const wanted = src.replace(card_image_pattern, `Images/cards/${match[1]}${is_dark ? "_dark" : ""}.jpg`);
+      if (wanted !== src) {
+        img.setAttribute("src", wanted);
+      }
+    });
+  };
+  swap_card_images();
+  new MutationObserver(swap_card_images).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
