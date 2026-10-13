@@ -89,15 +89,6 @@
   access: "Teaching Lab Google login"
   order: 40
 
-- title: "Classroom Observations in Google Sheets"
-  path: https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt
-  image: Images/dashboards/google_sheets.png
-  description: "Raw spreadsheet copies of submitted IPG data by site. By-coach copies are in the folder linked from the matrix above."
-  categories: [Practice, Raw data]
-  audience: "Coaches, site leads"
-  access: "Teaching Lab Google account"
-  order: 41
-
 - title: "Student Work Graded Dashboard"
   path: https://tl-data.teachinglab.org/student_work_graded/
   image: Images/dashboards/StudentWorkGraded.png

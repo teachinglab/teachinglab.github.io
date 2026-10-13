@@ -62,7 +62,6 @@ Everything, organized by Guskey level: perceptions, knowledge, mindsets, practic
 Individual responses and downloads.
 
 - [IPG Raw Data / Downloads](https://tl-data.teachinglab.org/ipg_raw_reports/)
-- [Classroom observations in Google Sheets](https://drive.google.com/drive/u/0/folders/1BfXaee-PW-EDegAoKNTNrVIEvGxzeMPt)
 - [Student Work Grading App](https://tl-data.teachinglab.org/student_work_grading/) (approved graders)
 :::
 
