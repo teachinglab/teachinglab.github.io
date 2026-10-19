@@ -11,7 +11,7 @@ mermaid:
 ---
 
 ::: {.callout-note appearance="simple"}
-This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-10-12). Edit it there, not here.
+This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-10-19). Edit it there, not here.
 :::
 
 Internal (login-required) hosted versions on Posit Connect:
@@ -315,21 +315,23 @@ content itself can stay deployed and simply becomes unscheduled.
 
 <!-- BEGIN GENERATED: connect-inventory -->
 
-_Auto-generated from the Posit Connect API on 2026-10-12 17:00 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
+_Auto-generated from the Posit Connect API on 2026-10-19 14:27 EDT by `data_scripts/generate_architecture.R`. Do not edit this section by hand._
 
-**Connect server:** https://tl-data.teachinglab.org — 274 content items, 34 active schedules, 4 APIs, 29 interactive apps.
+**Connect server:** https://tl-data.teachinglab.org — 276 content items, 36 active schedules, 4 APIs, 29 interactive apps.
 
-### Active scheduled jobs (34)
+### Active scheduled jobs (36)
 
 |Job                                                 |Cadence         |Run Time (ET) |Source in Repo                 |
 |:---------------------------------------------------|:---------------|:-------------|:------------------------------|
 |Coach/Facilitator Board Save                        |Daily           |01:00         |posit_automations/data_updates |
 |Employee Information                                |Daily           |00:00         |posit_automations/data_updates |
+|Monday L&R Name Audit                               |Daily           |09:00         |*(not in this repo)*           |
 |Monitor Connect Scripts                             |Daily           |12:24         |posit_automations              |
 |Qualtrics Checks                                    |Daily           |01:00         |posit_automations/validation   |
 |Score Course Assessments (FY27)                     |Daily           |09:51         |posit_automations/data_updates |
 |Staffing Dashboard Targets Workflow                 |Daily           |01:00         |posit_automations/cap_targets  |
 |Student Work Update (FY27)                          |Daily           |04:21         |posit_automations/data_updates |
+|Update Alchemer Autocomplete Lists                  |Daily           |08:00         |*(not in this repo)*           |
 |Update Project Log                                  |Daily           |00:30         |posit_automations/data_updates |
 |Update Qualtrics Survey Teacher Selection (FY27)    |Daily           |03:54         |posit_automations/data_updates |
 |daily_percent_completion                            |Daily           |00:30         |posit_automations/data_updates |
@@ -345,11 +347,11 @@ _Auto-generated from the Posit Connect API on 2026-10-12 17:00 EDT by `data_scri
 |update_site_choices                                 |Daily           |06:30         |posit_automations/data_updates |
 |update_student_outcomes                             |Daily           |02:46         |posit_automations/data_updates |
 |Duncan Weekly Project Log Auto-Submit               |Every 1 weeks   |05:00         |*(not in this repo)*           |
-|FY27 Response Rates & Key Outcomes (Project Health) |Hourly          |12:49         |*(not in this repo)*           |
-|tracker_27                                          |Hourly          |14:00         |posit_automations              |
-|update_coaching_log_27                              |Hourly          |12:30         |posit_automations/data_updates |
+|FY27 Response Rates & Key Outcomes (Project Health) |Hourly          |09:49         |*(not in this repo)*           |
+|tracker_27                                          |Hourly          |11:00         |posit_automations              |
+|update_coaching_log_27                              |Hourly          |09:30         |posit_automations/data_updates |
 |update_cap_usage_monthly                            |Monthly (day 3) |05:00         |posit_automations/data_updates |
-|automated_biweekly_reports                          |Twice monthly   |02:38         |*(not in this repo)*           |
+|automated_biweekly_reports                          |Twice monthly   |01:38         |*(not in this repo)*           |
 |Daily Data Backup                                   |Weekdays        |14:00         |posit_automations/data_updates |
 |FacT Tier Progression Monitoring                    |Weekdays        |04:00         |*(not in this repo)*           |
 |generate_daily_reports                              |Weekdays        |03:58         |*(not in this repo)*           |
@@ -373,8 +375,9 @@ Apps not deployed recently may be inactive — check before assuming they are li
 
 |App                      |Framework        |Last Deployed |Source in Repo                                    |
 |:------------------------|:----------------|:-------------|:-------------------------------------------------|
-|participant_feedback     |shiny            |2026-10-10    |dashboards/posit-connect/participant_feedback     |
-|ongoing_report           |shiny            |2026-10-10    |dashboards/posit-connect/ongoing_report           |
+|ongoing_report           |shiny            |2026-10-16    |dashboards/posit-connect/ongoing_report           |
+|participant_feedback     |shiny            |2026-10-15    |dashboards/posit-connect/participant_feedback     |
+|cap_usage_dashboard      |python-streamlit |2026-10-13    |*(not in this repo)*                              |
 |course_assessments       |shiny            |2026-10-06    |dashboards/deprecated/course_assessments          |
 |tl_individual_feedback   |shiny            |2026-09-30    |dashboards/posit-connect/tl_individual_feedback   |
 |project_log_tl           |shiny            |2026-09-28    |dashboards/posit-connect/project_log_tl           |
@@ -386,7 +389,6 @@ Apps not deployed recently may be inactive — check before assuming they are li
 |Teaching Lab API Monitor |shiny            |2026-08-07    |dashboards/posit-connect/api_monitor              |
 |calendar_refresh_monitor |shiny            |2026-08-03    |dashboards/posit-connect/calendar_refresh_monitor |
 |tl_pl_calendar           |shiny            |2026-08-03    |dashboards/posit-connect/tl_pl_calendar           |
-|cap_usage_dashboard      |python-streamlit |2026-07-24    |*(not in this repo)*                              |
 |d9_d11_coaching_outcomes |shiny            |2026-07-24    |dashboards/posit-connect/d9_d11_coaching_outcomes |
 |guskey_app               |shiny            |2026-05-11    |*(not in this repo)*                              |
 |IPGRawDataDashboard      |shiny            |2026-04-13    |dashboards/posit-connect/ipg_raw_reports          |
