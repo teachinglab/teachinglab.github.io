@@ -1,0 +1,105 @@
+---
+title: "Survey Glossary"
+description: "Every FY27 survey and form in one place: the abbreviation, who takes it, when, and what it measures."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+A quick reference for the surveys and abbreviations staff use day to day. For why we measure each of these, see the [Evaluation Plan](evaluation_plan.qmd). For how the dropdown lists inside them are filled, see [Why Isn't My Name on the Survey?](survey_lists.qmd)
+
+## At a glance
+
+| Short name | Survey | Who takes it | When | Guskey level |
+|---|---|---|---|---|
+| [**PF**](#pf) | FY27 Participant Feedback Survey | PL participants | End of each session | Participant perceptions |
+| [**ES**](#es) | FY27 Educator Survey | Teachers and leaders in the partnership | Start of year (Diagnostic) and end of year (Follow-up) | Knowledge, mindsets, enabling conditions |
+| [**IPG**](#ipg) | FY27 Classroom Observation Instruments | Coaches, observing a teacher | Baseline, Middle of Year, End of Year | Participant practices |
+| [**SW**](#sw) | FY27 Student Work Sample Submission | Coaches or teachers, uploading student work | Baseline, Middle of Year, End of Year | Student learning |
+| [**Student Survey**](#student) | FY27 Teaching Lab Student Survey | Students of coached teachers | Twice a year | Student learning experiences |
+| [**EC**](#ec) | FY27 Enabling Conditions | Teaching Lab project team | During the year | Enabling conditions |
+| [**Contact Lead**](#contact-lead) | FY27 Mid / End of Year Contact Lead Survey | Partner contact leads | Middle and end of year | Participant perceptions |
+| [**CCSO**](#ccso) | Coaching Cycle Student Outcomes | Coaches | End of each coaching cycle | Student learning |
+| [**CTR**](#ctr) | Coach-Teacher Recorded Conversations | Coaches | When submitting a recorded conversation | Practice (coaching quality) |
+| [**Media Consent**](#media-consent) | FY27 Teaching Lab Media Consent Form | Teachers and leaders being recorded | Before recording | n/a |
+
+## Participant Feedback (PF) {#pf}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_cBaoLkjhoXkOG4S)
+
+Participants fill this out at the end of a PL session. It asks about the facilitator, the session's quality and relevance, and how likely they are to recommend Teaching Lab (NPS). Participants pick their site, then their facilitator and course from lists drawn from that site's PL logistics board.
+
+- **Results:** [Individual Feedback](https://tl-data.teachinglab.org/individual_feedback/), [Participant Feedback Rollup](https://tl-data.teachinglab.org/participant_feedback/), the [daily facilitator report](report_emails.qmd#daily-facilitator-report)
+- **Facilitator or course missing?** See [Facilitators and courses](survey_lists.qmd#facilitators-and-courses-participant-feedback)
+
+## Educator Survey (ES) {#es}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_ahD6iIpcybD1u2G)
+
+Teachers and leaders take this once at the start of the partnership (the **Diagnostic**, or pre) and again at the end (the **Follow-up**, or post). It covers mindsets and expectations, the school environment (trust and collaboration), and content knowledge questions that make up our learning assessments.
+
+- **Results:** [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/), [Learning Assessments](https://tl-data.teachinglab.org/learning_assessments/)
+- **Tracked in:** the Diagnostic and Follow-up columns of the [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0), matched by email ([how](tracker_matching.qmd))
+
+## Classroom Observation (IPG) {#ipg}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_0DGUXmHmlnTOZim)
+
+Coaches use this to record a classroom observation with the Instructional Practice Guide (IPG) or a related tool. The coach picks themselves, the site, the teacher, and the round (Baseline, Middle of Year, or End of Year).
+
+- **Results:** [IPG Raw Data / Downloads](https://tl-data.teachinglab.org/ipg_raw_reports/), [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/), and an [observation report](report_emails.qmd#classroom-observation-report) emailed to the coach
+- **Name or teacher missing?** See [Coaches](survey_lists.qmd#coaches-classroom-observation-and-student-work) and [Teachers](survey_lists.qmd#teachers-who-youre-coaching)
+
+## Student Work (SW) {#sw}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_0H7xUSb8qixVCDk)
+
+Used to upload samples of student work for a coached teacher, tagged with a round (Baseline, Middle of Year, or End of Year). Approved graders then score the samples.
+
+- **Results:** [Student Work Graded](https://tl-data.teachinglab.org/student_work_graded/); graders use the [Student Work Grading App](https://tl-data.teachinglab.org/student_work_grading/)
+
+## Student Survey {#student}
+
+Students of coached teachers take this twice a year. It asks about their experience in that teacher's class: relationships, self-efficacy, growth mindset, belonging, challenge, and culturally responsive teaching. It's available in English and Spanish.
+
+## Enabling Conditions (EC) {#ec}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_dmYrUgpvaAE4zKm)
+
+The project team rates the conditions at a partner site against the Head, Heart, and Habits rubric, with notes on the evidence behind each score.
+
+## Contact Lead Survey {#contact-lead}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_6s9l6Uk1BSTvSqa)
+
+Partner contact leads take this in the middle and at the end of the year. It asks how they see Teaching Lab's PL overall and how likely they are to recommend us (NPS).
+
+## Coaching Cycle Student Outcomes (CCSO) {#ccso}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_bOSNHJtpzbvUyFg)
+
+Coaches fill this out at the end of a coaching cycle with the cycle goal and the share of students meeting it at the start and end of the cycle.
+
+## Coach-Teacher Recorded Conversations (CTR) {#ctr}
+
+[Open the survey](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_b9pikOzhbXvOapw)
+
+Coaches use this to upload a recording of a coaching conversation or PL session. The teacher or leader needs to have signed the [Media Consent Form](#media-consent) first.
+
+## Media Consent Form {#media-consent}
+
+[Open the form](https://teachinglab.iad1.qualtrics.com/jfe/form/SV_2brRHg1h5dJheNE)
+
+Teachers and leaders sign this before they're recorded.
+
+## Other terms you'll hear
+
+| Term | Meaning |
+|---|---|
+| **Diagnostic / Follow-up** | The pre and post rounds of the Educator Survey |
+| **Baseline / MOY / EOY** | Beginning, middle, and end of year rounds for observations and student work |
+| **NPS** | Net Promoter Score: % of 9–10 ratings minus % of 0–6 ratings on "How likely are you to recommend…" |
+| **Guskey levels** | Our evaluation framework: perceptions, knowledge, mindsets, enabling conditions, practices, student learning ([Evaluation Plan](evaluation_plan.qmd)) |
+| **Site / subsite** | The partner (e.g. a district) and the school or district within it, picked at the start of most surveys |
+| **Roster** | The [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) of coached participants, which the [tracker](tracker_matching.qmd) is built from |

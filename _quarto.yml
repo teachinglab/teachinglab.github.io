@@ -81,10 +81,20 @@ website:
             href: On_the_data.html
           - text: "Data Collection Overview"
             href: data_collection_overview.html
-          - text: "Why Isn't My Name on the Survey?"
-            href: survey_lists.html
           - text: "Data Infrastructure Architecture"
             href: architecture.html
+      - text: "Help"
+        menu:
+          - text: "Why Isn't My Name on the Survey?"
+            href: survey_lists.html
+          - text: "Why Didn't I Get My Report?"
+            href: report_emails.html
+          - text: "Why Doesn't the Tracker Count My Participants?"
+            href: tracker_matching.html
+          - text: "When Will I See My Change?"
+            href: refresh_times.html
+          - text: "Survey Glossary"
+            href: survey_glossary.html
       - text: "Blog"
         href: blog.html
       - text: "Archives"

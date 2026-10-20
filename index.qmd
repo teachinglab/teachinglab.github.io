@@ -75,6 +75,17 @@ How it's collected, scored, and refreshed.
 - [Data Infrastructure Architecture](architecture.qmd) · [Blog](blog.qmd)
 :::
 
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### Something's missing or not showing up
+
+A name not on a survey, a report that didn't arrive, or a participant the tracker isn't counting.
+
+- [Why isn't my name on the survey?](survey_lists.qmd)
+- [Why didn't I get my report?](report_emails.qmd)
+- [Why doesn't the tracker count my participants?](tracker_matching.qmd)
+- [When will I see my change?](refresh_times.qmd) · [Survey Glossary](survey_glossary.qmd)
+:::
+
 :::
 
 ## FAQ
@@ -86,6 +97,10 @@ How it's collected, scored, and refreshed.
 -   **Which school years are on here?**
 
     -   Current dashboards cover SY25-26 and SY26-27 (filter by date to see one year). Each card on the [Dashboards](Dashboards.qmd) page lists its years. Earlier years are in the [Archives](archives.qmd).
+
+-   **My name isn't on a survey, or I didn't get my report.**
+
+    -   Survey lists and reports come from Monday boards and sheets, so the fix is usually there. See [Why isn't my name on the survey?](survey_lists.qmd) and [Why didn't I get my report?](report_emails.qmd)
 
 -   **Something looks wrong or missing.**
 

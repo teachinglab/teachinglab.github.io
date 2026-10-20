@@ -1,0 +1,42 @@
+---
+title: "When Will I See My Change?"
+description: "How long it takes for changes on Monday, in Google Sheets, and in survey responses to reach surveys, trackers, dashboards, and reports."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Changes don't show up everywhere at once. Each survey, sheet, and dashboard refreshes on its own schedule. All times are Eastern.
+
+## If you changed something on Monday or in a sheet
+
+| You changed… | It shows up in… | When |
+|---|---|---|
+| [Coach/Facilitator Details Board](https://teachinglab.monday.com/boards/2208860812) (onboarding, Able to Support) | Coach list on IPG, Student Work, and Coach-Teacher Recorded Conversations | Next morning, around 5 AM |
+| A session on a PL logistics board ([L&R Hub](https://teachinglab.monday.com/boards/18416005880)): facilitator, date, course, site | Facilitator and course lists on Participant Feedback | Next morning, around 7 AM |
+| [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) | Teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes | Next morning, around 4 AM |
+| [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) | [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) | Next morning (the roster is copied overnight, around 12:30 AM) |
+| [FY27 Coaching Log](https://teachinglab.monday.com/boards/18416482214) | Coaching dashboards and the tracker | Within about an hour |
+| [FY27 Master Survey Input sheet](https://docs.google.com/spreadsheets/d/1hbs5d1uf2xqDvs0hG68hZG4ttmf7BhqKDuKCNNaYd54/edit) (sites, schools, districts) | Site and school questions on every FY27 survey | Next morning, around 6:30 AM |
+| [FY27 Project Staffing Match](https://teachinglab.monday.com/boards/6902955796) | Who's CC'd on daily facilitator reports | Next weekday morning's report |
+
+Because the survey lists refresh before 7 AM, **a change made during the workday shows up in surveys the next morning, not the same day.**
+
+## If a survey response was submitted
+
+| Where | When |
+|---|---|
+| Most dashboards, including the [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/) | Within 10 to 15 minutes |
+| [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) | Within an hour |
+| [FY27 Response Rates & Key Outcomes (Project Health)](https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit) | Within an hour |
+| [IPG Raw Data / Downloads](https://tl-data.teachinglab.org/ipg_raw_reports/) | Right away (it reads live from Qualtrics) |
+| [Learning Assessments](https://tl-data.teachinglab.org/learning_assessments/) | After the daily scoring run, around 10 AM |
+| [Student Work Graded](https://tl-data.teachinglab.org/student_work_graded/) | After the work is graded |
+| Daily facilitator report email | Next weekday morning ([details](report_emails.qmd#daily-facilitator-report)) |
+
+Each card on the [Dashboards](Dashboards.qmd) page lists that dashboard's refresh timing.
+
+## Still not showing up?
+
+If it's been longer than the times above, email the data team at [duncan.gates@teachinglab.org](mailto:duncan.gates@teachinglab.org) with what you changed, where, and when.

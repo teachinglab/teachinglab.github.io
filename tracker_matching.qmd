@@ -1,0 +1,50 @@
+---
+title: "Why Doesn't the Tracker Count My Participants?"
+description: "How the FY27 Data Collection Tracker matches survey responses to rostered participants, and the common reasons a completed survey shows as missing."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+The [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) starts from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) and checks each person off as their surveys come in. **If a person isn't on the roster, or a response can't be matched to them, the tracker can't count it.** The tracker updates every hour.
+
+## Who's on the tracker
+
+Everyone on the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) whose status is **Current/Active** or **Completed/Cycled Out**, and who has a **Participant Email** filled in. Rows without an email are skipped.
+
+A teacher who's coached in two subjects (for example Math and ELA) appears once for each subject. That's on purpose: each subject's project needs to see them.
+
+## How each survey is matched
+
+Some surveys are matched by **email** and others by the **name picked from a list**, so the fixes are different.
+
+| Tracker column | Survey | Matched by | Needs to match |
+|---|---|---|---|
+| Diagnostic / Follow-up Educator Survey | [Educator Survey](survey_glossary.qmd#es) | Email the participant typed | Participant Email or secondary email on the roster |
+| Classroom Observation (Baseline, Middle, End of Year) | [IPG](survey_glossary.qmd#ipg) | Teacher picked from the list, plus the round the coach chose | Participant name on the roster |
+| Student Work (Baseline, Middle, End of Year) | [Student Work](survey_glossary.qmd#sw) | Teacher picked from the list (email as a backup), plus the round chosen | Participant name on the roster |
+| Coaching log | [FY27 Coaching Log](https://teachinglab.monday.com/boards/18416482214) | Participant name on the log | Participant name on the roster |
+| Participant Feedback | [Participant Feedback](survey_glossary.qmd#pf) | Email the participant typed | Participant Email on the roster |
+| Student Survey (Baseline, Follow-up) | [Student Survey](survey_glossary.qmd#student) | Teacher's email on the survey | Participant Email on the roster |
+
+Only **finished** responses count. A response that was started but not submitted shows as in progress, not complete.
+
+## Common reasons a completed survey shows as missing
+
+- **The participant used a different email.** A personal email, a typo, or a second district address won't match. Add the other address as the **secondary email** on the roster, or ask the participant to use the email that's on the roster.
+- **"Other" was picked instead of the teacher's name.** IPG and Student Work are matched by the name chosen from the list, so a response filed under **Other** can't be connected to anyone. Add the teacher to the [roster](https://teachinglab.monday.com/boards/18416567790) first; they'll appear in the survey list the next morning ([how that works](survey_lists.qmd#teachers-who-youre-coaching)).
+- **The name on the roster is spelled differently.** Names are matched exactly, so "Kate" and "Katherine" are two different people.
+- **The wrong round was picked.** Classroom observations and student work count toward whichever round (Baseline, Middle of Year, End of Year) the coach chose in the survey. A baseline submitted as Middle of Year shows up in the wrong column.
+- **The participant isn't on the roster, or their status is wrong.** Check that they're on the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) with an active status and an email.
+- **It was submitted less than an hour ago.** The tracker updates hourly.
+
+## Pre and post
+
+- **Educator Survey:** a participant's first response counts as the **Diagnostic** (pre). The follow-up later in the year counts as the **Follow-up** (post).
+- **Classroom observations and student work:** the round the coach picks in the survey decides the column. Pick it carefully.
+- **Student Survey:** a teacher's first round of student responses counts as baseline, and a later round counts as follow-up.
+
+## Still wrong?
+
+If the roster and the response both look right and the tracker still doesn't count it after an hour, email the data team at [duncan.gates@teachinglab.org](mailto:duncan.gates@teachinglab.org) with the participant's name, site, the survey, and roughly when it was submitted.
