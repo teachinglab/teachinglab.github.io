@@ -1,0 +1,69 @@
+---
+title: "Why Isn't My Name on the Survey?"
+description: "Where the names, sites, courses, and teachers in our Qualtrics dropdowns come from, and what to change when something is missing."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Most of the lists in our Qualtrics surveys aren't typed in by hand. Each one is copied overnight from a Monday board or a Google Sheet. **If something is missing from a survey, the fix is almost always in that source, not in Qualtrics.** Once the source is right, the survey catches up the next morning.
+
+## Quick lookup
+
+| Survey list | Comes from | Who you show up for | Who to ask |
+|---|---|---|---|
+| **Coach** on the Classroom Observation (IPG), Student Work, and Coach-Teacher Recorded Conversations surveys | Coach/Facilitator Details board on Monday | Everyone, at every site | Onboarding team, who manage the Details board |
+| **Facilitator** on the Participant Feedback survey | PL logistics boards on Monday (session dates and facilitators) | Participants at the sites where you facilitate a session within 7 days of today | L&R |
+| **Course** on the Participant Feedback survey | PL logistics boards on Monday (`PL Course Name`) | Participants at that site, for sessions within 7 days of today | L&R |
+| **Teacher** on IPG, Student Work, and Coaching Cycle Student Outcomes | Coach roster board on Monday | People choosing that site | L&R / coaching leads |
+| **Site** on every FY27 survey | FY27 Master Survey Input sheet, `FY27 Official Site List` tab | Everyone | Data team |
+| **School / district** under a site | FY27 Master Survey Input sheet, `School/District Selection` tab | People choosing that site | Data team |
+
+All of these lists refresh early each morning. A change made today shows up in the survey tomorrow.
+
+## Coaches: Classroom Observation and Student Work
+
+You're listed as a coach when **any** of these are true on the Coach/Facilitator Details board:
+
+- `Coach Onboarding` is **Done**, **In Progress**, or **Full Time**
+- `Able to Support` includes **Coaching**
+- You're a full-time Teaching Lab coach
+
+If your name is missing, ask whoever manages the Details board to update your `Coach Onboarding` status. You'll appear the next morning.
+
+Picking **Other** and typing your name doesn't add you to the list, and the response may not be matched to you, so you might not get the report for that observation. Get added to the board first, then submit the observation.
+
+When a coach leaves, their name is hidden from the list but kept in the data, so past observations stay attached to them.
+
+## Facilitators and courses: Participant Feedback
+
+Participant Feedback only shows the facilitators and courses that match **the site the participant picked** and **sessions within a week of today**. This keeps the lists short, but it means:
+
+- Your name only appears for participants at a site where the PL logistics board has you down for a session in that window.
+- A course only appears if its session on the logistics board has a date and a `PL Course Name`.
+- If the session date on the board is wrong, or more than a week away, you won't show up yet.
+
+If you're missing, check your session on the PL logistics board. Your name, the date, the site, and the course name all need to be filled in.
+
+Onboarding status doesn't control this list. Being marked as onboarded on the Details board won't make you appear on Participant Feedback without a scheduled session.
+
+## Teachers: who you're coaching
+
+The teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes come from the coach roster board on Monday, filtered to the site the respondent picked. If a teacher is missing, add them to the roster under the right site.
+
+## Sites, schools, and districts
+
+The site list on every FY27 survey comes from the `FY27 Official Site List` tab of the Master Survey Input sheet. The school or district question that follows comes from the `School/District Selection` tab.
+
+Changes here go live on partner surveys right away, and a site can't be removed once it's added. **Please ask the data team instead of editing these tabs yourself.**
+
+## Still missing after a day?
+
+If the source looks right and the survey still hasn't caught up after the next morning, email the data team at [duncan.gates@teachinglab.org](mailto:duncan.gates@teachinglab.org) with:
+
+- the survey name
+- the name, course, or site you expected to see
+- the site you picked in the survey
+
+Please don't edit the list directly in Qualtrics. It gets overwritten from the source the next morning.
