@@ -13,7 +13,7 @@ Most of the lists in our Qualtrics surveys aren't typed in by hand. Each one is 
 
 | Survey list | Comes from | Who you show up for | Who to ask |
 |---|---|---|---|
-| **Coach** on the [Classroom Observation (IPG)](survey_glossary.qmd#ipg), [Student Work](survey_glossary.qmd#sw), and [Coach-Teacher Recorded Conversations](survey_glossary.qmd#ctr) surveys | [Coach/Facilitator Details Board](https://teachinglab.monday.com/boards/2208860812) | Everyone, at every site | Onboarding team, who manage the Details board |
+| **Coach** on the [Classroom Observation (IPG)](survey_glossary.qmd#ipg), [Student Work](survey_glossary.qmd#sw), and [Coach-Teacher Recorded Conversations](survey_glossary.qmd#ctr) surveys | [Coach/Facilitator Details Board](https://teachinglab.monday.com/boards/2208860812) | Everyone, at every site | [Molly Branson Thayer](mailto:molly.bransonthayer@teachinglab.org) and [Sharmae Franklin](mailto:sharmae.franklin@teachinglab.org) |
 | **Facilitator** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, listed on the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880) | Participants at the sites where you facilitate a session within 7 days of today | L&R |
 | **Course** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, `PL Course Name` column ([L&R Hub](https://teachinglab.monday.com/boards/18416005880)) | Participants at that site, for sessions within 7 days of today | L&R |
 | **Teacher** on IPG, Student Work, and Coaching Cycle Student Outcomes | [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) | People choosing that site | L&R / coaching leads |
@@ -30,7 +30,7 @@ You're listed as a coach when **any** of these are true on the [Coach/Facilitato
 - `Able to Support` includes **Coaching**
 - You're a full-time Teaching Lab coach
 
-If your name is missing, ask whoever manages the [Details board](https://teachinglab.monday.com/boards/2208860812) to update your `Coach Onboarding` status. You'll appear the next morning.
+If your name is missing, email [Molly Branson Thayer](mailto:molly.bransonthayer@teachinglab.org) and [Sharmae Franklin](mailto:sharmae.franklin@teachinglab.org), who manage the [Details board](https://teachinglab.monday.com/boards/2208860812), and ask them to update your `Coach Onboarding` status. You'll appear the next morning.
 
 Picking **Other** and typing your name doesn't add you to the list, and the response may not be matched to you, so you might not get the report for that observation. Get added to the board first, then submit the observation. See [Why Didn't I Get My Report?](report_emails.qmd)
 
