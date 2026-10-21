@@ -81,7 +81,7 @@
     "href": "tracker_matching.html#common-reasons-a-completed-survey-shows-as-missing",
     "title": "Why Doesn’t the Tracker Count My Participants?",
     "section": "Common reasons a completed survey shows as missing",
-    "text": "Common reasons a completed survey shows as missing\n\nThe participant used a different email. A personal email, a typo, or a second district address won’t match. Add the other address as the secondary email on the roster, or ask the participant to use the email that’s on the roster.\n“Other” was picked instead of the teacher’s name. IPG and Student Work are matched by the name chosen from the list, so a response filed under Other can’t be connected to anyone. Add the teacher to the roster first; they’ll appear in the survey list the next morning (how that works).\nThe name on the roster is spelled differently. Names are matched exactly, so “Kate” and “Katherine” are two different people.\nThe wrong round was picked. Classroom observations and student work count toward whichever round (Baseline, Middle of Year, End of Year) the coach chose in the survey. A baseline submitted as Middle of Year shows up in the wrong column.\nThe participant isn’t on the roster, or their status is wrong. Check that they’re on the SY26-27 Participant Roster with an active status and an email.\nIt was submitted less than an hour ago. The tracker updates hourly."
+    "text": "Common reasons a completed survey shows as missing\n\nThe participant used a different email. A personal email, a typo, or a second district address won’t match. Add the other address as the secondary email on the roster, or ask the participant to use the email that’s on the roster.\n“Other” was picked instead of the teacher’s name. IPG and Student Work are matched by the name chosen from the list, so a response filed under Other can’t be connected to anyone. Add the teacher to the roster first; they’ll appear in the survey list the next morning (how that works).\nThe name on the roster is spelled differently. Names are matched exactly, so “Kate” and “Katherine” are two different people.\nThe wrong round was picked. Classroom observations and student work count toward whichever round (Baseline, Middle of Year, End of Year) the coach chose in the survey. A baseline submitted as Middle of Year shows up in the wrong column.\nThe participant isn’t on the roster, or their status is wrong. Check that they’re on the SY26-27 Participant Roster with an active status and an email. Mary Kate Neal manages the roster.\nIt was submitted less than an hour ago. The tracker updates hourly."
   },
   {
     "objectID": "tracker_matching.html#pre-and-post",
@@ -95,7 +95,7 @@
     "href": "tracker_matching.html#still-wrong",
     "title": "Why Doesn’t the Tracker Count My Participants?",
     "section": "Still wrong?",
-    "text": "Still wrong?\nIf the roster and the response both look right and the tracker still doesn’t count it after an hour, email the data team at duncan.gates@teachinglab.org with the participant’s name, site, the survey, and roughly when it was submitted."
+    "text": "Still wrong?\nIf the roster and the response both look right and the tracker still doesn’t count it after an hour, email Duncan Gates, who runs the tracker, with the participant’s name, site, the survey, and roughly when it was submitted."
   },
   {
     "objectID": "participant_practice_4.html",
@@ -284,28 +284,28 @@
     "href": "survey_lists.html#quick-lookup",
     "title": "Why Isn’t My Name on the Survey?",
     "section": "Quick lookup",
-    "text": "Quick lookup\n\n\n\nSurvey list\nComes from\nWho you show up for\nWho to ask\n\n\n\n\nCoach on the Classroom Observation (IPG), Student Work, and Coach-Teacher Recorded Conversations surveys\nCoach/Facilitator Details Board\nEveryone, at every site\nOnboarding team, who manage the Details board\n\n\nFacilitator on the Participant Feedback survey\nPL logistics boards, listed on the FY27 Logistics Boards: L&R Hub\nParticipants at the sites where you facilitate a session within 7 days of today\nL&R\n\n\nCourse on the Participant Feedback survey\nPL logistics boards, PL Course Name column (L&R Hub)\nParticipants at that site, for sessions within 7 days of today\nL&R\n\n\nTeacher on IPG, Student Work, and Coaching Cycle Student Outcomes\nSY26-27 Participant Roster\nPeople choosing that site\nL&R / coaching leads\n\n\nSite on every FY27 survey\nFY27 Master Survey Input sheet, FY27 Official Site List tab\nEveryone\nData team\n\n\nSchool / district under a site\nFY27 Master Survey Input sheet, School/District Selection tab\nPeople choosing that site\nData team\n\n\n\nAll of these lists refresh early each morning. A change made today shows up in the survey tomorrow. See When Will I See My Change? for exact times."
+    "text": "Quick lookup\n\n\n\nSurvey list\nComes from\nWho you show up for\nWho to ask\n\n\n\n\nCoach on the Classroom Observation (IPG), Student Work, and Coach-Teacher Recorded Conversations surveys\nCoach/Facilitator Details Board\nEveryone, at every site\nMolly Branson Thayer and Sharmae Franklin\n\n\nFacilitator on the Participant Feedback survey\nPL logistics boards, listed on the FY27 Logistics Boards: L&R Hub\nParticipants at the sites where you facilitate a session within 7 days of today\nHolly Corwin\n\n\nCourse on the Participant Feedback survey\nPL logistics boards, PL Course Name column (L&R Hub)\nParticipants at that site, for sessions within 7 days of today\nHolly Corwin\n\n\nTeacher on IPG, Student Work, and Coaching Cycle Student Outcomes\nSY26-27 Participant Roster\nPeople choosing that site\nMary Kate Neal\n\n\nSite on every FY27 survey\nFY27 Master Survey Input sheet, FY27 Official Site List tab\nEveryone\nData team\n\n\nSchool / district under a site\nFY27 Master Survey Input sheet, School/District Selection tab\nPeople choosing that site\nData team\n\n\n\nAll of these lists refresh early each morning. A change made today shows up in the survey tomorrow. See When Will I See My Change? for exact times."
   },
   {
     "objectID": "survey_lists.html#coaches-classroom-observation-and-student-work",
     "href": "survey_lists.html#coaches-classroom-observation-and-student-work",
     "title": "Why Isn’t My Name on the Survey?",
     "section": "Coaches: Classroom Observation and Student Work",
-    "text": "Coaches: Classroom Observation and Student Work\nYou’re listed as a coach when any of these are true on the Coach/Facilitator Details Board:\n\nCoach Onboarding is Done, In Progress, or Full Time\nAble to Support includes Coaching\nYou’re a full-time Teaching Lab coach\n\nIf your name is missing, ask whoever manages the Details board to update your Coach Onboarding status. You’ll appear the next morning.\nPicking Other and typing your name doesn’t add you to the list, and the response may not be matched to you, so you might not get the report for that observation. Get added to the board first, then submit the observation. See Why Didn’t I Get My Report?\nWhen a coach leaves, their name is hidden from the list but kept in the data, so past observations stay attached to them."
+    "text": "Coaches: Classroom Observation and Student Work\nYou’re listed as a coach when any of these are true on the Coach/Facilitator Details Board:\n\nCoach Onboarding is Done, In Progress, or Full Time\nAble to Support includes Coaching\nYou’re a full-time Teaching Lab coach\n\nIf your name is missing, email Molly Branson Thayer and Sharmae Franklin, who manage the Details board, and ask them to update your Coach Onboarding status. You’ll appear the next morning.\nPicking Other and typing your name doesn’t add you to the list, and the response may not be matched to you, so you might not get the report for that observation. Get added to the board first, then submit the observation. See Why Didn’t I Get My Report?\nWhen a coach leaves, their name is hidden from the list but kept in the data, so past observations stay attached to them."
   },
   {
     "objectID": "survey_lists.html#facilitators-and-courses-participant-feedback",
     "href": "survey_lists.html#facilitators-and-courses-participant-feedback",
     "title": "Why Isn’t My Name on the Survey?",
     "section": "Facilitators and courses: Participant Feedback",
-    "text": "Facilitators and courses: Participant Feedback\nParticipant Feedback only shows the facilitators and courses that match the site the participant picked and sessions within a week of today. This keeps the lists short, but it means:\n\nYour name only appears for participants at a site where the PL logistics board has you down for a session in that window.\nA course only appears if its session on the logistics board has a date and a PL Course Name.\nIf the session date on the board is wrong, or more than a week away, you won’t show up yet.\n\nIf you’re missing, find your site’s board from the FY27 Logistics Boards: L&R Hub and check your session. Your name, the date, the site, and the course name all need to be filled in.\nOnboarding status doesn’t control this list. Being marked as onboarded on the Details board won’t make you appear on Participant Feedback without a scheduled session."
+    "text": "Facilitators and courses: Participant Feedback\nParticipant Feedback only shows the facilitators and courses that match the site the participant picked and sessions within a week of today. This keeps the lists short, but it means:\n\nYour name only appears for participants at a site where the PL logistics board has you down for a session in that window.\nA course only appears if its session on the logistics board has a date and a PL Course Name.\nIf the session date on the board is wrong, or more than a week away, you won’t show up yet.\n\nIf you’re missing, find your site’s board from the FY27 Logistics Boards: L&R Hub and check your session. Your name, the date, the site, and the course name all need to be filled in. The logistics boards are run by Holly Corwin. Contact Holly if something on them needs fixing.\nOnboarding status doesn’t control this list. Being marked as onboarded on the Details board won’t make you appear on Participant Feedback without a scheduled session."
   },
   {
     "objectID": "survey_lists.html#teachers-who-youre-coaching",
     "href": "survey_lists.html#teachers-who-youre-coaching",
     "title": "Why Isn’t My Name on the Survey?",
     "section": "Teachers: who you’re coaching",
-    "text": "Teachers: who you’re coaching\nThe teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes come from the SY26-27 Participant Roster, filtered to the site the respondent picked. If a teacher is missing, add them to the roster under the right site."
+    "text": "Teachers: who you’re coaching\nThe teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes come from the SY26-27 Participant Roster, filtered to the site the respondent picked. If a teacher is missing, add them to the roster under the right site, or ask Mary Kate Neal, who manages the roster."
   },
   {
     "objectID": "survey_lists.html#sites-schools-and-districts",
@@ -417,7 +417,7 @@
     "href": "report_emails.html#daily-facilitator-report",
     "title": "Why Didn’t I Get My Report?",
     "section": "Daily facilitator report",
-    "text": "Daily facilitator report\nAfter you facilitate, you get one report per course with that day’s Participant Feedback results.\n\nWhen: it isn’t sent the moment participants submit. It goes out early the next weekday morning and covers the previous day. Monday’s email covers Friday through Sunday.\nTo: you, at your firstname.lastname@teachinglab.org address. The project leads, CPMs, coach developers, and instructional designers for that site are CC’d, based on the FY27 Project Staffing Match board.\n\nYou won’t get a report when:\n\nFewer than 3 participants picked you and that course. This protects participants’ anonymity.\nYour session isn’t on that site’s PL logistics board for the past week. The report is only sent when the facilitator and site in the survey match a session on the board. Find your site’s board from the FY27 Logistics Boards: L&R Hub.\nParticipants picked Other instead of your name. If your name wasn’t in the list, see Why Isn’t My Name on the Survey?\nParticipants picked a different site or course than the one you facilitated."
+    "text": "Daily facilitator report\nAfter you facilitate, you get one report per course with that day’s Participant Feedback results.\n\nWhen: it isn’t sent the moment participants submit. It goes out early the next weekday morning and covers the previous day. Monday’s email covers Friday through Sunday.\nTo: you, at your firstname.lastname@teachinglab.org address. The project leads, CPMs, coach developers, and instructional designers for that site are CC’d, based on the FY27 Project Staffing Match board.\n\nYou won’t get a report when:\n\nFewer than 3 participants picked you and that course. This protects participants’ anonymity.\nYour session isn’t on that site’s PL logistics board for the past week. The report is only sent when the facilitator and site in the survey match a session on the board. Find your site’s board from the FY27 Logistics Boards: L&R Hub, and contact Holly Corwin if your session is missing or wrong.\nParticipants picked Other instead of your name. If your name wasn’t in the list, see Why Isn’t My Name on the Survey?\nParticipants picked a different site or course than the one you facilitated."
   },
   {
     "objectID": "report_emails.html#classroom-observation-report",
@@ -438,14 +438,14 @@
     "href": "report_emails.html#weekly-project-log-summaries",
     "title": "Why Didn’t I Get My Report?",
     "section": "Weekly project log summaries",
-    "text": "Weekly project log summaries\nEvery Thursday morning:\n\nManagers get a summary of their direct reports’ project log hours for the week.\nProject leads and sponsors get a summary of their project team’s hours.\n\nIf someone’s hours are missing, check that they submitted the weekly project log. If you’re a manager or lead and didn’t get the email, your email may be missing from the employee or staffing records. Contact the data team."
+    "text": "Weekly project log summaries\nEvery Thursday morning:\n\nManagers get a summary of their direct reports’ project log hours for the week.\nProject leads and sponsors get a summary of their project team’s hours.\n\nIf someone’s hours are missing, check that they submitted the weekly project log. If you’re a manager or lead and didn’t get the email, your email may be missing from the employee or staffing records. Contact Savanna Worthington or Duncan Gates."
   },
   {
     "objectID": "report_emails.html#still-missing",
     "href": "report_emails.html#still-missing",
     "title": "Why Didn’t I Get My Report?",
     "section": "Still missing?",
-    "text": "Still missing?\nEmail the data team at duncan.gates@teachinglab.org with the report you expected, the date and site of the session or observation, and the name that was selected in the survey."
+    "text": "Still missing?\nFor the daily facilitator report or anything else on this page, email Duncan Gates with the report you expected, the date and site of the session or observation, and the name that was selected in the survey."
   },
   {
     "objectID": "gifts_table.html",

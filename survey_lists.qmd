@@ -14,9 +14,9 @@ Most of the lists in our Qualtrics surveys aren't typed in by hand. Each one is 
 | Survey list | Comes from | Who you show up for | Who to ask |
 |---|---|---|---|
 | **Coach** on the [Classroom Observation (IPG)](survey_glossary.qmd#ipg), [Student Work](survey_glossary.qmd#sw), and [Coach-Teacher Recorded Conversations](survey_glossary.qmd#ctr) surveys | [Coach/Facilitator Details Board](https://teachinglab.monday.com/boards/2208860812) | Everyone, at every site | [Molly Branson Thayer](mailto:molly.bransonthayer@teachinglab.org) and [Sharmae Franklin](mailto:sharmae.franklin@teachinglab.org) |
-| **Facilitator** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, listed on the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880) | Participants at the sites where you facilitate a session within 7 days of today | L&R |
-| **Course** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, `PL Course Name` column ([L&R Hub](https://teachinglab.monday.com/boards/18416005880)) | Participants at that site, for sessions within 7 days of today | L&R |
-| **Teacher** on IPG, Student Work, and Coaching Cycle Student Outcomes | [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) | People choosing that site | L&R / coaching leads |
+| **Facilitator** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, listed on the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880) | Participants at the sites where you facilitate a session within 7 days of today | [Holly Corwin](mailto:holly.corwin@teachinglab.org) |
+| **Course** on the [Participant Feedback](survey_glossary.qmd#pf) survey | PL logistics boards, `PL Course Name` column ([L&R Hub](https://teachinglab.monday.com/boards/18416005880)) | Participants at that site, for sessions within 7 days of today | [Holly Corwin](mailto:holly.corwin@teachinglab.org) |
+| **Teacher** on IPG, Student Work, and Coaching Cycle Student Outcomes | [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) | People choosing that site | [Mary Kate Neal](mailto:marykate.neal@teachinglab.org) |
 | **Site** on every FY27 survey | [FY27 Master Survey Input sheet](https://docs.google.com/spreadsheets/d/1hbs5d1uf2xqDvs0hG68hZG4ttmf7BhqKDuKCNNaYd54/edit), `FY27 Official Site List` tab | Everyone | Data team |
 | **School / district** under a site | [FY27 Master Survey Input sheet](https://docs.google.com/spreadsheets/d/1hbs5d1uf2xqDvs0hG68hZG4ttmf7BhqKDuKCNNaYd54/edit), `School/District Selection` tab | People choosing that site | Data team |
 
@@ -44,13 +44,13 @@ When a coach leaves, their name is hidden from the list but kept in the data, so
 - A course only appears if its session on the logistics board has a date and a `PL Course Name`.
 - If the session date on the board is wrong, or more than a week away, you won't show up yet.
 
-If you're missing, find your site's board from the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880) and check your session. Your name, the date, the site, and the course name all need to be filled in.
+If you're missing, find your site's board from the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880) and check your session. Your name, the date, the site, and the course name all need to be filled in. The logistics boards are run by [Holly Corwin](mailto:holly.corwin@teachinglab.org). Contact Holly if something on them needs fixing.
 
 Onboarding status doesn't control this list. Being marked as onboarded on the [Details board](https://teachinglab.monday.com/boards/2208860812) won't make you appear on Participant Feedback without a scheduled session.
 
 ## Teachers: who you're coaching
 
-The teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes come from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790), filtered to the site the respondent picked. If a teacher is missing, add them to the roster under the right site.
+The teacher lists on IPG, Student Work, and Coaching Cycle Student Outcomes come from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790), filtered to the site the respondent picked. If a teacher is missing, add them to the roster under the right site, or ask [Mary Kate Neal](mailto:marykate.neal@teachinglab.org), who manages the roster.
 
 ## Sites, schools, and districts
 

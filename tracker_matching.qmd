@@ -36,7 +36,7 @@ Only **finished** responses count. A response that was started but not submitted
 - **"Other" was picked instead of the teacher's name.** IPG and Student Work are matched by the name chosen from the list, so a response filed under **Other** can't be connected to anyone. Add the teacher to the [roster](https://teachinglab.monday.com/boards/18416567790) first; they'll appear in the survey list the next morning ([how that works](survey_lists.qmd#teachers-who-youre-coaching)).
 - **The name on the roster is spelled differently.** Names are matched exactly, so "Kate" and "Katherine" are two different people.
 - **The wrong round was picked.** Classroom observations and student work count toward whichever round (Baseline, Middle of Year, End of Year) the coach chose in the survey. A baseline submitted as Middle of Year shows up in the wrong column.
-- **The participant isn't on the roster, or their status is wrong.** Check that they're on the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) with an active status and an email.
+- **The participant isn't on the roster, or their status is wrong.** Check that they're on the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) with an active status and an email. [Mary Kate Neal](mailto:marykate.neal@teachinglab.org) manages the roster.
 - **It was submitted less than an hour ago.** The tracker updates hourly.
 
 ## Pre and post
@@ -47,4 +47,4 @@ Only **finished** responses count. A response that was started but not submitted
 
 ## Still wrong?
 
-If the roster and the response both look right and the tracker still doesn't count it after an hour, email the data team at [duncan.gates@teachinglab.org](mailto:duncan.gates@teachinglab.org) with the participant's name, site, the survey, and roughly when it was submitted.
+If the roster and the response both look right and the tracker still doesn't count it after an hour, email [Duncan Gates](mailto:duncan.gates@teachinglab.org), who runs the tracker, with the participant's name, site, the survey, and roughly when it was submitted.

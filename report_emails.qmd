@@ -30,7 +30,7 @@ After you facilitate, you get one report per course with that day's [Participant
 You won't get a report when:
 
 - **Fewer than 3 participants** picked you and that course. This protects participants' anonymity.
-- **Your session isn't on that site's PL logistics board** for the past week. The report is only sent when the facilitator and site in the survey match a session on the board. Find your site's board from the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880).
+- **Your session isn't on that site's PL logistics board** for the past week. The report is only sent when the facilitator and site in the survey match a session on the board. Find your site's board from the [FY27 Logistics Boards: L&R Hub](https://teachinglab.monday.com/boards/18416005880), and contact [Holly Corwin](mailto:holly.corwin@teachinglab.org) if your session is missing or wrong.
 - **Participants picked Other** instead of your name. If your name wasn't in the list, see [Why Isn't My Name on the Survey?](survey_lists.qmd#facilitators-and-courses-participant-feedback)
 - **Participants picked a different site or course** than the one you facilitated.
 
@@ -53,8 +53,8 @@ Every Thursday morning:
 - **Managers** get a summary of their direct reports' project log hours for the week.
 - **Project leads and sponsors** get a summary of their project team's hours.
 
-If someone's hours are missing, check that they submitted the weekly project log. If you're a manager or lead and didn't get the email, your email may be missing from the employee or staffing records. Contact the data team.
+If someone's hours are missing, check that they submitted the weekly project log. If you're a manager or lead and didn't get the email, your email may be missing from the employee or staffing records. Contact [Savanna Worthington](mailto:savanna.worthington@teachinglab.org) or [Duncan Gates](mailto:duncan.gates@teachinglab.org).
 
 ## Still missing?
 
-Email the data team at [duncan.gates@teachinglab.org](mailto:duncan.gates@teachinglab.org) with the report you expected, the date and site of the session or observation, and the name that was selected in the survey.
+For the daily facilitator report or anything else on this page, email [Duncan Gates](mailto:duncan.gates@teachinglab.org) with the report you expected, the date and site of the session or observation, and the name that was selected in the survey.
