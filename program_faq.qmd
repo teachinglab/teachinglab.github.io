@@ -1,0 +1,86 @@
+---
+title: "Program FAQ"
+description: "Common questions about our Qualtrics forms: missing teacher or facilitator names, confirming a submission, and updating a response."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Quick answers for program staff using our Qualtrics forms. For anything not covered here, reach out to L&R through the [HappyFox](https://support.teachinglab.org/new/) (choose L&R as the team).
+
+| Question | Short answer |
+|---|---|
+| [My teacher's name isn't in the dropdown](#teacher-dropdowns) | Check the roster and the site you picked, then reload the survey |
+| [My facilitator or coach isn't in the dropdown](#facilitator-dropdowns) | Check their Monday board entry, then reload the survey |
+| [Did my form go through?](#did-it-go-through) | You saw the "Thank you" page, or got an email summary |
+| [Can I change my response?](#update-my-response) | Yes: use the link in your email summary, or ask L&R |
+| [Can a participant's response be changed?](#update-participant-response) | Yes, for metadata like school, date, or content area |
+
+## Teacher dropdowns {#teacher-dropdowns}
+
+**Where do teacher names come from?** The [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) on Monday. It's copied to Qualtrics every morning, before 8 AM Eastern.
+
+**Why can't I see my teacher's name?** Work through these in order:
+
+1. **Are they rostered?** Find them on the [Participant Roster](https://teachinglab.monday.com/boards/18416567790) with the right site.
+2. **Did you pick the site they're rostered to?** The teacher list is filtered by the site you choose.
+3. **Are you on the latest version of the survey?** See [Reload the survey](#reload-the-survey) below.
+
+More detail on how the teacher list is built: [Why Isn't My Name on the Survey?](survey_lists.qmd)
+
+## Facilitator and coach dropdowns {#facilitator-dropdowns}
+
+**Where do facilitator and coach names come from?**
+
+| Form | Source | How it updates |
+|---|---|---|
+| Participant Feedback | PL logistics boards ([L&R Hub](https://teachinglab.monday.com/boards/18416005880)) | Automatically, every morning before 8 AM Eastern |
+| Classroom Observation, Student Work | [Facilitator/Coach Details Board](https://teachinglab.monday.com/boards/2208860812) | Automatically, every morning before 8 AM Eastern |
+| FCOT | Checked against our other tools | By hand, at least twice a week |
+
+**Why can't I see my facilitator's or coach's name?** Work through these in order:
+
+1. **Are they set up on Monday?**
+    - Participant Feedback: they need to be on the session in the logistics board.
+    - Classroom Observation, Student Work, or FCOT: `Coach Onboarding` must be complete on the [Facilitator/Coach Details Board](https://teachinglab.monday.com/boards/2208860812).
+2. **Are you on the latest version of the survey?** See [Reload the survey](#reload-the-survey) below.
+3. **Still missing on the FCOT?** As a last resort, reach out to [Lauren Hartmann](mailto:lauren.hartmann@teachinglab.org) (Manager, Data Analytics) through the [HappyFox](https://support.teachinglab.org/new/) (choose L&R as the team).
+
+More detail on the facilitator and coach lists: [Why Isn't My Name on the Survey?](survey_lists.qmd)
+
+## Reload the survey {#reload-the-survey}
+
+::: {.callout-tip}
+## Qualtrics locks the version you opened
+
+Once you open a Qualtrics survey, it keeps the version that loaded at that moment. If you started the survey before a name was added, the name won't appear until you load a fresh copy.
+:::
+
+You have two options:
+
+- **Load a fresh copy** using either of these:
+    - [Incognito mode](https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop): <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> (Windows/Linux) or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> (Mac)
+    - [Clear your browser cache](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- **Finish now and fix it later:** choose "Other", type the name, submit, then ask your L&R analyst to update the submission.
+
+## How do I know my form went through? {#did-it-go-through}
+
+- You reached the "Thank you for submitting" page.
+- For IPG, Participant Feedback, and FCOT, you also get an email summary of your submission.
+
+Not getting the email? See [Why Didn't I Get My Report?](report_emails.qmd)
+
+## Can I update my response? {#update-my-response}
+
+Yes.
+
+- **Classroom Observation and FCOT:** open the email summary for that submission. It includes a link to update the response.
+- **Other forms:** reach out to L&R through the [HappyFox](https://support.teachinglab.org/new/) (choose L&R as the team) with the details of your response, and we'll send you a link to update it.
+
+## Can I update a participant's response? {#update-participant-response}
+
+Yes, for the [Participant Feedback](survey_glossary.qmd#pf), [Educator Survey](survey_glossary.qmd#es), [Contact Lead Survey](survey_glossary.qmd#contact-lead), and teacher-submitted [Student Work](survey_glossary.qmd#sw).
+
+- **What can be changed:** school, session date, content area, and other details about the response (not the participant's answers).
+- **How:** reach out to your project's L&R analyst through the [HappyFox](https://support.teachinglab.org/new/) (choose L&R as the team) with the details of the response and what needs to change.

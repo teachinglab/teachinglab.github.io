@@ -24,7 +24,18 @@ Outcomes for every Guskey level, filtered to your site.
 
 - [Ongoing Report](https://tl-data.teachinglab.org/ongoing_report/): start here, then pick your site
 - [FY27 Response Rates & Key Outcomes (Project Health)](https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit)
-- [Slide Deck Generator](https://tl-data.teachinglab.org/generate_slide_deck/)
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
+### Something's missing or not showing up
+
+A name not on a survey, a report that didn't arrive, or a participant the tracker isn't counting.
+
+- [Program FAQ](program_faq.qmd): Qualtrics dropdowns, submissions, and updating a response
+- [Why isn't my name on the survey?](survey_lists.qmd)
+- [Why didn't I get my report?](report_emails.qmd)
+- [Why doesn't the tracker count my participants?](tracker_matching.qmd)
+- [When will I see my change?](refresh_times.qmd) · [Survey Glossary](survey_glossary.qmd)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
@@ -73,17 +84,6 @@ How it's collected, scored, and refreshed.
 - [On the Data](On_the_data.qmd): sources, refresh timing, scoring
 - [Data Collection Overview](data_collection_overview.qmd) · [Data Dives](Data_dives.qmd)
 - [Data Infrastructure Architecture](architecture.qmd) · [Blog](blog.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .question-card}
-### Something's missing or not showing up
-
-A name not on a survey, a report that didn't arrive, or a participant the tracker isn't counting.
-
-- [Why isn't my name on the survey?](survey_lists.qmd)
-- [Why didn't I get my report?](report_emails.qmd)
-- [Why doesn't the tracker count my participants?](tracker_matching.qmd)
-- [When will I see my change?](refresh_times.qmd) · [Survey Glossary](survey_glossary.qmd)
 :::
 
 :::

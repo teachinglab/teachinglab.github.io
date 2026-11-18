@@ -134,3 +134,8 @@ p,li,h1, .description {
   white-space: nowrap;
   vertical-align: top;
 }
+
+/* Pages synced from Google Docs (scripts/sync_google_docs.py) */
+.doc-table td, .doc-table th { vertical-align: top; font-size: 0.9rem; }
+.doc-table p { margin-bottom: 0.35rem; }
+.doc-image { display: block; margin: 1rem auto; border-radius: 6px; }

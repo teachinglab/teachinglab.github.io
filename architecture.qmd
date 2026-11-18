@@ -11,7 +11,7 @@ mermaid:
 ---
 
 ::: {.callout-note appearance="simple"}
-This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-11-16). Edit it there, not here.
+This page is generated from `ARCHITECTURE.md` in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-11-18). Edit it there, not here.
 :::
 
 Internal (login-required) hosted versions on Posit Connect:
@@ -27,14 +27,14 @@ Internal (login-required) hosted versions on Posit Connect:
 ## System overview
 
 Everything runs on or through one EC2 instance (`tl-data.teachinglab.org`,
-3.131.192.25), which hosts Posit Connect and a standalone plumber API managed
+3.131.192.25; see [SERVER.md](SERVER.md)), which hosts Posit Connect and a standalone plumber API managed
 by pm2. Three GitHub repos feed it:
 
 | Repo | What it holds | How it deploys |
 |---|---|---|
 | `TeachingLab` (the package repo) | R package, scheduled Connect jobs (`posit_automations/`), Connect plumber APIs (`api/`), dashboards | `rsconnect::deploy*` to Posit Connect |
 | `ec2_tl_scripts` | Qualtrics → S3 survey ETL scripts | Lives at `/home/ubuntu/scripts` on the EC2 box |
-| `tl-api` | Standalone plumber API (port 8000) | Lives at `/home/ubuntu/plumber-apis`, run by pm2 (`@reboot pm2 resurrect`) |
+| `tl-api` | Standalone plumber API (port 8000) | Lives at `/home/ubuntu/plumber-apis`, run by pm2 (started at boot by the `pm2-ubuntu` systemd unit) |
 | `teachinglab.github.io` | Data Hub Quarto site | Azure Static Web Apps (Entra ID auth) at datahub.teachinglab.org |
 
 ```{mermaid}
@@ -241,7 +241,8 @@ Route detail:
 | Monday → Monday | Coaching log entries → logistics board subitems; D75 sub-school routing | `monday_subitems_logistics` (daily), `monday-webhook` (event) | Daily + webhook |
 | Monday → Google Slides | Deck list board → generated slide decks | `update_deck_list` + `automated_decks` Connect API | Daily / on demand |
 | S3 → serving | Everything above feeds Connect dashboards, pins, reports, and emails | Connect apps and scheduled jobs | On load / per schedule |
-| Serving → S3 | User-entered data flowing back: student work grading inputs, dashboard usage events (rolled up weekly/monthly) | Grading apps, usage dashboard, `update_usage_weekly/monthly` | On use |
+| Serving → S3 | User-entered data flowing back: student work grading inputs | Grading apps | On use |
+| Serving → PostHog | Dashboard usage events (opens, closes, tabs, filters) for every tracked Shiny app, via `tlShiny::track_usage()`; replaced the S3 usage log and rollups 2026-11-16. PostHog's free plan keeps 1 year, so `export_posthog_usage` archives each month to `s3://tl-miscellaneous/posthog_usage/events/YYYY-MM.parquet` for year-over-year comparisons | Tracked dashboards, `export_posthog_usage` (monthly) | On use + monthly |
 | YC's stuff → Monday *(WIP)* | Planned: web forms for coaching log and coaching roster entry, plus a bulk upload feeding the roster — details deliberately TBD for now | TBD | On submit / on upload |
 
 ## S3 buckets
@@ -258,7 +259,7 @@ once the current-year object appears. Bind both years rather than falling back.
 | `coaching-data-tl` | Coaching-specific derived data (CAPs, coaching outcomes, calendar parquet) | Coaching jobs, `monday-webhook` | Coaching dashboards, `/calendar` endpoints |
 | `tl-student-work-27` | The actual student work PDFs, one object per uploaded sample | `update_student_work` | `student_work_samples` and `student_work_graded` apps |
 | `survey-ids` | `user_database.parquet` — the participant lookup Qualtrics reads at survey open | `ec2_tl_scripts` | tl-api `/check_email_or_name` |
-| `tl-shiny-cap-usage-2` | Dashboard usage events plus weekly and monthly rollups | Tracked dashboards, `update_usage_weekly/monthly` | Usage dashboard |
+| `tl-shiny-cap-usage-2` | ongoing_report AI chat cost log and the ipg_raw_reports column-map cache; the old dashboard usage events and rollups (frozen 2026-11-16, history imported into PostHog) | ongoing_report, ipg_raw_reports | ipg_raw_reports (column-map cache) |
 | `tl-file-upload`, `tl-miscellaneous`, `tl-daily-stats`, `tl-capacity-plots`, `course-assessments-raw` | Supporting odds and ends: uploaded files, backups, cached stats and plots, raw assessment exports | `tl_file_upload_email`, `Daily Data Backup`, assorted jobs | The apps that produced them |
 
 ## Operational monitoring

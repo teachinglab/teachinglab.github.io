@@ -36,15 +36,6 @@
   access: "Teaching Lab Google account"
   order: 3
 
-- title: "Slide Deck Generator"
-  path: https://tl-data.teachinglab.org/generate_slide_deck/
-  image: teachinglab_logo.png
-  description: "Build a partner-ready slide deck from the latest data for a project."
-  categories: [All levels, Tool]
-  audience: "PMs, site leads"
-  access: "Teaching Lab Google login"
-  order: 4
-
 - title: "Participant Feedback Rollup"
   path: https://tl-data.teachinglab.org/participant_feedback/
   image: Images/dashboards/FacilitatorRollup.png

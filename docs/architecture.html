@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,19 +42,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c0e63b9cd5e4c963ba6f29db32abb45a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-80f6b70d3d035d7006809a3d43f1916e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-c0e63b9cd5e4c963ba6f29db32abb45a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c65b5991bb8365c92b140bd180f6292f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-be0c69b5b2e9ad15b6a9575aa8e0e2f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c65b5991bb8365c92b140bd180f6292f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -121,7 +120,7 @@ cookieconsent.run({
 <meta property="og:site_name" content="Data Hub">
 </head>
 
-<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -144,7 +143,6 @@ cookieconsent.run({
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
-          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -174,19 +172,13 @@ cookieconsent.run({
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455).
-    // Not run on load: stylesheets are set before first paint there, and
-    // scrolling would undo the scroll to a URL fragment (#14973).
-    // The one pixel nudge keeps the reader where they were.
-    const refreshSafariScrollbar = () => {
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        const scrollY = window.scrollY;
-        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        window.scrollTo(0, 1);
         setTimeout(() => {
-          window.scrollTo(0, scrollY);
+          window.scrollTo(0, 0);
           manageTransitions("body", true);
         }, 40);
       }
@@ -281,7 +273,6 @@ cookieconsent.run({
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
-      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -291,7 +282,6 @@ cookieconsent.run({
         return;
       const alternate = e.matches
       toggleColorMode(alternate);
-      refreshSafariScrollbar();
       localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
       toggleGiscusIfUsed(alternate, darkModeDefault);
     });
@@ -305,7 +295,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
@@ -316,7 +306,8 @@ cookieconsent.run({
     <span class="navbar-title">Data Hub</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -326,10 +317,10 @@ cookieconsent.run({
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy27-trackersslides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">FY27 Trackers/Slides</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fy27-trackers" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">FY27 Trackers</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fy27-trackersslides">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fy27-trackers">    
         <li>
     <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0">
  <span class="dropdown-text">FY27 Data Collection Tracker – Rostered Participants Only</span></a>
@@ -337,10 +328,6 @@ cookieconsent.run({
         <li>
     <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit">
  <span class="dropdown-text">FY27 Response Rates &amp; Key Outcomes (Project Health)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://tl-data.teachinglab.org/generate_slide_deck/">
- <span class="dropdown-text">Slide Deck Generator</span></a>
   </li>  
     </ul>
   </li>
@@ -411,7 +398,7 @@ cookieconsent.run({
 <span class="menu-text">Archives</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://docs.google.com/document/d/1sBJP9Bgl-gt-_HELb9Z6QvGVjimumAWg5xRAt-bea_c/edit?tab=t.0"> 
+    <a class="nav-link" href="./program_faq.html"> 
 <span class="menu-text">Program FAQ</span></a>
   </li>  
 </ul>
@@ -420,29 +407,20 @@ cookieconsent.run({
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/teachinglab/teachinglab.github.io"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="0bb2c11d906d61defe37bdd63c15a536" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>The Data Hub is reorganized:</strong> the home page starts from the question you’re asking, and <a href="./Dashboards.html">Dashboards</a> lists everything by Guskey level. Older reports moved to <a href="./archives.html">Archives</a>.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -464,7 +442,7 @@ cookieconsent.run({
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content" tabindex="-1">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -497,7 +475,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This page is generated from <code>ARCHITECTURE.md</code> in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-11-16). Edit it there, not here.</p>
+<p>This page is generated from <code>ARCHITECTURE.md</code> in the TeachingLab package repo and re-synced whenever the Connect inventory refreshes (last sync: 2026-11-18). Edit it there, not here.</p>
 </div>
 </div>
 </div>
@@ -508,7 +486,7 @@ cookieconsent.run({
 </ul>
 <section id="system-overview" class="level2">
 <h2 class="anchored" data-anchor-id="system-overview">System overview</h2>
-<p>Everything runs on or through one EC2 instance (<code>tl-data.teachinglab.org</code>, 3.131.192.25), which hosts Posit Connect and a standalone plumber API managed by pm2. Three GitHub repos feed it:</p>
+<p>Everything runs on or through one EC2 instance (<code>tl-data.teachinglab.org</code>, 3.131.192.25; see <a href="SERVER.md">SERVER.md</a>), which hosts Posit Connect and a standalone plumber API managed by pm2. Three GitHub repos feed it:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -536,7 +514,7 @@ cookieconsent.run({
 <tr class="odd">
 <td><code>tl-api</code></td>
 <td>Standalone plumber API (port 8000)</td>
-<td>Lives at <code>/home/ubuntu/plumber-apis</code>, run by pm2 (<code>@reboot pm2 resurrect</code>)</td>
+<td>Lives at <code>/home/ubuntu/plumber-apis</code>, run by pm2 (started at boot by the <code>pm2-ubuntu</code> systemd unit)</td>
 </tr>
 <tr class="even">
 <td><code>teachinglab.github.io</code></td>
@@ -550,7 +528,6 @@ cookieconsent.run({
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-
 <pre class="mermaid mermaid-js">flowchart LR
     subgraph sources["Data Sources"]
         qualtrics["Qualtrics&lt;br/&gt;(surveys.teachinglab.org)"]
@@ -639,7 +616,6 @@ cookieconsent.run({
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-
 <pre class="mermaid mermaid-js">flowchart TD
     subgraph survey_flow["Survey lifecycle (Qualtrics)"]
         open["Participant opens survey"] -.-&gt;|"JS calls tl-api&lt;br/&gt;/check_email_or_name"| autofill["Autofill site/role/demographics,&lt;br/&gt;skip already-answered blocks&lt;br/&gt;(user_database.parquet, survey-ids bucket)"]
@@ -686,7 +662,6 @@ cookieconsent.run({
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-
 <pre class="mermaid mermaid-js">flowchart LR
     monday["Monday.com"]
     qualtrics["Qualtrics"]
@@ -827,11 +802,17 @@ cookieconsent.run({
 </tr>
 <tr class="odd">
 <td>Serving → S3</td>
-<td>User-entered data flowing back: student work grading inputs, dashboard usage events (rolled up weekly/monthly)</td>
-<td>Grading apps, usage dashboard, <code>update_usage_weekly/monthly</code></td>
+<td>User-entered data flowing back: student work grading inputs</td>
+<td>Grading apps</td>
 <td>On use</td>
 </tr>
 <tr class="even">
+<td>Serving → PostHog</td>
+<td>Dashboard usage events (opens, closes, tabs, filters) for every tracked Shiny app, via <code>tlShiny::track_usage()</code>; replaced the S3 usage log and rollups 2026-11-16. PostHog’s free plan keeps 1 year, so <code>export_posthog_usage</code> archives each month to <code>s3://tl-miscellaneous/posthog_usage/events/YYYY-MM.parquet</code> for year-over-year comparisons</td>
+<td>Tracked dashboards, <code>export_posthog_usage</code> (monthly)</td>
+<td>On use + monthly</td>
+</tr>
+<tr class="odd">
 <td>YC’s stuff → Monday <em>(WIP)</em></td>
 <td>Planned: web forms for coaching log and coaching roster entry, plus a bulk upload feeding the roster — details deliberately TBD for now</td>
 <td>TBD</td>
@@ -891,9 +872,9 @@ cookieconsent.run({
 </tr>
 <tr class="even">
 <td><code>tl-shiny-cap-usage-2</code></td>
-<td>Dashboard usage events plus weekly and monthly rollups</td>
-<td>Tracked dashboards, <code>update_usage_weekly/monthly</code></td>
-<td>Usage dashboard</td>
+<td>ongoing_report AI chat cost log and the ipg_raw_reports column-map cache; the old dashboard usage events and rollups (frozen 2026-11-16, history imported into PostHog)</td>
+<td>ongoing_report, ipg_raw_reports</td>
+<td>ipg_raw_reports (column-map cache)</td>
 </tr>
 <tr class="odd">
 <td><code>tl-file-upload</code>, <code>tl-miscellaneous</code>, <code>tl-daily-stats</code>, <code>tl-capacity-plots</code>, <code>course-assessments-raw</code></td>
@@ -1522,50 +1503,15 @@ cookieconsent.run({
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const toggle = window.document.createElement('button');
-      toggle.type = "button";
-      toggle.setAttribute("role", "switch");
-      toggle.setAttribute("aria-checked", "false");
-      toggle.classList.add('top-right');
-      toggle.classList.add('quarto-color-scheme-toggle');
-      toggle.setAttribute("aria-label", "Toggle dark mode");
-      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      toggle.appendChild(i);
-      // Put the toggle in a landmark of its own, so that landmark navigation
-      // can reach it.
-      //
-      // The container is always a fresh direct child of body, and the toggle is
-      // never moved into page furniture that the theme or the author controls.
-      // The toggle is positioned against the page, so any ancestor that
-      // establishes a containing block captures it: a positioned element or a
-      // grid for position: absolute, and transform, filter, will-change or
-      // contain for position: fixed. A direct child of body has none of these
-      // to inherit, and the shift when one appears is silent and visual.
-      //
-      // ARIA says a document should have at most one banner, and axe reports a
-      // duplicate whether or not the banners carry distinct labels. So use a
-      // header when the page has no banner yet, and a named region otherwise.
-      //
-      // A header is a banner wherever it sits, unless it is inside sectioning
-      // content, so this cannot just look at the children of body: a custom
-      // page layout wraps the title block header in a plain div. An explicit
-      // role="banner" always counts.
-      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
-      const hasBanner = Array.from(
-        window.document.querySelectorAll('header:not([role]), [role="banner"]')
-      ).some(function(el) {
-        return el.hasAttribute("role") || el.closest(sectioning) === null;
-      });
-      const container = window.document.createElement(hasBanner ? "div" : "header");
-      if (hasBanner) {
-        container.setAttribute("role", "region");
-        container.setAttribute("aria-label", "Toggle dark mode");
-      }
-      container.classList.add('quarto-color-scheme-toggle-container');
-      container.appendChild(toggle);
-      window.document.body.appendChild(container);
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -1644,8 +1590,7 @@ cookieconsent.run({
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-      window.quartoDecorateExternalLinks = function (root) {
-     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1654,69 +1599,8 @@ cookieconsent.run({
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-          if (!link.classList.contains('no-external-icon')) {
-          }
         }
       }
-      };
-      window.quartoDecorateExternalLinks(window.document);
-    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
-    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
-    const hideOnEscAndFocusOut = {
-      name: 'hideOnEscAndFocusOut',
-      defaultValue: true,
-      fn(instance) {
-        const dismiss = () => {
-          // A show scheduled by the trigger delay would otherwise reopen it
-          instance.clearDelayTimeouts();
-          instance.hide();
-        };
-        const onKeyDown = (event) => {
-          if (event.key !== 'Escape') {
-            return;
-          }
-          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
-          // except an open reveal.js slide menu, which Esc should close too.
-          // The menu handles keys only when its keyboard option is on.
-          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
-            window.Reveal.getConfig().menu?.keyboard !== false;
-          if (!menuHandlesEsc) {
-            event.stopPropagation();
-          }
-          if (instance.popper.contains(window.document.activeElement)) {
-            // Disabled while refocusing so the focus trigger does not reopen it
-            instance.disable();
-            instance.reference.focus();
-            instance.enable();
-          }
-          dismiss();
-        };
-        const onFocusOut = (event) => {
-          const target = event.relatedTarget;
-          if (target && !instance.reference.contains(target) &&
-              !instance.popper.contains(target)) {
-            dismiss();
-          }
-        };
-        // On the trigger too: a click trigger (code-annotations: select) has no
-        // blur handling. Attached for the instance's lifetime so leaving the
-        // trigger also cancels a show still pending on the trigger delay.
-        instance.reference.addEventListener('focusout', onFocusOut);
-        return {
-          onShow() {
-            window.document.addEventListener('keydown', onKeyDown, true);
-            instance.popper.addEventListener('focusout', onFocusOut);
-          },
-          onHide() {
-            window.document.removeEventListener('keydown', onKeyDown, true);
-            instance.popper.removeEventListener('focusout', onFocusOut);
-          },
-          onDestroy() {
-            instance.reference.removeEventListener('focusout', onFocusOut);
-          },
-        };
-      },
-    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1730,7 +1614,6 @@ cookieconsent.run({
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
-        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1893,54 +1776,44 @@ cookieconsent.run({
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          // Each band is positioned against its own containing block, which is
-          // not the offsetParent of the lines, so place it from client rects.
-          const placeBand = (band, firstEl, lastEl, codeBlock) => {
-            const container = band.offsetParent;
-            if (container === null) {
-              return;
-            }
-            const containerRect = container.getBoundingClientRect();
-            // Reveal.js scales slides with a transform, so convert client
-            // pixels back to the CSS pixels of the container.
-            const scale = containerRect.height / container.offsetHeight || 1;
-            const firstRect = firstEl.getBoundingClientRect();
-            const lastRect = lastEl.getBoundingClientRect();
-            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
-            const height = (lastRect.bottom - firstRect.top) / scale;
-            band.style.top = top - 2 + "px";
-            band.style.height = height + 4 + "px";
-            if (codeBlock) {
-              // Without the copy button wrapper, the containing block is wider
-              // than the code block, so span the code block explicitly.
-              const blockRect = codeBlock.getBoundingClientRect();
-              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
-              band.style.width = blockRect.width / scale + "px";
-            }
-          };
+          let top = null;
+          let height = null;
+          let parent = null;
           if (lineIds.length > 0) {
-            const el = window.document.getElementById(lineIds[0]);
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const parent = el.parentElement.parentElement;
-            // cook up a div (if necessary) and position it
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
             }
-            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
             }
-            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -2039,9 +1912,6 @@ cookieconsent.run({
     }
   });
   </script>
-  <script type="application/javascript">
-  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -2051,6 +1921,9 @@ cookieconsent.run({
 <p>Great Teachers Make The Difference: <a href="https://www.teachinglab.org/donate">Support Our Work.</a></p>
 </div>   
     <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="./about.html">
@@ -2058,8 +1931,13 @@ cookieconsent.run({
 </a>
   </li>  
     <li class="nav-item">
+    <a class="nav-link" href="./program_faq.html">
+<p>Program FAQ</p>
+</a>
+  </li>  
+    <li class="nav-item">
     <a class="nav-link" href="./On_the_data.html">
-<p>FAQ</p>
+<p>On the Data</p>
 </a>
   </li>  
     <li class="nav-item">
@@ -2071,28 +1949,6 @@ cookieconsent.run({
     <a class="nav-link" href="./trademark.html">
 <p>Trademark</p>
 </a>
-  </li>  
-</ul>
-    <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/teachinglabhq">
-      <i class="bi bi-twitter-x" role="img" aria-label="Teaching Lab on X">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/teachinglabhq">
-      <i class="bi bi-github" role="img" aria-label="Teaching Lab GitHub">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://datahub.teachinglab.org/docs/blog/index.xml">
-      <i class="bi bi-rss" role="img" aria-label="TL Blog RSS">
-</i> 
-    </a>
   </li>  
 </ul>
     </div>

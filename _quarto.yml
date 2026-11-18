@@ -32,43 +32,27 @@ website:
       Teaching Lab specializes in curriculum-based professional learning, using our evidence-based model of professional learning, coined Head, Heart, Habits, and Equity. We envision a world where teachers and students thrive together in communities that enable lifelong learning and meaningful lives.
       
       Great Teachers Make The Difference: [Support Our Work.](https://www.teachinglab.org/donate)
-    center:
+    right:
       - text: "About"
         href: about.qmd
-      - text: "FAQ"
+      - text: "Program FAQ"
+        href: program_faq.qmd
+      - text: "On the Data"
         href: On_the_data.qmd
       - text: "License"
         href: license.qmd
       - text: "Trademark"
         href: trademark.qmd
-    right:
-      - icon: twitter-x
-        href: https://twitter.com/teachinglabhq
-        aria-label: Teaching Lab on X
-      - icon: github
-        href: https://github.com/teachinglabhq
-        aria-label: Teaching Lab GitHub
-      - icon: rss
-        href: https://datahub.teachinglab.org/docs/blog/index.xml
-        aria-label: TL Blog RSS
-  announcement:
-    icon: info-circle
-    dismissable: true
-    type: primary
-    position: below-navbar
-    content: "**The Data Hub is reorganized:** the home page starts from the question you're asking, and [Dashboards](/Dashboards.html) lists everything by Guskey level. Older reports moved to [Archives](/archives.html)."
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - text: "FY27 Trackers/Slides"
+      - text: "FY27 Trackers"
         menu:
           - text: "FY27 Data Collection Tracker – Rostered Participants Only"
             href: https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0
           - text: "FY27 Response Rates & Key Outcomes (Project Health)"
             href: https://docs.google.com/spreadsheets/d/1z6uPsFMz0oQN2IgMg5SwNItH8-7_YHOFirQ8ti9HmPM/edit
-          - text: "Slide Deck Generator"
-            href: https://tl-data.teachinglab.org/generate_slide_deck/
       - text: "Dashboards"
         href: Dashboards.qmd
       - text: "Resources"
@@ -100,11 +84,9 @@ website:
       - text: "Archives"
         href: archives.html
       - text: "Program FAQ"
-        href: https://docs.google.com/document/d/1sBJP9Bgl-gt-_HELb9Z6QvGVjimumAWg5xRAt-bea_c/edit?tab=t.0
+        href: program_faq.qmd
     right:
       - about.qmd
-      - icon: github
-        href: https://github.com/teachinglab/teachinglab.github.io
 format:
   html:
     # Colors, fonts and logo come from _brand.yml

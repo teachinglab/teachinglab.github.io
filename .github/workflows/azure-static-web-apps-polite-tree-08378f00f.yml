@@ -11,6 +11,10 @@ on:
 
   workflow_dispatch:
 
+  # Daily rebuild so pages synced from Google Docs pick up edits to the docs
+  schedule:
+    - cron: "0 10 * * *" # 10 AM UTC / 5-6 AM ET
+
 # Back-to-back pushes used to race and cancel each other's deploys
 concurrency:
   group: datahub-deploy-${{ github.event.pull_request.number || github.ref }}
@@ -18,7 +22,7 @@ concurrency:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
@@ -33,6 +37,25 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.10.18
+
+      # Refresh the pages copied from Google Docs (scripts/sync_google_docs.py).
+      # The service account must be a Viewer on each doc. If the secret is
+      # missing or the export fails, the committed snapshot is rendered instead.
+      - name: Get a Google Drive token
+        id: google_auth
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GOOGLE_DOCS_SA_KEY }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/drive.readonly
+
+      - name: Sync Google Doc pages
+        if: steps.google_auth.outputs.access_token != ''
+        env:
+          GOOGLE_DRIVE_TOKEN: ${{ steps.google_auth.outputs.access_token }}
+        run: python3 scripts/sync_google_docs.py
 
       - name: Render site
         run: quarto render
