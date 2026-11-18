@@ -56,6 +56,8 @@ KEEP_TAGS = {
     "a", "img", "br", "strong", "em", "sup", "sub",
 }
 HEADING_TAGS = {"h1", "h2", "h3", "h4"}
+# Text colors that should follow the site's light/dark theme, not be kept
+THEME_COLORS = {"#000000", "#222222", "#1155cc", "#0000ee", "#001d35"}
 VOID_TAGS = {"br", "img", "hr", "meta", "link", "col"}
 
 
@@ -110,6 +112,7 @@ class DocCleaner(HTMLParser):
         self.skip_depth = 0  # inside a comment thread or <style>
         self.heading = None
         self.seen_heading = False
+        self.table_depth = 0
 
     def handle_starttag(self, tag, attrs_list):
         attrs = dict(attrs_list)
@@ -148,6 +151,12 @@ class DocCleaner(HTMLParser):
             if classes & self.italic or re.search(r"font-style:\s*italic", inline_style):
                 open_markup += "<em>"
                 close_markup = "</em>" + close_markup
+            # Keep deliberate text colors (the doc's orange labels, white text on
+            # colored header cells); black and link blue follow the site theme
+            color = re.search(r"(?<![-\w])color:\s*(#[0-9a-fA-F]{6})", inline_style)
+            if color and color.group(1).lower() not in THEME_COLORS:
+                open_markup = f'<span style="color:{color.group(1)}">' + open_markup
+                close_markup += "</span>"
         elif tag == "a":
             if attrs.get("href"):
                 href = clean_href(attrs["href"])
@@ -165,10 +174,15 @@ class DocCleaner(HTMLParser):
             src = self.image_writer(attrs.get("src", ""))
             if src:
                 alt = html.escape(attrs.get("alt", "") or attrs.get("title", ""))
-                self.buffer.append(f'<img src="{src}" alt="{alt}" class="img-fluid doc-image">')
+                # Keep the size the image has in the doc (QR codes are tiny)
+                width = re.search(r"(?<![-\w])width:\s*([\d.]+)px", attrs.get("style", ""))
+                size = f' style="width:{float(width.group(1)):.0f}px"' if width else ""
+                css_class = "img-fluid" if self.table_depth else "img-fluid doc-image"
+                self.buffer.append(f'<img src="{src}" alt="{alt}" class="{css_class}"{size}>')
             return
         elif tag == "table":
-            self.buffer.append('<div class="table-responsive"><table class="table table-sm doc-table">')
+            self.table_depth += 1
+            self.buffer.append('<div class="table-responsive"><table class="doc-table">')
             self.stack.append((tag, "</table></div>"))
             return
         elif tag in ("td", "th"):
@@ -177,7 +191,31 @@ class DocCleaner(HTMLParser):
                 for name in ("colspan", "rowspan")
                 if attrs.get(name, "1").isdigit() and attrs.get(name, "1") != "1"
             )
-            open_markup, close_markup = f"<{tag}{span}>", f"</{tag}>"
+            style = attrs.get("style", "")
+            cell_style = []
+            background = re.search(r"background-color:\s*(#[0-9a-fA-F]{6})", style)
+            if background and background.group(1).lower() != "#ffffff":
+                cell_style.append(f"background-color:{background.group(1)}")
+            valign = re.search(r"vertical-align:\s*(top|middle|bottom)", style)
+            if valign:
+                cell_style.append(f"vertical-align:{valign.group(1)}")
+            width = re.search(r"(?<![-\w])width:\s*([\d.]+)pt", style)
+            extra = f' data-w="{width.group(1)}"' if width else ""
+            if background and background.group(1).lower() != "#ffffff":
+                extra += ' class="doc-filled"'
+            if cell_style:
+                extra += f' style="{";".join(cell_style)}"'
+            open_markup, close_markup = f"<{tag}{span}{extra}>", f"</{tag}>"
+        elif tag in ("ul", "ol"):
+            # Google exports each nesting level as a separate flat list whose
+            # class ends in the level (lst-kix_abc-1); nest_lists() rebuilds it
+            level = re.search(r"lst-kix_\w+-(\d+)", attrs.get("class", ""))
+            open_markup = f'<{tag} data-level="{level.group(1) if level else 0}">'
+            close_markup = f"</{tag}>"
+        elif tag == "p":
+            align = re.search(r"text-align:\s*(center|right)", attrs.get("style", ""))
+            open_markup = f'<p style="text-align:{align.group(1)}">' if align else "<p>"
+            close_markup = "</p>"
         elif tag in KEEP_TAGS:
             if tag in VOID_TAGS:
                 self.buffer.append(f"<{tag}>")
@@ -206,6 +244,8 @@ class DocCleaner(HTMLParser):
             open_tag, close_markup = self.stack.pop()
             if self.heading is None or open_tag in HEADING_TAGS:
                 self.buffer.append(close_markup)
+            if open_tag == "table":
+                self.table_depth -= 1
             if open_tag == tag:
                 break
         if tag in HEADING_TAGS and self.heading is not None:
@@ -240,6 +280,40 @@ def preprocess(raw_html):
     return body
 
 
+def nest_lists(fragment):
+    """Rebuild nested bullets from Google's runs of flat, level-tagged lists."""
+    run_pattern = r'(?:<(?:ul|ol) data-level="\d+">.*?</(?:ul|ol)>\s*)+'
+
+    def rebuild(run_match):
+        items = []
+        for tag, level, body in re.findall(r'<(ul|ol) data-level="(\d+)">(.*?)</\1>', run_match.group(0), re.S):
+            for item in re.findall(r"<li>(.*?)</li>", body, re.S):
+                items.append((tag, int(level), item))
+        if not items:
+            return run_match.group(0)
+
+        def render(index, level):
+            tag = items[index][0]
+            out = [f"<{tag}>"]
+            while index < len(items) and items[index][1] >= level:
+                out.append(f"<li>{items[index][2]}")
+                index += 1
+                if index < len(items) and items[index][1] > level:
+                    nested, index = render(index, items[index][1])
+                    out.append(nested)
+                out.append("</li>")
+            out.append(f"</{tag}>")
+            return "".join(out), index
+
+        html_out, index = [], 0
+        while index < len(items):
+            block, index = render(index, items[index][1])
+            html_out.append(block)
+        return "".join(html_out)
+
+    return re.sub(run_pattern, rebuild, fragment, flags=re.S)
+
+
 def tidy_fragment(fragment):
     # Collapse the empty wrappers Google leaves behind
     previous = None
@@ -248,11 +322,9 @@ def tidy_fragment(fragment):
         fragment = re.sub(r"<(strong|em)>(\s*)</\1>", r"\2", fragment)
         fragment = re.sub(r"</strong>(\s*)<strong>", r"\1", fragment)
         fragment = re.sub(r"</em>(\s*)<em>", r"\1", fragment)
-        fragment = re.sub(r"<p>(\s|&nbsp;| )*</p>", "", fragment)
+        fragment = re.sub(r"<p[^>]*>(\s|&nbsp;| )*</p>", "", fragment)
         fragment = re.sub(r"<li>(\s| )*</li>", "", fragment)
-    # Google repeats every list as one <ul> per item; merge adjacent lists
-    fragment = re.sub(r"</ul>\s*<ul>", "", fragment)
-    fragment = re.sub(r"</ol>\s*<ol>", "", fragment)
+    fragment = nest_lists(fragment)
     # Markdown-ish text typed into table cells, e.g. **Bold**
     fragment = re.sub(r"\*\*([^*<]+?)\*\*", r"<strong>\1</strong>", fragment)
     return fragment.strip()
@@ -290,54 +362,27 @@ def fully_bold(cell_html):
 
 
 def restructure_table(table_html):
-    """Turn Google's all-<td> tables into tables with a title, a real header
-    row, and no empty trailing columns."""
-    rows = [
-        [{"tag": tag, "attrs": attrs, "html": content} for tag, attrs, content in
-         re.findall(r"<(td|th)([^>]*)>(.*?)</\1>", row, re.S)]
-        for row in re.findall(r"<tr>(.*?)</tr>", table_html, re.S)
-    ]
-    rows = [row for row in rows if row]
-    if not rows:
-        return table_html
+    """Lay the table out like the doc: each cell gets its share of the row's
+    width (Google gives widths in points), so columns line up as they do there."""
+    def size_row(row_html):
+        widths = [float(w) for w in re.findall(r'data-w="([\d.]+)"', row_html)]
+        total = sum(widths) or 1
+        return re.sub(
+            r'data-w="([\d.]+)"',
+            lambda m: f'data-width="{float(m.group(1)) / total * 100:.1f}"',
+            row_html,
+        )
 
-    # A one-column table is a boxed note in the doc: render it as a panel
-    if all(len(row) == 1 for row in rows):
-        title = cell_text(rows[0][0]["html"]) if len(rows) > 1 and fully_bold(rows[0][0]["html"]) else ""
-        body = "".join(row[0]["html"] for row in (rows[1:] if title else rows))
-        heading = f'<div class="doc-panel-title">{html.escape(title)}</div>' if title else ""
-        return f'<div class="doc-panel">{heading}{body}</div>'
+    table_html = re.sub(r"<tr>.*?</tr>", lambda m: size_row(m.group(0)), table_html, flags=re.S)
+    # Fold the width into each cell's style attribute
+    def merge_width(match):
+        attrs = match.group(1) + match.group(3)
+        width = match.group(2)
+        if 'style="' in attrs:
+            return "<td" + attrs.replace('style="', f'style="width:{width}%;', 1) + ">"
+        return f'<td{attrs} style="width:{width}%">'
 
-    caption = ""
-    non_empty = [c for c in rows[0] if cell_text(c["html"])]
-    if len(non_empty) == 1 and (len(rows[0]) == 1 or "colspan" in non_empty[0]["attrs"]):
-        caption = cell_text(non_empty[0]["html"])
-        rows = rows[1:]
-
-    header_rows = 0
-    while header_rows < len(rows) - 1 and all(
-        fully_bold(c["html"]) or not cell_text(c["html"]) for c in rows[header_rows]
-    ):
-        header_rows += 1
-
-    def render_cell(cell, tag):
-        content = cell["html"]
-        if tag == "th":
-            content = re.sub(r"</?strong>", "", content)
-            content = re.sub(r"</?p>", " ", content).strip()
-        return f"<{tag}{cell['attrs']}>{content}</{tag}>"
-
-    parts = ['<div class="table-responsive"><table class="table doc-table">']
-    if caption:
-        parts.append(f'<caption class="doc-table-title">{html.escape(caption)}</caption>')
-    if header_rows:
-        parts.append("<thead>")
-        parts += ["<tr>" + "".join(render_cell(c, "th") for c in row) + "</tr>" for row in rows[:header_rows]]
-        parts.append("</thead>")
-    parts.append("<tbody>")
-    parts += ["<tr>" + "".join(render_cell(c, "td") for c in row) + "</tr>" for row in rows[header_rows:]]
-    parts.append("</tbody></table></div>")
-    return "".join(parts)
+    return re.sub(r'<td([^>]*?) data-width="([\d.]+)"([^>]*)>', merge_width, table_html)
 
 
 def question_cards(fragment):
