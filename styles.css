@@ -136,6 +136,57 @@ p,li,h1, .description {
 }
 
 /* Pages synced from Google Docs (scripts/sync_google_docs.py) */
-.doc-table td, .doc-table th { vertical-align: top; font-size: 0.9rem; }
-.doc-table p { margin-bottom: 0.35rem; }
 .doc-image { display: block; margin: 1rem auto; border-radius: 6px; }
+
+.doc-table { font-size: 0.875rem; margin-bottom: 0; }
+.doc-table td, .doc-table th { vertical-align: top; padding: 0.6rem 0.75rem; }
+.doc-table thead th {
+  background: rgba(0, 172, 240, 0.12);
+  border-bottom: 2px solid #00acf0;
+  font-family: Poppins, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.doc-table tbody td:first-child { font-weight: 600; }
+.doc-table tbody tr:nth-child(even) { background: rgba(127, 127, 127, 0.06); }
+.doc-table p { margin: 0 0 0.3rem; }
+.doc-table p:last-child { margin-bottom: 0; }
+.doc-table img { max-width: 72px; height: auto; }
+.doc-table-title {
+  caption-side: top;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: inherit;
+  padding: 0 0 0.5rem;
+}
+.table-responsive:has(.doc-table) { margin-bottom: 1.5rem; }
+
+.doc-panel {
+  border-left: 4px solid #00acf0;
+  background: rgba(0, 172, 240, 0.07);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.doc-panel-title { font-family: Poppins, sans-serif; font-weight: 600; margin-bottom: 0.5rem; }
+
+.doc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.doc-card {
+  position: relative;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-top: 3px solid #00acf0;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.doc-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
+.doc-card-q { font-family: Poppins, sans-serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.35rem; }
+.doc-card-a { font-size: 0.875rem; opacity: 0.85; }
