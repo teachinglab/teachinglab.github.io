@@ -345,6 +345,26 @@ def sync(doc, raw_html):
     print(f"Wrote {doc['output']}: {headings} sections, {len(written)} images")
 
 
+def token_from_service_account():
+    """Mint a Drive token straight from the GOOGLE_SA_KEY JSON key. This signs
+    locally, so it doesn't need the IAM Credentials API that
+    google-github-actions/auth uses (it's disabled in the facilitatorsheets
+    project)."""
+    key_json = os.environ.get("GOOGLE_SA_KEY", "").strip()
+    if not key_json:
+        return None
+    import json
+    from google.auth.transport.requests import Request
+    from google.oauth2 import service_account
+
+    credentials = service_account.Credentials.from_service_account_info(
+        json.loads(key_json),
+        scopes=["https://www.googleapis.com/auth/drive.readonly"],
+    )
+    credentials.refresh(Request())
+    return credentials.token
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--from-file", help="Use a local HTML export instead of the Drive API (first doc only)")
@@ -354,9 +374,9 @@ def main():
         sync(DOCS[0], Path(args.from_file).read_text(encoding="utf-8"))
         return
 
-    token = os.environ.get("GOOGLE_DRIVE_TOKEN")
+    token = os.environ.get("GOOGLE_DRIVE_TOKEN") or token_from_service_account()
     if not token:
-        print("GOOGLE_DRIVE_TOKEN not set; keeping the committed Google Doc snapshots")
+        print("No Google credentials; keeping the committed Google Doc snapshots")
         return
     for doc in DOCS:
         try:
