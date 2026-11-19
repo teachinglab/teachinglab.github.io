@@ -75,6 +75,8 @@ website:
             href: report_emails.html
           - text: "Why Doesn't the Tracker Count My Participants?"
             href: tracker_matching.html
+          - text: "How the Tracker Fills In Each Cell"
+            href: tracker_rules.html
           - text: "When Will I See My Change?"
             href: refresh_times.html
           - text: "Survey Glossary"

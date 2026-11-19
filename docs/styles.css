@@ -152,6 +152,8 @@ p,li,h1, .description {
 .doc-table a { word-break: normal; overflow-wrap: break-word; }
 .doc-table p { margin: 0 0 0.25rem; }
 .doc-table p:last-child { margin-bottom: 0; }
+/* The doc's QR codes are ~40px, too small to scan from a screen */
+.doc-table td img { width: 96px !important; max-width: none; }
 .doc-table td.doc-filled { color: #111; }
 .doc-table td.doc-filled a { color: #0b4f9c; }
 

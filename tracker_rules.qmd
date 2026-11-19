@@ -1,0 +1,149 @@
+---
+title: "How the Tracker Fills In Each Cell"
+description: "The exact rules the FY27 Data Collection Tracker uses to decide TRUE, FALSE, In Progress, or blank for every column, and how the response rates are calculated."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+The [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) rebuilds every hour from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) and the surveys. This page lists the rules it follows, column by column. For why a submitted survey might not be matched to a person, see [Why Doesn't the Tracker Count My Participants?](tracker_matching.qmd)
+
+## What the cell values mean
+
+| Value | Meaning | Counts toward the response rate? |
+|---|---|---|
+| **TRUE** | A finished response was matched to this person | Yes, as done |
+| **FALSE** | This person needs it and nothing has been matched yet | Yes, as not done |
+| **In Progress** | A response was started but not submitted. Click it to open the response | Yes, as not done |
+| **A number** | Coaching log days, minutes, or Participant Feedback responses | See [Response rates](#response-rates) |
+| **Blank** | This person isn't expected to complete it | **No.** Blank cells are left out of the rate entirely |
+
+Blank does not mean "missing". It means the tracker isn't counting that column for that person, so they don't help or hurt the rate.
+
+## Who gets a row
+
+- Everyone on the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) whose **Participant Status** is **Current/Active** or **Completed/Cycled Out** and who has a **Participant Email**.
+- If **Updated Participant Name** or **Updated Participant Email** is filled in on the roster, that value is used instead of the original.
+- A person gets **one row per content area and per school** listed on the roster. A teacher coached in Math and ELA has two rows. That's on purpose, so each subject's project sees them.
+
+## When a cell is blank
+
+Two things on the roster decide whether a column applies to a person: the **"Needed?" columns** and the **Participant Role**.
+
+### The "Needed?" columns
+
+Each roster item has four Yes/No columns. **"No" always blanks the matching tracker columns**, whatever the role.
+
+| Roster column | Tracker columns it controls |
+|---|---|
+| Ed Survey Needed? | Diagnostic Educator Survey, Follow-up Educator Survey |
+| BOY/EOY Observations Needed? | Baseline observation, End of year observation |
+| MOY Observations/Student Work Needed? | Middle of year observation, Middle of Year Student Work |
+| BOY/EOY Student Work Needed? | Baseline Student Work, Follow-up Student Work |
+
+### Participant Role
+
+These roles are treated as **non-teachers**: School leader or administrator, District leader or administrator, Community-based organization leader, Coach (plus the older FY26 labels School Leader, District Leader, School-based admin, and School-based coach). "Coach, Teacher/specialist" counts as a teacher.
+
+For a non-teacher, the **observation, student work, and student survey** columns show **TRUE** or **In Progress** if they have a response, and **blank** otherwise. They never show FALSE, **even when the "Needed?" column says Yes.** So an unobserved leader or coach is not counted as missing.
+
+Role does **not** affect the educator survey, coaching log, or Participant Feedback columns.
+
+### Service Type
+
+If **Service Type** is exactly **PL**, and the person has no coaching log time, the two coaching log columns are blank instead of FALSE. "Coaching, PL" is treated as coaching.
+
+## Column by column
+
+The order below is the order the tracker checks things in. The first rule that applies wins.
+
+### Diagnostic Educator Survey
+
+1. Ed Survey Needed? = No → **blank**
+2. A finished [Educator Survey](survey_glossary.qmd#es) response marked as pre, from the Participant Email or Secondary Participant Email → **TRUE**
+3. A started but unsubmitted response from either email → **In Progress**
+4. Otherwise → **FALSE**
+
+### Follow-up Educator Survey
+
+1. Ed Survey Needed? = No → **blank**
+2. A finished response marked as post, from either email → **TRUE**
+3. Otherwise → **FALSE** (no In Progress link for the follow-up)
+
+**What counts as pre and post:** a person's **first** response before **April 1, 2027** is pre. Their **second** response, or any response on or after April 1, 2027, is post. If a person's first response is on or after April 1, it's still pre as long as a second response comes at least a month later. If a project has its own Educator Survey cutoff later than April 1, every response before that cutoff is pre.
+
+### Baseline, Middle of Year, and End of Year Observation
+
+1. The matching "Needed?" column = No → **blank**
+2. A finished [Classroom Observation (IPG)](survey_glossary.qmd#ipg) for this round where the teacher picked matches the roster **Participant Name** → **TRUE**
+3. A started but unsubmitted observation for this round → **In Progress**
+4. Non-teacher role → **blank**
+5. Otherwise → **FALSE**
+
+The round is whatever the coach picked in the survey: "Baseline (first observation of the year)", "Mid-year (middle of service, if applicable)", or "End of year (last observation of the year)". Names are matched exactly, after straightening apostrophes and extra spaces. A short list of 31 observations from late SY25-26 (CUNY/UA, D9, D13, D75) is also credited this year.
+
+### Baseline, Middle of Year, and Follow-up Student Work
+
+1. The matching "Needed?" column = No → **blank**
+2. A finished [Student Work](survey_glossary.qmd#sw) submission for this round where the teacher picked, **or the co-teacher named**, matches the roster Participant Name → **TRUE**
+3. A finished submission for this round from the roster **Participant Email** → **TRUE**
+4. Non-teacher role → **blank**
+5. Otherwise → **FALSE**
+
+Only submitted responses are read for Student Work, so these columns never show In Progress.
+
+Rounds: Baseline is "Baseline (first submission of the year)" or "Assets & Needs Assessment". Middle of Year is "Mid-year (middle of service, if applicable)". If a teacher's **second** submission of the year is also marked Baseline, it counts as Middle of Year too. Follow-up is "End of year (last submission of the year)".
+
+Submissions the graders skipped because the files were **blank, empty, or broken** don't count for Baseline or Middle of Year.
+
+### Coaching Log Completion
+
+Shows the number of **different days** the person appears on the [FY27 Coaching Log](https://teachinglab.monday.com/boards/18416482214), as a 1:1 coachee, a group coaching participant, or a school admin meeting attendee. If any of those days were group days, it shows the split, e.g. **3 (2 1:1, 1 group)**. A day with both a 1:1 and a group session counts once, as a 1:1 day.
+
+- Logs with a **no-coaching reason** (for example "Partner Canceled") don't count.
+- Names are matched to the roster Participant Name, ignoring capitalization, apostrophe style, and extra spaces.
+- Not on any log → **FALSE**, unless Service Type is exactly PL (then **blank**).
+
+### Coaching Log Total Time
+
+Total minutes across 1:1 coaching, group coaching, micro PL, and school admin meetings, from the same logs. Not on any log → **FALSE**, or **blank** if Service Type is exactly PL.
+
+### Participant Feedback
+
+The number of finished [Participant Feedback](survey_glossary.qmd#pf) responses from the person's **Participant Email**, or **FALSE** if there are none. There's no In Progress link for this survey.
+
+### Baseline and Follow-up Student Survey
+
+Matched on the teacher's email on the [Student Survey](survey_glossary.qmd#student).
+
+1. Non-teacher role → **blank**
+2. The teacher has any finished student responses → Baseline **TRUE**
+3. The teacher has finished student responses **60 or more days** after their first one → Follow-up **TRUE**
+4. Otherwise → **FALSE**
+
+### Student Assessment Data
+
+Set per project, not per person: **TRUE** for everyone at a site when the BOY Ss Assessment Data Status on the [partnerships board](https://teachinglab.monday.com/boards/18426983068) is filled in. That column isn't on the FY27 board right now, so this shows FALSE for everyone until it comes back.
+
+## Response rates {#response-rates}
+
+Row 2 of every site tab shows that tab's rates. Blank cells never count.
+
+| Columns | Rate |
+|---|---|
+| Educator Survey, Observations, Student Work, Student Survey | TRUE ÷ (TRUE + FALSE + In Progress) |
+| Coaching Log Completion, Participant Feedback | People with a number ÷ (people with a number + FALSE) |
+| Coaching Log Total Time | Average minutes per person with a number |
+
+The **Project Overview** tab copies row 2 from each site tab. Its **Org Total** row is the average of the project rates, so every project counts equally regardless of size.
+
+## Site tabs
+
+- Each site has its own tab that pulls its rows live from the **Tracker** tab.
+- NY_D9, D11, D12, D13, D25, and D75 are split into **Math** and **ELA** tabs. Math is "Math" or "SpEd Math"; everything else, including a blank content area, goes to ELA.
+- In NY_D7, D11, D12, D13, D16, and D25, participants whose Grade Level is exactly **Pre-K** go to a separate **ECE** tab and are left out of the Math and ELA tabs.
+
+## Something looks wrong?
+
+Check the roster first: the status, email, role, and "Needed?" columns decide most of what the tracker shows. [Mary Kate Neal](mailto:marykate.neal@teachinglab.org) manages the roster. If the roster looks right and the cell still doesn't, email [Duncan Gates](mailto:duncan.gates@teachinglab.org) with the participant's name, site, and the column.

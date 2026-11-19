@@ -7,7 +7,7 @@ format:
     toc-depth: 2
 ---
 
-The [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) starts from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) and checks each person off as their surveys come in. **If a person isn't on the roster, or a response can't be matched to them, the tracker can't count it.** The tracker updates every hour.
+The [FY27 Data Collection Tracker](https://docs.google.com/spreadsheets/d/16PLobzihuwtYfqCg0Uk1YivBcbLtOFfclualc72WVRU/edit?gid=0#gid=0) starts from the [SY26-27 Participant Roster](https://teachinglab.monday.com/boards/18416567790) and checks each person off as their surveys come in. **If a person isn't on the roster, or a response can't be matched to them, the tracker can't count it.** The tracker updates every hour. For the exact rule behind every column, including when a cell is left blank, see [How the Tracker Fills In Each Cell](tracker_rules.qmd).
 
 ## Who's on the tracker
 

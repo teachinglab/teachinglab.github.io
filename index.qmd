@@ -35,6 +35,7 @@ A name not on a survey, a report that didn't arrive, or a participant the tracke
 - [Why isn't my name on the survey?](survey_lists.qmd)
 - [Why didn't I get my report?](report_emails.qmd)
 - [Why doesn't the tracker count my participants?](tracker_matching.qmd)
+- [How does the tracker fill in each cell?](tracker_rules.qmd): TRUE, FALSE, blank, and response rates
 - [When will I see my change?](refresh_times.qmd) · [Survey Glossary](survey_glossary.qmd)
 :::
 
